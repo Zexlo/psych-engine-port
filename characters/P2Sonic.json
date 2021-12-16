@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-62,
+				86
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "P2Sonic Down"
+		},
+		{
+			"offsets": [
+				52,
+				40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "P2Sonic Left"
+		},
+		{
+			"offsets": [
+				8,
+				29
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "P2Sonic Right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-110,
+				184
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "P2Sonic Up",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-79,
+				202
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "P2Sonic Idle",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-60,
+				170
+			],
+			"anim": "LOL",
+			"fps": 24,
+			"name": "P2Sonic Laugh",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/P2Sonic",
+	"position": [
+		-240,
+		70
+	],
+	"healthicon": "run",
+	"flip_x": false,
+	"healthbar_colors": [
+		1,
+		0,
+		101
+	],
+	"camera_position": [
+		-10,
+		-70
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

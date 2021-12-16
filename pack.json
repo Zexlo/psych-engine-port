@@ -1,0 +1,6 @@
+{
+	"name": "Sonic EXE V2 Port",
+	"description": "A faithful Psych engine port of the Sonic EXE V2 mod!",
+	"restart":false,
+	"color": [170, 0, 255]
+}

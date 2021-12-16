@@ -1,0 +1,139 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "Majin",
+		"player1": "Majinbf",
+		"player2": "SonicFunAssets",
+		"player3": null,
+		"events": [
+			[
+				25451.6129032258,
+				[
+					[
+						"Hey!",
+						"gf",
+						""
+					]
+				]
+			],
+			[
+				50322.5806451613,
+				[
+					[
+						"Hey!",
+						"gf",
+						""
+					]
+				]
+			],
+			[
+				85935.4838709678,
+				[
+					[
+						"Hey!",
+						"gf",
+						""
+					]
+				]
+			],
+			[
+				87193.5483870969,
+				[
+					[
+						"Hey!",
+						"gf",
+						"0.8"
+					]
+				]
+			],
+			[
+				99870.9677419356,
+				[
+					[
+						"Add Camera Zoom",
+						"0.020",
+						"0.03"
+					],
+					[
+						"Blammed Lights",
+						"1",
+						""
+					],
+					[
+						"Screen Shake",
+						"12. 0.003",
+						"12, 0.006"
+					]
+				]
+			],
+			[
+				112064.516129032,
+				[
+					[
+						"Blammed Lights",
+						"0",
+						""
+					]
+				]
+			],
+			[
+				118354.838709678,
+				[
+					[
+						"Hey!",
+						"gf",
+						""
+					]
+				]
+			],
+			[
+				130741.935483871,
+				[
+					[
+						"Hey!",
+						"gf",
+						""
+					]
+				]
+			],
+			[
+				137032.258064516,
+				[
+					[
+						"Add Camera Zoom",
+						"0.020",
+						"0.03"
+					],
+					[
+						"Blammed Lights",
+						"1",
+						""
+					],
+					[
+						"Screen Shake",
+						"20, 0.003",
+						"20, 0.008"
+					]
+				]
+			],
+			[
+				161612.903225806,
+				[
+					[
+						"Blammed Lights",
+						"0",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "Majingf",
+		"bpm": 155,
+		"arrowSkin": "Majin_Notes",
+		"needsVoices": true,
+		"song": "endless"
+	}
+}

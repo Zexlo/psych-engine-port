@@ -1,0 +1,57 @@
+{
+	"storyName": "Bonus songs",
+	"hideFreeplay": false,
+	"weekBackground": "sonic",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"sonic",
+		"mbf",
+		""
+	],
+	"songs": [
+		[
+			"Endless",
+			"Majin",
+			[
+				66,
+				120,
+				215
+			]
+		],
+		[
+			"Cycles",
+			"lordX",
+			[
+				195,
+				173,
+				255
+			]
+		],
+		[
+			"Faker",
+			"Faker",
+			[
+				106,
+				133,
+				255
+			]
+		],
+		[
+			"black sun",
+			"Fakerexe",
+			[
+				20,
+				20,
+				80
+			]
+		]
+	],
+	"weekName": "Sonic EXE"
+}

@@ -1,0 +1,9 @@
+{
+	"directory": "images/OBG",
+	"defaultZoom": 0.9,
+	"isPixelStage": false,
+
+	"boyfriend": [650, 300],
+	"girlfriend": [300, 330],
+	"opponent": [300, 400]
+}

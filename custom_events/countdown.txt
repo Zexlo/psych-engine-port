@@ -1,0 +1,1 @@
+starts the countdown used at the start of the song

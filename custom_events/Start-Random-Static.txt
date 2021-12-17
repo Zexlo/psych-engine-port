@@ -1,0 +1,8 @@
+Begin showing random static on a timer.
+
+Value 1: The timer will try to show
+    static every [Value 1] seconds.
+    Default is 0.25. '0' will stop the static.
+Value 2: The timer will have a [Value 2]
+    percent chance of actually showing the static.
+    Default is 10.

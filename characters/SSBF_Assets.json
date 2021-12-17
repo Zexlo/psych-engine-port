@@ -1,132 +1,132 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-14,
 				-140
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "firstDeath",
-			"indices": [],
-			"name": "BF dies"
+			"fps": 24,
+			"name": "BF dies",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-14,
 				-139
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "deathConfirm",
-			"indices": [],
-			"name": "BF Dead Loop"
+			"fps": 24,
+			"name": "BF Dead Loop",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-12,
 				-143
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "deathLoop",
-			"indices": [],
-			"name": "BF Dead Loop"
+			"fps": 24,
+			"name": "BF Dead Loop",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-16,
 				16
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "SSBF IDLE"
+			"fps": 24,
+			"name": "SSBF IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				4,
 				28
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "SSBF LEFT"
+			"fps": 24,
+			"name": "SSBF LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				15
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"loop": false,
-			"name": "SSBF LEFTmiss"
+			"fps": 24,
+			"name": "SSBF LEFTmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-11,
 				8
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "SSBF DOWN"
+			"fps": 24,
+			"name": "SSBF DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-17,
 				22
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "SSBF UP"
+			"fps": 24,
+			"name": "SSBF UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-10,
 				21
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "SSBF RIGHT"
+			"fps": 24,
+			"name": "SSBF RIGHT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				2,
 				33
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"loop": false,
-			"name": "SSBF DOWNmiss"
+			"fps": 24,
+			"name": "SSBF DOWNmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-16,
 				21
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUPmiss",
-			"loop": false,
-			"name": "SSBF UPmiss"
+			"fps": 24,
+			"name": "SSBF UPmiss",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
 	"image": "characters/SSBF_Assets",
 	"position": [
-		100,
-		350
+		90,
+		340
 	],
 	"healthicon": "bf",
 	"flip_x": true,

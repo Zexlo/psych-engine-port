@@ -16,6 +16,5 @@ function onEvent(name, value1, value2)
     -- change "Event Name" to whatever the event will be called
     if name == 'Hillzone' then
         setProperty('Hillzone.alpha', 255);
-             playSound('file');
-    end
+        end
 end

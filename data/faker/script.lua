@@ -1,3 +1,3 @@
 function onCreate()
-   addCharacterToList('Fakerbig', 'dad');
+   addCharacterToList('Faker_Transform', 'dad');
 end

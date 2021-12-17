@@ -4,7 +4,17 @@
 		"player1": "bf",
 		"events": [
 			[
-				112571.428571429,
+				112714.285714286,
+				[
+					[
+						"Start-Random-Static",
+						"0.60",
+						"30"
+					]
+				]
+			],
+			[
+				113142.857142857,
 				[
 					[
 						"Static",
@@ -14,66 +24,16 @@
 					[
 						"Change Character",
 						"dad",
-						"Fakerbig"
+						"Faker_Transformation"
 					]
 				]
 			],
 			[
-				112857.142857143,
-				[
-					[
-						"Screen Shake",
-						"0.08",
-						"1"
-					]
-				]
-			],
-			[
-				113142.857142857,
+				115428.571428571,
 				[
 					[
 						"Play Animation",
-						"Exe up",
-						"dad"
-					]
-				]
-			],
-			[
-				113428.571428571,
-				[
-					[
-						"Play Animation",
-						"Exe down",
-						"dad"
-					]
-				]
-			],
-			[
-				113714.285714286,
-				[
-					[
-						"Play Animation",
-						"Exe left",
-						"dad"
-					]
-				]
-			],
-			[
-				114571.428571429,
-				[
-					[
-						"Play Animation",
-						"Exe up",
-						"dad"
-					]
-				]
-			],
-			[
-				115571.428571429,
-				[
-					[
-						"Play Animation",
-						"Exe right",
+						"singLEFT",
 						"dad"
 					]
 				]
@@ -89,21 +49,61 @@
 				]
 			],
 			[
-				118000,
+				117428.571428571,
 				[
 					[
-						"Screen Shake",
-						"4, 0.08",
-						"0, 0"
+						"Play Animation",
+						"singRIGHT",
+						"dad"
 					]
 				]
 			],
 			[
-				119571.428571429,
+				118000,
 				[
 					[
-						"",
-						"Exe up",
+						"Static",
+						"singLEFT",
+						"dad"
+					]
+				]
+			],
+			[
+				118285.714285714,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"dad"
+					]
+				]
+			],
+			[
+				119857.142857143,
+				[
+					[
+						"Static",
+						"singDOWN",
+						"dad"
+					]
+				]
+			],
+			[
+				120142.857142857,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"dad"
+					]
+				]
+			],
+			[
+				121571.428571429,
+				[
+					[
+						"Static",
+						"singDOWN",
 						"dad"
 					]
 				]
@@ -2440,14 +2440,34 @@
 				"bpm": 105
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 105,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 105,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 105
 			},
 			{
 				"gfSection": false,

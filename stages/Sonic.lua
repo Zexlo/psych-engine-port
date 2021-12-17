@@ -1,6 +1,6 @@
 function onCreate()
 
-	makeLuaSprite('SKY', 'SKY', -400, -500);
+	makeLuaSprite('SKY', 'SKY', -400, 200);
 	setScrollFactor('SKY', 0.9, 0.9);
 	scaleObject('frontgrass', 1.4, 1);
 
@@ -23,7 +23,7 @@ function onCreate()
 	scaleObject('TAIL', 0.7, 0.7);
 
 
-	makeLuaSprite('FLOOR2', 'FLOOR2', -400, -200);
+	makeLuaSprite('FLOOR2', 'FLOOR2', -400, -050);
 	setScrollFactor('FLOOR2', 0.9, 0.9);
 	scaleObject('FLOOR2', 1.1, 1.1);
 

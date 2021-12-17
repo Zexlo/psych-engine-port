@@ -1,6 +1,6 @@
 timerIntervalDefault = 0.25; -- check random number every [timerInterval] seconds forever
 chanceOfStaticDefault = 10; -- percentage of chance of static trigger
-staticSpeed = 48; -- frames per second of static, 48 = 2x speed
+staticSpeed = 52; -- frames per second of static, 48 = 2x speed
 
 timerInterval = 0; -- create dummies for the future values
 chanceOfStatic = 0;

@@ -2,19 +2,13 @@
 	"storyName": "Bonus songs",
 	"hideFreeplay": false,
 	"weekBackground": "sonic",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
-	"weekCharacters": [
-		"sonic",
-		"mbf",
-		""
-	],
 	"songs": [
 		[
 			"Endless",
@@ -51,7 +45,22 @@
 				20,
 				80
 			]
+		],
+		[
+			"sunshine",
+			"Tdoll",
+			[
+				155,
+				95,
+				0
+			]
 		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
 	],
 	"weekName": "Sonic EXE"
 }

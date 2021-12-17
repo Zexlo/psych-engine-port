@@ -1,0 +1,144 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-14,
+				-140
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BF dies"
+		},
+		{
+			"offsets": [
+				-14,
+				-139
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BF Dead Loop"
+		},
+		{
+			"offsets": [
+				-12,
+				-143
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BF Dead Loop"
+		},
+		{
+			"offsets": [
+				-16,
+				16
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "SSBF IDLE"
+		},
+		{
+			"offsets": [
+				4,
+				28
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "SSBF LEFT"
+		},
+		{
+			"offsets": [
+				1,
+				15
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "SSBF LEFTmiss"
+		},
+		{
+			"offsets": [
+				-11,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "SSBF DOWN"
+		},
+		{
+			"offsets": [
+				-17,
+				22
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "SSBF UP"
+		},
+		{
+			"offsets": [
+				-10,
+				21
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "SSBF RIGHT"
+		},
+		{
+			"offsets": [
+				2,
+				33
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "SSBF DOWNmiss"
+		},
+		{
+			"offsets": [
+				-16,
+				21
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "SSBF UPmiss"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/SSBF_Assets",
+	"position": [
+		100,
+		350
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		0,
+		20
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

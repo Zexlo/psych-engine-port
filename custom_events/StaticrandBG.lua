@@ -5,6 +5,8 @@ staticSpeed = 48; -- frames per second of static, 48 = 2x speed
 timerInterval = 0; -- create dummies for the future values
 chanceOfStatic = 0;
 
+timerOn = false; -- fix canceled timer on pause creating softlock
+
 function onCreate()
     makeAnimatedLuaSprite('StaticRand', 'screenSTATIC', 0, 200); -- init static sprite
      setScrollFactor('screenSTATIC', 0.9, 0.9);
@@ -52,20 +54,28 @@ function onEvent(name, value1, value2)
         --debugPrint(timerInterval, ', ', chanceOfStatic);
 
         if timerInterval == 0 then
-            cancelTimer('TrigRand'); -- cancel timer on a value1 = 0
+            if timerOn then
+                cancelTimer('TrigRand'); -- cancel timer on a value1 = 0
+                timerOn = false;
+            end
         else
             runTimer('TrigRand', timerInterval, 0); -- infinite timer, trigger onTimerCompleted every [timerInterval]
+            timerOn = true;
         end
     end
 end
 
 function onPause()
-    cancelTimer('TrigRand'); -- stop the static effect in the pause screen
+    if timerOn then
+        cancelTimer('TrigRand'); -- stop the static effect in the pause screen
+        timerOn = false;
+    end
     return Function_Continue; -- don't interrupt the pause screen
 end
 
 function onResume()
     runTimer('TrigRand', timerInterval, 0); -- resume timer after unpause
+    timerOn = true;
 end
 
 --[[
@@ -82,5 +92,8 @@ function onTimerCompleted(tag, loops, loopsLeft)
 end
 
 function onDestroy() -- on song end, stop timer
-    cancelTimer('TrigRand');
+    if timerOn then
+        cancelTimer('TrigRand');
+        timerOn = false;
+    end
 end

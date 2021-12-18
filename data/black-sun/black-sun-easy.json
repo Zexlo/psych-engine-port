@@ -2,30 +2,52 @@
 	"song": {
 		"sectionLengths": [],
 		"player1": "bf",
-		"events": [],
+		"events": [
+			[
+				0,
+				[
+					[
+						"Hide-Dad-Notes",
+						"",
+						""
+					]
+				]
+			],
+			[
+				400,
+				[
+					[
+						"Play Animation",
+						"singDOWN",
+						"dad"
+					]
+				]
+			],
+			[
+				800,
+				[
+					[
+						"Play Animation",
+						"singRIGHT",
+						"dad"
+					]
+				]
+			],
+			[
+				1200,
+				[
+					[
+						"Play Animation",
+						"singUP",
+						"dad"
+					]
+				]
+			]
+		],
 		"gfVersion": "fakeGF",
 		"notes": [
 			{
-				"sectionNotes": [
-					[
-						400,
-						1,
-						0,
-						"Hurt Note"
-					],
-					[
-						800,
-						3,
-						0,
-						"Hurt Note"
-					],
-					[
-						1200,
-						2,
-						0,
-						"Hurt Note"
-					]
-				],
+				"sectionNotes": [],
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"mustHitSection": false
@@ -8769,14 +8791,34 @@
 				"bpm": 150
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 150,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 150,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 150
 			},
 			{
 				"gfSection": false,

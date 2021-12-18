@@ -1,0 +1,3 @@
+Makes all receptors spin really quick.
+
+Value 1 and 2 do nothing.

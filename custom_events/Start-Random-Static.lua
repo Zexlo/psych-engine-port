@@ -54,14 +54,15 @@ function onEvent(name, value1, value2)
     end
 end
 
-function onPause()
-    cancelTimer('TrigRand'); -- stop the static effect in the pause screen
-    return Function_Continue; -- don't interrupt the pause screen
-end
+-- function onPause()
+--     cancelTimer('TrigRand'); -- stop the static effect in the pause screen
+--     return Function_Continue; -- don't interrupt the pause screen
+-- end
 
-function onResume()
-    runTimer('TrigRand', timerInterval, 0); -- resume timer after unpause
-end
+-- function onResume()
+--     runTimer('TrigRand', timerInterval, 0); -- resume timer after unpause
+-- end
+-- looks like i am dumb!!!!! and these are not necessary and they're also causing softlocks on resume so bye bye
 
 --[[
     every frame is way too fucking fast and not consistent due to different framerates across platforms and players

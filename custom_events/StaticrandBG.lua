@@ -65,18 +65,19 @@ function onEvent(name, value1, value2)
     end
 end
 
-function onPause()
-    if timerOn then
-        cancelTimer('TrigRand'); -- stop the static effect in the pause screen
-        timerOn = false;
-    end
-    return Function_Continue; -- don't interrupt the pause screen
-end
+-- function onPause()
+--     if timerOn then
+--         cancelTimer('TrigRand'); -- stop the static effect in the pause screen
+--         timerOn = false;
+--     end
+--     return Function_Continue; -- don't interrupt the pause screen
+-- end
 
-function onResume()
-    runTimer('TrigRand', timerInterval, 0); -- resume timer after unpause
-    timerOn = true;
-end
+-- function onResume()
+--     runTimer('TrigRand', timerInterval, 0); -- resume timer after unpause
+--     timerOn = true;
+-- end
+-- refer to start-random-static.lua for more information about why these are nixed
 
 --[[
     every frame is way too fucking fast and not consistent due to different framerates across platforms and players

@@ -1,0 +1,4 @@
+Removes Tails' background sprite
+for 'Sunshine'.
+
+Value 1 and 2 do nothing.

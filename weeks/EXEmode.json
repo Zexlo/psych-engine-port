@@ -1,5 +1,6 @@
 {
 	"storyName": "Sonic EXE",
+	"difficulties": "Hard,Crazy",
 	"hideFreeplay": false,
 	"weekBackground": "EXE",
 	"freeplayColor": [
@@ -9,12 +10,12 @@
 	],
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
 	"weekCharacters": [
 		"",
 		"",
 		""
 	],
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"too slow",

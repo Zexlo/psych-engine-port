@@ -1,5 +1,6 @@
 {
 	"storyName": "Bonus songs",
+	"difficulties": "Hard,Crazy",
 	"hideFreeplay": false,
 	"weekBackground": "sonic",
 	"weekBefore": "tutorial",
@@ -9,6 +10,7 @@
 		253
 	],
 	"startUnlocked": true,
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"Endless",
@@ -56,7 +58,6 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
 	"weekCharacters": [
 		"",
 		"",

@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				-154,
 				-117
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "TailsDoll IDLE",
-			"indices": []
+			"indices": [],
+			"name": "TailsDoll IDLE"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				-147,
-				-137
+				-277,
+				-67
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "TailsDoll RIGHT",
-			"indices": []
+			"indices": [],
+			"name": "TailsDoll RIGHT"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				-77,
-				-131
+				83,
+				-151
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "TailsDoll LEFT",
-			"indices": []
+			"indices": [],
+			"name": "TailsDoll LEFT"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				-117,
-				-71
+				-182,
+				39
 			],
+			"loop": true,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "TailsDoll UP",
-			"indices": []
+			"indices": [],
+			"name": "TailsDoll UP"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				-106,
-				-171
+				-46,
+				-291
 			],
-			"anim": "singDOWN",
+			"loop": true,
 			"fps": 24,
-			"name": "TailsDoll DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "TailsDoll DOWN"
 		}
 	],
 	"no_antialiasing": true,

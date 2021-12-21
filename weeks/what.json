@@ -1,0 +1,67 @@
+{
+	"storyName": "???",
+	"difficulties": "Hard,Crazy",
+	"hideFreeplay": false,
+	"weekBackground": "unkown",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"chaos",
+			"super",
+			[
+				215,
+				173,
+				60
+			]
+		],
+		[
+			"too fest",
+			"sanic",
+			[
+				66,
+				73,
+				253
+			]
+		],
+		[
+			"milk",
+			"sunky",
+			[
+				106,
+				93,
+				255
+			]
+		],
+		[
+			"legacy endless",
+			"majinold",
+			[
+				86,
+				93,
+				255
+			]
+		],
+		[
+			"execution",
+			"lordXold",
+			[
+				126,
+				93,
+				255
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "??"
+}

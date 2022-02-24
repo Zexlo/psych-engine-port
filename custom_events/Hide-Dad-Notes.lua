@@ -1,8 +1,10 @@
 function onEvent(name, value1, value2)
 	if name == 'Hide-Dad-Notes' then
-		noteTweenAlpha('hide1', 0, 0, 0.001, 'linear');
-		noteTweenAlpha('hide2', 1, 0, 0.001, 'linear');
-		noteTweenAlpha('hide3', 2, 0, 0.001, 'linear');
-		noteTweenAlpha('hide4', 3, 0, 0.001, 'linear');
-	end
+	
+setPropertyFromGroup('opponentStrums',0,'alpha',0)
+setPropertyFromGroup('opponentStrums',1,'alpha',0)
+setPropertyFromGroup('opponentStrums',2,'alpha',0)
+setPropertyFromGroup('opponentStrums',3,'alpha',0)
+end
+
 end

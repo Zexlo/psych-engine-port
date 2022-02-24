@@ -19,5 +19,6 @@ function onCreate()
     precacheImage('Greenhill');
     precacheImage('screenstatic');
     precacheImage('screenstaticBG');
+    precacheImage('sonicJUMPSCARE');
 
 end

@@ -1,0 +1,194 @@
+{
+	"song": {
+		"speed": 2.9,
+		"stage": "Sonic",
+		"player1": "bf",
+		"player2": "Sonic",
+		"player3": null,
+		"events": [
+			[
+				0,
+				[
+					[
+						"Hide-Dad-Notes",
+						"",
+						""
+					]
+				]
+			],
+			[
+				84555.5555555556,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"dad"
+					]
+				]
+			],
+			[
+				84888.888888889,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"dad"
+					]
+				]
+			],
+			[
+				85138.888888889,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"dad"
+					]
+				]
+			],
+			[
+				85388.888888889,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"dad"
+					]
+				]
+			],
+			[
+				85638.888888889,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"dad"
+					]
+				]
+			],
+			[
+				85888.888888889,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"dad"
+					]
+				]
+			],
+			[
+				86138.888888889,
+				[
+					[
+						"Play Animation",
+						"laugh",
+						"dad"
+					],
+					[
+						"notefuckery",
+						"",
+						""
+					],
+					[
+						"Change Scroll Speed",
+						"1.2",
+						"4"
+					]
+				]
+			],
+			[
+				129722.222222222,
+				[
+					[
+						"Play Animation",
+						"evil",
+						"dad"
+					]
+				]
+			],
+			[
+				134388.888888889,
+				[
+					[
+						"Blammed Lights",
+						"4",
+						""
+					],
+					[
+						"Screen Shake",
+						"5, 0.005",
+						"5, 0.005"
+					]
+				]
+			],
+			[
+				140222.222222222,
+				[
+					[
+						"Blammed Lights",
+						"0",
+						""
+					],
+					[
+						"Change Scroll Speed",
+						"1.1",
+						"2"
+					]
+				]
+			],
+			[
+				161638.888888889,
+				[
+					[
+						"Blammed Lights",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				166972.222222222,
+				[
+					[
+						"Blammed Lights",
+						"4",
+						""
+					],
+					[
+						"Screen Shake",
+						"15, 0.001",
+						"15, 0.008"
+					]
+				]
+			],
+			[
+				169555.555555556,
+				[
+					[
+						"Jumpscare",
+						"",
+						""
+					]
+				]
+			],
+			[
+				183472.222222223,
+				[
+					[
+						"Blammed Lights",
+						"0",
+						""
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 135,
+		"arrowSkin": "slowcrazy",
+		"needsVoices": true,
+		"song": "too-slow"
+	}
+}

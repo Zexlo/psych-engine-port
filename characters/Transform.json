@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				-5,
+				517
+			],
 			"anim": "idle",
-			"indices": [],
-			"name": "TransformationIDLE"
+			"fps": 24,
+			"name": "TransformationIDLE",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-9,
-				513
-			],
 			"loop": true,
-			"fps": 24,
+			"offsets": [
+				-5,
+				517
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "TransformationUP"
+			"fps": 24,
+			"name": "TransformationUP",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-87,
-				432
-			],
 			"loop": true,
-			"fps": 24,
+			"offsets": [
+				-7,
+				341
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "TransformationRIGHT"
+			"fps": 24,
+			"name": "TransformationRIGHT",
+			"indices": []
 		},
 		{
-			"offsets": [
-				103,
-				262
-			],
 			"loop": true,
-			"fps": 24,
+			"offsets": [
+				13,
+				212
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "TransformationDOWN"
+			"fps": 24,
+			"name": "TransformationDOWN",
+			"indices": []
 		},
 		{
-			"offsets": [
-				121,
-				469
-			],
 			"loop": true,
-			"fps": 24,
+			"offsets": [
+				111,
+				309
+			],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "TransformationLEFT"
+			"fps": 24,
+			"name": "TransformationLEFT",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

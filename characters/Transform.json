@@ -2,6 +2,17 @@
 	"animations": [
 		{
 			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "TransformationIDLE"
+		},
+		{
+			"offsets": [
 				-9,
 				513
 			],

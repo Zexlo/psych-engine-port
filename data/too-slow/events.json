@@ -85,11 +85,6 @@
 						"dad"
 					],
 					[
-						"notefuckery",
-						"",
-						""
-					],
-					[
 						"Change Scroll Speed",
 						"1.2",
 						"4"
@@ -187,7 +182,7 @@
 		"validScore": false,
 		"gfVersion": "gf",
 		"bpm": 135,
-		"arrowSkin": "slowcrazy",
+		"arrowSkin": null,
 		"needsVoices": true,
 		"song": "too-slow"
 	}

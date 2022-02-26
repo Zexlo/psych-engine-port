@@ -1,4 +1,4 @@
-# Friday Night Funkin Psych Engine: VS. Sonic.EXE
+# Friday Night Funkin - Psych Engine: VS. Sonic.EXE
 An unofficial Psych Engine port of the VS. Sonic.EXE mod, originally created by CryBit.  
   
 **All assets used in this port, beside our own Lua scripts and credit icons, are made and owned by the creators of the VS. Sonic.EXE mod, under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 Unported License. See the [full credits](https://gamebanana.com/mods/316022) and [license](https://gamebanana.com/mods/license/316022) on Gamebanana.**  

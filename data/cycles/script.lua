@@ -1,29 +1,14 @@
-local allowCountdown = false;
-function onStartCountdown()
-	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
-		startVideo('SonicEXE');
-		allowCountdown = true;
-		return Function_Stop;
-	end
-	return Function_Continue;
-end
-
 function onCreate()
-	precacheSound('staticsound');
-	precacheImage('sonicJUMPSCARE');
-	precacheImage('screenstatic');
-	precacheSound('Jumpscare');
+    precacheImage('black');
 
-	precacheImage('black');
-
-	precacheImage('StartScreens/CircleTooSlow');
-	precacheImage('StartScreens/TextTooSlow');
+	precacheImage('StartScreens/CircleCycles');
+	precacheImage('StartScreens/TextCycles');
 
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);
-	makeLuaSprite('circle', 'StartScreens/CircleTooSlow', 1280, 0);
+	makeLuaSprite('circle', 'StartScreens/CircleCycles', 1280, 0);
 	addLuaSprite('circle', true);
-	makeLuaSprite('text', 'StartScreens/TextTooSlow', -1280, 0);
+	makeLuaSprite('text', 'StartScreens/TextCycles', -1280, 0);
 	addLuaSprite('text', true);
 
 	setObjectCamera('black', 'hud');

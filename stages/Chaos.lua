@@ -7,10 +7,11 @@ function onCreate()
 	setScrollFactor('CFloor', 1.2, 1.2);
 	scaleObject('CFloor', 0.9, 0.9);
 	
-	makeAnimatedLuaSprite('anim', 'Porker Lewis', 1300, -1000);
-	scaleObject('Porker Lewis', 0.7, 0.7);
-      	addAnimationByPrefix('anim', 'idle', 'PorkerFG', 40, true);
-	objectPlayAnimation('anim', 'PorkerFG', false);
+	makeAnimatedLuaSprite('porker', 'Porker Lewis', 1850, -500);
+	scaleObject('porker', 0.7, 0.7);
+	setScrollFactor('porker', 1.2, 1.2);
+      	addAnimationByPrefix('porker', 'idle', 'PorkerFG', 40, true);
+	objectPlayAnimation('porker', 'PorkerFG', false);
 
 	makeAnimatedLuaSprite('float', 'Emeralds', 400, 000);
       	addAnimationByPrefix('float', 'idle','TheEmeralds', 24, true);
@@ -25,7 +26,7 @@ function onCreate()
 	addLuaSprite('Exetrees', false);
           	addLuaSprite('CFloor', false);
           	addLuaSprite('pebles', false);
-	addLuaSprite('anim', true);
+	addLuaSprite('porker', true);
 	addLuaSprite('float', true);
 
 		

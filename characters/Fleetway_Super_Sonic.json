@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Fleetway Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Fleetway Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				203,
 				-83
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Fleetway Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				10,
 				-230
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Fleetway Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-40,
 				90
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Fleetway Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "HowFast",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway HowFast",
-			"indices": []
+			"anim": "HowFast",
+			"indices": [],
+			"name": "Fleetway HowFast"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-101,
 				-140
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Fleetway Right"
 		}
 	],
 	"no_antialiasing": false,

@@ -11,11 +11,12 @@ function onCreate()
 	scaleObject('porker', 0.7, 0.7);
 	setScrollFactor('porker', 1.2, 1.2);
       	addAnimationByPrefix('porker', 'idle', 'PorkerFG', 40, true);
-	objectPlayAnimation('porker', 'PorkerFG', false);
+	objectPlayAnimation('porker', 'idle', true);
 
-	makeAnimatedLuaSprite('float', 'Emeralds', 400, 000);
-      	addAnimationByPrefix('float', 'idle','TheEmeralds', 24, true);
-	objectPlayAnimation('float', 'TheEmeralds', false);
+	makeAnimatedLuaSprite('emeralds', 'Emeralds', 400, 0);
+    addAnimationByPrefix('emeralds', 'idle','TheEmeralds', 24, true);
+	objectPlayAnimation('emeralds', 'idle', true);
+	addLuaSprite('emeralds', true);
 
 	makeLuaSprite('pebles', 'pebles', -100, 420);
 	setScrollFactor('pebles', 0.9, 0.9);
@@ -27,7 +28,6 @@ function onCreate()
           	addLuaSprite('CFloor', false);
           	addLuaSprite('pebles', false);
 	addLuaSprite('porker', true);
-	addLuaSprite('float', true);
 
 		
 	close(true); --For performance reasons, close this script once the stage is fully loaded, as this script won't be used anymore after loading the stage

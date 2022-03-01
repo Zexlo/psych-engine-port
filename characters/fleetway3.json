@@ -5,9 +5,20 @@
 				330,
 				420
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "Laser Blast",
+			"indices": [],
+			"name": "Fleetway Laser Blast"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
 			"loop": false,
 			"name": "Fleetway Laser Blast"
 		}
@@ -21,8 +32,8 @@
 	"healthicon": "icon-super",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		255,
+		254,
+		209,
 		0
 	],
 	"camera_position": [

@@ -35,7 +35,7 @@ function onUpdate(elapsed)
         freeCam = not freeCam; -- toggle
         textToggle();
         if not freeCam then
-            setProperty('isCameraOnForcedPos', false);
+            setProperty('isCameraOnForcedPos', false); -- release camera
         end
     elseif getKey('two') then -- toggle free cam, staying in place
         freeCam = not freeCam; -- toggle
@@ -50,7 +50,7 @@ function onUpdate(elapsed)
     if freeCam then
         incAmount = 15;
         if getKey('shift', true) then
-            incAmount = 30;
+            incAmount = 30; -- nyoom
         end
 
         if getKey('j', true) then
@@ -65,12 +65,12 @@ function onUpdate(elapsed)
             curY = curY + incAmount;
         end
 
-        triggerEvent('Camera Follow Pos', curX, curY);
+        triggerEvent('Camera Follow Pos', curX, curY); -- has the annoying lerp of in-game camera, but it's more stable than moving cam by vars so eh
     else
-        curX = getProperty('camFollowPos.x');
+        curX = getProperty('camFollowPos.x'); -- save coords
         curY = getProperty('camFollowPos.y');
     end
-    setProperty('health', 2);
+    -- setProperty('health', 2); -- unstoppable force meets immovable object
 end
 
 -- make it easier to get status of key
@@ -81,11 +81,11 @@ function getKey(key, pressing)
         debugPrint('getKey has no key.');
         return false;
     elseif pressing == nil then
-        pressing = false;
+        pressing = false; -- "pressing" = is the key being pressed right now, "pressed" = was the key last pressed 
     end
 
     if pressing then
-        return getPropertyFromClass('flixel.FlxG', 'keys.pressed.' .. key);
+        return getPropertyFromClass('flixel.FlxG', 'keys.pressed.' .. key); -- clever concatenation
     else
         return getPropertyFromClass('flixel.FlxG', 'keys.justPressed.' .. key);
     end
@@ -105,7 +105,7 @@ function textToggle(set)
         addLuaText('freeCamLuaText');
         addLuaText('controlLuaText');
     else
-        removeLuaText('freeCamLuaText', false);
+        removeLuaText('freeCamLuaText', false); -- false, don't destroy the text
         removeLuaText('controlLuaText', false);
     end
 

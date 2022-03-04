@@ -1,16 +1,15 @@
 function onCreate()
 
 	makeLuaSprite('CWall', 'CWall', -2000, -4390);
-	setScrollFactor('CWall', 1.2, 1.2);
+	setScrollFactor('CWall', 0.8, 1);
 	
 	
 	makeLuaSprite('CFloor', 'CFloor', -2000, 300);
-	setScrollFactor('CFloor', 1.2, 1.2);
+	setScrollFactor('CFloor', 1, 1);
 	scaleObject('CFloor', 0.9, 0.9);
 	
-makeAnimatedLuaSprite('hole', 'The Chamber', -800, 100);
-       scaleObject('porker', 0.7, 0.7);
-      	addAnimationByPrefix('hole', 'idle', 'Chamber Sonic Fall', 16, false);
+	makeAnimatedLuaSprite('hole', 'The Chamber', -800, 100);
+    addAnimationByPrefix('hole', 'idle', 'Chamber Sonic Fall', 16, false);
 	objectPlayAnimation('hole', 'idle', false);		
 
 
@@ -18,7 +17,7 @@ makeAnimatedLuaSprite('hole', 'The Chamber', -800, 100);
     addAnimationByPrefix('beam', 'idle','Emerald Beam', 24, true);
 	objectPlayAnimation('emeralds', 'idle', false);
 
-makeAnimatedLuaSprite('emeralds', 'Emeralds', -300, -500);
+	makeAnimatedLuaSprite('emeralds', 'Emeralds', -300, -500);
     addAnimationByPrefix('emeralds', 'idle','TheEmeralds', 24, true);
 	objectPlayAnimation('emeralds', 'idle', true);
 		
@@ -26,17 +25,17 @@ makeAnimatedLuaSprite('emeralds', 'Emeralds', -300, -500);
 	scaleObject('thing', 0.9, 0.9);	
 
 	makeLuaSprite('pebles', 'pebles', -500, 800);
-	setScrollFactor('pebles', 1.2, 1.2);
+	setScrollFactor('pebles', 1, 1);
 	scaleObject('pebles', 0.9, 0.9);
 
 	
-       addLuaSprite('CFloor', false);
-       addLuaSprite('CWall', false);
-       addLuaSprite('thing', false);
-         addLuaSprite('beam', false);
-       addLuaSprite('emeralds', false);
-         addLuaSprite('hole', false);
-       addLuaSprite('pebles', false);
+	addLuaSprite('CFloor', false);
+	addLuaSprite('CWall', false);
+	addLuaSprite('thing', false);
+	addLuaSprite('beam', false);
+	addLuaSprite('emeralds', false);
+	addLuaSprite('hole', false);
+	addLuaSprite('pebles', false);
 		
 	close(true); --For performance reasons, close this script once the stage is fully loaded, as this script won't be used anymore after loading the stage
 end

@@ -16,7 +16,7 @@
 				203,
 				-83
 			],
-			"loop": false,
+			"loop": true,
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
@@ -27,7 +27,7 @@
 				10,
 				-230
 			],
-			"loop": false,
+			"loop": true,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
@@ -38,7 +38,7 @@
 				-40,
 				90
 			],
-			"loop": false,
+			"loop": true,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
@@ -49,7 +49,7 @@
 				-101,
 				-140
 			],
-			"loop": false,
+			"loop": true,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],

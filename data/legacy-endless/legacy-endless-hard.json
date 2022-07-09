@@ -9406,6 +9406,46 @@
 				"bpm": 155
 			},
 			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 155,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 155
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 155
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 155
+			},
+			{
 				"gfSection": false,
 				"lengthInSteps": 16,
 				"altAnim": false,
@@ -9416,12 +9456,14 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "SonicFunAssets",
+		"player2": "majin_new",
 		"player3": null,
+		"splashSkin": "noteSpalshes",
 		"song": "legacy-endless",
 		"stage": "Majin",
 		"validScore": true,
 		"needsVoices": true,
+		"arrowSkin": "Majin_Notes",
 		"bpm": 155,
 		"speed": 3
 	}

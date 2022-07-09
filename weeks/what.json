@@ -3,18 +3,14 @@
 	"difficulties": "Hard,Crazy",
 	"hideFreeplay": false,
 	"weekBackground": "unkown",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"weekCharacters": [
-		"",
-		"",
-		""
-	],
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"legacy endless",
@@ -33,8 +29,30 @@
 				153,
 				215
 			]
+		],
+		[
+			"chaos",
+			"super",
+			[
+				195,
+				175,
+				0
+			]
+		],
+		[
+			"milk",
+			"sunky",
+			[
+				26,
+				113,
+				253
+			]
 		]
 	],
-	"hideStoryMode": false,
-	"weekName": "??"
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekName": "???"
 }

@@ -1,3 +1,3 @@
-Makes all receptors move to a single lane.
-
-Value 1 and 2 do nothing.
+Rotates arrows.
+Value 1 controls the speed.
+Value 2 controls the amount to tween (360 for normal)

@@ -1,33 +1,41 @@
 function onCreate()
 
-	makeLuaSprite('CWall', 'CWall', -800, -500);
-	setScrollFactor('CWall', 0.9, 0.9);
+	makeLuaSprite('CWall', 'CWall', -2000, -4390);
+	setScrollFactor('CWall', 0.8, 1);
 	
-	makeLuaSprite('CFloor', 'CFloor', -350, 300);
-	setScrollFactor('CFloor', 1.2, 1.2);
+	
+	makeLuaSprite('CFloor', 'CFloor', -2000, 300);
+	setScrollFactor('CFloor', 1, 1);
 	scaleObject('CFloor', 0.9, 0.9);
 	
-	makeAnimatedLuaSprite('anim', 'Porker Lewis', 1300, -1000);
-	scaleObject('Porker Lewis', 0.7, 0.7);
-      	addAnimationByPrefix('anim', 'idle', 'PorkerFG', 40, true);
-	objectPlayAnimation('anim', 'PorkerFG', false);
+	makeAnimatedLuaSprite('hole', 'The Chamber', -800, 100);
+    addAnimationByPrefix('hole', 'idle', 'Chamber Sonic Fall', 16, false);
+	objectPlayAnimation('hole', 'idle', false);		
 
-	makeAnimatedLuaSprite('float', 'Emeralds', 400, 000);
-      	addAnimationByPrefix('float', 'idle','TheEmeralds', 24, true);
-	objectPlayAnimation('float', 'TheEmeralds', false);
 
-	makeLuaSprite('pebles', 'pebles', -100, 420);
-	setScrollFactor('pebles', 0.9, 0.9);
+	makeAnimatedLuaSprite('beam', 'Cbeam', -600, -1800);
+    addAnimationByPrefix('beam', 'idle','Emerald Beam', 24, true);
+	objectPlayAnimation('emeralds', 'idle', false);
+
+	makeAnimatedLuaSprite('emeralds', 'Emeralds', -300, -500);
+    addAnimationByPrefix('emeralds', 'idle','TheEmeralds', 24, true);
+	objectPlayAnimation('emeralds', 'idle', true);
+		
+	makeLuaSprite('thing', 'CBG1', -2800, -1400);
+	scaleObject('thing', 0.9, 0.9);	
+
+	makeLuaSprite('pebles', 'pebles', -500, 800);
+	setScrollFactor('pebles', 1, 1);
 	scaleObject('pebles', 0.9, 0.9);
 
-
+	
+	addLuaSprite('CFloor', false);
 	addLuaSprite('CWall', false);
-	addLuaSprite('Exetrees', false);
-          	addLuaSprite('CFloor', false);
-          	addLuaSprite('pebles', false);
-	addLuaSprite('anim', true);
-	addLuaSprite('float', true);
-
+	addLuaSprite('thing', false);
+	addLuaSprite('beam', false);
+	addLuaSprite('emeralds', false);
+	addLuaSprite('hole', false);
+	addLuaSprite('pebles', false);
 		
 	close(true); --For performance reasons, close this script once the stage is fully loaded, as this script won't be used anymore after loading the stage
 end

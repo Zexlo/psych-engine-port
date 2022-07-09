@@ -21,8 +21,8 @@ function onCreate()
    startTime = 0.3;
 
    runTimer('flyin', startTime);
-   runTimer('fadeout', startTime+2);
-   runTimer('beginsong', startTime+0.6);
+   runTimer('fadeout', startTime+2.5);
+   runTimer('beginsong', startTime+2);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)

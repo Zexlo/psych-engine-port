@@ -1,0 +1,40 @@
+{
+	"storyName": "The end",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "unkown",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Triple Trouble",
+			"tails",
+			[
+				255,
+				55,
+				60
+			]
+		],
+		[
+			"Fight or Flight",
+			"starved",
+			[
+				146,
+				13,
+				73
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Bonus Round"
+}

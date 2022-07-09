@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				330,
+				420
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Laser Blast",
+			"indices": [],
+			"name": "Fleetway Laser Blast"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Fleetway Laser Blast"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/fleetway3",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-super",
+	"flip_x": false,
+	"healthbar_colors": [
+		254,
+		209,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

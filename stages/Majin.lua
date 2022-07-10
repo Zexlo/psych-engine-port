@@ -1,34 +1,34 @@
 function onCreate()
 
-	makeLuaSprite('sonicFUNsky', 'sonicFUNsky', -1000, -200);
+	makeLuaSprite('sonicFUNsky', 'endless/sonicFUNsky', -1000, -200);
 	setScrollFactor('sonicFUNsky', 0.9, 0.9);
 		
-	makeLuaSprite('Boppers Front', 'Boppers Front', -400, -300);
+	makeLuaSprite('Boppers Front', 'endless/Boppers Front', -400, -300);
 	setScrollFactor('Boppers Front', 0.9, 0.9);
 	scaleObject('Boppers Front', 1, 1);
 
-       makeLuaSprite('Bush 1', 'Bush 1', -800, 400);
+       makeLuaSprite('Bush 1', 'endless/Bush 1', -800, 400);
 	setScrollFactor('Bush 1', 0.9, 0.9);
 	scaleObject('Bush 1', 1, 1);
 	
-	makeLuaSprite('Bush 2', 'Bush 2', -700, 340);
+	makeLuaSprite('Bush 2', 'endless/Bush 2', -700, 340);
 	setScrollFactor('Bush 2', 0.9, 0.9);
 	scaleObject('Bush 2', 1, 1);
 	
-	makeLuaSprite('grassm', 'grassm', -1200, 400);
+	makeLuaSprite('grassm', 'endless/grassm', -1200, 400);
 	setScrollFactor('grassm', 0.9, 0.9);
 	scaleObject('grassm', 1.1, 1.1);
 		
-       makeAnimatedLuaSprite('Maj1', 'Majin FG1', 700, 600);
+       makeAnimatedLuaSprite('Maj1', 'endless/Majin FG1', 700, 600);
 	addAnimationByPrefix('Maj1', 'idle', 'majin front bopper', 24, true);
 	objectPlayAnimation('Maj1', 'idle', false);
 	
 
-       makeAnimatedLuaSprite('MajB', 'MajinBack', -600, -400);
+       makeAnimatedLuaSprite('MajB', 'endless/MajinBack', -600, -400);
 	addAnimationByPrefix('MajB', 'idle', 'MajinBop2', 24, true);
 	objectPlayAnimation('MajB', 'idle', false);
 	
-	makeAnimatedLuaSprite('MajF', 'MajinFront', -1000, -400);
+	makeAnimatedLuaSprite('MajF', 'endless/MajinFront', -1000, -400);
 	addAnimationByPrefix('MajF', 'idle', 'MajinBop1', 24, true);
 	objectPlayAnimation('MajF', 'idle', false);
 

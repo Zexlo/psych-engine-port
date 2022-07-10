@@ -3,7 +3,7 @@ function onCreate()
   addCharacterToList('Fleetway2', 'dad');
   addCharacterToList('Fleetway3', 'dad');
   addCharacterToList('bf-super', 'bf');
-  precacheImage('characters/Lewis Porker');
+  precacheImage('chaos/Lewis Porker');
 
        setPropertyFromClass('GameOverSubstate', 'characterName', 'bf-fleetway-die'); --Character json file for the death animation
 	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'fnf_loss_sfx'); --put in mods/sounds/

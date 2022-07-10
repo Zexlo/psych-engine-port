@@ -3,7 +3,6 @@ function onCreate()
       	makeLuaSprite('TailsBG', 'TailsBG', -400, -100);
 	setScrollFactor('TailsBG', 0.9, 0.9);
 	scaleObject('TailsBG', 1.1, 1.1);
-
 	addLuaSprite('TailsBG', false);
 
 		

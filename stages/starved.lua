@@ -1,12 +1,12 @@
 function onCreate()
 
-	makeLuaSprite('city','starved/city', -80, -20);
+	makeLuaSprite('city','starved/city', 500, 50);
 	setScrollFactor('city', 0.9, 0.9);
 	
 	makeLuaSprite('redlight','starved/light', -350, 50);
 	setScrollFactor('redlight', 0.9, 0.9);	
 	
-	makeLuaSprite('tower', 'starved/towers', -100, 40);
+	makeLuaSprite('tower', 'starved/towers', 600, 60);
 	setScrollFactor('tower', 0.9, 0.9);
 	scaleObject('tower', 1.1, 1.1);
 

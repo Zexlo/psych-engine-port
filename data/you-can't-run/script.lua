@@ -27,9 +27,9 @@ function onCreate()
 
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);
-	makeLuaSprite('circle', 'StartScreens/CircleYouCantRun', 1280, 0);
+	makeLuaSprite('circle', 'StartScreens/CircleYouCantRun', 1280, 200);
 	addLuaSprite('circle', true);
-	makeLuaSprite('text', 'StartScreens/TextYouCantRun', -1280, 0);
+	makeLuaSprite('text', 'StartScreens/TextYouCantRun', -1280, 250);
 	addLuaSprite('text', true);
 
 	setObjectCamera('black', 'hud');
@@ -44,12 +44,11 @@ end
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 0, 1, 'linear');
-		doTweenX('textfly', 'text', 0, 1, 'linear');
+		doTweenX('circlefly', 'circle', 400, 1, 'linear');
+		doTweenX('textfly', 'text', 250, 1, 'linear');
 	end
 	if tag == 'fadeout' then
 		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
 		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
-		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')
-	end
+		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')	end
 end

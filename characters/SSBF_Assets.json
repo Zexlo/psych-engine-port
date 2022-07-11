@@ -92,7 +92,7 @@
 	"no_antialiasing": true,
 	"image": "characters/SSBF_Assets",
 	"position": [
-		90,
+		290,
 		340
 	],
 	"healthicon": "SSBF",
@@ -103,8 +103,8 @@
 		209
 	],
 	"camera_position": [
-		0,
-		20
+		-150,
+		10
 	],
 	"sing_duration": 4,
 	"scale": 1

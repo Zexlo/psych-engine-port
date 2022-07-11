@@ -2,12 +2,11 @@
 function onCreate()
 	-- triggered when the lua file is started
 
-	-- create a lua sprite called "Porker" which is the tag used in the script to refer the image and it anim to
-	makeAnimatedLuaSprite('Porker', 'chaos/Lewis Porker', 1550, -800); --majing FG2 is the filename in mod/images so change it to your image (it needs to have an XML for its anims)
+	makeAnimatedLuaSprite('Porker', 'chaos/Lewis Porker', 1750, -1200); 
 	addAnimationByPrefix('Porker', 'first', 'PorkerFG', 24, false); --first is just the anim tag in lua it can be whatever, PorkerFG is the animation name from the XML sheet
 	objectPlayAnimation('Porker', 'first');
-	addLuaSprite('Porker', true); -- false = add behind characters in the BG, true = add in front characters, the characters will appear behind these sprites acting as a front layer
-end
+	addLuaSprite('Porker', true); 
+	end
 
 -- Gameplay interactions
 function onBeatHit()

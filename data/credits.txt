@@ -1,4 +1,4 @@
 Sonic EXE V2 Psych Port
 GreyLynx Music::zex:: Main Sonic EXE V2 porter::https://twitter.com/GreyLynx4::0xFF55FFDE
-Hako::hako::Technical/scripting help::https://twitter.com/safecrunchy::0xFFFFC71F
+Hako::::Technical/scripting help::https://twitter.com/safecrunchy::0xFFFFC71F
 Sonic EXE mod team::EXE::Making this awesome mod for everyone to enjoy!::https://gamebanana.com/mods/316022::0xFFFFC71F

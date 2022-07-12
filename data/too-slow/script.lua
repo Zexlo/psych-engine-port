@@ -25,7 +25,7 @@ function onCreate()
 	addLuaSprite('circle', true);
 	makeLuaSprite('text', 'StartScreens/TextTooSlow', -1280, 200);
 	addLuaSprite('text', true);
-         makeLuaSprite('credbox', 'box', 150, -1280);
+         makeLuaSprite('credbox', 'box', 380, -1280);
          scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
 	
@@ -64,7 +64,7 @@ function onCreate()
           addLuaText('wild')
           
        
-	
+	setObjectCamera('credbox', 'hud');
 	setObjectCamera('black', 'hud');
 	setObjectCamera('circle', 'hud');
 	setObjectCamera('text', 'hud');
@@ -75,7 +75,7 @@ function onCreate()
 	runTimer('fadeout', startTime+2.5);
 	runTimer('slidedown', startTime+3);
 	runTimer('beginsong', startTime+4);
-	runTimer('slideup', startTime+7);
+	runTimer('slideup', startTime+9);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
@@ -90,7 +90,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
 	end
 	if tag == 'slidedown' then
 doTweenY('move', 'credits', 50, 1, 'linear');
-doTweenY('move1', 'credbox', 250, 1, 'linear');
+doTweenY('move1', 'credbox', 0, 1, 'linear');
 doTweenY('move2', 'code', 150, 1, 'linear');
 doTweenY('move3', 'jakie', 200, 1, 'linear');
 doTweenY('move4', 'art', 250, 1, 'linear');
@@ -109,7 +109,7 @@ end
 	end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
-     doTweenY('move1', 'credbox', -1280, 1, 'linear');         
+     doTweenY('move1', 'credbox', -1280, 0.4, 'linear');         
        doTweenY('move2', 'code', -1280, 1, 'linear');
        doTweenY('move3', 'jakie', -1280, 1, 'linear');          
        doTweenY('move4', 'art', -1280, 1, 'linear');

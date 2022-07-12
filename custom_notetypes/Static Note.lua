@@ -1,7 +1,7 @@
 function onCreate()
 makeAnimatedLuaSprite('Static', 'screenstatic', 0, 0); -- "234" = sprite X pos, "567" = sprite Y pos
     addAnimationByPrefix('Static', 'idle', 'screenSTATIC', 80, false); -- "24" = framerate of animation, "false" = does the animation loop
-    setObjectCamera('Static', 'hud'); -- shows up in the camera center as he should
+    setObjectCamera('Static', 'hud'); -- shows up in the camera center as it should
     setProperty('Static.alpha', 0);
     addLuaSprite('Static', true);
   	--Iterate over all notes

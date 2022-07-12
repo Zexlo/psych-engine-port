@@ -3,6 +3,7 @@ function onCreate()
  addCharacterToList('SSBF_Assets', 'bf');
   addCharacterToList('3DGO', 'bf');
 
+
 	setPropertyFromClass('GameOverSubstate', 'characterName', '3DGO'); --Character json file for the death animation
 	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'fnf_loss_sfx'); --put in mods/sounds/
 	setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/music/
@@ -27,9 +28,9 @@ function onCreate()
              setProperty('go.alpha', 0);
 	addLuaSprite('go', true);
 
-      	makeLuaSprite('filter', 'grain', 0, 0);
+      	makeLuaSprite('filter', 'grain',0, 0);
        setProperty('filter.alpha', 0.1);      	
-	scaleObject('filter', 2.5, 2.5);
+	scaleObject('filter', 2.8, 2.5);
 	addLuaSprite('filter', true);	
 	
        makeLuaText('credits', 'CREDITS', 770, 250, -1280)
@@ -83,7 +84,7 @@ function onCreate()
       runTimer('wait', startTime+1.2);
       runTimer('wait1', startTime+2.2);
       runTimer('hidego', startTime+2.9); 
-	runTimer('slideup', startTime+6);	
+	runTimer('slideup', startTime+7);	
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
@@ -123,7 +124,7 @@ doTweenY('move12', 'niff', 530, 1, 'linear');
 end
 	       if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
-     doTweenY('move1', 'credbox', -1280, 1, 'linear');
+     doTweenY('move1', 'credbox', -1280, 0.4, 'linear');
        doTweenY('move2', 'code', -1280, 1, 'linear');
        doTweenY('move3', 'jakie', -1280, 1, 'linear');          
        doTweenY('move4', 'art', -1280, 1, 'linear');

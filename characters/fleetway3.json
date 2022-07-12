@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				330,
-				420
+				0,
+				0
 			],
 			"loop": false,
 			"fps": 24,
@@ -16,18 +16,18 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "Fleetway Laser Blast"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/fleetway3",
 	"position": [
-		0,
-		0
+		-850,
+		-850
 	],
 	"healthicon": "icon-super",
 	"flip_x": false,
@@ -37,8 +37,8 @@
 		0
 	],
 	"camera_position": [
-		0,
-		0
+		-1050,
+		-110
 	],
 	"sing_duration": 6.1,
 	"scale": 1

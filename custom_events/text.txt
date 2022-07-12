@@ -1,1 +1,4 @@
-displays text based of value 1
+displays text
+
+Value 1: time to display for
+Value2: text to display

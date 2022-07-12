@@ -1,4 +1,5 @@
 function onCreate()
+
   addCharacterToList('Fleetway1', 'dad');
   addCharacterToList('Fleetway2', 'dad');
   addCharacterToList('Fleetway3', 'dad');
@@ -9,12 +10,8 @@ function onCreate()
 	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'fnf_loss_sfx'); --put in mods/sounds/
 	setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/music/
 	setPropertyFromClass('GameOverSubstate', 'endSoundName', 'gameOverEnd'); --put in mods/music/
-    precacheImage('black');
-
-	precacheImage('StartScreens/CircleCycles');
-	precacheImage('StartScreens/TextCycles');
-
-        makeLuaSprite('credbox', 'box', 380, -1280);
+  
+          makeLuaSprite('credbox', 'box', 380, -1280);
          scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
 	
@@ -60,19 +57,41 @@ function onCreate()
             
           	setObjectCamera('credbox', 'hud');
 
-	startTime = 0.3;
-	runTimer('slidedown', startTime+1);
-	runTimer('beginsong', startTime);
-	runTimer('slideup', startTime+6);
+	startTime = 0.6;
+	
+--Cutscene segment
+runTimer('cutscene', 1);
+setProperty('dad.alpha', 0);
+runTimer('end', 1.2);
+--credits and song start		
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
-	if tag == 'fadeout' then
-		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
-		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
-		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')
+	if tag == 'cutscene' then
+	playSound('robot');
+runTimer('end1', 1.2);	
 	end
-	if tag == 'slidedown' then
+	
+	if tag == 'end1' then
+	runTimer('slidedown', startTime+3);
+	runTimer('beginsong', 3);
+	runTimer('slideup', startTime+8);	
+setProperty('hole.alpha', 0)	
+ setProperty('sonc.alpha', 1)
+  addAnimationByPrefix('sonc', 'idle', 'Chamber Sonic Fall', 16, false); 	 
+	objectPlayAnimation('hole', 'idle', false);
+	playSound('sonic');
+	runTimer('beamer', 1.5)	
+end
+	if tag == 'slidedown' then	
+playSound('beam')
+  setProperty('beam.alpha', 0)
+  setProperty('Charged.alpha', 1)
+     addAnimationByPrefix('thing', 'idle','BGyellow', 24, true);
+	objectPlayAnimation('BGyellow', 'idle', true);
+ 
+end
+	if tag == 'slidedown' then	
 doTweenY('move', 'credits', 50, 1, 'linear');
 doTweenY('move1', 'credbox', 0, 1, 'linear');
 doTweenY('move2', 'code', 120, 1, 'linear');
@@ -87,17 +106,24 @@ doTweenY('move11', 'chart', 440, 1, 'linear');
 doTweenY('move12', 'jac', 470, 1, 'linear');
 doTweenY('move13', 'title', 530, 1, 'linear');
 doTweenY('move14', 'wild', 570, 1, 'linear');
-
-
-
 end
+
 	if tag == 'beginsong' then
-		allowCountdown = true;
+		allowCountdown = true;		
 		startCountdown();
-	end
+end
+	if tag == 'wait' then
+	setProperty('dad.alpha', 1);	
+doTweenY('lol1', 'dad', -700, 0.2, 'linear');
+runTimer('left', 0.4)
+end
+
+	if tag == 'left' then
+doTweenX('lol', 'dad', -700, 2, 'linear');
+end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
-     doTweenY('move1', 'credbox', -1280, 1, 'linear');         
+     doTweenY('move1', 'credbox', -1280, 0.4, 'linear');         
        doTweenY('move2', 'code', -1280, 1, 'linear');
        doTweenY('move3', 'jakie', -1280, 1, 'linear');          
        doTweenY('move4', 'art', -1280, 1, 'linear');
@@ -109,8 +135,10 @@ end
      doTweenY('move11', 'chart', -1280, 1, 'linear');
   doTweenY('move12', 'jac', -1280, 1, 'linear');
   doTweenY('move13', 'title', -1280, 1, 'linear');
-  doTweenY('move14', 'wild', -1280, 1, 'linear');
-
+  doTweenY('move14', 'wild', -1280, 1, 'linear'); 
+ setProperty('defaultOpponentY', -500);
+setProperty('defaultOpponentX', -500);
+close(true);
        end
 end
 function onStartCountdown()
@@ -120,7 +148,10 @@ function onStartCountdown()
 	return Function_Continue;
 end
 
-function onUpdate(elapsed)
-  setProperty('dad.y', defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
- end
+function onTweenCompleted()
+runTimer('wait', 0.2)
+end
 
+--function onUpdate(elapsed)
+ --setProperty('dad.y',defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
+--end

@@ -55,7 +55,7 @@ function onCreate()
 	runTimer('fadeout', startTime+2.5);
 	runTimer('slidedown', startTime+3);
 	runTimer('beginsong', startTime+4);
-	runTimer('slideup', startTime+7);
+	runTimer('slideup', startTime+9);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
@@ -88,7 +88,7 @@ end
 	end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
-     doTweenY('move1', 'credbox', -1280, 1, 'linear');         
+     doTweenY('move1', 'credbox', -1280, 0.4, 'linear');         
        doTweenY('move2', 'code', -1280, 1, 'linear');
        doTweenY('move3', 'jakie', -1280, 1, 'linear');          
        doTweenY('move4', 'art', -1280, 1, 'linear');

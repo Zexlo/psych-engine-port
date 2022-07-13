@@ -2,6 +2,7 @@ local bfx = 200;
 local bfy = 0;
 local zoomshit = 0;
 
+
 allowCountdown = false;
 function onCreate()
 	addCharacterToList('starved_die', 'bf');
@@ -47,9 +48,10 @@ function onUpdate(elapsed)
 	noteTweenX('play2', 6, 635, 0.1, 'quartInOut')
 	noteTweenX('play3', 7, 745, 0.1, 'quartInOut')
      noteTweenAlpha('hidee', 3, 0, 0.001, 'linear');
-	
- 
-        --debugPrint('there');
-    end
+end	
+ function onGameOver()
+setObjectCamera('boyfriend', 'hud');
+return Function_Continue;
+ end
     end
     end

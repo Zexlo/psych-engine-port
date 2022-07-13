@@ -157,8 +157,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				28,
-				14
+				92,
+				-164
 			],
 			"anim": "firstDeath",
 			"fps": 24,
@@ -169,7 +169,7 @@
 			"loop": true,
 			"offsets": [
 				315,
-				-195
+				-188
 			],
 			"anim": "deathLoop",
 			"fps": 24,
@@ -180,7 +180,7 @@
 			"loop": false,
 			"offsets": [
 				315,
-				-195
+				-188
 			],
 			"anim": "deathConfirm",
 			"fps": 24,
@@ -202,8 +202,8 @@
 	"no_antialiasing": false,
 	"image": "characters/starved_die",
 	"position": [
-		-320,
-		-100
+		-310,
+		260
 	],
 	"healthicon": "starved",
 	"flip_x": true,
@@ -214,7 +214,7 @@
 	],
 	"camera_position": [
 		-220,
-		50
+		60
 	],
 	"sing_duration": 4,
 	"scale": 1

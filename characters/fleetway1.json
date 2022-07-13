@@ -1,26 +1,92 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				-6,
-				0
+				60,
+				26
 			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Shut up",
+			"indices": [],
+			"name": "Fleetway Shut Up"
+		},
+		{
+			"offsets": [
+				60,
+				120
+			],
+			"loop": false,
+			"fps": 24,
 			"anim": "Grrr",
-			"fps": 24,
-			"name": "Fleetway Grrr",
-			"indices": []
+			"indices": [],
+			"name": "Fleetway Grrr"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
-				0
+				250,
+				10
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "Laser Blast",
+			"indices": [],
+			"name": "Fleetway Laser Blast"
+		},
+		{
+			"offsets": [
+				90,
+				90
+			],
+			"loop": false,
 			"fps": 24,
-			"name": "Fleetway Laser Blast",
-			"indices": []
+			"anim": "Step it up",
+			"indices": [],
+			"name": "Fleetway StepItUp"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Finished",
+			"indices": [],
+			"name": "Fleetway YoureFinished"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "TooSlow",
+			"indices": [],
+			"name": "Fleetway Too Slow"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "scream",
+			"indices": [],
+			"name": "Fleetway Scream"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "laugh",
+			"indices": [],
+			"name": "Fleetway Laugh"
 		},
 		{
 			"loop": false,
@@ -28,95 +94,29 @@
 				0,
 				0
 			],
-			"anim": "Scream",
-			"fps": 24,
-			"name": "Fleetway Scream",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "Shut Up",
-			"fps": 24,
-			"name": "Fleetway Shut Up",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "Too Slow",
-			"fps": 24,
-			"name": "Fleetway Too Slow",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "WHAT?!",
+			"anim": "WHAT",
 			"fps": 24,
 			"name": "Fleetway WHAT?!",
 			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "StepItUp",
-			"fps": 24,
-			"name": "Fleetway StepItUp",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "YoureFinished",
-			"fps": 24,
-			"name": "Fleetway YoureFinished",
-			"indices": []
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Fleetway Laugh"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/fleetway1",
 	"position": [
-		-700,
+		-500,
 		-500
 	],
-	"healthicon": "icon-super",
+	"healthicon": "super",
 	"flip_x": false,
 	"healthbar_colors": [
-		254,
-		209,
+		220,
+		255,
 		0
 	],
 	"camera_position": [
-		-150,
-		50
+		-50,
+		-50
 	],
-	"sing_duration": 6.1,
-	"scale": 1
+	"sing_duration": 4,
+	"scale": 0.95
 }

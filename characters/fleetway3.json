@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
+				500,
+				500
 			],
 			"loop": false,
 			"fps": 24,
@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				0,
-				0
+				500,
+				500
 			],
 			"loop": false,
 			"fps": 24,
@@ -26,8 +26,8 @@
 	"no_antialiasing": false,
 	"image": "characters/fleetway3",
 	"position": [
-		-850,
-		-850
+		-500,
+		-500
 	],
 	"healthicon": "icon-super",
 	"flip_x": false,
@@ -37,8 +37,8 @@
 		0
 	],
 	"camera_position": [
-		-1050,
-		-110
+		-1590,
+		-540
 	],
 	"sing_duration": 6.1,
 	"scale": 1

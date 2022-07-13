@@ -116,10 +116,12 @@ end
 	setProperty('dad.alpha', 1);	
 doTweenY('lol1', 'dad', -700, 0.2, 'linear');
 runTimer('left', 0.4)
+return Function_Stop;
 end
 
 	if tag == 'left' then
 doTweenX('lol', 'dad', -700, 2, 'linear');
+return Function_Stop;
 end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
@@ -136,8 +138,8 @@ end
   doTweenY('move12', 'jac', -1280, 1, 'linear');
   doTweenY('move13', 'title', -1280, 1, 'linear');
   doTweenY('move14', 'wild', -1280, 1, 'linear'); 
- setProperty('defaultOpponentY', -500);
-setProperty('defaultOpponentX', -500);
+  setProperty('defaultOpponentY', -900);
+ setProperty('defaultOpponentX', -900);
 close(true);
        end
 end
@@ -152,6 +154,13 @@ function onTweenCompleted()
 runTimer('wait', 0.2)
 end
 
---function onUpdate(elapsed)
- --setProperty('dad.y',defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
---end
+function onMoveCamera(focus)
+	if focus >= 'boyfriend' then
+doTweenX('fix', 'dad', -700, 0.1, 'linear');
+doTweenY('fix1', 'dad', -700, 0.1, 'linear');
+elseif focus >= 'dad' then
+doTweenX('fix', 'dad', -700, 0.1, 'linear');
+doTweenY('fix1', 'dad', -700, 0.1, 'linear');
+--setProperty('dad.y',defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
+end
+end

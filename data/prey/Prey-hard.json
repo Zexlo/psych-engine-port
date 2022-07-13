@@ -8293,6 +8293,216 @@
 				"bpm": 176
 			},
 			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 176,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 176,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 176
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 176
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 176
+			},
+			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 176,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 176,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 176,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 176
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 176
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 176,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
 				"gfSection": false,
 				"altAnim": false,
 				"typeOfSection": 0,
@@ -8317,6 +8527,186 @@
 		"gfVersion": "nogf",
 		"events": [
 			[
+				0,
+				[
+					[
+						"BF Fade",
+						"2",
+						"1"
+					]
+				]
+			],
+			[
+				10823.8636363636,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				10909.0909090909,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				24545.4545454545,
+				[
+					[
+						"tweenX",
+						"dad",
+						"1000"
+					]
+				]
+			],
+			[
+				25397.7272727273,
+				[
+					[
+						"tweenX",
+						"boyfriend",
+						"1600"
+					]
+				]
+			],
+			[
+				38181.8181818182,
+				[
+					[
+						"tweenX",
+						"dad",
+						"1300"
+					]
+				]
+			],
+			[
+				38607.9545454545,
+				[
+					[
+						"tweenX",
+						"boyfriend",
+						"1800"
+					]
+				]
+			],
+			[
+				50454.5454545454,
+				[
+					[
+						"Set Cam Zoom",
+						"0.6",
+						""
+					]
+				]
+			],
+			[
+				87272.7272727273,
+				[
+					[
+						"tweenX",
+						"dad",
+						"800"
+					]
+				]
+			],
+			[
+				87954.5454545454,
+				[
+					[
+						"tweenX",
+						"dad",
+						"1600"
+					]
+				]
+			],
+			[
+				88636.3636363636,
+				[
+					[
+						"Set Cam Zoom",
+						"0.6",
+						""
+					]
+				]
+			],
+			[
+				89147.7272727273,
+				[
+					[
+						"tweenX",
+						"boyfriend",
+						"2000"
+					]
+				]
+			],
+			[
+				98181.8181818182,
+				[
+					[
+						"tweenX",
+						"boyfriend",
+						"2200"
+					]
+				]
+			],
+			[
+				100909.090909091,
+				[
+					[
+						"tweenX",
+						"dad",
+						"1800"
+					]
+				]
+			],
+			[
+				117272.727272727,
+				[
+					[
+						"tweenX",
+						"dad",
+						"1850"
+					]
+				]
+			],
+			[
+				126818.181818182,
+				[
+					[
+						"tweenX",
+						"dad",
+						"1500"
+					]
+				]
+			],
+			[
+				130909.090909091,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
+				131505.681818182,
+				[
+					[
+						"tweenX",
+						"dad",
+						"-200"
+					]
+				]
+			],
+			[
 				131676.136363636,
 				[
 					[
@@ -8330,7 +8720,7 @@
 				131761.363636364,
 				[
 					[
-						"Lyrics",
+						"text",
 						"Seems that bucket of bolts had to lay off the nitro this time around!",
 						"3"
 					]
@@ -8347,6 +8737,36 @@
 				]
 			],
 			[
+				132017.045454546,
+				[
+					[
+						"Play Animation",
+						"dialogue",
+						"dad"
+					]
+				]
+			],
+			[
+				132613.636363636,
+				[
+					[
+						"tweenY",
+						"dad",
+						"-150"
+					]
+				]
+			],
+			[
+				132698.863636364,
+				[
+					[
+						"tweenX",
+						"dad",
+						"2300"
+					]
+				]
+			],
+			[
 				135255.681818182,
 				[
 					[
@@ -8357,10 +8777,20 @@
 				]
 			],
 			[
-				136363.636363636,
+				135340.909090909,
 				[
 					[
-						"Lyrics",
+						"text",
+						"Hey redhead!",
+						"1.1"
+					]
+				]
+			],
+			[
+				136278.409090909,
+				[
+					[
+						"text",
 						"Might wanna repair your toys!",
 						"1.1"
 					]
@@ -8370,8 +8800,8 @@
 				138494.318181818,
 				[
 					[
-						"Lyrics",
-						"You don't even know your fate, hedgehog...--0xFF0000",
+						"text",
+						"You don't even know your fate, hedgehog...",
 						"3.7"
 					]
 				]
@@ -8380,8 +8810,8 @@
 				142840.909090909,
 				[
 					[
-						"Lyrics",
-						"*Maniacal kackling*--0xFF0000",
+						"text",
+						"*Maniacal kackling*",
 						"8.9"
 					]
 				]
@@ -8397,21 +8827,62 @@
 				]
 			],
 			[
+				152642.045454545,
+				[
+					[
+						"tweenX",
+						"boyfriend",
+						"2300"
+					]
+				]
+			],
+			[
+				152727.272727273,
+				[
+					[
+						"Set Cam Zoom",
+						"0.5",
+						""
+					]
+				]
+			],
+			[
+				269999.999999999,
+				[
+					[
+						"Set Cam Zoom",
+						"1",
+						""
+					]
+				]
+			],
+			[
 				284232.954545453,
 				[
 					[
-						"Lyrics",
+						"text",
 						"Man, you really like scrambling your own plans don't'cha-",
 						"3"
+					]
+				]
+			],
+			[
+				286960.227272726,
+				[
+					[
+						"Flash Camera",
+						"1",
+						""
 					]
 				]
 			]
 		],
 		"player3": null,
 		"song": "Prey",
+		"arrowSkin": "",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "stage",
+		"stage": "stardust",
 		"bpm": 176,
 		"speed": 3.5
 	}

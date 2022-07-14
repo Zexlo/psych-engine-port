@@ -164,3 +164,7 @@ doTweenY('fix1', 'dad', -700, 0.1, 'linear');
 --setProperty('dad.y',defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
 end
 end
+
+function onUpdate(elasped)
+doTweenColor('ColorTween', 'timeBar', 'F6b949', 1, 'linear')
+end

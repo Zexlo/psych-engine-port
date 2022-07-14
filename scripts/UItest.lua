@@ -1,4 +1,12 @@
+
 function onCreate()
+--setPropertyFromClass('openfl.Lib', 'application.window.width', 1280-320)
+        --setPropertyFromClass('flixel.FlxG', 'mouse.visible', true);
+	--runHaxeCode([[
+	--FlxG.mouse.unload();
+	--FlxG.log.add("Sexy mouse cursor " + Paths.image("custom_mouse_cursor"));
+	--FlxG.mouse.load(Paths.image("custom_mouse_cursor").bitmap, 1.5, 0);
+	--]])
 
 luaDebugMode = true
 makeLuaSprite('obj1', 'pause/top', -100, 0);
@@ -35,8 +43,7 @@ setProperty('obj1.alpha', 0);
 return Function_Continue;
 end
 
-function onGameOverConfirm(retry)
- if tag == 'retry' then
-doTweenColor('bfColorTween', 'boyfriend', 'FF0000', 0.2, 'linear')
-end
-end
+--function onDestroy()
+--setPropertyFromClass('flixel.FlxG', 'mouse.visible', false);
+--runHaxeCode('FlxG.mouse.unload();')
+--end

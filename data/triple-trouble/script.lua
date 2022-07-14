@@ -61,3 +61,6 @@ function onStartCountdown()
 	end
 	return Function_Continue;
 end
+function onUpdate(elasped)
+doTweenColor('ColorTween', 'timeBar', '6C18C5', 1, 'linear')
+end

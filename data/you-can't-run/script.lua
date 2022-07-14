@@ -52,3 +52,6 @@ function onTimerCompleted(tag, loops, loopsLeft)
 		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
 		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')	end
 end
+function onUpdate(elasped)
+doTweenColor('ColorTween', 'timeBar', '4735C1', 1, 'linear')
+end

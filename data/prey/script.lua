@@ -75,6 +75,6 @@ noteTweenAlpha('ha', 0, 1, 0.6, 'linear');
  noteTweenAlpha('hd', 3, 1, 0.6, 'linear');
 end
 end
---function onUpdate()
---setProperty('boyfriend.x',970 + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*30);
---end
+function onUpdate(elasped)
+doTweenColor('ColorTween', 'timeBar', '6D7175', 1, 'linear')
+end

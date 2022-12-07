@@ -1,0 +1,44 @@
+{
+	"storyName": "Bonus Round",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "what",
+	"weekBefore": "???",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"new milk",
+			"sunky",
+			[
+				195,
+				55,
+				100
+			]
+		],
+		[
+			"too fest",
+			"sanic",
+			[
+				235,
+				55,
+				100
+			]
+		],
+		[
+			"personel",
+			"coldsteel",
+			[
+				195,
+				55,
+				100
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Bonus Round"
+}

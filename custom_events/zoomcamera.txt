@@ -1,0 +1,2 @@
+zooms the camera based of value 1 and 2.
+Value 1 determines the amount to zoom in.

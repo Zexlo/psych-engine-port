@@ -1,0 +1,49 @@
+{
+	"storyName": "Sonic EXE",
+	"difficulties": "Hard,Crazy",
+	"hideFreeplay": false,
+	"weekBackground": "EXE",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"too slow",
+			"sonic",
+			[
+				66,
+				53,
+				253
+			]
+		],
+		[
+			"you can't run",
+			"run",
+			[
+				46,
+				80,
+				175
+			]
+		],
+		[
+			"Triple Trouble",
+			"Tails",
+			[
+				86,
+				113,
+				173
+			]
+		]
+	],
+	"weekName": "SonicEXE"
+}

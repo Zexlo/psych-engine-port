@@ -1,0 +1,3 @@
+Rotates arrows.
+Value 1 controls the speed.
+Value 2 controls the amount to tween (360 for normal)

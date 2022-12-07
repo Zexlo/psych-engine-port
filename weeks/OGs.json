@@ -1,0 +1,50 @@
+{
+	"storyName": "The OGs",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "OG",
+	"weekBefore": "what",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": false,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Endless og",
+			"majinold",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Execution",
+			"lordX",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"milk",
+			"sunky",
+			[
+				206,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "the OGs"
+}

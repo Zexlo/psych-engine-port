@@ -1,0 +1,35 @@
+{
+	"storyName": "The end",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "end",
+	"weekBefore": "???",
+	"startUnlocked": true,
+	"songs": [
+		[
+			"Prey",
+			"furnace",
+			[
+				195,
+				55,
+				100
+			]
+		],
+		[
+			"Fight or Flight",
+			"starved",
+			[
+				115,
+				0,
+				0
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekName": "The end"
+}

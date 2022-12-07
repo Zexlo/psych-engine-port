@@ -1,0 +1,3 @@
+Hides the opponent's notes and receptors.
+
+Value 1 and 2 do nothing.

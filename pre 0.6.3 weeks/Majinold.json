@@ -1,0 +1,49 @@
+{
+	"storyName": "Bonus songs",
+	"difficulties": "Hard,Crazy",
+	"hideFreeplay": false,
+	"weekBackground": "sonic",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"Endless",
+			"Majin",
+			[
+				66,
+				120,
+				215
+			]
+		],
+		[
+			"Cycles",
+			"lordX",
+			[
+				195,
+				173,
+				255
+			]
+		],
+		[
+			"sunshine",
+			"Tdoll",
+			[
+				155,
+				95,
+				0
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekName": "Sonic EXE"
+}

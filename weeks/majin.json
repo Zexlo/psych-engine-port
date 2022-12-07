@@ -1,0 +1,68 @@
+{
+	"storyName": "Round 2",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "sonic",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Endless",
+			"majin",
+			[
+				106,
+				113,
+				255
+			]
+		],
+		[
+			"Cycles",
+			"lordX",
+			[
+				106,
+				113,
+				253
+			]
+		],
+		[
+			"Sunshine",
+			"Tdoll",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Soulless",
+			"Tdoll",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Chaos",
+			"Super",
+			[
+				186,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Round 2 Sonic EXE",
+	"hiddenUntilUnlocked": false
+}

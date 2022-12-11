@@ -28,4 +28,5 @@ if tag == '1' then
 	elseif quote == (6) then	
 	playSound('XLines/6', 1)
 	end
-end	
+end
+end

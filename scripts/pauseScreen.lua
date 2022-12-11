@@ -87,6 +87,9 @@ makeLuaSprite('disk', 'covers/blankrecord', -800, 250)
 elseif songName == 'Fight or Flight' then
 makeLuaSprite('disk', 'covers/blankrecord', -800, 250)
 
+elseif songName == 'personel' then
+makeLuaSprite('disk', 'covers/DONOTSTEEL', -800, 250)
+
 else
 makeLuaSprite('disk', 'covers/cantrun', -800, 250)
 	end

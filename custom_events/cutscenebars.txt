@@ -1,0 +1,3 @@
+displays the cutscene bars for prey
+
+Value 1 = type remove to remove the bars

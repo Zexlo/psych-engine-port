@@ -37,9 +37,10 @@ if tag == 'begin' then
 	end
 	
 function onGameOverConfirm(retry)
-
+if songName == 'Too slow' or songName == 'Cycles' or songName == 'Execution' then
 	setProperty('boyfriend.alpha', 0);
 	objectPlayAnimation('sonic', 'end',true);
 	doTweenX('fixXs', 'sonic', 320, 0.01, 'sineOut')
 	doTweenY('fixYs', 'sonic', -110, 0.01, 'sineOut')	
+	end
 	end

@@ -7,18 +7,13 @@ function onCreate()
 	
 	makeLuaSprite("bg2", spriteName, width-20, -400)
 	
-makeLuaSprite('dark', 'black', -100, 200);
+makeLuaSprite('dark', 'black', -150, 200);
 	setScrollFactor('dark', 0.9, 1);
-	scaleObject('dark', 2, 1.3);
-
-makeLuaSprite('cover', 'black', 0, -300);
-	setScrollFactor('cover', 0.9, 1);
-	scaleObject('cover', 2, 0.8);
+	scaleObject('dark', 2, 3);
 
 	addLuaSprite("bg1", false)
 	addLuaSprite("bg2", false)
 	addLuaSprite('dark', false);
-       addLuaSprite('cover', false);
 	setObjectCamera('cover', 'other');
 
 	close(true); 

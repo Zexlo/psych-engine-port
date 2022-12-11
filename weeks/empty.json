@@ -5,6 +5,11 @@
 	"weekBackground": "end",
 	"weekBefore": "???",
 	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
 	"songs": [
 		[
 			"Prey",
@@ -26,10 +31,5 @@
 		]
 	],
 	"hideStoryMode": false,
-	"weekCharacters": [
-		"",
-		"",
-		""
-	],
 	"weekName": "The end"
 }

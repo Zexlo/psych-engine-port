@@ -1,7 +1,7 @@
 {
 	"name": "Sonic EXE V2 Psych Port",
-	"description": "A faithful Psych engine port of the Sonic EXE V2 mod, It feautres every song from the V2 update including some enchancements only available using this psych engine port!",
+	"description": "A faithful Psych engine port of the Sonic EXE mod, It feautres (nearly) all songs from the V2 update including some added to the cancelled V2.5/3 build. Some enhancements have been made in this psych engine port!",
 	"restart":true,
-	"runsGlobally": true,
+	"runsGlobally": false,
 	"color": [170, 0, 255]
 }

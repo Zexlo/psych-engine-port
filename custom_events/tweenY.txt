@@ -1,1 +1,1 @@
-Tweens Value1 by Value2 on the X co-ordinate 
+Tweens Value1 by Value2 on the Y co-ordinate 

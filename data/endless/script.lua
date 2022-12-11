@@ -70,8 +70,7 @@ end
 
 function onUpdate(elasped)
 	setTextString('timeTxt', 'inf')
-	setTextString('songMisses', 'inf')
-doTweenColor('ColorTween', 'timeBar', '000000', 1, 'linear')
+	doTweenColor('ColorTween', 'timeBar', '000000', 1, 'linear')
 end
 
 function onTweenCompleted(tag)

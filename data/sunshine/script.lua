@@ -156,3 +156,10 @@ end
 function onUpdate(elasped)
 doTweenColor('ColorTween', 'timeBar', 'E69138', 1, 'linear')
 end
+
+function opponentNoteHit(id, direction, noteType, isSustainNote)
+ if direction == 'Up' then
+addHaxeLibrary('FlxTrail', 'flixel.addons.effects')
+runHaxeCode('game.addBehindDad(new FlxTrail(game.dad, null, 4, 24, 0.3, 0.069));')-- Works the same as goodNoteHit, but for Opponent's notes being hit
+end
+end

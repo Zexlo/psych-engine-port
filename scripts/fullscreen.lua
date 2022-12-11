@@ -1,5 +1,5 @@
 function onCreate()
-
+    setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
 	makeLuaSprite('nah', 'nocheating', 0, 0);
 	addLuaSprite('nah', true);
 	setObjectCamera('nah', 'other')
@@ -30,6 +30,10 @@ if curBeat % 2 == 0 then
 end	
 
 function onUpdatePost(elapsed)
+
+if songName == 'Endless' or songName == 'Endless og' then
+	setTextString('timeTxt', 'inf')
+	end
     setProperty('iconP1.x', screenWidth - 430)
     setProperty('iconP2.x', 285)
 

@@ -3,46 +3,38 @@
 		{
 			"loop": false,
 			"offsets": [
-				-6,
-				0
+				102,
+				36
 			],
-			"anim": "idle",
+			"anim": "firstDeath",
 			"fps": 24,
-			"name": "BF idle dance",
+			"name": "omnomnom",
 			"indices": []
 		},
 		{
 			"offsets": [
-				92,
-				-164
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "firstDeath",
-			"indices": [],
-			"name": "omnomnom"
-		},
-		{
-			"offsets": [
 				315,
 				-188
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "deathLoop",
-			"indices": [],
-			"name": "loop"
+			"loop": true,
+			"name": "spookman"
 		},
 		{
 			"offsets": [
-				315,
-				-188
+				20,
+				142
 			],
-			"loop": false,
+			"indices": [
+				15,
+				17
+			],
 			"fps": 24,
 			"anim": "deathConfirm",
-			"indices": [],
-			"name": "loop"
+			"loop": false,
+			"name": "omnomnom"
 		}
 	],
 	"no_antialiasing": false,

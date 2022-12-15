@@ -1,0 +1,1 @@
+plays a random unused voice line from coldsteel.

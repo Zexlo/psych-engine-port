@@ -61,7 +61,6 @@ function onCreate()
 	
 --Cutscene segment
 runTimer('cutscene', 1);
-setProperty('dad.alpha', 0);
 runTimer('end', 1.2);
 --credits and song start		
 end
@@ -139,17 +138,6 @@ end
 		allowCountdown = true;		
 		startCountdown();
 end
-	if tag == 'wait' then
-	setProperty('dad.alpha', 1);	
-doTweenY('lol1', 'dad', -700, 0.2, 'linear');
-runTimer('left', 0.4)
-return Function_Stop;
-end
-
-	if tag == 'left' then
-doTweenX('lol', 'dad', -700, 2, 'linear');
-return Function_Stop;
-end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
      doTweenY('move1', 'credbox', -1280, 0.4, 'linear');         
@@ -165,11 +153,10 @@ end
   doTweenY('move12', 'jac', -1280, 1, 'linear');
   doTweenY('move13', 'title', -1280, 1, 'linear');
   doTweenY('move14', 'wild', -1280, 1, 'linear'); 
-  setProperty('defaultOpponentY', -900);
- setProperty('defaultOpponentX', -900);
 close(true);
        end
 end
+
 function onStartCountdown()
 	if not allowCountdown then
 		return Function_Stop;
@@ -177,23 +164,53 @@ function onStartCountdown()
 	return Function_Continue;
 end
 
-function onTweenCompleted()
-runTimer('wait', 0.2)
-end
-
-function onMoveCamera(focus)
-	if focus >= 'boyfriend' then
-doTweenX('fix', 'dad', -700, 0.1, 'linear');
-doTweenY('fix1', 'dad', -700, 0.1, 'linear');
-elseif focus >= 'dad' then
-doTweenX('fix', 'dad', -700, 0.1, 'linear');
-doTweenY('fix1', 'dad', -700, 0.1, 'linear');
---setProperty('dad.y',defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
-end
-end
-
 function onUpdate(elasped)
 doTweenColor('ColorTween', 'timeBar', 'F6b949', 1, 'linear')
+
+if curBeat >= 30 then
+setProperty('dad.y',defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
+end
+
+if curBeat == 0 then
+setProperty('dad.alpha', 0);
+doTweenY('setup1', 'dad', 0, 0.2, 'linear');
+doTweenX('setup2', 'dad', 0, 0.2, 'linear');
+setProperty('healthBarBG.visible', false)
+setProperty('healthBar.visible', false)
+setProperty('scoreTxt.visible', false)
+setProperty('timeTxt.visible', false)
+setProperty('iconP1.visible', false)
+setProperty('iconP2.visible', false)
+setProperty('timeBar.visible', false)
+setProperty('timeBarBG.visible', false)
+setProperty('song.visible', false)
+end
+
+if curBeat > 1 then
+setProperty('healthBarBG.visible', true)
+setProperty('healthBar.visible', true)
+setProperty('scoreTxt.visible', true)
+setProperty('timeTxt.visible', true)
+setProperty('iconP1.visible', true)
+setProperty('iconP2.visible', true)
+setProperty('timeBar.visible', true)
+setProperty('timeBarBG.visible', true)
+setProperty('song.visible', true)
+setProperty('dad.alpha', 1);	
+doTweenY('lol1', 'dad', -700, 0.2, 'linear');
+end
+
+if curBeat == 6 then
+doTweenX('lol', 'dad', -700, 2, 'linear');
+end
+
+if curBeat >= 64 and curBeat <=70 then
+setObjectOrder('dad', getObjectOrder('boyfriend')+1)
+
+else 
+setObjectOrder('dad', getObjectOrder('boyfriend')-1)
+
+end
 end
 
 function onGameOverStart()

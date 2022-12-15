@@ -69,13 +69,13 @@ makeLuaSprite('disk', 'covers/tooslow', -800, 250)
 elseif songName == 'Milk' or songName == 'New Milk' then
 makeLuaSprite('disk', 'covers/milk', -800, 250)
 
-elseif songName == 'Cycles' or songName == 'Execution' then
+elseif songName == 'Cycles' or songName == 'Execution' or songName == 'Cycles Remastered' then
 makeLuaSprite('disk', 'covers/lordX', -800, 250)
 
 elseif songName == 'Endless' or songName == 'Endless og' then
 makeLuaSprite('disk', 'covers/endless', -800, 250)
 
-elseif songName == 'Too Fest' then
+elseif songName == 'Too Fest' or songName == 'Too Fest OG' then
 makeLuaSprite('disk', 'covers/toofest', -800, 250)
 
 elseif songName == 'Chaos' then
@@ -87,6 +87,9 @@ makeLuaSprite('disk', 'covers/blankrecord', -800, 250)
 elseif songName == 'Fight or Flight' then
 makeLuaSprite('disk', 'covers/blankrecord', -800, 250)
 
+elseif songName == 'Substantial' or songName == 'Digitalized' then
+makeLuaSprite('disk', 'covers/blankrecord', -800, 250)
+
 elseif songName == 'personel' then
 makeLuaSprite('disk', 'covers/DONOTSTEEL', -800, 250)
 
@@ -96,7 +99,7 @@ makeLuaSprite('disk', 'covers/cantrun', -800, 250)
 
 
 
-	scaleObject('disk', 0.15, 0.15); 	
+	scaleObject('disk', 0.28, 0.28); 	
 	setObjectCamera('disk', 'other')
 	addLuaSprite('disk')
 	setObjectOrder('disk', getObjectOrder('pauseLeft')+1)

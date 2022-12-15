@@ -1,8 +1,8 @@
 {
-	"storyName": "Round 2",
+	"storyName": "Fun is infinite - majin",
 	"difficulties": "Hard",
 	"hideFreeplay": false,
-	"weekBackground": "sonic",
+	"weekBackground": "Majin",
 	"freeplayColor": [
 		146,
 		113,
@@ -26,34 +26,16 @@
 			]
 		],
 		[
-			"Cycles",
-			"lordX",
+			"Endless og",
+			"majinold",
 			[
 				106,
 				113,
 				253
 			]
-		],
-		[
-			"Sunshine",
-			"Tdoll",
-			[
-				146,
-				113,
-				253
-			]
-		],
-		[
-			"Chaos",
-			"Super",
-			[
-				186,
-				113,
-				253
-			]
 		]
 	],
-	"hideStoryMode": false,
+	"hideStoryMode": true,
 	"weekName": "Round 2 Sonic EXE",
 	"hiddenUntilUnlocked": false
 }

@@ -59,7 +59,7 @@ function onCreate()
 	runTimer('fadeout', startTime+1.5);
 	runTimer('slidedown', startTime+3);
 	runTimer('beginsong', startTime+4);
-	runTimer('slideup', startTime+12);
+	runTimer('slideup', startTime+9);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)

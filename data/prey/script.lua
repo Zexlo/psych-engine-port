@@ -66,10 +66,11 @@ setProperty('timeBar.visible', true)
 setProperty('timeBarBG.visible', true)
 setProperty('song.visible', true)
 end
-end
 
-function onSongStart()
- end
+if tag == 'sound' then
+playSound('Furnace',0.5)
+end
+end
 
 function onUpdate(elasped) 
 doTweenColor('ColorTween', 'timeBar', '6D7175', 1, 'linear')
@@ -84,6 +85,11 @@ if stophide == false then
  noteTweenAlpha('d', 7, 0, 0.001, 'linear'); 
  noteTweenAlpha('i', 7, 0, 0.001, 'linear'); 
 end
+
+if curBeat == 49 then
+runTimer('sound', 1)
+end
+
 end
 
 function onGameOverStart()

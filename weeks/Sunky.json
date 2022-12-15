@@ -1,0 +1,35 @@
+{
+	"storyName": "fnf.mpeg",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "what",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"milk",
+			"sunky",
+			[
+				195,
+				55,
+				100
+			]
+		],
+		[
+			"milk og",
+			"sunky",
+			[
+				235,
+				55,
+				100
+			  ]
+			]
+		],
+	"hideStoryMode": true,
+	"weekName": "Bonus Round"
+}

@@ -1,4 +1,3 @@
-local health
 local volume
 local stop = false
 local allowCountdown = false
@@ -18,6 +17,11 @@ function onCreate()
 	setProperty('void.visible', false)
 end
 
+function onTimerCompleted(tag, loops, loopsLeft)
+if tag == '1' then
+playSound('Coldsteel/mymother',0.4)
+end
+end
 
 function onUpdate(elapsed)
 doTweenColor('ColorTween', 'timeBar', 'FF00FF', 1, 'linear')
@@ -25,6 +29,11 @@ doTweenColor('ColorTween', 'timeBar', 'FF00FF', 1, 'linear')
 	if curBeat == 1 then
 		setPropertyFromClass("openfl.Lib", "application.window.title", "psssh...nothin personnel...kid...")
 	end
+
+if curBeat == 308 then
+         runTimer('1', 2, 1)
+end	
+	
 	if curBeat >= 300 and curBeat <= 315 then
 		-- oppt notespin
 		noteTweenAngle('E', 0, angle, 0.001, linear);

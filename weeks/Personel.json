@@ -1,0 +1,26 @@
+{
+	"storyName": "Coldsteel",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "coldsteel",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"personel",
+			"coldsteel",
+			[
+				66,
+				53,
+				253
+			]
+		]
+	],
+	"weekName": "Coldsteel"
+}

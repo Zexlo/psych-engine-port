@@ -95,7 +95,6 @@ function onGameOverStart()
 
 	start = 10;
 	finish = 3;
-	stop = 1.8;
 	--countdown = 1;
 	
 	runTimer('end', start);
@@ -119,12 +118,12 @@ function onGameOverStart()
 	
 	setProperty('ded.alpha', 0);
 	setProperty('maj.alpha', 0);
-	doTweenAlpha('show', 'ded', 1, 5, 'sineOut')
+	doTweenAlpha('show', 'ded', 5, 5, 'sineOut')
 
 function onTimerCompleted(tag, loops, loopsLeft)
 
 if tag == 'end' then
-	doTweenAlpha('hide', 'boyfriend', 0, 0.2, 'sineOut')
+	setProperty('boyfriend.alpha', 0);
 	doTweenAlpha('showmaj', 'maj', 1, 0.2, 'sineOut')
 runTimer('endit', finish);
 --runTimer('b', countdown);
@@ -140,7 +139,7 @@ playSound('majinend');
 end	
 
 if tag == 'kill' then
-	runTimer('bye', stop);
+	runTimer('bye', 1.9);
 	doTweenAlpha('hidemaj', 'maj', 0, 1.2, 'sineOut')
 
 end

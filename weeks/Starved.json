@@ -1,0 +1,35 @@
+{
+	"storyName": "Starved",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "end",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Prey",
+			"furnace",
+			[
+				195,
+				55,
+				100
+				]
+		],
+		[
+			"Fight or Flight",
+			"starved",
+			[
+				115,
+				0,
+				0
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "Starved"
+}

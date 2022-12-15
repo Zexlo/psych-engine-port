@@ -1,0 +1,50 @@
+{
+	"songs": [
+		[
+			"Substantial",
+			"sonicpix",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Digitalized",
+			"sonicpix",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Malediction",
+			"curse-happy",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "end",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "Abandoned",
+	"weekName": "V3 scrapped songs",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

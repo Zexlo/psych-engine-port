@@ -1,0 +1,50 @@
+{
+	"storyName": "LordX",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "lordX",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"execution",
+			"lordX",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"cycles",
+			"lordX",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"cycles remastered",
+			"lordX",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "LordX",
+	"hiddenUntilUnlocked": false
+}

@@ -1,0 +1,26 @@
+{
+	"storyName": "Sonic.exe",
+	"difficulties": "Hard",
+	"hideFreeplay": true,
+	"weekBackground": "Tooslow",
+	"weekBefore": "Week 7",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"too slow",
+			"sonic",
+			[
+				66,
+				53,
+				253
+			]
+		]
+	],
+	"weekName": "Sonic.exe"
+}

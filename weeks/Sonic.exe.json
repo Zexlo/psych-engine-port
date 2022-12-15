@@ -1,0 +1,23 @@
+{
+	"songs": [
+		["too slow", "sonic", [66, 53, 253]],
+		["you can't run", "run", [46, 80, 175]],
+		["Triple Trouble", "Beast", [86, 113, 173]]
+	],
+
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"weekBackground": "EXE",
+
+	"storyName": "Sonic.exe",
+	"difficulties": "Hard",
+	"weekBefore": "Week 7",
+	"weekName": "Sonic.exe",
+	"startUnlocked": true,
+
+	"hideStoryMode": false,
+	"hideFreeplay": false
+}

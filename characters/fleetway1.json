@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				60,
-				26
+				0,
+				0
 			],
 			"loop": false,
 			"fps": 24,
@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				60,
-				120
+				0,
+				0
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				250,
-				10
+				0,
+				0
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				90,
-				90
+				0,
+				0
 			],
 			"loop": false,
 			"fps": 24,
@@ -103,8 +103,8 @@
 	"no_antialiasing": false,
 	"image": "characters/fleetway1",
 	"position": [
-		-500,
-		-500
+		-120,
+		0
 	],
 	"healthicon": "super",
 	"flip_x": false,

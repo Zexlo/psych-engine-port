@@ -1,7 +1,6 @@
 function onCreate()
- addCharacterToList('Tails_Doll_Alt', 'dad');
- addCharacterToList('SSBF_Assets', 'bf');
-  addCharacterToList('3DGO', 'bf');
+	addCharacterToList('Tails_Doll_Alt', 'dad');
+	addCharacterToList('3DGO', 'bf');
 
 --setPropertyFromClass('lime.app.Application', 'current.window.width', 854)
 --setPropertyFromClass('lime.app.Application', 'current.window.height', 480)
@@ -155,6 +154,29 @@ end
 
 function onUpdate(elasped)
 doTweenColor('ColorTween', 'timeBar', 'E69138', 1, 'linear')
+
+if curBeat >= 147 and curBeat <215 then
+  removeLuaSprite('TailsBG', false);
+    noteTweenX('play0', 4, 415, 0.05, 'SineInOut')
+	noteTweenX('play1', 5, 525, 0.05, 'SineInOut')
+	noteTweenX('play2', 6, 635, 0.05, 'SineInOut')
+	noteTweenX('play3', 7, 745, 0.05, 'SineInOut')
+    noteTweenAlpha('hidee', 3, 0, 0.05, 'expoInOut');
+	
+elseif curBeat >=215 and not middlescroll then
+  addLuaSprite('TailsBG', false);
+         setPropertyFromGroup('playerStrums', 0, 'x', defaultPlayerStrumX0)
+        setPropertyFromGroup('playerStrums', 1, 'x', defaultPlayerStrumX1)
+        setPropertyFromGroup('playerStrums', 2, 'x', defaultPlayerStrumX2)
+        setPropertyFromGroup('playerStrums', 3, 'x', defaultPlayerStrumX3)
+        setPropertyFromGroup('playerStrums', 4, 'x', defaultPlayerStrumX4)
+
+        setPropertyFromGroup('opponentStrums', 0, 'x', defaultOpponentStrumX0 + 40)
+        setPropertyFromGroup('opponentStrums', 1, 'x', defaultOpponentStrumX1 + 43)
+        setPropertyFromGroup('opponentStrums', 2, 'x', defaultOpponentStrumX2 + 40)
+        setPropertyFromGroup('opponentStrums', 3, 'x', defaultOpponentStrumX3 + 46)
+        setPropertyFromGroup('opponentStrums', 4, 'x', defaultOpponentStrumX4 + 49)
+end
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)

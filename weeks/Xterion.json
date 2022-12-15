@@ -1,0 +1,41 @@
+{
+	"songs": [
+		[
+			"Substantial",
+			"sonicpix",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Digitalized",
+			"sonicpix",
+			[
+				146,
+				113,
+				253
+				]
+			]
+		],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "end",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"storyName": "Xterion",
+	"weekName": "SONIC JAM.CUE",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

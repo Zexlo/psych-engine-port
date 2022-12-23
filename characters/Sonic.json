@@ -15,7 +15,7 @@
 			"loop": false,
 			"offsets": [
 				-100,
-				84
+				74
 			],
 			"anim": "singUP",
 			"fps": 24,
@@ -26,7 +26,7 @@
 			"loop": false,
 			"offsets": [
 				-42,
-				46
+				26
 			],
 			"anim": "singDOWN",
 			"fps": 24,
@@ -37,7 +37,7 @@
 			"loop": false,
 			"offsets": [
 				-28,
-				30
+				10
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -57,17 +57,6 @@
 		},
 		{
 			"offsets": [
-				-82,
-				45
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "laugh",
-			"indices": [],
-			"name": "SONIClaugh"
-		},
-		{
-			"offsets": [
 				-47,
 				26
 			],
@@ -75,6 +64,39 @@
 			"fps": 24,
 			"anim": "evil",
 			"indices": [],
+			"name": "sonicImmagetya"
+		},
+		{
+			"offsets": [
+				-72,
+				25
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "laugh",
+			"loop": false,
+			"name": "SONIClaugh"
+		},
+		{
+			"offsets": [
+				-72,
+				25
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "SONIClaugh"
+		},
+		{
+			"offsets": [
+				-47,
+				26
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "end",
+			"loop": false,
 			"name": "sonicImmagetya"
 		}
 	],
@@ -92,8 +114,8 @@
 		175
 	],
 	"camera_position": [
-		-10,
-		-80
+		40,
+		-30
 	],
 	"sing_duration": 4,
 	"scale": 1

@@ -5,11 +5,6 @@
 	"weekBackground": "end",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"weekCharacters": [
-		"",
-		"",
-		""
-	],
 	"songs": [
 		[
 			"Prey",
@@ -18,18 +13,23 @@
 				195,
 				55,
 				100
-				]
+			]
 		],
 		[
 			"Fight or Flight",
 			"starved",
 			[
-				115,
+				135,
 				0,
 				0
 			]
 		]
 	],
 	"hideStoryMode": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
 	"weekName": "Starved"
 }

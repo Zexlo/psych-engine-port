@@ -1,11 +1,11 @@
 {
 	"storyName": "Sonic.exe",
 	"difficulties": "Hard",
-	"hideFreeplay": true,
+	"hideFreeplay": false,
 	"weekBackground": "Tooslow",
 	"weekBefore": "Week 7",
 	"startUnlocked": true,
-	"hideStoryMode": false,
+	"hideStoryMode": true,
 	"weekCharacters": [
 		"",
 		"",

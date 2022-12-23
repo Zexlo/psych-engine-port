@@ -1,20 +1,16 @@
 {
 	"storyName": "LordX",
-	"difficulties": "",
+	"difficulties": "Hard",
 	"hideFreeplay": false,
 	"weekBackground": "lordX",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"weekCharacters": [
-		"",
-		"",
-		""
-	],
+	"hideStoryMode": true,
 	"songs": [
 		[
 			"execution",
@@ -44,7 +40,11 @@
 			]
 		]
 	],
-	"hideStoryMode": true,
-	"weekName": "LordX",
-	"hiddenUntilUnlocked": false
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "LordX"
 }

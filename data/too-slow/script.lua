@@ -1,23 +1,16 @@
 local allowCountdown = false;
 function onStartCountdown()
-	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
-		startVideo('SonicEXE');
-		allowCountdown = true;
-		return Function_Stop;
+	if not allowCountdown and isStoryMode then --Block the first countdown
+	startVideo('SonicEXE');
+	setProperty('inCutscene', false);		
+	allowCountdown = true;
+	return Function_Stop;
 	end
 	return Function_Continue;
 end
 
 function onCreate()
-	precacheSound('staticsound');
 	precacheImage('sonicJUMPSCARE');
-	precacheImage('screenstatic');
-	precacheSound('Jumpscare');
-
-	precacheImage('black');
-
-	precacheImage('StartScreens/CircleTooSlow');
-	precacheImage('StartScreens/TextTooSlow');
 
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);
@@ -130,15 +123,21 @@ function onStartCountdown()
 	return Function_Continue;
 end
 
-function onUpdate()
+function onUpdate(elasped)
 doTweenColor('ColorTween', 'timeBar', '166DBB', 1, 'linear')
- noteTweenAlpha('hidea', 0, 0, 0.001, 'SineInOut');
-        noteTweenAlpha('hideb', 1, 0, 0.001, 'SineInOut');
-        noteTweenAlpha('hidec', 2, 0, 0.001, 'SineInOut');
-        noteTweenAlpha('hided', 3, 0, 0.001, 'SineInOut');
-        noteTweenX('play0', 4, 415, 0.01, 'SineInOut')
-	    noteTweenX('play1', 5, 525, 0.01, 'SineInOut')
-	    noteTweenX('play2', 6, 635, 0.01, 'SineInOut')
-	    noteTweenX('play3', 7, 745, 0.01, 'SineInOut')
-        noteTweenAlpha('hidee', 3, 0, 0.001, 'expoInOut');
+
+for i = 0,3 do
+	noteTweenY(i, i, 1000, 0.001, 'SineInOut')
+	noteTweenX('play0', 4, 415, 0.01, 'SineInOut')
+	noteTweenX('play1', 5, 525, 0.01, 'SineInOut')
+	noteTweenX('play2', 6, 635, 0.01, 'SineInOut')
+	noteTweenX('play3', 7, 745, 0.01, 'SineInOut')
+end		
+	if curBeat >= 190 and curBeat <=198 or curStep >= 1306 and curStep <=1432 then
+doTweenZoom('wee', 'camGame', 1.3, 0.5, 'linear');
+else
+end
+if curStep >= 364 then
+setTextColor('txt', 'FF0000')
+end
 end

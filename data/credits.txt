@@ -3,4 +3,5 @@ Zexlo::zex:: Main Sonic EXE V2/3 porter::https://twitter.com/GreyLynx4::0xFFFFFF
 Hako::::EX-Technical/scripting help::https://twitter.com/safecrunchy::0xFFFFFFFF
 CoffeeDev::coffeedev::Created the original pause menu lua script::https://gamebanana.com/members/1942780::0xFFFFFFFF
 AxorTheAxolotl::Axor::Created the Psych port of Personel::https://gamebanana.com/members/1804873::0xFFFFFFFF
+FlippedSpike::EX-Created the FEAR meter LUA script::https://gamebanana.com/members/2093720::0xFFFFFFFF
 Sonic EXE mod team::EXE::Making this awesome mod for everyone to enjoy!::https://gamebanana.com/mods/316022::0xFFFFC71F

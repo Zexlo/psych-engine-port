@@ -1,11 +1,11 @@
 {
 	"storyName": "Sonic.exe",
 	"difficulties": "Hard",
-	"hideFreeplay": true,
+	"hideFreeplay": false,
 	"weekBackground": "Triple",
 	"weekBefore": "Week 7",
 	"startUnlocked": true,
-	"hideStoryMode": false,
+	"hideStoryMode": true,
 	"weekCharacters": [
 		"",
 		"",
@@ -14,7 +14,7 @@
 	"songs": [
 		[
 			"Triple Trouble",
-			"sonic",
+			"Beast",
 			[
 				66,
 				53,

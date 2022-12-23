@@ -3,16 +3,15 @@ endscroll = false
 local weee = "prey/stardustFloor" -- replace limoSunset with the name of your sprite
 
 function onCreate()
-	makeLuaSprite("floor1", weee, -100, -600)
+	makeLuaSprite("floor1", weee, -100, -400)
 	width = getProperty("floor1.width")
 	
-	makeLuaSprite("floor2", weee, width-120, -600)
+	makeLuaSprite("floor2", weee, width-120, -400)
 	
 	addLuaSprite("floor1", true)
 	addLuaSprite("floor2", true)
 	setProperty('floor1.alpha', 0)
     setProperty('floor2.alpha', 0)
-
 	doTweenX("floor1Tween", "floor1", -width, 0.8, "linear")
 	doTweenX("floor2Tween", "floor2", -20, 0.8, "linear")
 runTimer('lol', 12.8)	

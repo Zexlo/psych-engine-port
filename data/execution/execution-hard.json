@@ -2656,6 +2656,7 @@
 		"gfVersion": "Notknuk",
 		"events": [],
 		"player3": null,
+		"splashSkin": "BloodSplash",		
 		"song": "Execution",
 		"needsVoices": true,
 		"validScore": true,

@@ -1,11 +1,11 @@
 {
 	"storyName": "Sonic.exe",
 	"difficulties": "Hard",
-	"hideFreeplay": true,
+	"hideFreeplay": false,
 	"weekBackground": "YCR",
 	"weekBefore": "Week 7",
 	"startUnlocked": true,
-	"hideStoryMode": false,
+	"hideStoryMode": true,
 	"weekCharacters": [
 		"",
 		"",
@@ -14,7 +14,7 @@
 	"songs": [
 		[
 			"you can't run",
-			"sonic",
+			"run",
 			[
 				66,
 				53,

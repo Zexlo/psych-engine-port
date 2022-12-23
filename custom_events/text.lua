@@ -11,15 +11,7 @@ if name == "text" then
 	doTweenX('txt', 'Text', 1.5, 1, 'elasticInOut')
 
 	runTimer('remove',value2,1);
-
-function onMoveCamera(focus)
-	if focus == 'dad' then
-	setTextColor('txt', 'FF0000')
-	else
-	setTextColor('txt', '0000FF')	
-	end
-	end
-
+	
 function onTimerCompleted(tag, loops, loopsLeft)
 if tag == 'remove' then
 removeLuaText("txt", true)          

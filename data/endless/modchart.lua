@@ -1,0 +1,3 @@
+function onUpdate(elasped)
+
+end

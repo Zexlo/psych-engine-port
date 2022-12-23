@@ -8733,6 +8733,7 @@
 			}
 		],
 		"player3": null,
+		"splashSkin": "BloodSplash",	
 		"isRing": false,
 		"song": "Chaos",
 		"stage": "Chaos",

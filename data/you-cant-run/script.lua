@@ -1,8 +1,19 @@
 allowCountdown = false;
 videoDelay = false;
 
+local allowCountdown = false;
+function onStartCountdown()
+	if not allowCountdown and isStoryMode then --Block the first countdown
+	startVideo('Phase2');
+	setProperty('inCutscene', false);		
+	allowCountdown = true;
+	return Function_Stop;
+	end
+	return Function_Continue;
+end
+
 function onCreate()
-	if isStoryMode and not seenCutscene then
+	if isStoryMode then
 		videoDelay = true;
 	end
 
@@ -29,7 +40,7 @@ function onCreate()
 
 	startTime = 0.3;
 	if videoDelay then 
-		startTime = 5; -- cutscene delay
+		startTime = 2; -- cutscene delay
 	end
 
 	runTimer('flyin', startTime);

@@ -6,11 +6,26 @@ function onCreate()
 	setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'majindie'); --put in mods/music/
 	setPropertyFromClass('GameOverSubstate', 'endSoundName', 'gameOverEnd'); --put in mods/music/
 
-    precacheImage('black');
 
-	precacheImage('StartScreens/CircleMajin');
-	precacheImage('StartScreens/TextMajin');
+	makeLuaSprite('3', 'endless/three', 0, 0);
+	screenCenter('3','XY')
+	makeLuaSprite('2', 'endless/two', 0, 0);
+	screenCenter('2','XY')	
+	makeLuaSprite('1', 'endless/one', 0, 0);
+	screenCenter('1','XY')	
+	makeLuaSprite('go', 'endless/gofun', 0, 0);
+	screenCenter('go','XY')
 
+	setObjectCamera('3', 'hud');
+	setObjectCamera('2', 'hud');
+	setObjectCamera('1', 'hud');
+	setObjectCamera('go', 'hud');	
+	
+	-- addLuaSprite('3', true);
+	-- addLuaSprite('2', true);
+	-- addLuaSprite('1', true);
+	-- addLuaSprite('go', true);
+	
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);
 	makeLuaSprite('circle', 'StartScreens/CircleMajin', -1280, 0);
@@ -69,13 +84,46 @@ end
 
 
 function onUpdate(elasped)
-	setTextString('timeTxt', 'inf')
 	doTweenColor('ColorTween', 'timeBar', '000000', 1, 'linear')
+
+	if curStep == 888 then
+addLuaSprite('3',true)	
 end
 
-function onTweenCompleted(tag)
+	if curStep == 892 then
+removeLuaSprite('3',true)		
+addLuaSprite('2',true)	
+end
 
+	if curStep == 895 then
+removeLuaSprite('2',true)		
+addLuaSprite('1',true)	
+end
+
+	if curStep == 900 then
+removeLuaSprite('1',true)		
+addLuaSprite('go',true)	
+end
+	if curStep >= 905 then
+removeLuaSprite('go',true)		
+end
+end
+
+-- function noteMiss(id, noteData, noteType, isSustainNote)
+-- if misses >= 10 then
+-- setProperty('health',0)
+-- end
+-- end
+
+
+function onTweenCompleted(tag)
+if tag == 'fadetext' then
+removeLuaSprite('black',true)
+removeLuaSprite('circle',true)
+removeLuaSprite('text',true)
 	end
+	end
+	
 	
 function onGameOverStart()
 
@@ -134,7 +182,7 @@ playSound('majinend');
 	doTweenX('fixbfX', 'maj', 380, 0.1, 'sineOut')
 	doTweenY('fixbfY', 'maj', 100, 0.1, 'sineOut')
 	doTweenAlpha('hideded', 'ded', 0, 0.5, 'sineOut')
-	objectPlayAnimation('maj', 'deathConfirm',true);
+	playAnim('maj', 'deathConfirm',true);
 	runTimer('kill', finish);
 end	
 

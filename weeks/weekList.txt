@@ -2,6 +2,7 @@ Tooslow
 YCR
 Triple
 Sonic.exe
+Tooslowencore
 Majin
 LordX
 TDoll

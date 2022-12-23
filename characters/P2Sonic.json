@@ -1,70 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-62,
 				86
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "P2Sonic Down"
+			"fps": 24,
+			"name": "P2Sonic Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				52,
 				40
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "P2Sonic Left"
+			"fps": 24,
+			"name": "P2Sonic Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				8,
 				29
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "P2Sonic Right"
+			"fps": 24,
+			"name": "P2Sonic Right",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-110,
 				184
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "P2Sonic Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "P2Sonic Up"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-79,
 				202
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "P2Sonic Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "P2Sonic Idle"
 		},
 		{
-			"loop": true,
 			"offsets": [
-				-60,
-				170
+				-90,
+				180
 			],
-			"anim": "LOL",
+			"loop": true,
 			"fps": 24,
-			"name": "P2Sonic Laugh",
-			"indices": []
+			"anim": "LOL",
+			"indices": [],
+			"name": "P2Sonic Laugh"
+		},
+		{
+			"offsets": [
+				-90,
+				180
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "laugh",
+			"loop": true,
+			"name": "P2Sonic Laugh"
 		}
 	],
 	"no_antialiasing": false,

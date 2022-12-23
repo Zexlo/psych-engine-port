@@ -4,26 +4,26 @@ function onCreate()
 	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'prey-death'); --put in mods/sounds/
 	setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'prey-loop'); --put in mods/music/
 	setPropertyFromClass('GameOverSubstate', 'endSoundName', 'prey-retry'); --put in mods/music/
+	
+	makeAnimatedLuaSprite('furnace','characters/Furnace_sheet',400 ,1750)
+	addAnimationByPrefix('furnace', 'idle', 'Furnace idle', 24, true)
+	setObjectOrder('furnace', getObjectOrder('floor1')-1)
+	setObjectOrder('furnace', getObjectOrder('floor1')-1)
+	scaleObject('furnace', 6, 6);
+	setProperty('furnace.antialiasing', false)
+	
+	width = getProperty("bg1.width")
+	stophide = false
+	setProperty('dad.alpha', 0)
+	setProperty('gf.alpha', 0)
+	doTweenX("fixit", "gf", 4200, 2, "linear")
+	setProperty('boyfriend.alpha', 0)
+	setProperty('furnace.visible', false)		
+	setProperty('camHUD.alpha', 0)
+	runTimer('display', 12.8)
+	runTimer('remove', 12.6)
 
-width = getProperty("bg1.width")
-stophide = false
-setProperty('dad.alpha', 0)
-setProperty('gf.alpha', 0)
-doTweenX("fixit", "gf", 4200, 2, "linear")
-setProperty('boyfriend.alpha', 0)
-setProperty('healthBarBG.visible', false)
-setProperty('healthBar.visible', false)
-setProperty('scoreTxt.visible', false)
-setProperty('timeTxt.visible', false)
-setProperty('iconP1.visible', false)
-setProperty('iconP2.visible', false)
-setProperty('timeBar.visible', false)
-setProperty('timeBarBG.visible', false)
-setProperty('song.visible', false)
-runTimer('display', 12.8)
-runTimer('remove', 12.6)
-
-doTweenX("bg1Tween", "bg1", -width, 3, "linear")
+	doTweenX("bg1Tween", "bg1", -width, 3, "linear")
 	doTweenX("bg2Tween", "bg2", -20, 3, "linear")
 end
 
@@ -56,19 +56,12 @@ end
 
 if tag == 'start' then
 doTweenX('lol1', 'dad', 500, 1, 'linear');
-setProperty('healthBarBG.visible', true)
-setProperty('healthBar.visible', true)
-setProperty('scoreTxt.visible', true)
-setProperty('timeTxt.visible', true)
-setProperty('iconP1.visible', true)
-setProperty('iconP2.visible', true)
-setProperty('timeBar.visible', true)
-setProperty('timeBarBG.visible', true)
-setProperty('song.visible', true)
+doTweenAlpha('showHUD','camHUD', 1,1,'linear')
+setProperty('iconP1.alpha',getProperty('iconP2.alpha'))
 end
 
 if tag == 'sound' then
-playSound('Furnace',0.5)
+playSound('Furnace',0.8)
 end
 end
 
@@ -88,6 +81,22 @@ end
 
 if curBeat == 49 then
 runTimer('sound', 1)
+end
+
+if curStep >= 1544 and curStep <= 1624 or curStep >= 3335 then
+setTextColor('txt', '0000FF')
+	
+elseif curStep >= 1624 and curStep <=1800 then
+	setTextColor('txt', 'FF0000')	
+end
+
+if curStep >=1790 then
+doTweenColor('ColorTween', 'healthBar', '6C6CD8', 1, 'linear')
+end
+
+if curBeat >= 781 then
+setProperty('furnace.visible', true)	
+doTweenX('run', 'furnace', 3800, 2, 'sineOut')
 end
 
 end

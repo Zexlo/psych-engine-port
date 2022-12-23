@@ -5,7 +5,7 @@ function onCreate()
 	scaleObject('SKY', 1.4, 1.4);
 
 	
-	makeLuaSprite('fronttrees', 'tooslow/TreesFG', -660, -240);
+	makeLuaSprite('fronttrees', 'tooslow/TreesFG', -660, -220);
 	--setScrollFactor('fronttrees', 0.9, 0.9);
 	scaleObject('fronttrees', 1.4, 1.2);
 		
@@ -37,7 +37,7 @@ function onCreate()
 	makeLuaSprite('treesR', 'tooslow/TreesRight', 1000, -80);	
     scaleObject('treesR', 1.2, 1.2);	
 
-	makeLuaSprite('bush1', 'tooslow/OuterBush', -460, 300);
+	makeLuaSprite('bush1', 'tooslow/OuterBush', -450, 300);
     scaleObject('bush1', 1.2, 1.2);	
 
 	makeLuaSprite('Grassfloor', 'tooslow/Grass', -650, 550);

@@ -1,6 +1,6 @@
 function onGameOverStart()
 
-if songName == 'Too slow' or songName == 'Cycles' or songName == 'Execution' then
+if week == 'Tooslow' or week == 'Tooslowencore' or week == 'LordX' or week == 'YCR' or week == 'Triple' then
 
 exedeath()
 else end
@@ -19,7 +19,6 @@ function exedeath()
 	addAnimationByPrefix('sonic', 'end', 'deathConfirmSonicExe', 24, false);
         scaleObject('sonic', 1.5, 1.5);	
 	addLuaSprite('sonic', false);
-	
 	start = 1.8;
 	
 runTimer('begin', start);
@@ -37,7 +36,7 @@ if tag == 'begin' then
 	end
 	
 function onGameOverConfirm(retry)
-if songName == 'Too slow' or songName == 'Cycles' or songName == 'Execution' then
+if week == 'Tooslow' or week == 'Tooslowencore' or week == 'LordX' or week == 'YCR' or week == 'Triple' then
 	setProperty('boyfriend.alpha', 0);
 	objectPlayAnimation('sonic', 'end',true);
 	doTweenX('fixXs', 'sonic', 320, 0.01, 'sineOut')

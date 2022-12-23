@@ -6,7 +6,7 @@ local zoomshit = 0;
 	allowCountdown = false;
 function onCreate()
 
-	addCharacterToList('starved_die', 'bf');
+	addCharacterToList('starved_die', 'boyfriend');
     setPropertyFromClass('GameOverSubstate', 'characterName', 'starved_die'); --Character json file for the death animation
 	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'starved-death'); --put in mods/sounds/
 	setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'starved-loop'); --put in mods/music/

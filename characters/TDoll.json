@@ -2,7 +2,7 @@
 	"animations": [
 		{
 			"offsets": [
-				-156,
+				-157,
 				-117
 			],
 			"loop": true,
@@ -16,44 +16,44 @@
 				-147,
 				-137
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "TailsDoll RIGHT"
-		},
-		{
-			"offsets": [
-				-77,
-				-131
-			],
 			"loop": true,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "TailsDoll LEFT"
+			"name": "TailsDoll RIGHT"
 		},
 		{
 			"offsets": [
 				-117,
 				-71
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
+			"loop": true,
 			"name": "TailsDoll UP"
 		},
 		{
 			"offsets": [
-				-106,
+				-109,
 				-171
 			],
-			"loop": true,
+			"indices": [],
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
+			"loop": true,
 			"name": "TailsDoll DOWN"
+		},
+		{
+			"offsets": [
+				-80,
+				-131
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "TailsDoll LEFT"
 		}
 	],
 	"no_antialiasing": false,

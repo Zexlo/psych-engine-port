@@ -1,9 +1,8 @@
 -- Lua stuff
 function onCreate()
-	-- triggered when the lua file is started
-
+  precacheImage('chaos/Lewis Porker');
 	makeAnimatedLuaSprite('Porker', 'chaos/Lewis Porker', 1750, -1200); 
-	addAnimationByPrefix('Porker', 'first', 'PorkerFG', 24, false); --first is just the anim tag in lua it can be whatever, PorkerFG is the animation name from the XML sheet
+	addAnimationByPrefix('Porker', 'first', 'PorkerFG', 24, false); --XML sheet anim name
 	objectPlayAnimation('Porker', 'first');
 	addLuaSprite('Porker', true); 
 	end

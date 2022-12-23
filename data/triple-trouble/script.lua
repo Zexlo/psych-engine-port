@@ -8,14 +8,7 @@ function onCreate()
 
 	addCharacterToList('Beast', 'dad');
 	addCharacterToList('Eggman', 'dad');
-	addCharacterToList('BOYFRIEND', 'bf');
 	addCharacterToList('Knucks', 'gf');
-	precacheImage('screenstatic');
-
-	precacheImage('black');
-
-	precacheImage('StartScreens/CircleTripleTrouble');
-	precacheImage('StartScreens/TextTripleTrouble');
 
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);
@@ -30,7 +23,7 @@ function onCreate()
 
 	startTime = 0.3;
 	if videoDelay then 
-		startTime = 5; -- cutscene delay
+		startTime = 3; -- cutscene delay
 	end
 
 	runTimer('flyin', startTime);

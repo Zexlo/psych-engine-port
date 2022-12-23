@@ -1,0 +1,21 @@
+function onUpdatePost()
+	for r = 0, getProperty('notes.length') do
+		for i = 0, getProperty('grpNoteSplashes.length') - 1 do
+			if getPropertyFromGroup('notes', r, 'noteSplashTexture') == 'BloodSplash' then
+				setPropertyFromGroup('grpNoteSplashes', i, 'alpha', 1)
+				setPropertyFromGroup('grpNoteSplashes', i, 'offset.y', -90)
+				setPropertyFromGroup('grpNoteSplashes', i, 'offset.x', -40)
+			elseif getPropertyFromGroup('notes', r, 'noteSplashTexture') == 'milkSplashes' then
+				setPropertyFromGroup('grpNoteSplashes', i, 'alpha', 1)
+				setPropertyFromGroup('grpNoteSplashes', i, 'offset.y', 100)
+				setPropertyFromGroup('grpNoteSplashes', i, 'offset.x', 75)
+				setPropertyFromGroup('grpNoteSplashes', i, 'scale.y', 0.7)
+				setPropertyFromGroup('grpNoteSplashes', i, 'scale.x', 0.7)
+			elseif getPropertyFromGroup('notes', r, 'noteSplashTexture') == 'endlessNoteSplashes' then
+				setPropertyFromGroup('grpNoteSplashes', i, 'alpha', 1)
+				setPropertyFromGroup('grpNoteSplashes', i, 'offset.x', 35)
+				setPropertyFromGroup('grpNoteSplashes', i, 'offset.y', -10)
+			end
+		end
+	end
+end

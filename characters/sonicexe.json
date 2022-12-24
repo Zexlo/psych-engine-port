@@ -1,85 +1,85 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				34,
 				31
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SONICmoveUP"
+			"fps": 24,
+			"name": "SONICmoveUP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-90,
 				-16
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SONICmoveRIGHT"
+			"fps": 24,
+			"name": "SONICmoveRIGHT",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-60,
 				-80
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SONICmoveIDLE"
+			"fps": 24,
+			"name": "SONICmoveIDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				20,
 				-160
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SONICmoveDOWN"
+			"fps": 24,
+			"name": "SONICmoveDOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				110,
 				-63
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SONICmoveLEFT"
+			"fps": 24,
+			"name": "SONICmoveLEFT",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				-40
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "SONIClaugh",
 			"indices": [
 				8,
 				9,
 				10
-			],
-			"name": "SONIClaugh"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-40
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "SONIClaugh"
+			"fps": 24,
+			"name": "SONIClaugh",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -96,9 +96,9 @@
 		165
 	],
 	"camera_position": [
-		-50,
-		80
+		20,
+		140
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 0.9
 }

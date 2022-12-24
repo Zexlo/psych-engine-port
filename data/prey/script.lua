@@ -253,6 +253,7 @@ end
 
 if curBeat == 49 then
 runTimer('sound', 1)
+-- setProperty('boyfriend.flipX', true)
 end
 
 if curStep >= 1544 and curStep <= 1624 or curStep >= 3335 then

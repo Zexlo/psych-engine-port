@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				105,
 				-2
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Left instance",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-7,
 				-56
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "down instance",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-5,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "idle instance",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "idle instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-7,
 				-53
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "miss DOWN instance",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "miss DOWN instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				107,
 				-1
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "miss LEFT instance",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "miss LEFT instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-24,
 				-24
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "miss RIGHT instance",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "miss RIGHT instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-36,
 				27
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "miss UP instance",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "miss UP instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-28,
 				-27
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "right instance",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right instance"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-35,
 				37
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "up instance",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "up instance"
 		}
 	],
 	"no_antialiasing": false,
@@ -114,9 +114,9 @@
 		209
 	],
 	"camera_position": [
-		0,
-		0
+		60,
+		10
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 0.9
 }

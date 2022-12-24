@@ -6,12 +6,6 @@ local zoomshit = 0;
 	allowCountdown = false;
 function onCreate()
 
-	addCharacterToList('starved_die', 'boyfriend');
-    setPropertyFromClass('GameOverSubstate', 'characterName', 'starved_die'); --Character json file for the death animation
-	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'starved-death'); --put in mods/sounds/
-	setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'starved-loop'); --put in mods/music/
-	setPropertyFromClass('GameOverSubstate', 'endSoundName', 'starved-retry'); --put in mods/music/
-
     doTweenAngle('move1', 'healthBar', 90, 0.2, 'SineInOut');
     doTweenY('move2', 'healthBar',350 , 0.2, 'SineInOut');
 	doTweenX('move3', 'healthBar',800 , 0.2, 'SineInOut');
@@ -113,29 +107,6 @@ function onUpdatePost(elapsed)
 	noteTweenY('play5', 1, 800, 0.01, 'SineInOut')
 	noteTweenY('play6', 2, 800, 0.01, 'SineInOut')
 	noteTweenY('play7', 3, 800, 0.01, 'SineInOut')	
-
-function onGameOverStart()
-doTweenColor('unred1','boyfriend','FFFFFF', 0.2, 'linear')
-makeLuaSprite('redBG','red',0,0)
-setObjectCamera('redBG', 'other');
-runTimer('fix',5)
-setObjectCamera('boyfriend', 'other');
-doTweenX('fixXbf', 'boyfriend', 100, 0.2, 'sineOut')
-doTweenY('fixYbf', 'boyfriend', -200, 0.2, 'sineOut')
-function onTimerCompleted(tag)
-	if tag == 'fix' then
-	doTweenX('fixX', 'boyfriend', -50, 0.1, 'SineInOut');
-	doTweenY('fixY', 'boyfriend', -180, 0.1, 'SineInOut');
-return Function_Continue;
-		end
-	end
-end
  
- function onGameOverConfirm(retry) 
- addLuaSprite('redBG', true)
-doTweenAlpha('fadeout', 'redBG', 0, 1, 'linear')
- end
- 
-
 	end
 end

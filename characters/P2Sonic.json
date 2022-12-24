@@ -71,10 +71,10 @@
 				-90,
 				180
 			],
-			"indices": [],
+			"loop": true,
 			"fps": 24,
 			"anim": "laugh",
-			"loop": true,
+			"indices": [],
 			"name": "P2Sonic Laugh"
 		}
 	],
@@ -92,8 +92,8 @@
 		101
 	],
 	"camera_position": [
-		-10,
-		-70
+		-40,
+		-60
 	],
 	"sing_duration": 4,
 	"scale": 1

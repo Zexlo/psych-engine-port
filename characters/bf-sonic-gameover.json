@@ -1,25 +1,14 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "firstDeath",
-			"indices": [],
-			"name": "sonic gameover start"
-		},
-		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "deathLoop",
+			"anim": "firstDeath",
 			"fps": 24,
-			"name": "sonic gameover loop",
+			"name": "sonic gameover start",
 			"indices": []
 		},
 		{
@@ -27,6 +16,21 @@
 				0,
 				0
 			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "sonic gameover loop"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "sonic gameover end",
 			"indices": [
 				1,
 				2,
@@ -50,11 +54,7 @@
 				20,
 				21,
 				22
-			],
-			"fps": 24,
-			"anim": "deathConfirm",
-			"loop": false,
-			"name": "sonic gameover end"
+			]
 		}
 	],
 	"no_antialiasing": true,
@@ -71,8 +71,8 @@
 		246
 	],
 	"camera_position": [
-		0,
-		0
+		480,
+		-200
 	],
 	"sing_duration": 4,
 	"scale": 7

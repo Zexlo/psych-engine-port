@@ -15,6 +15,5 @@ makeLuaSprite('dark', 'black', -150, 200);
 	addLuaSprite("bg2", false)
 	addLuaSprite('dark', false);
 	setObjectCamera('cover', 'other');
-
-	close(true); 
+	close(true)
 end

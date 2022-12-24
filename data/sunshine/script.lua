@@ -1,15 +1,8 @@
 function onCreate()
 	addCharacterToList('Tails_Doll_Alt', 'dad');
-	addCharacterToList('3DGO', 'bf');
-
+	
 --setPropertyFromClass('lime.app.Application', 'current.window.width', 854)
 --setPropertyFromClass('lime.app.Application', 'current.window.height', 480)
-	setPropertyFromClass('GameOverSubstate', 'characterName', '3DGO'); --Character json file for the death animation
-	setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'fnf_loss_sfx'); --put in mods/sounds/
-	setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/music/
-	setPropertyFromClass('GameOverSubstate', 'endSoundName', ''); --put in mods/music/
-    precacheImage('black');
-
         makeLuaSprite('credbox', 'box', 390, -1280);
          scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);

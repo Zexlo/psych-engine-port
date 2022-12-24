@@ -9,7 +9,9 @@
 	scaleObject('bar2', 3, 1);	
 	
 	addLuaSprite('bar1', true);
-	addLuaSprite('bar2', true);	
+	addLuaSprite('bar2', true);
+	setObjectOrder('bar1', getObjectOrder('timeBar')+6)
+	setObjectOrder('bar2', getObjectOrder('timeBar')+6)	
 	end
 		
 	function onEvent(name,value1,value2)

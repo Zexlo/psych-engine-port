@@ -12,7 +12,6 @@ function onCreate()
 	addLuaSprite("floor2", true)
 	setProperty('floor1.alpha', 0)
     setProperty('floor2.alpha', 0)
-
 	doTweenX("floor1Tween", "floor1", -width, 0.8, "linear")
 	doTweenX("floor2Tween", "floor2", -20, 0.8, "linear")
 runTimer('lol', 12.8)	

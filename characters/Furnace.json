@@ -1,123 +1,123 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-280,
 				-319
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Furnace down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Furnace down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-286,
 				-280
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Furnace up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Furnace up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-270,
 				-333
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Furnace right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Furnace right"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-240,
 				-340
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Furnace idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Furnace idle"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-270,
 				-333
 			],
-			"anim": "singRIGHT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Furnace right",
+			"anim": "singRIGHT-loop",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			]
+			],
+			"name": "Furnace right"
 		},
 		{
+			"offsets": [
+				-202,
+				-325
+			],
 			"loop": false,
-			"offsets": [
-				-202,
-				-325
-			],
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Furnace left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Furnace left"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-202,
 				-325
 			],
-			"anim": "singLEFT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Furnace left",
+			"anim": "singLEFT-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Furnace left"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-286,
 				-280
 			],
-			"anim": "singUP-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Furnace up",
+			"anim": "singUP-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Furnace up"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-280,
 				-319
 			],
-			"anim": "singDOWN-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "Furnace down",
+			"anim": "singDOWN-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Furnace down"
 		}
 	],
 	"no_antialiasing": true,
@@ -134,8 +134,8 @@
 		78
 	],
 	"camera_position": [
-		-150,
-		150
+		-210,
+		190
 	],
 	"sing_duration": 6.1,
 	"scale": 6

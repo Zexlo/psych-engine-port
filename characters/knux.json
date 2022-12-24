@@ -1,13 +1,14 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				84,
 				-50
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
+			"fps": 24,
+			"name": "Knux Idle",
 			"indices": [
 				0,
 				1,
@@ -23,17 +24,17 @@
 				11,
 				12,
 				13
-			],
-			"name": "Knux Idle"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				67,
 				-1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
+			"fps": 24,
+			"name": "Knux Up",
 			"indices": [
 				0,
 				1,
@@ -51,17 +52,17 @@
 				13,
 				14,
 				15
-			],
-			"name": "Knux Up"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				130,
 				-151
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Knux Down",
 			"indices": [
 				0,
 				1,
@@ -79,18 +80,16 @@
 				13,
 				14,
 				15
-			],
-			"name": "Knux Down"
+			]
 		},
 		{
-			"loop": false,
 			"offsets": [
 				267,
 				-120
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Knux Right",
+			"anim": "singLEFT",
 			"indices": [
 				0,
 				1,
@@ -108,17 +107,17 @@
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Knux Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				54,
 				-119
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Knux Left",
+			"anim": "singRIGHT",
 			"indices": [
 				0,
 				1,
@@ -136,7 +135,8 @@
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Knux Left"
 		}
 	],
 	"no_antialiasing": false,
@@ -153,8 +153,8 @@
 		0
 	],
 	"camera_position": [
-		-510,
-		200
+		-450,
+		100
 	],
 	"sing_duration": 4,
 	"scale": 1.05

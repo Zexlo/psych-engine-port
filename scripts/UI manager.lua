@@ -1,4 +1,5 @@
 function onCreate()
+ setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port: ' ..songName);
 	makeLuaSprite('nah', 'nocheating', 0, 0);
 	addLuaSprite('nah', true);
 	setObjectCamera('nah', 'other')
@@ -13,7 +14,7 @@ makeLuaText('check', 'nameon is false', 1250, 0, 0);
     setTextAlignment('check', 'right')	
 if timeBarType == 'Song Name' then
 nameon = true
-setTextString('check','nameon is true')
+--setTextString('check','nameon is true')
 setPropertyFromClass('ClientPrefs', 'timeBarType', 'time Left')
 end
 
@@ -23,6 +24,10 @@ end
     setTextAlignment('song', 'center')	
 	setObjectOrder('song', getObjectOrder('timeBar'))
 	setProperty('song.alpha',0)	
+if songName ==	'Prey' then
+    setTextFont('song', 'sonic.otf')
+	setTextSize('song', 30)	
+end	
 	
 end
 
@@ -43,7 +48,7 @@ end
 
 function onUpdatePost(elapsed)
 --endless shit
-if songName == 'Endless' or songName == 'Endless og' then
+if week == 'Majin' then
 setProperty('songLength', 60000000)
 end
 
@@ -79,6 +84,9 @@ end
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
+if songName == 'personel' and curBeat < 10 then
+setProperty('health',2);
+end
      if getProperty('health') > 0.2 then --prevent opponent from killing by just singing too long
           if not isSustainNote then
                setProperty('health', getProperty('health')-0.02); --amount to lose on normal notes
@@ -89,8 +97,25 @@ function opponentNoteHit(id, direction, noteType, isSustainNote)
 
 end
 
+function noteMiss(id, noteData, noteType, isSustainNote)
+playAnim('gf', 'sad', false, false, 0)
+end
+
 function onDestroy()
+setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
 if nameon == true then
 setPropertyFromClass('ClientPrefs', 'timeBarType', 'Song Name')
+
 end
 end
+
+function onGameOverStart()
+	if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
+setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
+		fullscreen = true		
+	elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == true then
+setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
+		fullscreen = false
+		end
+		end
+		

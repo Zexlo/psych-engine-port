@@ -1,134 +1,134 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				-240,
 				-340
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "starved idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "starved idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-240,
 				-329
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "starved down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "starved down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-240,
 				-342
 			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "starved up",
-			"indices": []
-		},
-		{
 			"loop": false,
-			"offsets": [
-				-234,
-				-335
-			],
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "starved right",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "starved up"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-234,
 				-335
 			],
-			"anim": "singRIGHT-loop",
+			"loop": false,
 			"fps": 24,
-			"name": "starved right",
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "starved right"
+		},
+		{
+			"offsets": [
+				-234,
+				-335
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
 			"indices": [
 				15,
 				16,
 				17,
 				18
-			]
+			],
+			"name": "starved right"
 		},
 		{
+			"offsets": [
+				-246,
+				-335
+			],
 			"loop": false,
-			"offsets": [
-				-246,
-				-335
-			],
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "starved left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "starved left"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-246,
 				-335
 			],
-			"anim": "singLEFT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "starved left",
+			"anim": "singLEFT-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "starved left"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-240,
 				-341
 			],
-			"anim": "singUP-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "starved up",
+			"anim": "singUP-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "starved up"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-240,
 				-329
 			],
-			"anim": "singDOWN-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "starved down",
+			"anim": "singDOWN-loop",
 			"indices": [
 				12,
 				13,
 				14,
 				15
-			]
+			],
+			"name": "starved down"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-240,
 				-341
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "dialogue",
-			"indices": [],
-			"name": "starved dialogue"
+			"fps": 24,
+			"name": "starved dialogue",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
@@ -140,13 +140,13 @@
 	"healthicon": "starved-pixel",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		36,
+		144,
+		0,
 		0
 	],
 	"camera_position": [
-		-230,
-		220
+		-240,
+		130
 	],
 	"sing_duration": 6.1,
 	"scale": 6

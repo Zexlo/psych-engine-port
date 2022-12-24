@@ -1,7 +1,9 @@
 Sonic EXE V2.5 Psych Port
+Sonic EXE mod team::EXE::Making the original Sonic.exe mod::https://gamebanana.com/mods/316022::0xFFFFC71F
 Zexlo::zex:: Main Sonic EXE V2/3 porter::https://twitter.com/GreyLynx4::0xFFFFFFFF
-Hako::::EX-Technical/scripting help::https://twitter.com/safecrunchy::0xFFFFFFFF
+BoxCrunch::empty::EX-Technical/scripting help::https://twitter.com/safecrunchy::0xFFFFFFFF
+Contributors
 CoffeeDev::coffeedev::Created the original pause menu lua script::https://gamebanana.com/members/1942780::0xFFFFFFFF
 AxorTheAxolotl::Axor::Created the Psych port of Personel::https://gamebanana.com/members/1804873::0xFFFFFFFF
-FlippedSpike::EX-Created the FEAR meter LUA script::https://gamebanana.com/members/2093720::0xFFFFFFFF
-Sonic EXE mod team::EXE::Making this awesome mod for everyone to enjoy!::https://gamebanana.com/mods/316022::0xFFFFC71F
+FlippedSpike::empty::Created the FEAR meter LUA script::https://gamebanana.com/members/2093720::0xFFFFFFFF
+TheZoroForce240::empty::Created the 5K+ LUA script::https://gamebanana.com/members/1708748::0xFFFFFFFF

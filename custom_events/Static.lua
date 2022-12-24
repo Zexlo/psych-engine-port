@@ -9,10 +9,10 @@ end
 function onEvent(name, value1, value2)
     if name == 'Static' then
 	
-startTime = 0.2;
+startTime = 0.3;
 
 	runTimer('run', startTime);
-	setProperty('showstatic.alpha', 0.4);
+	setProperty('showstatic.alpha', 0.6);
     objectPlayAnimation('showstatic', 'idle');
 	playSound('staticBUZZ');
     end

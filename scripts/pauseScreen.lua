@@ -38,7 +38,6 @@ makeLuaSprite('3p', 'endless/three', 0, 0);
 	setObjectCamera('gop', 'other');	
 
 	luaDebugMode = true
- setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
 	makeLuaSprite('blackbox', 'blackBG', 0, 0)
 	setObjectCamera('blackbox', 'camOther')
 	setProperty('blackbox.alpha', 0.7)
@@ -264,6 +263,7 @@ end
 	
 function onTweenCompleted(tag)		
 if tag == 'fade' then
-		exitSong(true)
+ setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
+ exitSong(true)
 	end
 	end

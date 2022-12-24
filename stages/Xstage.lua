@@ -1,3 +1,4 @@
+allowCountdown = false
 function onCreate()
 
 	makeLuaSprite('skyX', 'Xstage/skyX', -800, -500);
@@ -38,6 +39,51 @@ makeLuaSprite('smflower2', 'Xstage/smflower2', -250, 550);
 	addLuaSprite('smflower', false);
 	addLuaSprite('smflower2', false)
 	addLuaSprite('tree', false);
-		
-	close(true); --For performance reasons, close this script once the stage is fully loaded, as this script won't be used anymore after loading the stage
+
+if songName == 'Execution' then
+allowCountdown = true
+close(true)
+else
+	makeLuaSprite('black', 'black', 0, 0);
+	addLuaSprite('black', true);
+	makeLuaSprite('circle', 'StartScreens/CircleCycles', 1280, 200);
+	addLuaSprite('circle', true);
+	makeLuaSprite('text', 'StartScreens/TextCycles', -1280, 200);
+	addLuaSprite('text', true);
+
+	setObjectCamera('circle', 'other');
+	setObjectCamera('black', 'other');
+	setObjectCamera('text', 'other');
+
+	startTime = 0.3;
+
+	runTimer('flyin', startTime);
+	runTimer('fadeout', startTime+2.5);
+	runTimer('beginsong', startTime+4);
+end
+end
+
+function onStartCountdown()
+	if not allowCountdown then
+		return Function_Stop;
+	end
+	return Function_Continue;
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+	if tag == 'flyin' then
+		doTweenX('circlefly', 'circle', 500, 1, 'linear');
+		doTweenX('textfly', 'text', 300, 1, 'linear');
+	end
+	
+	if tag == 'fadeout' then
+		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
+		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
+		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')
+	end
+	
+	if tag == 'beginsong' then
+		allowCountdown = true;
+		startCountdown();
+	end	
 end

@@ -1,6 +1,6 @@
 function onCreate()
 makeAnimatedLuaSprite('Static', 'screenstaticBG', 0, 0);
-    addAnimationByPrefix('Static', 'idle', 'STATIC', 40, false);
+    addAnimationByPrefix('Static', 'idle', 'STATIC', 40, false);	
     setObjectCamera('Static', 'hud');
     setProperty('Static.alpha', 0);
     addLuaSprite('Static', true);
@@ -8,7 +8,7 @@ makeAnimatedLuaSprite('Static', 'screenstaticBG', 0, 0);
 	for i = 0, getProperty('unspawnNotes.length')-1 do
 		--Check if the note is an Static Note
 		if getPropertyFromGroup('unspawnNotes', i, 'noteType') == 'Static Note' then
-			setPropertyFromGroup('unspawnNotes', i, 'texture', 'STATICNOTES_assets'); -- Change texture
+			setPropertyFromGroup('unspawnNotes', i, 'texture', 'STATICNOTE_assets'); -- Change texture
 			setPropertyFromGroup('unspawnNotes', i, 'hitHealth', '0.085'); -- Default value is: 0.023, health gained on hit
 			setPropertyFromGroup('unspawnNotes', i, 'missHealth', '0.2600'); -- Default value is: 0.0475, health lost on miss
 			setPropertyFromGroup('unspawnNotes', i, 'hitCausesMiss', false);

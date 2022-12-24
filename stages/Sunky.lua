@@ -8,10 +8,6 @@ function onCreate()
 	
 	setObjectCamera('ratio', 'other');
 	setObjectOrder('ratio', getObjectOrder('blackbox')-1)
-	setScrollFactor('SunkBG', 0.9, 0.9);
-	setScrollFactor('ball', 0.9, 0.9);
-
-	scaleObject('ball', 0.9, 0.9); 
 	
 	addLuaSprite('SunkBG', false);
 	addLuaSprite('stage', false);
@@ -57,3 +53,18 @@ function onStartCountdown()
 	end
 	return Function_Continue;
 end
+
+function onUpdate(elasped)
+    noteTweenX('play0', 0, 190, 0.01, 'SineInOut')
+	noteTweenX('play1', 1, 300, 0.01, 'SineInOut')
+	noteTweenX('play2', 2, 410, 0.01, 'SineInOut')
+	noteTweenX('play3', 3, 520, 0.01, 'SineInOut')
+    noteTweenX('play4', 4, 660, 0.01, 'SineInOut')
+	noteTweenX('play5', 5, 770, 0.01, 'SineInOut')
+	noteTweenX('play6', 6, 880, 0.01, 'SineInOut')
+	noteTweenX('play7', 7, 990, 0.01, 'SineInOut')
+
+if curBear >= 5 then
+close(true);	
+end
+	end

@@ -71,21 +71,10 @@
 				-72,
 				25
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "laugh",
-			"loop": false,
-			"name": "SONIClaugh"
-		},
-		{
-			"offsets": [
-				-72,
-				25
-			],
 			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN-alt",
-			"loop": false,
 			"name": "SONIClaugh"
 		},
 		{
@@ -93,11 +82,26 @@
 				-47,
 				26
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "end",
-			"loop": false,
+			"indices": [],
 			"name": "sonicImmagetya"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-72,
+				25
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "SONIClaugh",
+			"indices": [
+				4,
+				5,
+				6
+			]
 		}
 	],
 	"no_antialiasing": false,
@@ -114,7 +118,7 @@
 		175
 	],
 	"camera_position": [
-		40,
+		90,
 		-30
 	],
 	"sing_duration": 4,

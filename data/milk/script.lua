@@ -87,17 +87,6 @@ end
        end
 end
 
-function onUpdate(elapsed)
---doTweenColor('ColorTween', 'timeBar', 'FF0000', 1, 'linear')
-    noteTweenX('play0', 0, 190, 0.01, 'SineInOut')
-	noteTweenX('play1', 1, 300, 0.01, 'SineInOut')
-	noteTweenX('play2', 2, 410, 0.01, 'SineInOut')
-	noteTweenX('play3', 3, 520, 0.01, 'SineInOut')
-    noteTweenX('play4', 4, 660, 0.01, 'SineInOut')
-	noteTweenX('play5', 5, 770, 0.01, 'SineInOut')
-	noteTweenX('play6', 6, 880, 0.01, 'SineInOut')
-	noteTweenX('play7', 7, 990, 0.01, 'SineInOut')
-end
  function onGameOver()
 setObjectCamera('boyfriend', 'hud');
 return Function_Continue;

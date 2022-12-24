@@ -1,23 +1,6 @@
-local allowCountdown = false;
-function onStartCountdown()
-	if not allowCountdown and isStoryMode then --Block the first countdown
-	startVideo('SonicEXE');
-	setProperty('inCutscene', false);		
-	allowCountdown = true;
-	return Function_Stop;
-	end
-	return Function_Continue;
-end
-
 function onCreate()
 	precacheImage('sonicJUMPSCARE');
 
-	makeLuaSprite('black', 'black', 0, 0);
-	addLuaSprite('black', true);
-	makeLuaSprite('circle', 'StartScreens/CircleTooSlow', 1280, 200);
-	addLuaSprite('circle', true);
-	makeLuaSprite('text', 'StartScreens/TextTooSlow', -1280, 200);
-	addLuaSprite('text', true);
     makeLuaSprite('credbox', 'box', 380, -1280);
     scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
@@ -58,29 +41,15 @@ function onCreate()
           
        
 	setObjectCamera('credbox', 'hud');
-	setObjectCamera('black', 'hud');
-	setObjectCamera('circle', 'hud');
-	setObjectCamera('text', 'hud');
 
 	startTime = 0.3;
 
-	runTimer('flyin', startTime);
-	runTimer('fadeout', startTime+2.5);
 	runTimer('slidedown', startTime+3);
 	runTimer('beginsong', startTime+2);
 	runTimer('slideup', startTime+9);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
-	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 500, 1, 'linear');
-		doTweenX('textfly', 'text', 300, 1, 'linear');
-	end
-	if tag == 'fadeout' then
-		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
-		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
-		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')
-	end
 	if tag == 'slidedown' then
 doTweenY('move', 'credits', 50, 1, 'linear');
 doTweenY('move1', 'credbox', 0, 1, 'linear');

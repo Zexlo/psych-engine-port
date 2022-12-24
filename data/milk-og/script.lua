@@ -2,16 +2,7 @@ local bfx = 200;
 local bfy = 0;
 local zoomshit = 0;
 
-
-allowCountdown = false;
-
 function onCreate()
-	precacheImage('black');
-
-	makeLuaSprite('black', 'black', 0, 0);
-	addLuaSprite('black', true);
-	makeLuaSprite('circle', 'StartScreens/Sunky', -1200, 0);
-	addLuaSprite('circle', true);
     makeLuaSprite('credbox', 'box', 380, -1280);
     scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
@@ -49,30 +40,15 @@ function onCreate()
           addLuaText('mouse');
        
 	setObjectCamera('credbox', 'hud');
-	setObjectCamera('black', 'hud');
-	setObjectCamera('circle', 'hud');
-	setObjectCamera('text', 'hud');
 
 	startTime = 0.3;
 
-	runTimer('flyin', startTime);
-	runTimer('fadeout', startTime+1.5);
 	runTimer('slidedown', startTime+3);
 	runTimer('beginsong', startTime+4);
 	runTimer('slideup', startTime+12);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
-	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 100, 0.02, 'SineInOut');
-        playSound('flatBONK', 1, 'thefunny');
-		
-	end
-	if tag == 'fadeout' then
-		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
-		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
-		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut');
-	end
 	if tag == 'slidedown' then
 doTweenY('move', 'credits', 50, 1, 'linear');
 doTweenY('move1', 'credbox', 0, 1, 'linear');
@@ -87,10 +63,6 @@ doTweenY('move11', 'Music', 530, 1, 'linear');
 doTweenY('move12', 'mouse', 580, 1, 'linear');
 
 end
-	if tag == 'beginsong' then
-		allowCountdown = true;
-		startCountdown();
-	end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
      doTweenY('move1', 'credbox', -1280, 0.4, 'linear');         
@@ -115,24 +87,7 @@ end
      removeLuaText('mouse', true);
        end
 end
-function onStartCountdown()
-	if not allowCountdown then
-		return Function_Stop;
-	end
-	return Function_Continue;
-end
 
-function onUpdate(elapsed)
---doTweenColor('ColorTween', 'timeBar', 'FF0000', 1, 'linear')
-    noteTweenX('play0', 0, 190, 0.01, 'SineInOut')
-	noteTweenX('play1', 1, 300, 0.01, 'SineInOut')
-	noteTweenX('play2', 2, 410, 0.01, 'SineInOut')
-	noteTweenX('play3', 3, 520, 0.01, 'SineInOut')
-    noteTweenX('play4', 4, 660, 0.01, 'SineInOut')
-	noteTweenX('play5', 5, 770, 0.01, 'SineInOut')
-	noteTweenX('play6', 6, 880, 0.01, 'SineInOut')
-	noteTweenX('play7', 7, 990, 0.01, 'SineInOut')
-end
  function onGameOver()
 setObjectCamera('boyfriend', 'hud');
 return Function_Continue;

@@ -76,7 +76,6 @@ function onCreate()
 	setProperty('furnace.antialiasing', false)
 	
 	width = getProperty("bg1.width")
-	stophide = false
 	setProperty('dad.alpha', 0)
 	setProperty('gf.alpha', 0)
 	doTweenX("fixit", "gf", 4200, 2, "linear")
@@ -204,7 +203,6 @@ end
 
 if tag == 'remove' then
 setProperty('cover.alpha', 0)
-stophide = true
 setProperty('gf.alpha', 1)
 setProperty('dad.alpha', 1)
 end
@@ -239,18 +237,6 @@ function onUpdate(elasped)
 	
 -- end of more HUD shit lolmao
 	
-if stophide == false then
- noteTweenAlpha('g', 0, 0, 0.001, 'linear');
- noteTweenAlpha('h', 1, 0, 0.001, 'linear');
- noteTweenAlpha('e', 2, 0, 0.001, 'linear');
- noteTweenAlpha('f', 3, 0, 0.001, 'linear');
- noteTweenAlpha('a', 4, 0, 0.001, 'linear');
- noteTweenAlpha('b', 5, 0, 0.001, 'linear');
- noteTweenAlpha('c', 6, 0, 0.001, 'linear');
- noteTweenAlpha('d', 7, 0, 0.001, 'linear'); 
- noteTweenAlpha('i', 7, 0, 0.001, 'linear'); 
-end
-
 if curBeat == 49 then
 runTimer('sound', 1)
 -- setProperty('boyfriend.flipX', true)

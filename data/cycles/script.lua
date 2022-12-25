@@ -1,6 +1,5 @@
 function onCreate()
 
-setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/music/
         makeLuaSprite('credbox', 'box', 390, -1280);
          scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
@@ -40,7 +39,7 @@ setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/mus
 	startTime = 0.3;
 
 	runTimer('slidedown', startTime+5);
-	runTimer('slideup', startTime+15);
+	runTimer('slideup', startTime+11);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)

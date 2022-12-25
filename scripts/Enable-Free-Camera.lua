@@ -1,12 +1,13 @@
 FREE_CAM_TEXT = 'Free Camera Enabled';
 LOCKED_CAM_TEXT = 'Free Camera Locked';
-CONTROL_TEXT = 'I, J, K, L to move\nHold Shift to move faster\nPress 1 to release camera\nPress 2 to lock camera';
+CONTROL_TEXT = 'I, J, K, L to move\nHold Shift to move faster\nPress 1 to release camera\nPress 2 to lock camera\nQ to zoom out\nE to zoom in\nW to reset zoom';
 ON = false;
 OFF = true;
 -----------
 freeCam = false;
 curX = 0;
 curY = 0;
+curzoom = 0.9;
 textVisible = false;
 function onCreate()
 setPropertyFromClass('flixel.FlxG', 'camera.zoom', 0.6)
@@ -55,7 +56,14 @@ function onUpdate(elapsed)
         elseif getKey('k', true) then
             curY = curY + incAmount;
         end
-        
+        if getKey('q', true) then
+ curzoom = curzoom - 0.005;
+        elseif getKey('e', true) then
+            curzoom = curzoom + 0.005;
+		elseif getKey('w', true) then
+            curzoom = 0.9		
+        end
+		doTweenZoom('wee', 'camGame', curzoom, 0.2, 'linear');	
         triggerEvent('Camera Follow Pos', curX, curY); -- has the annoying lerp of in-game camera, but it's more stable than moving cam by vars so eh
     else
         curX = getProperty('camFollowPos.x'); -- save coords

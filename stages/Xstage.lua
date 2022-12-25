@@ -1,39 +1,34 @@
-allowCountdown = false
-function onCreate()
-
-	makeLuaSprite('skyX', 'Xstage/skyX', -800, -500);
-	
-	makeLuaSprite('tree', 'Xstage/tree', 900, -400);
+	allowCountdown = false
+	function onCreate()
+	makeLuaSprite('skyX', 'Xstage/skyX', -820, -300);
+	scaleObject('skyX', 0.5, 0.4);	
+	makeLuaSprite('tree', 'Xstage/tree', 1150, -370);
 	scaleObject('tree', 0.7, 0.7);
 	
-	makeLuaSprite('tree', 'Xstage/tree', 900, -400);
-	scaleObject('tree', 0.7, 0.7);
-	
-       makeLuaSprite('smflower', 'Xstage/smflower', 980, 350);
-	scaleObject('smflower', 0.7, 0.7);
+       makeLuaSprite('smflower', 'Xstage/smflower', 980, 460);
+	scaleObject('smflower', 0.6, 0.6);
 
-makeLuaSprite('smflower2', 'Xstage/smflower2', -250, 550);
-	scaleObject('smflower2', 0.7, 0.7);
+makeLuaSprite('smflower2', 'Xstage/smflower2', -200, 460);
+	scaleObject('smflower2', 0.6, 0.6);
 
 
-    makeLuaSprite('Hills2', 'Xstage/Hills2', -500, 100);
-	scaleObject('Hills2', 1, 1);
+    makeLuaSprite('Hills2', 'Xstage/Hills2', -800, 420);
+	scaleObject('Hills2', 0.5, 0.4);
 
-	makeLuaSprite('Hills1', 'Xstage/Hills1', -700, -600);
-	scaleObject('Hills1', 1.1, 1.1);
+	makeLuaSprite('Hills1', 'Xstage/Hills1', -800, -200);
+	scaleObject('Hills1', 0.6, 0.5);
 
-	makeLuaSprite('groundX', 'Xstage/groundX', -800, 400);
-	scaleObject('groundX', 1.1, 1.1);
-
-         makeAnimatedLuaSprite('fanim', 'Xstage/Weird', -300, 000);
-       scaleObject('Weird', 0.7, 0.7);
+	makeLuaSprite('groundX', 'Xstage/groundX', -740, 600);
+	scaleObject('groundX', 0.6, 0.5);
+         makeAnimatedLuaSprite('fanim', 'Xstage/Weird', -400, 100);
 	addAnimationByPrefix('fanim', 'idle', 'flower', 40, true);
+	scaleObject('fanim', 0.8, 0.8);	
 	objectPlayAnimation('fanim', 'flower', false);
 
 
 	addLuaSprite('skyX', false);
-	addLuaSprite('Hills2', false);
 	addLuaSprite('Hills1', false);
+	addLuaSprite('Hills2', false);
 	addLuaSprite('groundX', false);
 	addLuaSprite('fanim', false);
 	addLuaSprite('smflower', false);
@@ -59,7 +54,7 @@ else
 
 	runTimer('flyin', startTime);
 	runTimer('fadeout', startTime+2.5);
-	runTimer('beginsong', startTime+4);
+	runTimer('beginsong', startTime+2.6);
 end
 end
 

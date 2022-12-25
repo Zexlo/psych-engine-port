@@ -4,14 +4,22 @@ function onCreate()
 	addAnimationByPrefix('sonic', 'start', 'appear', 24, false);	
 	addAnimationByPrefix('sonic', 'idle', 'deathLoopSonicExe', 24, true);		
 	addAnimationByPrefix('sonic', 'end', 'deathConfirmSonicExe', 24, false);
-	setProperty('sonic.antialiasing', true)	
+	setProperty('sonic.antialiasing', true)
+	makeLuaSprite('red', 'red', -150, 0);
+	makeLuaSprite('yo', 'black', -150, 0);
+	setScrollFactor('yo', 0.9, 1);
+	setScrollFactor('red', 0.9, 1);
+	scaleObject('red', 2, 3);
+	scaleObject('yo', 2, 3);
+	addLuaSprite("yo", true)
+	addLuaSprite("red", true)
+	setProperty('red.alpha', 0)
+	setProperty('yo.alpha', 0)
+	setObjectCamera('red', 'other');
+	setObjectCamera('yo', 'other');		
 end
 
 function onGameOverStart()
-if songName == 'Chaos' then
-close()
-end
-if songName ~= 'Chaos' then
 	setPropertyFromClass('flixel.FlxG', 'camera.zoom', 1.1)
 
 	doTweenX('fixX', 'camFollow', 750, 0.2, 'sineOut')
@@ -25,7 +33,7 @@ if songName ~= 'Chaos' then
 	runTimer('begin', start);
 	objectPlayAnimation('sonic', 'start',false);
 	end
-end	
+	
 function onTimerCompleted(tag, loops, loopsLeft)
 
 	if tag == 'begin' then
@@ -39,6 +47,14 @@ function onTimerCompleted(tag, loops, loopsLeft)
 function onGameOverConfirm(retry)
 	setProperty('boyfriend.alpha', 0);
 	objectPlayAnimation('sonic', 'end',true);
+	setProperty('yo.alpha', 1)	
+	doTweenAlpha('fadein','red', 1, 0.8, 'linear'); 	
 	doTweenX('fixXs', 'sonic', 320, 0.01, 'sineOut')
 	doTweenY('fixYs', 'sonic', -110, 0.01, 'sineOut')	
 	end
+
+function onTweenCompleted(tag)
+	if tag == "fadein" then
+doTweenAlpha('fadeout','red', 0, 0.8, 'linear');
+end
+end	

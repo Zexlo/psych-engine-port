@@ -1,13 +1,35 @@
 {
 	"animations": [
 		{
+			"offsets": [
+				572,
+				637
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "danceLeft",
+			"indices": [],
+			"name": "Knuckleft"
+		},
+		{
+			"offsets": [
+				572,
+				637
+			],
+			"loop": false,
+			"fps": 20,
+			"anim": "danceRight",
+			"indices": [],
+			"name": "Knuckright"
+		},
+		{
 			"loop": false,
 			"offsets": [
 				572,
 				637
 			],
-			"anim": "danceLeft",
-			"fps": 20,
+			"anim": "sad",
+			"fps": 24,
 			"name": "Knuckleft",
 			"indices": []
 		},
@@ -15,34 +37,12 @@
 			"loop": false,
 			"offsets": [
 				572,
-				637
-			],
-			"anim": "danceRight",
-			"fps": 20,
-			"name": "Knuckright",
-			"indices": []
-		},
-		{
-			"offsets": [
-				572,
-				637
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "sad",
-			"loop": false,
-			"name": "Knuckleft"
-		},
-		{
-			"offsets": [
-				572,
 				636
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "cheer",
-			"loop": false,
-			"name": "Knuckright"
+			"fps": 24,
+			"name": "Knuckright",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -59,9 +59,9 @@
 		77
 	],
 	"camera_position": [
-		-230,
-		-60
+		-290,
+		-40
 	],
 	"sing_duration": 4,
-	"scale": 0.4
+	"scale": 0.5
 }

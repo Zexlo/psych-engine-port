@@ -1,21 +1,10 @@
 function onCreate()
 
-setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/music/
-    precacheImage('black');
-
-	precacheImage('StartScreens/CircleCycles');
-	precacheImage('StartScreens/TextCycles');
-
-	makeLuaSprite('black', 'black', 0, 0);
-	addLuaSprite('black', true);
-	makeLuaSprite('circle', 'StartScreens/CircleCycles', 1280, 200);
-	addLuaSprite('circle', true);
-	makeLuaSprite('text', 'StartScreens/TextCycles', -1280, 200);
-	addLuaSprite('text', true);
-        makeLuaSprite('credbox', 'box', 43, -1280);
+        makeLuaSprite('credbox', 'box', 390, -1280);
          scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
 	
+	setObjectCamera('credbox', 'HUD');	
        makeLuaText('credits', 'CREDITS', 730, 250, -1280)
        setTextSize('credits', 30)
        addLuaText('credits')
@@ -47,24 +36,13 @@ setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/mus
           setTextSize('chart', 30)
           addLuaText('chart')     
           
-	setObjectCamera('black', 'hud');
-	setObjectCamera('circle', 'hud');
-	setObjectCamera('text', 'hud');
-
 	startTime = 0.3;
 
-	runTimer('flyin', startTime);
-	runTimer('fadeout', startTime+2.5);
-	runTimer('slidedown', startTime+3);
-	runTimer('beginsong', startTime+4);
-	runTimer('slideup', startTime+9);
+	runTimer('slidedown', startTime+5);
+	runTimer('slideup', startTime+11);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
-	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 500, 1, 'linear');
-		doTweenX('textfly', 'text', 300, 1, 'linear');
-	end
 
 if tag == '1' then
 	if quote == (1) then  
@@ -81,15 +59,10 @@ if tag == '1' then
 	playSound('XLines/6', 1)
 	end
 end	
-	
-	if tag == 'fadeout' then
-		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
-		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
-		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')
-	end
+
 	if tag == 'slidedown' then
 doTweenY('move', 'credits', 50, 1, 'linear');
-doTweenY('move1', 'credbox', 70, 1, 'linear');
+doTweenY('move1', 'credbox', 0, 1, 'linear');
 doTweenY('move2', 'code', 150, 1, 'linear');
 doTweenY('move3', 'jakie', 200, 1, 'linear');
 doTweenY('move4', 'art', 250, 1, 'linear');
@@ -101,10 +74,6 @@ doTweenY('move10', 'sas', 440, 1, 'linear');
 doTweenY('move11', 'chart', 470, 1, 'linear');
 
 end
-	if tag == 'beginsong' then
-		allowCountdown = true;
-		startCountdown();
-	end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
      doTweenY('move1', 'credbox', -1280, 0.4, 'linear');         
@@ -119,12 +88,6 @@ end
      doTweenY('move11', 'chart', -1280, 1, 'linear');
 
        end
-end
-function onStartCountdown()
-	if not allowCountdown then
-		return Function_Stop;
-	end
-	return Function_Continue;
 end
 
 function onUpdate(elasped)

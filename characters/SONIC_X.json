@@ -1,68 +1,68 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
-				-77,
-				159
+				55,
+				140
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "X_Idle"
+			"fps": 24,
+			"name": "X_Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-58,
-				273
+				75,
+				164
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "X_Up"
-		},
-		{
-			"offsets": [
-				-7,
-				142
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "X_Down"
-		},
-		{
-			"offsets": [
-				-79,
-				179
-			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "X_Left"
+			"fps": 24,
+			"name": "X_Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-117,
-				202
+				130,
+				130
 			],
-			"loop": true,
+			"anim": "singDOWN",
 			"fps": 24,
+			"name": "X_Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				91,
+				247
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "X_Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				172
+			],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "X_Right"
+			"fps": 24,
+			"name": "X_Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/SONIC_X",
 	"position": [
-		-240,
-		130
+		0,
+		0
 	],
-	"healthicon": "lordX",
+	"healthicon": "LordX",
 	"flip_x": false,
 	"healthbar_colors": [
 		120,
@@ -70,8 +70,8 @@
 		176
 	],
 	"camera_position": [
-		-120,
-		-200
+		-230,
+		-160
 	],
 	"sing_duration": 4,
 	"scale": 1.1

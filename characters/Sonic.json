@@ -1,107 +1,107 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				-110,
 				31
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SONICIDLE"
+			"fps": 24,
+			"name": "SONICIDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-100,
 				74
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SONICUP"
+			"fps": 24,
+			"name": "SONICUP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-42,
 				26
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SONICDOWN"
+			"fps": 24,
+			"name": "SONICDOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-28,
 				10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SONICLEFT"
+			"fps": 24,
+			"name": "SONICLEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-102,
 				49
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SONICRIGHT"
+			"fps": 24,
+			"name": "SONICRIGHT",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-47,
 				26
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "evil",
-			"fps": 24,
-			"name": "sonicImmagetya",
-			"indices": []
+			"indices": [],
+			"name": "sonicImmagetya"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-47,
 				26
 			],
-			"anim": "end",
+			"loop": false,
 			"fps": 24,
-			"name": "sonicImmagetya",
+			"anim": "end",
+			"indices": [],
+			"name": "sonicImmagetya"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-72,
+				25
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "SONIClaugh",
 			"indices": []
 		},
 		{
-			"offsets": [
-				-72,
-				25
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singDOWN-alt",
 			"loop": false,
-			"name": "SONIClaugh"
-		},
-		{
 			"offsets": [
 				-72,
 				25
 			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "SONIClaugh",
 			"indices": [
 				5,
 				6,
 				6
-			],
-			"fps": 24,
-			"anim": "singUP-alt",
-			"loop": false,
-			"name": "SONIClaugh"
+			]
 		}
 	],
 	"no_antialiasing": false,
@@ -114,8 +114,8 @@
 	"flip_x": false,
 	"healthbar_colors": [
 		2,
-		100,
-		175
+		2,
+		125
 	],
 	"camera_position": [
 		90,

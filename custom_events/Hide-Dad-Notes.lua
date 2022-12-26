@@ -1,10 +1,8 @@
 function onEvent(name, value1, value2)
 	if name == 'Hide-Dad-Notes' then
 	
-setPropertyFromGroup('opponentStrums',0,'alpha',0)
-setPropertyFromGroup('opponentStrums',1,'alpha',0)
-setPropertyFromGroup('opponentStrums',2,'alpha',0)
-setPropertyFromGroup('opponentStrums',3,'alpha',0)
-end
-
+     for i = 0,3 do
+     noteTweenAlpha(i,i,0,0.2,'linear')
+		end
+	end
 end

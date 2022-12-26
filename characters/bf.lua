@@ -57,4 +57,4 @@ function onTweenCompleted(tag)
 	if tag == "fadein" then
 doTweenAlpha('fadeout','red', 0, 0.8, 'linear');
 end
-end	
+end

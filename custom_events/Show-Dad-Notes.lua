@@ -1,8 +1,13 @@
 function onEvent(name, value1, value2)
 	if name == 'Show-Dad-Notes' then
-		noteTweenAlpha('show1D', 0, 1, value1, 'linear');
-		noteTweenAlpha('show2D', 1, 1, value1, 'linear');
-		noteTweenAlpha('show3D', 2, 1, value1, 'linear');
-		noteTweenAlpha('show4D', 3, 1, value1, 'linear');
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == true then
+alpha = 0.5
+else
+alpha = 1
+end
+
+     for i = 0,3 do
+     noteTweenAlpha(i,i,alpha,0.2,'linear')
+		end
 	end
 end

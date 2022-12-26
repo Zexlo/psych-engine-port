@@ -154,22 +154,36 @@ if curBeat >= 147 and curBeat <215 then
 	noteTweenX('play1', 5, 525, 0.05, 'SineInOut')
 	noteTweenX('play2', 6, 635, 0.05, 'SineInOut')
 	noteTweenX('play3', 7, 745, 0.05, 'SineInOut')
-    noteTweenAlpha('hidee', 3, 0, 0.05, 'expoInOut');
-	
-elseif curBeat >=215 and not middlescroll then
-  addLuaSprite('TailsBG', false);
-         setPropertyFromGroup('playerStrums', 0, 'x', defaultPlayerStrumX0)
-        setPropertyFromGroup('playerStrums', 1, 'x', defaultPlayerStrumX1)
-        setPropertyFromGroup('playerStrums', 2, 'x', defaultPlayerStrumX2)
-        setPropertyFromGroup('playerStrums', 3, 'x', defaultPlayerStrumX3)
-        setPropertyFromGroup('playerStrums', 4, 'x', defaultPlayerStrumX4)
-
-        setPropertyFromGroup('opponentStrums', 0, 'x', defaultOpponentStrumX0 + 40)
-        setPropertyFromGroup('opponentStrums', 1, 'x', defaultOpponentStrumX1 + 43)
-        setPropertyFromGroup('opponentStrums', 2, 'x', defaultOpponentStrumX2 + 40)
-        setPropertyFromGroup('opponentStrums', 3, 'x', defaultOpponentStrumX3 + 46)
-        setPropertyFromGroup('opponentStrums', 4, 'x', defaultOpponentStrumX4 + 49)
 end
+
+if curBeat >= 147 and curBeat <215 and downscroll then
+
+for i = 4,7 do
+	noteTweenY(i, i, 550, 0.001, 'SineInOut')
+	end	
+end	
+	
+if curBeat >=215 and not middlescroll then
+	addLuaSprite('TailsBG', false);
+	setPropertyFromGroup('playerStrums', 0, 'x', defaultPlayerStrumX0)
+	setPropertyFromGroup('playerStrums', 1, 'x', defaultPlayerStrumX1)
+	setPropertyFromGroup('playerStrums', 2, 'x', defaultPlayerStrumX2)
+	setPropertyFromGroup('playerStrums', 3, 'x', defaultPlayerStrumX3)
+	setPropertyFromGroup('playerStrums', 4, 'x', defaultPlayerStrumX4)
+	setPropertyFromGroup('opponentStrums', 0, 'x', defaultOpponentStrumX0 + 40)
+	setPropertyFromGroup('opponentStrums', 1, 'x', defaultOpponentStrumX1 + 43)
+	setPropertyFromGroup('opponentStrums', 2, 'x', defaultOpponentStrumX2 + 40)
+	setPropertyFromGroup('opponentStrums', 3, 'x', defaultOpponentStrumX3 + 46)
+	setPropertyFromGroup('opponentStrums', 4, 'x', defaultOpponentStrumX4 + 49)	
+elseif curBeat >=215 and middlescroll then
+	addLuaSprite('TailsBG', false);
+  end
+  
+if curBeat >=215 and downscroll then
+for i = 4,7 do
+	noteTweenY(i, i, 570, 0.001, 'SineInOut')
+	end
+end	
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)

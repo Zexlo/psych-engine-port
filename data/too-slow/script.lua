@@ -65,10 +65,6 @@ doTweenY('move11', 'chart', 490, 1, 'linear');
 doTweenY('move12', 'wild', 530, 1, 'linear');
 
 end
-	if tag == 'beginsong' then
-		allowCountdown = true;
-		startCountdown();
-	end
        if tag == 'slideup' then
        doTweenY('move', 'credits', -1280, 1, 'linear');
      doTweenY('move1', 'credbox', -1280, 0.4, 'linear');         
@@ -85,23 +81,10 @@ end
 
        end
 end
-function onStartCountdown()
-	if not allowCountdown then
-		return Function_Stop;
-	end
-	return Function_Continue;
-end
 
 function onUpdate(elasped)
 doTweenColor('ColorTween', 'timeBar', '166DBB', 1, 'linear')
-
-for i = 0,3 do
-	noteTweenY(i, i, 1000, 0.001, 'SineInOut')
-	noteTweenX('play0', 4, 415, 0.01, 'SineInOut')
-	noteTweenX('play1', 5, 525, 0.01, 'SineInOut')
-	noteTweenX('play2', 6, 635, 0.01, 'SineInOut')
-	noteTweenX('play3', 7, 745, 0.01, 'SineInOut')
-end		
+	
 	if curBeat >= 190 and curBeat <=198 or curStep >= 1306 and curStep <=1432 then
 doTweenZoom('wee', 'camGame', 1.3, 0.5, 'linear');
 else

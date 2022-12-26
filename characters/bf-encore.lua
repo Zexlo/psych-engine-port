@@ -17,6 +17,7 @@ function onCreate()
 	setObjectCamera('yo', 'other');		
 end
 
+
 function onGameOverStart()
 	setPropertyFromClass('flixel.FlxG', 'camera.zoom', 1.1)
 
@@ -56,3 +57,9 @@ function onTweenCompleted(tag)
 doTweenAlpha('fadeout','red', 0, 0.8, 'linear');
 end
 end	
+
+function onUpdate(elapsed)
+if week == 'Majin' and boyfriendName == 'bf-encore' then
+doTweenColor('ColorTween', 'boyfriend', '4161bd', 0.1, 'linear')
+end
+end

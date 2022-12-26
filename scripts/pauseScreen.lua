@@ -3,10 +3,7 @@ cSelected = false
 rSelected = false
 eSelected = false
 
-canPause = true
-
-
-
+canPause = false
 
 function onGameOver()
 canPause = false
@@ -23,24 +20,26 @@ end
 
 function onCreate()
 --close()
-makeLuaSprite('3p', 'endless/three', 0, 0);
+	makeLuaSprite('3p', 'endless/three', 0, 0);
 	screenCenter('3p','XY')
 	makeLuaSprite('2p', 'endless/two', 0, 0);
 	screenCenter('2p','XY')	
 	makeLuaSprite('1p', 'endless/one', 0, 0);
 	screenCenter('1p','XY')	
 	makeLuaSprite('gop', 'endless/gofun', 0, 0);
-	screenCenter('gop','XY')
+	screenCenter('gop','XY')	
 
 	setObjectCamera('3p', 'other');
 	setObjectCamera('2p', 'other');
 	setObjectCamera('1p', 'other');
-	setObjectCamera('gop', 'other');	
+	setObjectCamera('gop', 'other');
 
 	luaDebugMode = true
 	makeLuaSprite('blackbox', 'blackBG', 0, 0)
-	setObjectCamera('blackbox', 'camOther')
-	setProperty('blackbox.alpha', 0.7)
+	setObjectCamera('blackbox', 'other')
+	setProperty('blackbox.alpha', 0)
+	initLuaShader('grayscale')
+	initLuaShader('noshader')	
 	setProperty('blackbox.visible', false)
 	makeLuaSprite('pauseRight', 'pauseScreen/pauseRight', 1500, 30)
 	setObjectCamera('pauseRight', 'camOther')
@@ -58,6 +57,10 @@ makeLuaSprite('3p', 'endless/three', 0, 0);
 	makeLuaSprite('fadeBG', 'simplejump', 0, 0)
 	scaleObject('fadeBG', 0.7, 0.7); 
 	setProperty('fadeBG.alpha', 0)
+	makeLuaText('controltext', "CONTROLS\nTAB: Change skin (base bf ONLY)\nF12: Toggle fullscreen", 1280, 310, -800);
+    setTextSize('controltext', 30);
+	setObjectCamera('controltext', 'other');	
+    setTextFont('controltext', 'sonic.otf')
 	
 	addLuaSprite('blackbox', true)
 	addLuaSprite('pauseRight', true)
@@ -67,70 +70,111 @@ makeLuaSprite('3p', 'endless/three', 0, 0);
 	addLuaSprite('restart', true)
 	addLuaSprite('exit', true)
 	addLuaSprite('fadeBG', true)
+
+	setObjectOrder('controltext', getObjectOrder('blackbox')+1)	
 end
 function onCreatePost()	
+	makeAnimatedLuaSprite('pauseIcon', nil, -800, 140)
+	loadGraphic('pauseIcon', 'icons/icon-bf', 150)
+	addAnimation('pauseIcon', 'icon/icon-bf', {0, 1}, 0, true)
+	setObjectCamera('pauseIcon', 'other')
+	addLuaSprite('pauseIcon')
+	setObjectOrder('pauseIcon', getObjectOrder('pauseLeft')+1)
+	setProperty('pauseIcon.angle', 180)
 
 if week == 'Tooslow' or week == 'Tooslowencore' then
-makeLuaSprite('disk', 'covers/tooslow', -800, 250)
+makeLuaSprite('disk', 'covers/tooslow', -800, 260)
 
 elseif week == 'YCR' then
-makeLuaSprite('disk', 'covers/cantrun', -800, 250)
+makeLuaSprite('disk', 'covers/cantrun', -800, 260)
 
 elseif week == 'Triple' then
-makeLuaSprite('disk', 'covers/Triple Trouble', -800, 250)
+makeLuaSprite('disk', 'covers/Triple Trouble', -800, 260)
 
 elseif week == 'Majin' then
-makeLuaSprite('disk', 'covers/endless', -800, 250)
+makeLuaSprite('disk', 'covers/endless', -800, 260)
 
 elseif week == 'LordX' then
-makeLuaSprite('disk', 'covers/lordX', -800, 250)
+makeLuaSprite('disk', 'covers/lordX', -800, 260)
 
 elseif week == 'Sunky' then
-makeLuaSprite('disk', 'covers/milk', -800, 250)
+makeLuaSprite('disk', 'covers/milk', -800, 260)
 
 elseif week == 'Sanic' then
-makeLuaSprite('disk', 'covers/toofest', -800, 250)
+makeLuaSprite('disk', 'covers/toofest', -800, 260)
 
 elseif week == 'Fleetway' then
-makeLuaSprite('disk', 'covers/chaos', -800, 250)
+makeLuaSprite('disk', 'covers/chaos', -800, 260)
 
 elseif week == 'TDoll' then
-makeLuaSprite('disk', 'covers/Tdoll', -800, 250)
+makeLuaSprite('disk', 'covers/Tdoll', -800, 260)
 
-elseif week == 'Starved' or  week == 'Xterion' then
-makeLuaSprite('disk', 'covers/blankrecord', -800, 250)
+elseif week == 'Starved' or  week == 'Xterion' or week == 'curse' then
+makeLuaSprite('disk', 'covers/blankrecord', -800, 260)
 
 elseif week == 'Personel' then
-makeLuaSprite('disk', 'covers/DONOTSTEEL', -800, 250)
+makeLuaSprite('disk', 'covers/DONOTSTEEL', -800, 260)
 	end
-
-
-
 	scaleObject('disk', 0.28, 0.28); 	
 	setObjectCamera('disk', 'other')
 	addLuaSprite('disk')
 	setObjectOrder('disk', getObjectOrder('pauseLeft')+1)
-	setProperty('disk.angle', 180)	
+	setProperty('disk.angle', 180)
+
+
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
+down = 550
+moveY = 1000
+fixY = 688
+elseif downscroll then
+down = 570
+moveY = 1000
+fixY = 688
+else
+down = 50
+moveY = -200
+fixY = 31
+end
 
 end	
+
+function onSongStart()
+if songName ~= 'Chaos' then
+canPause = true
+else
+end
+end
+
 function onUpdatePost(elapsed)
 
-	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause and curBeat >= 1 then
-		playSound('pauseSounds/pause', 0.8, 'pause')		
+	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause then
+		playSound('pauseSounds/pause', 0.8, 'pause')
+		playSound('pause',1,'song')		
 		doTweenX('pauseRightTween', 'pauseRight', 600, 0.2, 'linear')
-		doTweenX('fixtimebar', 'timeBar', 450, 0.2, 'linear')
-		doTweenY('fixtimebar2', 'timeBar', 30, 0.2, 'linear')
+		doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'linear')
+		doTweenY('fixtimebar2', 'timeBar', fixY, 0.2, 'linear')
 		doTweenX('pauseLeftTween', 'pauseLeft', 0, 0.2, 'linear')
+		doTweenY('controlTween', 'controltext', 30, 0.4, 'linear')	
 		doTweenX('TimerTween', 'Timer', 207, 0.2, 'linear')
-		doTweenX('diskTween', 'disk', 65, 0.6, 'smoothStepIn')
+		doTweenX('diskTween', 'disk', 65, 0.4, 'smoothStepIn')
 		doTweenAngle('diskTweenAng', 'disk', 0, 1, 'circInOut')
 		doTweenX('cTween', 'continue', 900, 0.2, 'linear')
 		doTweenX('rTween', 'restart', 818, 0.2, 'linear')
 		doTweenX('eTween', 'exit', 736, 0.2, 'linear')
+		doTweenX('pauseIconTween', 'pauseIcon', 65, 0.4, 'circInOut')
+		doTweenAngle('pauseIconTweenAng', 'pauseIcon', 0, 0.4, 'circInOut')	
+		setSpriteShader('blackbox','grayscale')
+	    addHaxeLibrary("ShaderFilter", "openfl.filters")
+		runHaxeCode([[
+		game.camGame.setFilters([new ShaderFilter(game.getLuaObject("blackbox").shader)]);
+		]]) 
 		cSelected = true
 		rSelected = false
 		eSelected = false
-		fakePaused = true		
+		fakePaused = true
+	for i = 0,7 do	
+	noteTweenY(i, i,moveY, 0.2, 'linear')
+end		
 	elseif keyJustPressed('accept') and fakePaused == true and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause then
 		plsHelp()
 	end
@@ -164,21 +208,35 @@ doTweenAngle('rotate2', 'disk', 360, 0.02, 'smoothStepIn')
 	
 		setProperty('blackbox.visible', true)
 		setPropertyFromClass('Conductor', 'songPosition', getPropertyFromClass('Conductor', 'songPosition') - elapsed * 1000  ) 
-		-- it is counted by milliseconds, 1000 = 1 second
+		-- counted in milliseconds, 1000 = 1 second
 		setPropertyFromClass('flixel.FlxG', 'sound.music.time', getPropertyFromClass('Conductor', 'songPosition'))
 		setProperty('vocals.time', getPropertyFromClass('Conductor', 'songPosition'))
 		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
 		setProperty('vocals.volume', 0)
-		
-	elseif fakePaused == false and canPause then
+end
+	if fakePaused == false and canPause then
 		setProperty('blackbox.visible', false)
 		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
-		
+		setSpriteShader('blackbox','noshader')
+		runHaxeCode([[
+		game.camGame.setFilters([new ShaderFilter(game.getLuaObject("blackbox").shader)]);
+		]]) 
+	stopSound('song')
+	stopSound('song1')		
 	end
 	scaleObject('Timer', 1 * getProperty("songPercent"), 1)
 	damnIWannaDie()
+end
+	
+function onSoundFinished(tag)
+if tag == 'song' then
+playSound('pause',1,'song1')
+end
+if tag == 'song1' then
+playSound('pause',1,'song')
+end
+end
 
-    end
 function damnIWannaDie()
 	if keyJustPressed('down') and fakePaused == true then
 		if cSelected == true then
@@ -215,19 +273,28 @@ function plsHelp()
 	playSound('pauseSounds/unpause', 1, 'unpause')
 	setProperty('vocals.volume', 1)
 	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
-	doTweenX('fixtimebar3', 'timeBar', 450, 0.2, 'linear')
-	doTweenY('fixtimebar4', 'timeBar', 30, 0.2, 'linear')
-	doTweenY('fixtimebar5', 'timeBar', 30, 0.2, 'linear')
+	doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'linear')
+	doTweenY('fixtimebar2', 'timeBar', fixY, 0.2, 'linear')
 	doTweenX('pauseRightTween2', 'pauseRight', 1500, 0.2, 'linear')
 	doTweenX('pauseLeftTween2', 'pauseLeft', -800, 0.2, 'linear')
+	doTweenY('controlTween', 'controltext', -800, 0.4, 'linear')	
 	doTweenX('TimerTween2', 'Timer', -800, 0.2, 'linear')
 	doTweenX('cTween2', 'continue', 1500, 0.2, 'linear')
 	doTweenX('rTween', 'restart', 1500, 0.2, 'linear')
 	doTweenX('eTween', 'exit', 1500, 0.2, 'linear')
-	doTweenX('diskTween', 'disk', -800, 1, 'circInOut')
+	doTweenX('diskTween', 'disk', -800, 0.6, 'circInOut')
 	doTweenAngle('diskTweenAng', 'disk', 180, 1, 'circInOut')
-	runTimer('cont',1.3)
-	runTimer('4c',0.5)	
+	doTweenX('pauseIconTween', 'pauseIcon', -800, 0.6, 'circInOut')
+	doTweenAngle('pauseIconTweenAng', 'pauseIcon', 180, 0.6, 'circInOut')	
+	runTimer('4c',0.2)
+	noteTweenY('p1', 7,down, 0.2 , 'linear')
+	noteTweenY('p2', 6,down, 0.4 , 'linear')
+	noteTweenY('p3', 5,down, 0.6 , 'linear')
+	noteTweenY('p4', 4,down, 0.8 , 'linear')
+	noteTweenY('o1', 0,down, 0.2 , 'linear')
+	noteTweenY('o2', 1,down, 0.4 , 'linear')
+	noteTweenY('o3', 2,down, 0.6 , 'linear')
+	noteTweenY('o4', 3,down, 0.8 , 'linear')	
 	cSelected = false
 	rSelected = false
 	eSelected = false
@@ -243,18 +310,20 @@ end
 function onTimerCompleted(tag, loops, loopsLeft)
 if tag == '4c' then
 	addLuaSprite('3p',true)	
-	runTimer('3c',0.3)
+	runTimer('countdown',0.3,4)
 	end
-if tag == '3c' then
+
+if tag == 'countdown' and loopsLeft == 3 then
 removeLuaSprite('3p',false)		
 addLuaSprite('2p',true)
-	runTimer('2c',0.3)
 end
-if tag == '2c' then
+
+if tag == 'countdown' and loopsLeft == 2 then
 removeLuaSprite('2p',false)		
 addLuaSprite('1p',true)
 end
-if tag == 'cont' then
+
+if tag == 'countdown'and loopsLeft == 1 then
 removeLuaSprite('1p',false)	
 	fakePaused = false
 -- triggerEvent("Change Scroll Speed", "speed", "duration")

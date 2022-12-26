@@ -10,4 +10,4 @@ function onGameOverStart()
 if week == 'Xterion' then
 setPropertyFromClass('flixel.FlxG', 'camera.zoom', 0.15)
 end	
-end	
+end

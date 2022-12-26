@@ -21,6 +21,9 @@
 	
 	doTweenY('move3', 'bar1', -500, 0.2, 'linear')
 	doTweenY('move4', 'bar2', 1000, 0.2, 'linear')
+for i = 0,7 do
+	noteTweenAlpha(i, i, 1, 0.001, 'SineInOut')
+end		
 	setProperty('healthBarBG.visible', true)
 	setProperty('healthBar.visible', true)
 	setProperty('scoreTxt.visible', true)
@@ -30,9 +33,13 @@
 	setProperty('timeBar.visible', true)
 	setProperty('timeBarBG.visible', true)
 	setProperty('song.visible', true)
-else	
+else
+for i = 0,7 do
+	noteTweenAlpha(i, i, 0, 0.001, 'SineInOut')
+end	
 	doTweenY('move1', 'bar1', 0, 0.2, 'linear')
 	doTweenY('move2', 'bar2', 600, 0.2, 'linear')
+	
 	setProperty('healthBarBG.visible', false)
 	setProperty('healthBar.visible', false)
 	setProperty('scoreTxt.visible', false)

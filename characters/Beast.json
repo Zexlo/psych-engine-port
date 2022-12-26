@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [
 				44,
 				393
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Beast IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Beast IDLE"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				-177,
 				333
 			],
-			"anim": "singRIGHT",
+			"loop": true,
 			"fps": 24,
-			"name": "Beast RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Beast RIGHT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				149,
 				297
 			],
-			"anim": "singLEFT",
+			"loop": true,
 			"fps": 24,
-			"name": "Beast LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Beast LEFT"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				55,
 				480
 			],
-			"anim": "singUP",
+			"loop": true,
 			"fps": 24,
-			"name": "Beast UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Beast UP"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				67,
 				292
 			],
-			"anim": "singDOWN",
+			"loop": true,
 			"fps": 24,
-			"name": "Beast DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Beast DOWN"
 		}
 	],
 	"no_antialiasing": false,
@@ -65,9 +65,9 @@
 	"healthicon": "Beast",
 	"flip_x": false,
 	"healthbar_colors": [
-		0,
-		0,
-		215
+		42,
+		5,
+		118
 	],
 	"camera_position": [
 		-210,

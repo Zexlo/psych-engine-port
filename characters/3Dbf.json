@@ -1,92 +1,92 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-17,
 				16
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF IDLE",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "SSBF IDLE"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				4,
 				28
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF LEFT",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SSBF LEFT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				1,
 				15
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF LEFTmiss",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "SSBF LEFTmiss"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-11,
 				8
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF DOWN",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SSBF DOWN"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-17,
 				22
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF UP",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "SSBF UP"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-10,
 				21
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF RIGHT",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SSBF RIGHT"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				2,
 				33
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF DOWNmiss",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "SSBF DOWNmiss"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-16,
 				21
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "SSBF UPmiss",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "SSBF UPmiss"
 		}
 	],
 	"no_antialiasing": true,
@@ -98,9 +98,9 @@
 	"healthicon": "3Dbf",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		127,
+		255,
+		255
 	],
 	"camera_position": [
 		100,

@@ -5,7 +5,10 @@ local zoomshit = 0;
 
 	allowCountdown = false;
 function onCreate()
-
+if not middlescroll then
+setPropertyFromClass('ClientPrefs', 'middleScroll', true)
+nomid = true
+end
     doTweenAngle('move1', 'healthBar', 90, 0.2, 'SineInOut');
     doTweenY('move2', 'healthBar',350 , 0.2, 'SineInOut');
 	doTweenX('move3', 'healthBar',800 , 0.2, 'SineInOut');
@@ -65,8 +68,7 @@ function onMoveCamera(focus)
     end
 end
 
-function onUpdate()
-setTextString('scoreTxt','Sacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')	
+function onUpdate()	
     zoomshit = (getProperty('camGame.zoom')/0.75);
     setCharacterX('boyfriend',bfx*zoomshit)
     setCharacterY('boyfriend',bfy*zoomshit)
@@ -76,6 +78,10 @@ end
 
 function onUpdate(elapsed)
 	doTweenColor('ColorTween', 'timeBar', 'FF0000', 1, 'linear')
+
+	for i = 0,3 do
+	noteTweenX(i, i,-1000, 0.2, 'linear')
+end
 	
 if curBeat >= 294 and curBeat <=499 then
 	doTweenAlpha('bye1', 'room', 0, 1, 'sineOut')
@@ -99,14 +105,11 @@ function onUpdatePost(elapsed)
     setProperty('iconP2.y', 0)
     setProperty('iconP1.x', 1020)
     setProperty('iconP2.x', 1020)
-    noteTweenX('play0', 4, 415, 0.01, 'SineInOut')
-	noteTweenX('play1', 5, 525, 0.01, 'SineInOut')
-	noteTweenX('play2', 6, 635, 0.01, 'SineInOut')
-	noteTweenX('play3', 7, 745, 0.01, 'SineInOut')
-    noteTweenY('play4', 0, 800, 0.01, 'SineInOut')
-	noteTweenY('play5', 1, 800, 0.01, 'SineInOut')
-	noteTweenY('play6', 2, 800, 0.01, 'SineInOut')
-	noteTweenY('play7', 3, 800, 0.01, 'SineInOut')	
- 
 	end
 end
+
+function onDestroy()
+if nomid == true then
+setPropertyFromClass('ClientPrefs', 'middleScroll', false)
+end
+end	

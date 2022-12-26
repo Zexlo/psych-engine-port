@@ -1,41 +1,41 @@
 {
 	"animations": [
 		{
+			"offsets": [
+				38,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "DeathAnim"
+		},
+		{
 			"loop": false,
 			"offsets": [
 				38,
 				11
 			],
-			"anim": "firstDeath",
+			"anim": "deathLoop",
 			"fps": 24,
 			"name": "DeathAnim",
-			"indices": []
-		},
-		{
-			"offsets": [
-				38,
-				11
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "deathLoop",
 			"indices": [
 				39
-			],
-			"name": "DeathAnim"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				38,
 				11
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "deathConfirm",
+			"fps": 24,
+			"name": "DeathAnim",
 			"indices": [
 				39
-			],
-			"name": "DeathAnim"
+			]
 		}
 	],
 	"no_antialiasing": true,
@@ -44,12 +44,12 @@
 		-550,
 		-420
 	],
-	"healthicon": "bf",
+	"healthicon": "3Dbf",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		127,
+		255,
+		255
 	],
 	"camera_position": [
 		0,

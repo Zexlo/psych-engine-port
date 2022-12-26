@@ -1,5 +1,5 @@
 FREE_CAM_TEXT = 'Free Camera Enabled';
-LOCKED_CAM_TEXT = 'Free Camera Locked';
+LOCKED_CAM_TEXT = '';
 CONTROL_TEXT = 'I, J, K, L to move\nHold Shift to move faster\nPress 1 to release camera\nPress 2 to lock camera\nQ to zoom out\nE to zoom in\nW to reset zoom';
 ON = false;
 OFF = true;

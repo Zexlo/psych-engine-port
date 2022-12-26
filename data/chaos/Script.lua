@@ -192,7 +192,7 @@ function onStartCountdown()
 	end
 	doTweenY('move1', 'bars1', -5000, 0.5, 'linear')
 	doTweenY('move2', 'bars2',1000, 0.5, 'linear')
-		removeLuaText('weee')	
+		removeLuaText('weee')		
 	return Function_Continue;
 end
 
@@ -218,6 +218,10 @@ end
 if curBeat == 6 then
 doTweenX('lol', 'dad', -700, 2, 'linear');
 end
+
+if curBeat >20 then
+ setGlobalFromScript('scripts/pauseScreen','canPause','true') 
+ end
 
 if curBeat >= 64 and curBeat <=70 then
 setObjectOrder('dad', getObjectOrder('boyfriend')+1)

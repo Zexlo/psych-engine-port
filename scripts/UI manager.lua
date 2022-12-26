@@ -1,53 +1,69 @@
 function onCreate()
+if downscroll then
+BGY = 675
+nameY = 650
+scoreY = 15
+else
+BGY = 18
+nameY = -2
+scoreY = 660
+end
  setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port: ' ..songName);
 	makeLuaSprite('nah', 'nocheating', 0, 0);
 	addLuaSprite('nah', true);
 	setObjectCamera('nah', 'other')
 	setProperty('nah.alpha', 0)
 	fullscreen = false
+	makeLuaSprite('timeBG', 'timeBarBG', 400, BGY);
+	addLuaSprite('timeBG', true);
+	setObjectCamera('timeBG', 'HUD')	
 end
 
 function onCreatePost()
-makeLuaText('check', 'nameon is false', 1250, 0, 0);
-    setTextSize('check', 25)
-    --addLuaText('check');
-    setTextAlignment('check', 'right')	
-if timeBarType == 'Song Name' then
-nameon = true
---setTextString('check','nameon is true')
-setPropertyFromClass('ClientPrefs', 'timeBarType', 'time Left')
-end
 
-    makeLuaText('song', ' ' .. (songName), 1250, 0, 0);
+if timeBarType == 'Song Name' then
+else
+	makeLuaText('song', ' ' .. (songName), 1250, 0, nameY);
+end	
     setTextSize('song', 25)
     addLuaText('song');
     setTextAlignment('song', 'center')	
 	setObjectOrder('song', getObjectOrder('timeBar'))
-	setProperty('song.alpha',0)	
-if songName ==	'Prey' then
+
     setTextFont('song', 'sonic.otf')
-	setTextSize('song', 30)	
-end	
+    setTextFont('timeTxt', 'sonic.otf')
+
+	setProperty('song.antialiasing', false)
+	setProperty('scoreTxt.antialiasing', false)
+	setProperty('scoreTxt.y', scoreY)	
+	setProperty('timeTxt.antialiasing', false)	
 	
 end
 
 
 function onBeatHit()
 if curBeat % 1 == 0 then
-	doTweenAngle('wee', 'iconP1', -15, 1, 'linear')
-	doTweenAngle('waa', 'iconP2', 15, 1, 'linear')
+	doTweenAngle('wee', 'iconP1', -15, 0.7, 'linear')
+	doTweenAngle('waa', 'iconP2', 15, 0.7, 'linear')
 	end
 	
 if curBeat % 2 == 0 then
-	doTweenAngle('wee', 'iconP1', 15, 1, 'linear')
-	doTweenAngle('waa', 'iconP2', -15, 1, 'linear')
+	doTweenAngle('wee', 'iconP1', 15, 0.7, 'linear')
+	doTweenAngle('waa', 'iconP2', -15, 0.7, 'linear')
 	end
 	
 end	
 
 
 function onUpdatePost(elapsed)
---endless shit
+if curBeat <= 0 then
+if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
+for i = 0,7 do
+	noteTweenY(i, i, 550, 0.001, 'SineInOut')
+	end
+	end	
+	end
+	
 if week == 'Majin' then
 setProperty('songLength', 60000000)
 end
@@ -57,8 +73,12 @@ end
     setProperty('iconP1.x', screenWidth - 430)
     setProperty('iconP2.x', 285)
 	setProperty('song.visible',getProperty('timeTxt.visible'))	
-	setProperty('song.alpha',getProperty('timeTxt.alpha'))
-	
+	setProperty('song.alpha',getProperty('timeTxt.alpha'))	
+	setProperty('timeBG.visible',getProperty('timeBar.visible'))	
+	setProperty('timeBG.alpha',getProperty('timeBar.alpha'))	
+	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
+	setTextFont('scoreTxt', 'sonic.otf')
+    setTextSize('scoreTxt', 23)		
 --BOTPLAY SHIT	
 if botPlay == true then
     setProperty('nah.alpha', 1)
@@ -87,7 +107,7 @@ function opponentNoteHit(id, direction, noteType, isSustainNote)
 if songName == 'personel' and curBeat < 10 then
 setProperty('health',2);
 end
-     if getProperty('health') > 0.2 then --prevent opponent from killing by just singing too long
+     if getProperty('health') > 0.4 then --prevent opponent from killing by just singing too long
           if not isSustainNote then
                setProperty('health', getProperty('health')-0.02); --amount to lose on normal notes
           else

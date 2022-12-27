@@ -145,6 +145,11 @@ else
 end
 end
 
+function onEndSong()
+canPause = false
+	return Function_Continue;
+end
+
 function onUpdatePost(elapsed)
 
 	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause then
@@ -326,7 +331,6 @@ end
 if tag == 'countdown'and loopsLeft == 1 then
 removeLuaSprite('1p',false)	
 	fakePaused = false
--- triggerEvent("Change Scroll Speed", "speed", "duration")
 	end
 end
 	

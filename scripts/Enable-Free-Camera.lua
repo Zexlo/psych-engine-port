@@ -1,6 +1,6 @@
 FREE_CAM_TEXT = 'Free Camera Enabled';
 LOCKED_CAM_TEXT = '';
-CONTROL_TEXT = 'I, J, K, L to move\nHold Shift to move faster\nPress 1 to release camera\nPress 2 to lock camera\nQ to zoom out\nE to zoom in\nW to reset zoom';
+CONTROL_TEXT = 'I, J, K, L to move\nHold Shift to move faster\nPress 1 to release camera\nPress 2 to lock camera\nQ to zoom out\nE to zoom in\nW to reset zoom\n0 to force exit\n9 to force restart';
 ON = false;
 OFF = true;
 -----------
@@ -32,7 +32,6 @@ function onUpdate(elapsed)
             setProperty('isCameraOnForcedPos', false); -- release camera
         end
     elseif getKey('two') then -- toggle free cam, staying in place
-        freeCam = not freeCam; -- toggle
         textToggle();
         if not freeCam then
             addLuaText('lockedCamLuaText');
@@ -57,12 +56,17 @@ function onUpdate(elapsed)
             curY = curY + incAmount;
         end
         if getKey('q', true) then
- curzoom = curzoom - 0.005;
+			curzoom = curzoom - 0.005;
         elseif getKey('e', true) then
             curzoom = curzoom + 0.005;
 		elseif getKey('w', true) then
             curzoom = 0.9		
         end
+		if getKey('zero', true) then
+		exitSong(false)
+		elseif getKey('nine', true) then
+		restartSong(false)
+		end
 		doTweenZoom('wee', 'camGame', curzoom, 0.2, 'linear');	
         triggerEvent('Camera Follow Pos', curX, curY); -- has the annoying lerp of in-game camera, but it's more stable than moving cam by vars so eh
     else
@@ -71,8 +75,9 @@ function onUpdate(elapsed)
     end
 	if freeCam == true then
     setProperty('health', 2);
+	setProperty('vocals.volume', 1)
+	setProperty('songMisses',0)
 	end
-    -- setProperty('health', 2); -- unstoppable force meets immovable object
 end
 
 -- make it easier to get status of key

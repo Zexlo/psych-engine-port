@@ -1,4 +1,3 @@
-allowCountdown = false;
 function onCreate()
  
     makeLuaSprite('SunkBG', 'sunky/SunkBG', -100, 0);
@@ -13,58 +12,5 @@ function onCreate()
 	addLuaSprite('stage', false);
 	addLuaSprite('ratio', true);
 	addLuaSprite('ball', false);	
-	
-	makeLuaSprite('black', 'black', 0, 0);
-	addLuaSprite('black', true);
-	makeLuaSprite('circle', 'StartScreens/Sunky', -1200, 0);
-	addLuaSprite('circle', true);
-	setObjectCamera('black', 'other');
-	setObjectCamera('circle', 'other');
-	setObjectCamera('text', 'other');
-	
-	startTime = 0.3;
-
-	runTimer('flyin', startTime);
-	runTimer('fadeout', startTime+1.5);
-	runTimer('beginsong', startTime+4);	
+	close()
 end
-function onTimerCompleted(tag, loops, loopsLeft)
-	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 100, 0.02, 'SineInOut');
-        playSound('flatBONK', 1, 'thefunny');
-		
-	end
-	if tag == 'fadeout' then
-		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
-		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
-		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut');
-	end
-
-	if tag == 'beginsong' then
-		allowCountdown = true;
-		startCountdown();
-	end	
-	
-end
-
-function onStartCountdown()
-	if not allowCountdown then
-		return Function_Stop;
-	end
-	return Function_Continue;
-end
-
-function onUpdate(elasped)
-    noteTweenX('play0', 0, 190, 0.01, 'SineInOut')
-	noteTweenX('play1', 1, 300, 0.01, 'SineInOut')
-	noteTweenX('play2', 2, 410, 0.01, 'SineInOut')
-	noteTweenX('play3', 3, 520, 0.01, 'SineInOut')
-    noteTweenX('play4', 4, 660, 0.01, 'SineInOut')
-	noteTweenX('play5', 5, 770, 0.01, 'SineInOut')
-	noteTweenX('play6', 6, 880, 0.01, 'SineInOut')
-	noteTweenX('play7', 7, 990, 0.01, 'SineInOut')
-
-if curBear >= 5 then
-close(true);	
-end
-	end

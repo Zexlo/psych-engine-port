@@ -1,92 +1,92 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-17,
 				16
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "SSBF IDLE"
+			"fps": 24,
+			"name": "SSBF IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				4,
 				28
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SSBF LEFT"
+			"fps": 24,
+			"name": "SSBF LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				15
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "SSBF LEFTmiss"
+			"fps": 24,
+			"name": "SSBF LEFTmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-11,
 				8
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SSBF DOWN"
+			"fps": 24,
+			"name": "SSBF DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-17,
 				22
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SSBF UP"
+			"fps": 24,
+			"name": "SSBF UP",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-10,
 				21
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SSBF RIGHT"
+			"fps": 24,
+			"name": "SSBF RIGHT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				2,
 				33
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "SSBF DOWNmiss"
+			"fps": 24,
+			"name": "SSBF DOWNmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-16,
 				21
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "SSBF UPmiss"
+			"fps": 24,
+			"name": "SSBF UPmiss",
+			"indices": []
 		}
 	],
 	"no_antialiasing": true,
@@ -98,8 +98,8 @@
 	"healthicon": "3Dbf",
 	"flip_x": true,
 	"healthbar_colors": [
-		127,
-		255,
+		100,
+		235,
 		255
 	],
 	"camera_position": [

@@ -1,6 +1,7 @@
 local block = true
 local endsong = false
-
+local restart = true
+local leave = false
 function onCreate()
 if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
 down = 550
@@ -18,7 +19,7 @@ nameY = -2
 scoreY = 660
 hideY = -200
 end
- setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port: ' ..songName);
+ setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
 	makeLuaSprite('nah', 'nocheating', 0, 0);
 	addLuaSprite('nah', true);
 	setObjectCamera('nah', 'other')
@@ -89,6 +90,10 @@ end
     setTextFont('scoretxt', 'sonic.otf')	
 	setProperty('scoreTxt.y', scoreY)
 
+	makeLuaSprite('replay', 'pauseScreen/Restart', 1500, -90)
+	makeLuaSprite('exitres', 'pauseScreen/Exit', 1500, -90)
+	makeLuaSprite('rBG', 'pauseScreen/RbutBG', 1500, -90)
+	makeLuaSprite('eBG', 'pauseScreen/EbutBG', 1500, -90)	
 	makeLuaSprite('zig','pauseScreen/zigzag',0,-1200)
 	makeLuaSprite('trig','pauseScreen/bottomPanel',1500,30)
 	makeLuaSprite('BG1' , 'PauseScreen/txtBG',-1500 ,200);
@@ -96,9 +101,14 @@ end
 	makeLuaSprite('BG3', 'PauseScreen/txtBG', -1500,360);	
 	makeLuaSprite('BG4', 'PauseScreen/txtBG', 1500,440);
 	makeLuaSprite('BG5', 'PauseScreen/txtBG', 420,1200);
-	
+
+	scaleObject('BG3',1.1, 1);	
 	scaleObject('BG5',0.9, 1.8);
 
+	setObjectCamera('rBG', 'other')
+	setObjectCamera('eBG', 'other')		
+	setObjectCamera('replay', 'other')
+	setObjectCamera('exitres', 'other')	
 	setObjectCamera('zig', 'HUD')
 	setObjectCamera('trig', 'HUD')	
 	setObjectCamera('circ', 'HUD')		
@@ -110,6 +120,10 @@ end
 
 	addLuaSprite('trig', true);
 	addLuaSprite('timeBG', true);
+	addLuaSprite('eBG', true);
+	addLuaSprite('rBG', true);	
+	addLuaSprite('exitres', true);
+	addLuaSprite('replay', true);	
 end
 
 
@@ -177,10 +191,31 @@ end
 
 -- results screen crap
 
-if getKey('enter',true) and endsong == true then
-playSound('confirmMenu',1,'enterend')
-block = false
+if endsong == true then
+checkbutton()
 end
+
+ if getKey('enter') and endsong == true then
+	if restart == true then
+	restartSong(false);
+	elseif leave == true then
+	block = false
+	endSong()
+	end
+	end
+	
+if restart == false then
+		setProperty('replay.y', -90)
+	end
+	if restart == true then
+		doTweenY('replayTweenY', 'replay', -105, 0.02, 'circInOut')
+	end
+	if leave == false then
+		setProperty('exitres.y', -90)
+	end
+	if leave == true then
+		doTweenY('exitTweenY', 'exitres', -105, 0.02, 'circInOut')
+	end
 end
 function opponentNoteHit(id, direction, noteType, isSustainNote)
 if songName == 'personel' and curBeat < 10 then
@@ -196,9 +231,11 @@ end
 
 end
 
+
 function noteMiss(id, noteData, noteType, isSustainNote)
 playAnim('gf', 'sad', false, false, 0)
 end
+
 
 function getKey(key, pressing)
     key = string.upper(key);
@@ -217,13 +254,17 @@ end
     return false; -- if nothing else idk
 end
 
--- results screen shid
+-- all this is for the results screen lmaooo
 function onEndSong()
  if block == true then
+ if week == 'Sunky' then
+setProperty('ratio.visible',false)
+end
+
 setProperty('inCutscene', true);
  setGlobalFromScript('scripts/pauseScreen','canPause','false')
 	addLuaSprite('zig', true);
-	addLuaSprite('circ', true);
+	addLuaSprite('circ', true);	
 	addLuaSprite('BG1', true);
 	addLuaSprite('BG2', true);
 	addLuaSprite('BG3', true);
@@ -281,6 +322,7 @@ addLuaSprite('rating',true)
 	end
 	return Funtion_Continue; --allows song end
 end
+
 function onTimerCompleted(tag, loops, loopsLeft)	
 if tag == 'Xdone' then
 	doTweenY('txt3', 'bftxt', 10, 0.4, 'linear')
@@ -290,7 +332,7 @@ if tag == 'Xdone' then
 if tag == 'resdone' then
 	doTweenX('BG1X', 'BG1', 420, 0.4, 'linear')
 	doTweenX('BG2X', 'BG2', 420, 0.6, 'linear')
-	doTweenX('BG3X', 'BG3',420, 0.8, 'linear')
+	doTweenX('BG3X', 'BG3',398, 0.8, 'linear')
 	doTweenX('BG4X', 'BG4',420, 1, 'linear')
 	doTweenY('BG5X', 'BG5',520, 1.2, 'linear')	
 	doTweenX('txt1', 'hitnotes', 0, 0.4, 'linear')
@@ -320,16 +362,45 @@ end
 if tag == 'rateimg' then
 if	rating >= 0 and rating < 0.5 then
 
-	playSound('shit')
+	playSound('shit',1,'rateping')
 elseif	rating >= 0.5 and rating < 0.7 then	
-	playSound('shit')
+	playSound('shit',1,'rateping')
 elseif	rating >= 0.7 and rating < 1 then	
-	playSound('good')
+	playSound('good',1,'rateping')
 else	
-	playSound('sick')
+	playSound('sick',1,'rateping')
 end
 endsong = true
+	doTweenX('replayTween', 'replay', 878, 0.2, 'linear')
+	doTweenX('exitTween', 'exitres', 786, 0.2, 'linear')
+	doTweenX('r1Tween', 'rBG', 878, 0.2, 'linear')
+	doTweenX('e1ween', 'eBG', 786, 0.2, 'linear')	
 end
+end
+
+
+function checkbutton()
+	if keyJustPressed('down') and endsong == true then
+		if restart == true then
+			restart = false
+			leave = true
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
+		elseif leave == true then
+			leave = false
+			restart = true
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
+			end
+	elseif keyJustPressed('up') and endsong == true then
+		if restart == true then
+			restart = false
+			leave = true
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
+		elseif leave == true then
+			leave = false
+			restart = true
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
+		end
+	end
 end
 
 function onDestroy()
@@ -340,8 +411,6 @@ function onDestroy()
 	end
 end
 
-
--- all this is for the results screen lmaooo
 function onGameOverStart()
 if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
 	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
@@ -350,10 +419,4 @@ elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscree
 	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
 	fullscreen = false
 	end
-end
-
-function onSoundFinished(tag)
-if tag == 'enterend' then
-endSong()
-end
 end

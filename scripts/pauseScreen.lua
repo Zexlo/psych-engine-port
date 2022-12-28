@@ -19,7 +19,7 @@ end
 
 
 function onCreate()
-close()
+--close()
 	makeLuaSprite('3p', 'endless/three', 0, 0);
 	screenCenter('3p','XY')
 	makeLuaSprite('2p', 'endless/two', 0, 0);

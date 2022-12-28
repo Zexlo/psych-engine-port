@@ -1,6 +1,7 @@
-function onCreate()
-endsong = false
+local block = true
+local endsong = false
 
+function onCreate()
 if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
 down = 550
 moveY = 1000
@@ -42,11 +43,11 @@ end
     setTextSize('resultTxt', 50)
 	makeLuaText('ratingtype', 'RATING:', 1250, 0, 1000);
     setTextSize('ratingtype', 50)
-	makeLuaText('misstxt', 'TOTAL MISSES:', 1250, 1000, 285);
+	makeLuaText('misstxt', 'TOTAL MISSES:', 1250, 1200, 285);
     setTextSize('misstxt', 50)	
-	makeLuaText('accuracyTxt', 'ACCURACY:', 1250, -1000, 365);
+	makeLuaText('accuracyTxt', 'ACCURACY:', 1250, -1200, 365);
     setTextSize('accuracyTxt', 50)
-	makeLuaText('hitnotes', 'TOTAL NOTES HIT:', 1250, -1000, 205);
+	makeLuaText('hitnotes', 'TOTAL NOTES HIT:', 1250, -1200, 205);
     setTextSize('hitnotes', 50)	
 	makeLuaText('bftxt', 'BOYFRIEND', 1250, -500, 310);
     setTextSize('bftxt', 70)	
@@ -54,7 +55,7 @@ end
     setTextSize('passed', 70)	
 	makeLuaText('acttxt', ''..getProperty(songName), 1250, 0, 1000);
     setTextSize('acttxt', 70)		
-	makeLuaText('scoretxt', '', 1250, 1000, 440);
+	makeLuaText('scoretxt', '', 1250, 1200, 440);
     setTextSize('scoretxt', 50)
 	
     setTextSize('song', 25)
@@ -86,17 +87,14 @@ end
     setTextFont('passed', 'sonic.otf')
     setTextFont('acttxt', 'sonic.otf')
     setTextFont('scoretxt', 'sonic.otf')	
-	setProperty('song.antialiasing', false)
-	setProperty('scoreTxt.antialiasing', false)
-	setProperty('scoreTxt.y', scoreY)	
-	setProperty('timeTxt.antialiasing', false)	
+	setProperty('scoreTxt.y', scoreY)
 
 	makeLuaSprite('zig','pauseScreen/zigzag',0,-1200)
 	makeLuaSprite('trig','pauseScreen/bottomPanel',1500,30)
-	makeLuaSprite('BG1' , 'PauseScreen/txtBG',1500 ,200);
-	makeLuaSprite('BG2', 'PauseScreen/txtBG', -1500,280);
-	makeLuaSprite('BG3', 'PauseScreen/txtBG', 1500,360);
-	makeLuaSprite('BG4', 'PauseScreen/txtBG', -1500,440);
+	makeLuaSprite('BG1' , 'PauseScreen/txtBG',-1500 ,200);
+	makeLuaSprite('BG2', 'PauseScreen/txtBG', 1500,280);
+	makeLuaSprite('BG3', 'PauseScreen/txtBG', -1500,360);	
+	makeLuaSprite('BG4', 'PauseScreen/txtBG', 1500,440);
 	makeLuaSprite('BG5', 'PauseScreen/txtBG', 420,1200);
 	
 	scaleObject('BG5',0.9, 1.8);
@@ -178,11 +176,12 @@ setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
 end
 
 -- results screen crap
-if getKey('enter', true) and endsong == true then
-playSound('confirmMenu',1,'enterend')
-end
-end
 
+if getKey('enter',true) and endsong == true then
+playSound('confirmMenu',1,'enterend')
+block = false
+end
+end
 function opponentNoteHit(id, direction, noteType, isSustainNote)
 if songName == 'personel' and curBeat < 10 then
 setProperty('health',2);
@@ -220,6 +219,9 @@ end
 
 -- results screen shid
 function onEndSong()
+ if block == true then
+setProperty('inCutscene', true);
+ setGlobalFromScript('scripts/pauseScreen','canPause','false')
 	addLuaSprite('zig', true);
 	addLuaSprite('circ', true);
 	addLuaSprite('BG1', true);
@@ -275,9 +277,10 @@ screenCenter('rating','X')
 scaleObject('rating',0.9,0.9)
 setObjectCamera('rating','HUD')
 addLuaSprite('rating',true)
-	return Function_Stop;
+		return Function_Stop; --prevents song end
+	end
+	return Funtion_Continue; --allows song end
 end
-
 function onTimerCompleted(tag, loops, loopsLeft)	
 if tag == 'Xdone' then
 	doTweenY('txt3', 'bftxt', 10, 0.4, 'linear')
@@ -286,15 +289,15 @@ if tag == 'Xdone' then
 	end
 if tag == 'resdone' then
 	doTweenX('BG1X', 'BG1', 420, 0.4, 'linear')
-	doTweenX('BG2X', 'BG2', 420, 0.4, 'linear')
-	doTweenX('BG3X', 'BG3',420, 0.4, 'linear')
-	doTweenX('BG4X', 'BG4',420, 0.4, 'linear')
-	doTweenY('BG5X', 'BG5',520, 0.8, 'linear')	
+	doTweenX('BG2X', 'BG2', 420, 0.6, 'linear')
+	doTweenX('BG3X', 'BG3',420, 0.8, 'linear')
+	doTweenX('BG4X', 'BG4',420, 1, 'linear')
+	doTweenY('BG5X', 'BG5',520, 1.2, 'linear')	
 	doTweenX('txt1', 'hitnotes', 0, 0.4, 'linear')
-	doTweenX('txt2', 'misstxt', 0, 0.4, 'linear')
-	doTweenX('act1', 'accuracyTxt',0, 0.4, 'linear')
-	doTweenX('act2', 'scoretxt',0, 0.4, 'linear')
-	doTweenY('act3', 'ratingtype',510, 0.8, 'linear')	
+	doTweenX('txt2', 'misstxt', 0, 0.6, 'linear')
+	doTweenX('act1', 'accuracyTxt',0, 0.8, 'linear')
+	doTweenX('act2', 'scoretxt',0, 1, 'linear')
+	doTweenY('act3', 'ratingtype',510, 1.2, 'linear')	
 end
 end
 
@@ -311,8 +314,8 @@ if tag == 'moveY1' then
 setProperty('zig.y', -205)
 doTweenY('zag', 'zig', 0, 1, 'linear')
 end
-if tag == 'e' then
-doTweenY('rateimg', 'rating',560, 0.4, 'linear')
+if tag == 'BG5X' then
+doTweenY('rateimg', 'rating',560, 0.6, 'linear')
 end
 if tag == 'rateimg' then
 if	rating >= 0 and rating < 0.5 then
@@ -351,6 +354,6 @@ end
 
 function onSoundFinished(tag)
 if tag == 'enterend' then
-exitSong()
+endSong()
 end
 end

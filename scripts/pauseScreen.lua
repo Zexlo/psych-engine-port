@@ -19,7 +19,7 @@ end
 
 
 function onCreate()
---close()
+close()
 	makeLuaSprite('3p', 'endless/three', 0, 0);
 	screenCenter('3p','XY')
 	makeLuaSprite('2p', 'endless/two', 0, 0);
@@ -142,17 +142,17 @@ function onSongStart()
 if songName ~= 'Chaos' then
 canPause = true
 else
+canPause = false
 end
 end
 
 function onEndSong()
-canPause = false
-	return Function_Continue;
+close()
 end
 
 function onUpdatePost(elapsed)
 
-	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause then
+	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause == true then
 		playSound('pauseSounds/pause', 0.8, 'pause')
 		playSound('pause',1,'song')		
 		doTweenX('pauseRightTween', 'pauseRight', 600, 0.2, 'linear')

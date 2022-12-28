@@ -1,6 +1,6 @@
 function onCreate()
-makeAnimatedLuaSprite('Static', 'screenstaticBG', 0, 0);
-    addAnimationByPrefix('Static', 'idle', 'STATIC', 40, false);	
+makeAnimatedLuaSprite('Static', 'hitStatic', 0, 0);
+    addAnimationByPrefix('Static', 'idle', 'staticANIMATION', 40, false);	
     setObjectCamera('Static', 'hud');
     setProperty('Static.alpha', 0);
     addLuaSprite('Static', true);
@@ -22,17 +22,16 @@ makeAnimatedLuaSprite('Static', 'screenstaticBG', 0, 0);
 end
 
 function noteMiss(id, noteData, noteType, isSustainNote) 
-	if noteType == 'Static Note' then
-	  doTweenColor('bfColorTween', 'Static', 'FF0000', 0.2, 'linear'); 
-	  doTweenAlpha('show', 'Static', 0.5, 0.3, 'linear');  	  
-        -- setProperty('Static.alpha', 0.5);
-        objectPlayAnimation('Static', 'idle', false);
-        playSound('staticsound');
+if noteType == 'Static Note' then
+	setProperty('Static.alpha', 1); 	  
+	runTimer('stopit',1.5)
+    objectPlayAnimation('Static', 'idle', false);
+    playSound('staticsound');
         
     end
 end
-function onTweenCompleted(tag, loops, loopsLeft)
-if tag == 'show' then
-setProperty('Static.alpha', 0);
+function onTimerCompleted(tag, loops, loopsLeft)
+if tag == 'stopit' then
+	setProperty('Static.alpha', 0);
 end
 end

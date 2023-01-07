@@ -1,6 +1,7 @@
 local block = true
 local endsong = false
-local restart = true
+local cont = true
+local restart = false
 local leave = false
 function onCreate()
 if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
@@ -90,8 +91,10 @@ end
     setTextFont('scoretxt', 'sonic.otf')	
 	setProperty('scoreTxt.y', scoreY)
 
-	makeLuaSprite('replay', 'pauseScreen/Restart', 1500, -90)
-	makeLuaSprite('exitres', 'pauseScreen/Exit', 1500, -90)
+	makeLuaSprite('replay', 'pauseScreen/Restart', 1500, -130)
+	makeLuaSprite('exitres', 'pauseScreen/Exit', 1500, -130)
+	makeLuaSprite('contres', 'pauseScreen/Continue', 1500, -130)
+	makeLuaSprite('cBG', 'pauseScreen/CbutBG', 1500, -90)	
 	makeLuaSprite('rBG', 'pauseScreen/RbutBG', 1500, -90)
 	makeLuaSprite('eBG', 'pauseScreen/EbutBG', 1500, -90)	
 	makeLuaSprite('zig','pauseScreen/zigzag',0,-1200)
@@ -100,14 +103,17 @@ end
 	makeLuaSprite('BG2', 'PauseScreen/txtBG', 1500,280);
 	makeLuaSprite('BG3', 'PauseScreen/txtBG', -1500,360);	
 	makeLuaSprite('BG4', 'PauseScreen/txtBG', 1500,440);
-	makeLuaSprite('BG5', 'PauseScreen/txtBG', 420,1200);
+	makeLuaSprite('BG5', 'PauseScreen/txtBG', 460,1200);
 
 	scaleObject('BG3',1.1, 1);	
-	scaleObject('BG5',0.9, 1.8);
+	scaleObject('BG5',0.7, 1.8);
+	-- screenCenter('BG5','X')
 
 	setObjectCamera('rBG', 'other')
-	setObjectCamera('eBG', 'other')		
-	setObjectCamera('replay', 'other')
+	setObjectCamera('eBG', 'other')
+	setObjectCamera('cBG', 'other')		
+	setObjectCamera('replay', 'other')	
+	setObjectCamera('contres', 'other')
 	setObjectCamera('exitres', 'other')	
 	setObjectCamera('zig', 'HUD')
 	setObjectCamera('trig', 'HUD')	
@@ -121,7 +127,9 @@ end
 	addLuaSprite('trig', true);
 	addLuaSprite('timeBG', true);
 	addLuaSprite('eBG', true);
-	addLuaSprite('rBG', true);	
+	addLuaSprite('rBG', true);
+	addLuaSprite('cBG', true);	
+	addLuaSprite('contres', true);	
 	addLuaSprite('exitres', true);
 	addLuaSprite('replay', true);	
 end
@@ -181,6 +189,7 @@ end
 if botPlay == true and keyJustPressed('back') or botPlay == true and keyJustPressed('accept') then
 exitSong(false)
 end
+
 	if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
 setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
 		fullscreen = true		
@@ -195,13 +204,32 @@ if endsong == true then
 checkbutton()
 end
 
- if getKey('enter') and endsong == true then
+ if getKey('enter') and endsong == true and isStoryMode then
+	if cont == true then
+	block = false	
+	endSong();
+	elseif restart == true then
+	restartSong()
+	elseif leave == true then
+	exitSong()	
+	end
+
+ elseif getKey('enter') and endsong == true and not isStoryMode then
 	if restart == true then
 	restartSong(false);
 	elseif leave == true then
 	block = false
 	endSong()
 	end
+	end
+
+if isStoryMode then
+if cont == true then
+		doTweenY('contTweenY', 'contres', -105, 0.02, 'circInOut')
+	end
+end	
+if cont == false then
+		setProperty('contres.y', -90)
 	end
 	
 if restart == false then
@@ -217,6 +245,7 @@ if restart == false then
 		doTweenY('exitTweenY', 'exitres', -105, 0.02, 'circInOut')
 	end
 end
+
 function opponentNoteHit(id, direction, noteType, isSustainNote)
 if songName == 'personel' and curBeat < 10 then
 setProperty('health',2);
@@ -371,27 +400,43 @@ else
 	playSound('sick',1,'rateping')
 end
 endsong = true
-	doTweenX('replayTween', 'replay', 878, 0.2, 'linear')
-	doTweenX('exitTween', 'exitres', 786, 0.2, 'linear')
-	doTweenX('r1Tween', 'rBG', 878, 0.2, 'linear')
-	doTweenX('e1ween', 'eBG', 786, 0.2, 'linear')	
+if isStoryMode then
+	doTweenX('contTween', 'contres', 956, 0.2, 'linear')
+	doTweenX('c1Tween', 'cBG', 956, 0.2, 'linear')	
+end
+	doTweenX('replayTween', 'replay', 848, 0.2, 'linear')
+	doTweenX('exitTween', 'exitres', 756, 0.2, 'linear')
+	doTweenX('r1Tween', 'rBG', 848, 0.2, 'linear')
+	doTweenX('e1ween', 'eBG', 756, 0.2, 'linear')	
 end
 end
 
 
 function checkbutton()
 	if keyJustPressed('down') and endsong == true then
-		if restart == true then
-			restart = false
-			leave = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
-		elseif leave == true then
-			leave = false
+		if cont == true then
 			restart = true
+			leave = false
+			cont = false
 			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
+		elseif restart == true then
+			leave = true
+			restart = false
+			cont = false
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
+	elseif leave == true then
+	if isStoryMode then
+			leave = false
+			restart = false
+			cont = true
+	else
+			leave = false
+			restart = true	
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
+			end
 			end
 	elseif keyJustPressed('up') and endsong == true then
-		if restart == true then
+		if cont == true then
 			restart = false
 			leave = true
 			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
@@ -399,6 +444,16 @@ function checkbutton()
 			leave = false
 			restart = true
 			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
+		elseif restart == true then
+		if isStoryMode then
+			leave = false
+			restart = false
+			cont = true
+	else
+			leave = true
+			restart = false	
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
+			end
 		end
 	end
 end

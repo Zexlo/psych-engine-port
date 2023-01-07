@@ -17,6 +17,9 @@ function onCreatePost()
     makeGraphic('FearBarBar',getProperty('FearBarBg.width')/2,getProperty('FearBarBg.height'),'FF0000')
 
     addLuaSprite('FearBarBar',false)
+	setObjectOrder('FearBarImage', getObjectOrder('trig')-1)
+	setObjectOrder('fearbarBG', getObjectOrder('trig')-1)
+	setObjectOrder('FearBarBar', getObjectOrder('trig')-1)	
 end
 
 function onUpdate()

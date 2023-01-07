@@ -1,6 +1,19 @@
-function onCreate()
+allowCountdown = false;
+function onCreate()		
 	precacheImage('sonicJUMPSCARE');
 
+
+	makeLuaSprite('black', 'black', 0, 0);
+	addLuaSprite('black', true);
+	makeLuaSprite('circle', 'StartScreens/CircleTooSlow', 1280, 200);
+	addLuaSprite('circle', true);
+	makeLuaSprite('text', 'StartScreens/TextTooSlow', -1280, 200);
+	addLuaSprite('text', true);
+	
+	setObjectCamera('black', 'other');
+	setObjectCamera('circle', 'other');
+	setObjectCamera('text', 'other');
+	
     makeLuaSprite('credbox', 'box', 380, -1280);
     scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
@@ -47,22 +60,24 @@ function onCreate()
 	runTimer('slidedown', startTime+3);
 	runTimer('beginsong', startTime+2);
 	runTimer('slideup', startTime+9);
+	runTimer('flyin', startTime);
+	runTimer('fadeout', startTime+2.5);		
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'slidedown' then
-doTweenY('move', 'credits', 50, 1, 'linear');
-doTweenY('move1', 'credbox', 0, 1, 'linear');
-doTweenY('move2', 'code', 150, 1, 'linear');
-doTweenY('move3', 'jakie', 200, 1, 'linear');
-doTweenY('move4', 'art', 250, 1, 'linear');
-doTweenY('move5', 'bun', 290, 1, 'linear');
-doTweenY('move6', 'co', 320, 1, 'linear');
-doTweenY('move7', 'music', 370, 1, 'linear');
-doTweenY('move8', 'mar', 410, 1, 'linear');
-doTweenY('move10', 'sas', 440, 1, 'linear');
-doTweenY('move11', 'chart', 490, 1, 'linear');
-doTweenY('move12', 'wild', 530, 1, 'linear');
+	doTweenY('move', 'credits', 50, 1, 'linear');
+	doTweenY('move1', 'credbox', 0, 1, 'linear');
+	doTweenY('move2', 'code', 150, 1, 'linear');
+	doTweenY('move3', 'jakie', 200, 1, 'linear');
+	doTweenY('move4', 'art', 250, 1, 'linear');
+	doTweenY('move5', 'bun', 290, 1, 'linear');
+	doTweenY('move6', 'co', 320, 1, 'linear');
+	doTweenY('move7', 'music', 370, 1, 'linear');
+	doTweenY('move8', 'mar', 410, 1, 'linear');
+	doTweenY('move10', 'sas', 440, 1, 'linear');
+	doTweenY('move11', 'chart', 490, 1, 'linear');
+	doTweenY('move12', 'wild', 530, 1, 'linear');
 
 end
        if tag == 'slideup' then
@@ -80,9 +95,33 @@ end
      doTweenY('move12', 'wild', -1280, 1, 'linear');
 
        end
-end
+	if tag == 'flyin' then
+		doTweenX('circlefly', 'circle', 500, 1, 'linear');
+		doTweenX('textfly', 'text', 300, 1, 'linear');
+	end
+	if tag == 'fadeout' then
+		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
+		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
+		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')
+	end
+	
+	if tag == 'beginsong' then	
+	allowCountdown = true;	
+		startCountdown();	
+	end
+	end
+
+function onStartCountdown()
+if not allowCountdown then
+	return Function_Stop;
+	end
+	return Function_Continue;
+end	
 
 function onUpdate(elasped)
+	for i = 0,3 do
+	noteTweenX(i, i,-1000, 0.2, 'linear')
+end	
 doTweenColor('ColorTween', 'timeBar', '166DBB', 1, 'linear')
 	
 	if curBeat >= 190 and curBeat <=198 or curStep >= 1306 and curStep <=1432 then

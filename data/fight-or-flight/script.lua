@@ -100,7 +100,7 @@ end
 
 
 
-function onUpdatePost(elapsed)
+function onUpdatePost()
     setProperty('iconP1.y', 550)
     setProperty('iconP2.y', 0)
     setProperty('iconP1.x', 1020)

@@ -9,8 +9,9 @@ function onCreate()
 	addLuaSprite("red", true)
 	setProperty('red.alpha', 0)
 	setProperty('yo.alpha', 0)
-	setObjectCamera('red', 'other');
-	setObjectCamera('yo', 'other');	
+	setObjectCamera('red', 'HUD');
+	setObjectCamera('yo', 'HUD');	
+	setObjectOrder('yo', getObjectOrder('red')-2)	
 end
 
 function onEvent(name,value1,value2)
@@ -25,4 +26,5 @@ function onTweenCompleted(tag)
 doTweenAlpha('fadeout','red', 0, 0.8, 'linear');
 end
 end
+ 
  

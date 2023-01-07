@@ -5,6 +5,8 @@ function onEvent(name, value1, value2)
         for i=0, 7, 1 do -- for every note
             noteTweenAngle(i..'b', i, -360, 0.001, 'linear'); -- set to -360 to spin clockwise
             noteTweenAngle(i, i, 0, noteSpinSpeed, 'expoOut'); -- reset to 0 to spin!! expo out gives the ease effect
+		    -- noteTweenAngle('bruh', 7, -360, 0.001, 'linear'); -- set to -360 to spin clockwise
+            -- noteTweenAngle('bruhagain', 7, 0, noteSpinSpeed, 'expoOut'); -- reset to 0 to spin!! expo out gives the ease effect
         end
     end
 end

@@ -1,6 +1,7 @@
 function onCreate()
 	addCharacterToList('Tails_Doll_Alt', 'dad');
-	
+
+
 --setPropertyFromClass('lime.app.Application', 'current.window.width', 854)
 --setPropertyFromClass('lime.app.Application', 'current.window.height', 480)
         makeLuaSprite('credbox', 'box', 390, -1280);
@@ -81,6 +82,12 @@ function onCreate()
       runTimer('hidego', startTime+2.8); 
 	runTimer('slideup', startTime+7);	
 end
+
+-- function onCreatePost()
+	 -- runHaxeCode([[
+ -- FlxG.resizeGame(1280, 960)
+	-- ]])
+	-- end
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'beginsong' then

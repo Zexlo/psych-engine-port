@@ -1,3 +1,4 @@
+	docutscene = false
 	function onCreate()
 	makeLuaSprite('bar1', 'bar', 0, -500)
 	makeLuaSprite('bar2', 'bar', 0, 1000)	
@@ -33,6 +34,7 @@ end
 	setProperty('timeBar.visible', true)
 	setProperty('timeBarBG.visible', true)
 	setProperty('song.visible', true)
+	docutscene = false
 else
 for i = 0,7 do
 	noteTweenAlpha(i, i, 0, 0.001, 'SineInOut')
@@ -49,6 +51,7 @@ end
 	setProperty('timeBar.visible', false)
 	setProperty('timeBarBG.visible', false)
 	setProperty('song.visible', false)	
+	docutscene = true
 		end
 	end
 end		

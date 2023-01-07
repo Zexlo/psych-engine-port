@@ -1,5 +1,5 @@
-allowCountdown = false;
 function onCreate()
+local allowCountdown = false;
 
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);

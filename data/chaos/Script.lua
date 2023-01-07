@@ -219,10 +219,6 @@ if curBeat == 6 then
 doTweenX('lol', 'dad', -700, 2, 'linear');
 end
 
-if curBeat >20 then
- setGlobalFromScript('scripts/pauseScreen','canPause','true') 
- end
-
 if curBeat >= 64 and curBeat <=70 then
 setObjectOrder('dad', getObjectOrder('boyfriend')+1)
 

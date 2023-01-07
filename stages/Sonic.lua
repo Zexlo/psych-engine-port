@@ -1,4 +1,3 @@
-local allowCountdown = false;
 function onCreate()
 
 	makeLuaSprite('SKY', 'tooslow/BGSky', -720, -200);
@@ -57,42 +56,5 @@ function onCreate()
 	addLuaSprite('fronttrees', true);
 	scaleObject('GF', 0.8, 0.8);
 		
-	makeLuaSprite('black', 'black', 0, 0);
-	addLuaSprite('black', true);
-	makeLuaSprite('circle', 'StartScreens/CircleTooSlow', 1280, 200);
-	addLuaSprite('circle', true);
-	makeLuaSprite('text', 'StartScreens/TextTooSlow', -1280, 200);
-	addLuaSprite('text', true);
-	
-	setObjectCamera('black', 'other');
-	setObjectCamera('circle', 'other');
-	setObjectCamera('text', 'other');
-
-	startTime = 0.3;
-
-	runTimer('flyin', startTime);
-	runTimer('fadeout', startTime+2.5);	
-
 end
 
-function onTimerCompleted(tag, loops, loopsLeft)
-	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 500, 1, 'linear');
-		doTweenX('textfly', 'text', 300, 1, 'linear');
-	end
-	if tag == 'fadeout' then
-		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
-		doTweenAlpha('fadecircle', 'circle', 0, 2, 'sineOut');
-		doTweenAlpha('fadetext', 'text', 0, 2, 'sineOut')
-	end
-	end
-	
-function onStartCountdown()
-	if not allowCountdown and isStoryMode then --Block the first countdown
-	startVideo('SonicEXE');
-	setProperty('inCutscene', false);		
-	allowCountdown = true;
-	return Function_Stop;
-	end
-	return Function_Continue;
-end	

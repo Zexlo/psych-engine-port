@@ -184,6 +184,16 @@ end
 		plsHelp()
 	end
 	
+	if curBeat >= 20 and songName == 'Chaos' then
+	canPause = true
+	 -- setProperty('playbackRate',1.2)
+	end
+
+-- if getGlobalFromScript('custom_events/cutscenebars','docutscene','true') then
+-- canPause = false
+-- elseif getGlobalFromScript('custom_events/cutscenebars','docutscene','false') then
+-- canPause = true
+-- end
 	
 	if cSelected == false then
 		setProperty('continue.y', 0)

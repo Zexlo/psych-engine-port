@@ -42,22 +42,23 @@ else
 	makeLuaText('song', ' ' .. (songName), 1250, 0, nameY);
 end	
 	makeLuaText('resultTxt', 'RESULTS', 1250, 0, -200);
-    setTextSize('resultTxt', 50)
-	makeLuaText('ratingtype', 'RATING:', 1250, 0, 1000);
-    setTextSize('ratingtype', 50)
 	makeLuaText('misstxt', 'TOTAL MISSES:', 1250, 1200, 285);
-    setTextSize('misstxt', 50)	
-	makeLuaText('accuracyTxt', 'ACCURACY:', 1250, -1200, 365);
-    setTextSize('accuracyTxt', 50)
-	makeLuaText('hitnotes', 'TOTAL NOTES HIT:', 1250, -1200, 205);
-    setTextSize('hitnotes', 50)	
-	makeLuaText('bftxt', 'BOYFRIEND', 1250, -500, 310);
-    setTextSize('bftxt', 70)	
-	makeLuaText('passed', 'HAS PASSED', 1250, 500, 310);
-    setTextSize('passed', 70)	
+	makeLuaText('ratingtype', 'RATING:', 1250, 0, 1000);	
+	makeLuaText('accuracyTxt', 'ACCURACY:', 1250, -1200, 365);	
+	makeLuaText('hitnotes', 'TOTAL NOTES HIT:', 1250, -1200, 205);	
+	makeLuaText('bftxt', 'BOYFRIEND', 1250, -500, 310);	
+	makeLuaText('passed', 'HAS PASSED', 1250, 500, 310);	
 	makeLuaText('acttxt', ''..getProperty(songName), 1250, 0, 1000);
-    setTextSize('acttxt', 70)		
 	makeLuaText('scoretxt', '', 1250, 1200, 440);
+		
+    setTextSize('resultTxt', 50)
+    setTextSize('ratingtype', 50)
+    setTextSize('misstxt', 50)	
+    setTextSize('accuracyTxt', 50)
+    setTextSize('hitnotes', 50)	
+    setTextSize('bftxt', 70)	
+    setTextSize('passed', 70)	
+    setTextSize('acttxt', 70)		
     setTextSize('scoretxt', 50)
 	
     setTextSize('song', 25)

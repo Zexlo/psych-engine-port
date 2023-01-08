@@ -32,7 +32,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
     if tag == 'TrigRand' then -- don't trigger on other timers
         rand = math.random()*100;
         if rand <= chanceOfStatic then
-            objectPlayAnimation('StaticRand', 'idle', true); -- play the static, true is to interrupt the previous animation
+            playAnim('StaticRand', 'idle', true); -- play the static, true is to interrupt the previous animation
         end
     end
 end

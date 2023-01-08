@@ -1,17 +1,18 @@
 -- Lua stuff
 function onCreate()
   precacheImage('chaos/Lewis Porker');
-	makeAnimatedLuaSprite('Porker', 'chaos/Lewis Porker', 1750, -1200); 
+	makeAnimatedLuaSprite('Porker', 'chaos/Lewis Porker', 2100, -1100); 
 	addAnimationByPrefix('Porker', 'first', 'PorkerFG', 24, false); --XML sheet anim name
-	objectPlayAnimation('Porker', 'first');
+	scaleObject('porker',0.8,0.8)
 	addLuaSprite('Porker', true); 
+	playAnim('Porker', 'first',false);	
 	end
 
 -- Gameplay interactions
 function onBeatHit()
 	-- triggered 4 times per section
 	if curBeat % 2 == 0 then
-		objectPlayAnimation('Porker', 'first');
+		playAnim('Porker', 'first',false);
 	end
 end
 
@@ -27,6 +28,6 @@ function onCountdownTick(counter) -- rest of this SHOULD NOT be changed
 	-- counter = 3 -> "Go!"
 	-- counter = 4 -> Nothing happens lol, tho it is triggered at the same time as onSongStart i think
 	if counter % 2 == 0 then
-		objectPlayAnimation('Porker', 'first'); 
+		playAnim('Porker', 'first',false);
 	end
 end

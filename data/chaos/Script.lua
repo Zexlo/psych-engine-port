@@ -91,7 +91,7 @@ runTimer('end', 1.2);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
-	if tag == 'cutscene' then
+	if tag == 'cutscene' then 
 	addLuaText('robo')
 	setObjectOrder('robo', getObjectOrder('bars2')+1)	
 	playSound('robot');
@@ -115,14 +115,14 @@ runTimer('end1', 1.2);
     playSound('FleetLines/7', 1)
 	elseif quote == (8) then
     playSound('FleetLines/8', 1)
-elseif quote == (9) then
+    elseif quote == (9) then
     playSound('FleetLines/9', 1)
-elseif quote == (10) then
+    elseif quote == (10) then
     playSound('FleetLines/10', 1)
-elseif quote == (11) then
+    elseif quote == (11) then
     playSound('FleetLines/11', 1)	
-                    end
-        end	
+    end
+end	
 	
 	
 	if tag == 'end1' then
@@ -132,8 +132,8 @@ elseif quote == (11) then
 	runTimer('slideup', startTime+8);	
 setProperty('hole.alpha', 0)	
  setProperty('sonc.alpha', 1)
-  addAnimationByPrefix('sonc', 'idle', 'Chamber Sonic Fall', 16, false); 	 
-	objectPlayAnimation('hole', 'idle', false);
+  addAnimationByPrefix('sonc', 'idle', 'Chamber Sonic Fall', 24, false); 	 
+	playAnim('hole', 'idle', false);
 	playSound('sonic');	
 	addLuaText('weee')
 	setObjectOrder('weee', getObjectOrder('bars2')+1)		
@@ -144,7 +144,8 @@ playSound('beam')
 	setProperty('beam.alpha', 0)
 	setProperty('Charged.alpha', 1)
     addAnimationByPrefix('thing', 'idle','BGyellow', 24, true);
-	objectPlayAnimation('BGyellow', 'idle', true);
+	playAnim('BGyellow', 'idle', true);
+    playAnim('emeralds', 'idle', false); 
 	doTweenAlpha('showHUD','camHUD', 1,0.5,'linear')
 end
 	if tag == 'slidedown' then	
@@ -212,11 +213,11 @@ end
 
 if curBeat > 1 then
 	setProperty('dad.alpha', 1);	
-	doTweenY('lol1', 'dad', -700, 0.2, 'linear');
+	doTweenY('lol1', 'dad', -600, 0.2, 'linear');
 end
 
 if curBeat == 6 then
-doTweenX('lol', 'dad', -700, 2, 'linear');
+doTweenX('lol', 'dad', -500, 1, 'linear');
 end
 
 if curBeat >= 64 and curBeat <=70 then

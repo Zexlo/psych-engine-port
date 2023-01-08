@@ -147,6 +147,7 @@ end
 end
 
 function onEndSong()
+canPause = false	
 close()
 end
 

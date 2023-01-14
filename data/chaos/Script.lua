@@ -227,6 +227,11 @@ else
 setObjectOrder('dad', getObjectOrder('boyfriend')-1)
 
 end
+
+if curStep == 1020 then
+    
+playSound(SUPERBF,1)
+end
 end
 
 function onGameOverStart()

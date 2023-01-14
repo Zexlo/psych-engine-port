@@ -1,4 +1,7 @@
 function onCreate()
+	if week == 'Fleetway' then
+		close()
+	end	
 	precacheImage('characters/DeathScreenSonicExe')
 	makeAnimatedLuaSprite('sonic', 'characters/DeathScreenSonicExe', 300, -200);
 	addAnimationByPrefix('sonic', 'start', 'appear', 24, false);	
@@ -31,13 +34,13 @@ function onGameOverStart()
 	start = 1.8;
 	
 	runTimer('begin', start);
-	objectPlayAnimation('sonic', 'start',false);
+	playAnim('sonic', 'start',false);
 	end
 	
 function onTimerCompleted(tag, loops, loopsLeft)
 
 	if tag == 'begin' then
-	objectPlayAnimation('sonic', 'idle',true);
+	playAnim('sonic', 'idle',true);
 	doTweenX('fixXs', 'sonic', 320, 0.01, 'sineOut')
 	doTweenY('fixYs', 'sonic', -140, 0.01, 'sineOut')	
 	
@@ -46,7 +49,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
 	
 function onGameOverConfirm(retry)
 	setProperty('boyfriend.alpha', 0);
-	objectPlayAnimation('sonic', 'end',true);
+	playAnim('sonic', 'end',true);
 	setProperty('yo.alpha', 1)	
 	doTweenAlpha('fadein','red', 1, 0.8, 'linear'); 	
 	doTweenX('fixXs', 'sonic', 320, 0.01, 'sineOut')

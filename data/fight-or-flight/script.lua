@@ -2,13 +2,8 @@ local bfx = 200;
 local bfy = 0;
 local zoomshit = 0;
 
-
 	allowCountdown = false;
-function onCreate()
-if not middlescroll then
-setPropertyFromClass('ClientPrefs', 'middleScroll', true)
-nomid = true
-end
+function onCreate()		
     doTweenAngle('move1', 'healthBar', 90, 0.2, 'SineInOut');
     doTweenY('move2', 'healthBar',350 , 0.2, 'SineInOut');
 	doTweenX('move3', 'healthBar',800 , 0.2, 'SineInOut');
@@ -33,8 +28,9 @@ end
 end
 
 function onCreatePost()
-	setObjectOrder('fear', getObjectOrder('meter')+1)	
+	setObjectOrder('fear', getObjectOrder('meter')+1)
 	end
+	
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'flyin' then
@@ -97,19 +93,21 @@ elseif curBeat >=499 then
 	doTweenColor('unred2','sonicdead','FFFFFF', 1, 'linear')
 end
 
+if curStep >= 2176 then
+	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
+	setProperty('vocals.volume', 0)
+end
 
 
 
-function onUpdatePost()
+
+function onUpdatePost()	
     setProperty('iconP1.y', 550)
     setProperty('iconP2.y', 0)
     setProperty('iconP1.x', 1020)
     setProperty('iconP2.x', 1020)
+	for i = 4,7 do	
+		noteTweenAlpha('alphafix'..i, i,0.6, 0.2, 'linear')	
+		end
 	end
 end
-
-function onDestroy()
-if nomid == true then
-setPropertyFromClass('ClientPrefs', 'middleScroll', false)
-end
-end	

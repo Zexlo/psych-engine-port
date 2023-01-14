@@ -1,26 +1,33 @@
-local block = true
-local endsong = false
-local cont = true
-local restart = false
-local leave = false
-function onCreate()
-if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
-down = 550
-moveY = 1000
-fixY = 688
-hideY = 1000
-elseif downscroll then
-BGY = 675
-nameY = 650
-scoreY = 15
-hideY = -200
-else
-BGY = 18
-nameY = -2
-scoreY = 660
-hideY = -200
-end
- setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
+	local block = true
+	local endsong = false
+	local cont = true
+	local restart = false
+	local leave = false
+	nomid = false
+
+	function onCreate()
+		if not middlescroll and songName == 'Fight or Flight' then
+			setPropertyFromClass('ClientPrefs', 'middleScroll', true)
+			nomid = true
+		end		
+	if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
+	down = 550
+	moveY = 1000
+	fixY = 688
+	hideY = 1000
+	elseif downscroll then
+	BGY = 675
+	nameY = 650
+	scoreY = 15
+	hideY = -200
+	else
+	BGY = 18
+	nameY = -2
+	scoreY = 660
+	hideY = -200
+	end
+
+ 	setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
 	makeLuaSprite('nah', 'nocheating', 0, 0);
 	addLuaSprite('nah', true);
 	setObjectCamera('nah', 'other')
@@ -151,6 +158,7 @@ end
 
 
 function onUpdatePost(elapsed)
+--debugPrint("forced: ",nomid)	
 if curBeat <= 0 then
 if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
 for i = 0,7 do
@@ -330,7 +338,7 @@ setProperty('inCutscene', true);
     addLuaText('bftxt');
     addLuaText('passed');
     addLuaText('acttxt');
-	addLuaText('scoretxt');
+	addLuaText('scoretxt'); 
 	setTextString('scoretxt', 'SCORE: '..score)	
 	setTextString('hitnotes', ' NOTES HIT: '..hits)
 	setTextString('misstxt', ' MISSES: '..getProperty('songMisses'))	
@@ -463,8 +471,10 @@ function onDestroy()
 	setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
 	if nameon == true then
 	setPropertyFromClass('ClientPrefs', 'timeBarType', 'Song Name')
-
 	end
+	if nomid == true then
+	setPropertyFromClass('ClientPrefs', 'middleScroll', false)	
+	end	
 end
 
 function onGameOverStart()

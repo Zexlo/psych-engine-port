@@ -147,12 +147,14 @@ end
 end
 
 function onEndSong()
-canPause = false	
+canPause = false
+if songName ~= 'Chaos' then
+canPause = false		
 close()
+end
 end
 
 function onUpdatePost(elapsed)
-
 	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause == true then
 		playSound('pauseSounds/pause', 0.8, 'pause')
 		playSound('pause',1,'song')		

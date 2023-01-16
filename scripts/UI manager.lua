@@ -42,8 +42,7 @@
 	addLuaSprite('resultsBG', true);	
 end
 
-function onCreatePost()
-
+function onCreatePost()	
 if timeBarType == 'Song Name' then
 else
 	makeLuaText('song', ' ' .. (songName), 1250, 0, nameY);
@@ -71,6 +70,10 @@ end
     setTextSize('song', 25)
     addLuaText('song');
 
+    setTextFont('song', 'sonic.otf')
+    setTextFont('timeTxt', 'sonic.otf')	
+	setTextFont('scoreTxt', 'sonic.otf')
+    setTextSize('scoreTxt', 23)
 
 -- results screen assets and text brah	
     setTextColor('ratingtype', 'fcfc00')
@@ -86,8 +89,6 @@ end
     setTextAlignment('song', 'center')
 	setObjectOrder('song', getObjectOrder('timeBar'))
 
-    setTextFont('song', 'sonic.otf')
-    setTextFont('timeTxt', 'sonic.otf')
     setTextFont('resultTxt', 'sonic.otf')
     setTextFont('ratingtype', 'sonic.otf')
     setTextFont('misstxt', 'sonic.otf')
@@ -139,7 +140,7 @@ end
 	addLuaSprite('cBG', true);	
 	addLuaSprite('contres', true);	
 	addLuaSprite('exitres', true);
-	addLuaSprite('replay', true);	
+	addLuaSprite('replay', true);
 end
 
 
@@ -179,10 +180,7 @@ if endsong == false then
 	setProperty('song.alpha',getProperty('timeTxt.alpha'))	
 	setProperty('timeBG.visible',getProperty('timeBar.visible'))	
 	setProperty('timeBG.alpha',getProperty('timeBar.alpha'))
-end	
-	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
-	setTextFont('scoreTxt', 'sonic.otf')
-    setTextSize('scoreTxt', 23)		
+end
 --BOTPLAY SHIT	
 if botPlay == true then
     setProperty('nah.alpha', 1)
@@ -253,6 +251,11 @@ if restart == false then
 	if leave == true then
 		doTweenY('exitTweenY', 'exitres', -105, 0.02, 'circInOut')
 	end
+	
+	if getTextString('timeTxt') == '- '..songName..' ['..songdif..']'..' -' then
+	end	
+	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
+	
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)

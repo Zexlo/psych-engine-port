@@ -1,16 +1,20 @@
 {
 	"storyName": "Tails Doll",
-	"difficulties": "Hard",
+	"difficulties": "Hard,Hard,Hard",
 	"hideFreeplay": false,
 	"weekBackground": "",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
 	"songs": [
 		[
 			"sunshine",
@@ -22,11 +26,7 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"",
-		"",
-		""
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Tails Doll"
+	"hideStoryMode": true,
+	"weekName": "Tails Doll",
+	"hiddenUntilUnlocked": false
 }

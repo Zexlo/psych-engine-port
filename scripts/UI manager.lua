@@ -4,8 +4,8 @@
 	local restart = false
 	local leave = false
 	nomid = false
-
-	function onCreate()
+	debugger = false
+	function onCreate()	
 		if not middlescroll and songName == 'Fight or Flight' then
 			setPropertyFromClass('ClientPrefs', 'middleScroll', true)
 			nomid = true
@@ -39,7 +39,12 @@
 	makeLuaSprite('resultsBG', 'blackBG', 0, 0)
 	setObjectCamera('resultsBG', 'HUD')
 	setProperty('resultsBG.alpha', 0)
-	addLuaSprite('resultsBG', true);	
+	addLuaSprite('resultsBG', true);
+
+	makeLuaText('variables','song:'..songName..'\ndifficulty: '..difficultyName, 1280, 5, 50);
+    setTextSize('variables', 20);
+    setTextAlignment('variables', 'left');
+    setObjectCamera('variables', 'hud');
 end
 
 function onCreatePost()	
@@ -157,9 +162,26 @@ if curBeat % 2 == 0 then
 	
 end	
 
+function getKey(key, pressing)
+    key = string.upper(key);
+    if key == nil then
+    debugPrint('getKey has no key.');
+    return false;
+elseif pressing == nil then
+        pressing = false; -- "pressing" = is the key being pressed right now, "pressed" = was the key last pressed 
+end
+
+if pressing then
+        return getPropertyFromClass('flixel.FlxG', 'keys.pressed.' .. key); -- clever concatenation
+else
+        return getPropertyFromClass('flixel.FlxG', 'keys.justPressed.' .. key);
+end
+    return false; -- if nothing else idk
+end
 
 function onUpdatePost(elapsed)
---debugPrint("forced: ",nomid)	
+if debugger == true then	
+end	
 if curBeat <= 0 then
 if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
 for i = 0,7 do
@@ -251,6 +273,14 @@ if restart == false then
 	if leave == true then
 		doTweenY('exitTweenY', 'exitres', -105, 0.02, 'circInOut')
 	end
+
+	if getKey('five') and debugger == false then -- toggle free cam, releasing to game
+        debugger = true
+		addLuaText('variables');	
+    elseif getKey('five') and debugger == true then
+		debugger = false
+		removeLuaText('variables',false);		 
+    end        
 	
 	if getTextString('timeTxt') == '- '..songName..' ['..songdif..']'..' -' then
 	end	
@@ -272,27 +302,8 @@ end
 
 end
 
-
 function noteMiss(id, noteData, noteType, isSustainNote)
 playAnim('gf', 'sad', false, false, 0)
-end
-
-
-function getKey(key, pressing)
-    key = string.upper(key);
-    if key == nil then
-    debugPrint('getKey has no key.');
-    return false;
-elseif pressing == nil then
-        pressing = false; -- "pressing" = is the key being pressed right now, "pressed" = was the key last pressed 
-end
-
-if pressing then
-        return getPropertyFromClass('flixel.FlxG', 'keys.pressed.' .. key); -- clever concatenation
-else
-        return getPropertyFromClass('flixel.FlxG', 'keys.justPressed.' .. key);
-end
-    return false; -- if nothing else idk
 end
 
 -- all this is for the results screen lmaooo

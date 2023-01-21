@@ -1,11 +1,16 @@
 {
 	"song": {
-		"speed": 3.2,
-		"stage": "trioStage",
-		"player1": "bf",
-		"player2": "Tails",
-		"player3": null,
 		"events": [
+			[
+				0,
+				[
+					[
+						"Set Key Count",
+						"5",
+						""
+					]
+				]
+			],
 			[
 				106643.835616438,
 				[
@@ -30,15 +35,22 @@
 						"BF3"
 					]
 				]
+			],
+			[
+				133150.684931507,
+				[
+					[
+						"Change Character",
+						"bf",
+						"bf"
+					],
+					[
+						"Set Property",
+						"boyfriend.flipX",
+						"false"
+					]
+				]
 			]
-		],
-		"notes": [],
-		"splashSkin": null,
-		"validScore": false,
-		"gfVersion": "gf",
-		"bpm": 146,
-		"arrowSkin": null,
-		"needsVoices": true,
-		"song": "triple-trouble"
+		]
 	}
 }

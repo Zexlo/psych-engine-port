@@ -13,102 +13,42 @@
 				]
 			],
 			[
-				14794.5205479452,
+				106643.835616438,
 				[
 					[
-						"tailsjump",
+						"Static",
 						"",
 						""
 					]
 				]
 			],
 			[
-				41095.8904109589,
+				106746.575342466,
 				[
 					[
-						"tailsjump",
-						"",
-						""
+						"Change Character",
+						"Dad",
+						"Beast"
+					],
+					[
+						"Change Character",
+						"BF",
+						"BF3"
 					]
 				]
 			],
 			[
-				94109.589041096,
+				133047.94520548,
 				[
 					[
-						"tailsjump",
-						"",
-						""
-					]
-				]
-			],
-			[
-				105205.479452055,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				106849.315068493,
-				[
+						"Static",
+						" ",
+						"true"
+					],
 					[
 						"Change Character",
 						"dad",
-						"BEAST"
-					]
-				]
-			],
-			[
-				106853.595890411,
-				[
-					[
-						"Change Character",
-						"bf",
-						"bf3"
-					]
-				]
-			],
-			[
-				111780.821917808,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				124931.506849315,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				131506.849315069,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				133146.404109589,
-				[
-					[
-						"knuxjump",
-						"",
-						""
+						"knux"
 					]
 				]
 			],
@@ -117,188 +57,13 @@
 				[
 					[
 						"Change Character",
-						"dad",
-						"knux"
-					],
-					[
-						"Opponent Notes Right Side",
-						"",
-						""
-					]
-				]
-			],
-			[
-				172602.739726028,
-				[
-					[
-						"knuxjump",
-						"",
-						""
-					]
-				]
-			],
-			[
-				236712.328767124,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				238356.164383562,
-				[
-					[
-						"Change Character",
-						"dad",
-						"BEAST"
-					],
-					[
-						"Change Character",
-						"boyfriend",
-						"bf3"
-					]
-				]
-			],
-			[
-				289315.068493151,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				290954.623287672,
-				[
-					[
-						"eggjump",
-						"",
-						""
-					]
-				]
-			],
-			[
-				290958.904109589,
-				[
-					[
-						"Change Character",
-						"dad",
-						"eggman"
-					]
-				]
-			],
-			[
-				290962.66916983,
-				[
-					[
-						"Change Character",
 						"bf",
 						"bf"
-					]
-				]
-			],
-			[
-				296019.145073445,
-				[
+					],
 					[
-						"Play Animation",
-						"laugh",
-						"dad"
-					]
-				]
-			],
-			[
-				296742.03663971,
-				[
-					[
-						"Play Animation",
-						"end",
-						"dad"
-					]
-				]
-			],
-			[
-				307585.410133686,
-				[
-					[
-						"Play Animation",
-						"laugh",
-						"dad"
-					]
-				]
-			],
-			[
-				308308.301699951,
-				[
-					[
-						"Play Animation",
-						"end",
-						"dad"
-					]
-				]
-			],
-			[
-				324211.916157782,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				325657.699290312,
-				[
-					[
-						"eggjump",
-						"",
-						""
-					]
-				]
-			],
-			[
-				347344.446278264,
-				[
-					[
-						"startstatic",
-						"",
-						""
-					]
-				]
-			],
-			[
-				400115.530615613,
-				[
-					[
-						"Play Animation",
-						"laugh",
-						"dad"
-					]
-				]
-			],
-			[
-				400838.422181878,
-				[
-					[
-						"Play Animation",
-						"end",
-						"dad"
-					]
-				]
-			],
-			[
-				405175.771579468,
-				[
-					[
-						"startstatic",
-						"",
-						""
+						"Set Property",
+						"boyfriend.flipX",
+						"true"
 					]
 				]
 			]
@@ -787,11 +552,6 @@
 				"sectionNotes": [
 					[
 						14794.5205479452,
-						6,
-						719.178082191781
-					],
-					[
-						14794.5205479452,
 						0,
 						0
 					],
@@ -819,11 +579,6 @@
 						16027.397260274,
 						4,
 						0
-					],
-					[
-						14794.5205479452,
-						6,
-						719.178082191781
 					],
 					[
 						14794.5205479452,
@@ -876,9 +631,16 @@
 						0
 					],
 					[
+						14794.5205479452,
+						6,
+						0,
+						"Ring"
+					],
+					[
 						15616.4383561644,
 						7,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -1015,7 +777,8 @@
 					[
 						18904.1095890411,
 						7,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -1170,11 +933,6 @@
 						0
 					],
 					[
-						22191.7808219178,
-						2,
-						0
-					],
-					[
 						21369.8630136986,
 						5,
 						0
@@ -1183,6 +941,12 @@
 						21575.3424657534,
 						0,
 						0
+					],
+					[
+						22191.7808219178,
+						2,
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -1273,11 +1037,6 @@
 					],
 					[
 						25479.4520547945,
-						2,
-						0
-					],
-					[
-						25479.4520547945,
 						3,
 						0
 					],
@@ -1320,6 +1079,12 @@
 						26095.8904109589,
 						0,
 						0
+					],
+					[
+						25479.4520547945,
+						2,
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -1456,7 +1221,8 @@
 					[
 						28767.1232876712,
 						7,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -1729,11 +1495,6 @@
 					],
 					[
 						35342.4657534247,
-						2,
-						0
-					],
-					[
-						35342.4657534247,
 						1,
 						0
 					],
@@ -1746,6 +1507,12 @@
 						35136.9863013699,
 						3,
 						0
+					],
+					[
+						35342.4657534247,
+						2,
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -2002,11 +1769,6 @@
 						0
 					],
 					[
-						42123.2876712329,
-						6,
-						0
-					],
-					[
 						42328.7671232877,
 						5,
 						0
@@ -2063,6 +1825,11 @@
 					],
 					[
 						42534.2465753425,
+						6,
+						0
+					],
+					[
+						42123.2876712329,
 						6,
 						0
 					]
@@ -2503,7 +2270,8 @@
 					[
 						47671.2328767123,
 						2,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -2725,7 +2493,8 @@
 					[
 						50958.9041095891,
 						2,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"lengthInSteps": 16,
@@ -2938,7 +2707,8 @@
 					[
 						55068.493150685,
 						7,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"altAnim": false,
@@ -3256,7 +3026,8 @@
 					[
 						61027.397260274,
 						2,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"typeOfSection": 0,
@@ -3408,7 +3179,8 @@
 					[
 						64315.0684931507,
 						2,
-						0
+						0,
+						"Ring"
 					]
 				],
 				"altAnim": false,
@@ -3587,11 +3359,6 @@
 					],
 					[
 						68219.1780821918,
-						7,
-						0
-					],
-					[
-						68219.1780821918,
 						8,
 						0
 					],
@@ -3604,6 +3371,12 @@
 						68116.4383561644,
 						6,
 						0
+					],
+					[
+						68219.1780821918,
+						7,
+						0,
+						"Ring"
 					]
 				],
 				"altAnim": false,
@@ -6212,14 +5985,14 @@
 						113835.616438356,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						114760.273972603,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -6386,7 +6159,7 @@
 						117020.547945206,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -6693,7 +6466,7 @@
 						124623.287671233,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -6840,14 +6613,14 @@
 						127602.739726028,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						128116.438356165,
 						6,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -6924,7 +6697,7 @@
 						129041.095890411,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -7681,7 +7454,7 @@
 						139828.767123288,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -8353,7 +8126,7 @@
 						153287.671232877,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -8430,14 +8203,14 @@
 						154623.287671233,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						155342.465753425,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -8519,7 +8292,7 @@
 						156986.301369863,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -9283,14 +9056,14 @@
 						169623.287671233,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						170856.164383562,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -9457,14 +9230,14 @@
 						172910.95890411,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						173630.136986302,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -9561,14 +9334,14 @@
 						174863.01369863,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						175582.191780822,
 						2,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -9630,21 +9403,21 @@
 						176506.849315069,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						177226.02739726,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						176712.328767123,
 						2,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -9756,21 +9529,21 @@
 						178047.94520548,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						179075.342465754,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						177739.726027397,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -9847,21 +9620,21 @@
 						180205.479452055,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						179486.301369863,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						180410.95890411,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -9958,21 +9731,21 @@
 						181130.136986302,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						182054.794520548,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						181643.835616439,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -10067,28 +9840,28 @@
 						182876.712328767,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						183493.150684932,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						183904.109589041,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						182773.97260274,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -10135,14 +9908,14 @@
 						185239.726027397,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						184417.808219178,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -10329,7 +10102,7 @@
 						188219.178082192,
 						9,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -10391,7 +10164,7 @@
 						189349.315068493,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -10503,7 +10276,7 @@
 						191917.808219178,
 						9,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -10580,7 +10353,7 @@
 						192636.98630137,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -10682,14 +10455,14 @@
 						194589.041095891,
 						6,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						195205.479452055,
 						9,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -10791,7 +10564,7 @@
 						196643.835616439,
 						9,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -10858,7 +10631,7 @@
 						198595.890410959,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -10995,14 +10768,14 @@
 						200136.98630137,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						199417.808219178,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -11129,14 +10902,14 @@
 						201575.342465754,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						200856.164383562,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -11493,14 +11266,14 @@
 						205787.671232877,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						206301.369863014,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -11707,7 +11480,7 @@
 						209178.082191781,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -11974,7 +11747,7 @@
 						212773.97260274,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -12098,7 +11871,7 @@
 						214520.547945206,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -12220,7 +11993,7 @@
 						216061.643835617,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -12897,7 +12670,7 @@
 						223356.164383562,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -13054,14 +12827,14 @@
 						224486.301369863,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						224794.520547945,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -13303,14 +13076,14 @@
 						227157.534246576,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						227568.493150685,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -13467,7 +13240,7 @@
 						229006.849315069,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -14511,14 +14284,14 @@
 						260239.726027398,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						261061.643835617,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -14560,14 +14333,14 @@
 						261678.082191781,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						262705.479452055,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -15001,14 +14774,14 @@
 						280376.712328767,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						280787.671232877,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -15159,21 +14932,21 @@
 						284589.041095891,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						285102.739726028,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						285616.438356165,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -15205,7 +14978,7 @@
 						286438.356164384,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -15232,14 +15005,14 @@
 						287876.712328767,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						288595.890410959,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -15811,21 +15584,21 @@
 						301802.277603565,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						302163.723386698,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						301983.000495131,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -16411,28 +16184,28 @@
 						313368.542663806,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						313549.265555372,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						313729.988446939,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						313910.711338505,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -16834,14 +16607,14 @@
 						320326.373989107,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						321049.265555372,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -16918,7 +16691,7 @@
 						322585.410133686,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -17000,7 +16773,7 @@
 						323940.831820433,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -17122,7 +16895,7 @@
 						325386.614952963,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -17857,14 +17630,14 @@
 						350868.542663806,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						351139.627001155,
 						8,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -17951,14 +17724,14 @@
 						351952.880013203,
 						9,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						352946.855916818,
 						6,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -18035,14 +17808,14 @@
 						353489.024591517,
 						8,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						354121.554711999,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -18229,7 +18002,7 @@
 						356470.95230236,
 						9,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -18366,7 +18139,7 @@
 						359723.964350553,
 						5,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -18773,14 +18546,14 @@
 						367766.133025251,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						368760.108928866,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -18837,7 +18610,7 @@
 						369934.807724047,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -20289,7 +20062,7 @@
 						390085.410133685,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -20391,7 +20164,7 @@
 						391260.108928866,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -20473,7 +20246,7 @@
 						392615.530615613,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -23224,7 +22997,7 @@
 						445928.78362766,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -23385,7 +23158,7 @@
 						449091.43423007,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -23562,14 +23335,14 @@
 						452254.08483248,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						452705.892061395,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -24591,14 +24364,14 @@
 						481892.639049347,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						482886.614952961,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -24776,7 +24549,7 @@
 						484784.205314407,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
@@ -24839,7 +24612,7 @@
 						486772.157121636,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -24896,35 +24669,35 @@
 						487766.13302525,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						488037.2173626,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						488398.663145732,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						488760.108928865,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						488760.108928865,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -25006,35 +24779,35 @@
 						489211.916157781,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						489483.00049513,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						489934.807724046,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						489754.084832479,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						490296.253507178,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -25114,42 +24887,42 @@
 						490657.699290311,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						491019.145073443,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						491199.867965009,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						491380.590856576,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						491651.675193925,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						490567.337844528,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -25245,35 +25018,35 @@
 						491922.759531274,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						492374.56676019,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						492736.012543323,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						493097.458326455,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						492826.373989106,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -25320,35 +25093,35 @@
 						493639.627001154,
 						1,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						493820.34989272,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						494452.880013202,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						494091.43423007,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						494633.602904768,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -25405,28 +25178,28 @@
 						494904.687242118,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						495356.494471034,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						496079.386037299,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						495717.940254166,
 						0,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -25453,14 +25226,14 @@
 						496440.831820431,
 						3,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					],
 					[
 						497344.446278262,
 						4,
 						0,
-						"Phantom Note",
+						"Hurt Note",
 						0
 					]
 				],
@@ -26090,24 +25863,84 @@
 				"bpm": 146
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 146,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"bpm": 146,
 				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 146,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 146
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 146
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 146
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 146
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 146
 			},
 			{
 				"gfSection": false,

@@ -1,4 +1,4 @@
 displays text
 
-Value 1: time to display for
-Value2: text to display
+Value 1: text to display
+Value 2: time to display for

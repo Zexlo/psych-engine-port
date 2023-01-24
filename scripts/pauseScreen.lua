@@ -109,11 +109,11 @@ makeLuaSprite('disk', 'covers/chaos', -800, 260)
 elseif week == 'TDoll' then
 makeLuaSprite('disk', 'covers/Tdoll', -800, 260)
 
-elseif week == 'Starved' or  week == 'Xterion' or week == 'curse' then
-makeLuaSprite('disk', 'covers/blankrecord', -800, 260)
-
 elseif week == 'Personel' then
-makeLuaSprite('disk', 'covers/DONOTSTEEL', -800, 260)
+	makeLuaSprite('disk', 'covers/DONOTSTEEL', -800, 260)
+
+elseif week == 'Starved' or  week == 'Xterion' or week == 'cursed' then
+makeLuaSprite('disk', 'covers/blankrecord', -800, 260)
 	end
 	scaleObject('disk', 0.28, 0.28); 	
 	setObjectCamera('disk', 'other')

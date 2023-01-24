@@ -1,6 +1,6 @@
 	local block = true
 	local endsong = false
-	local cont = true
+	local cont = false
 	local restart = false
 	local leave = false
 	nomid = false
@@ -41,7 +41,7 @@
 	setProperty('resultsBG.alpha', 0)
 	addLuaSprite('resultsBG', true);
 
-	makeLuaText('variables','song:'..songName..'\ndifficulty: '..difficultyName, 1280, 5, 50);
+	makeLuaText('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat, 1280, 5, 50);
     setTextSize('variables', 20);
     setTextAlignment('variables', 'left');
     setObjectCamera('variables', 'hud');
@@ -105,12 +105,12 @@ end
     setTextFont('scoretxt', 'sonic.otf')	
 	setProperty('scoreTxt.y', scoreY)
 
-	makeLuaSprite('replay', 'pauseScreen/Restart', 1500, -130)
-	makeLuaSprite('exitres', 'pauseScreen/Exit', 1500, -130)
-	makeLuaSprite('contres', 'pauseScreen/Continue', 1500, -130)
-	makeLuaSprite('cBG', 'pauseScreen/CbutBG', 1500, -90)	
-	makeLuaSprite('rBG', 'pauseScreen/RbutBG', 1500, -90)
-	makeLuaSprite('eBG', 'pauseScreen/EbutBG', 1500, -90)	
+	makeLuaSprite('replay', 'pauseScreen/Restart', 1500, -90)
+	makeLuaSprite('exitres', 'pauseScreen/Exit', 1500, -90)
+	makeLuaSprite('contres', 'pauseScreen/Continue', 1500, -90)
+	makeLuaSprite('cBG', 'pauseScreen/CbutBG', 1500, -50)	
+	makeLuaSprite('rBG', 'pauseScreen/RbutBG', 1500, -50)
+	makeLuaSprite('eBG', 'pauseScreen/EbutBG', 1500, -50)	
 	makeLuaSprite('zig','pauseScreen/zigzag',0,-1200)
 	makeLuaSprite('trig','pauseScreen/bottomPanel',1500,30)
 	makeLuaSprite('BG1' , 'PauseScreen/txtBG',-1500 ,200);
@@ -121,6 +121,12 @@ end
 
 	scaleObject('BG3',1.1, 1);	
 	scaleObject('BG5',0.7, 1.8);
+	scaleObject('replay',0.9, 0.9);
+	scaleObject('exitres',0.9, 0.9);
+	scaleObject('contres',0.9, 0.9);
+	scaleObject('cBG',0.9, 0.9);
+	scaleObject('rBG',0.9, 0.9);
+	scaleObject('eBG',0.9, 0.9);						
 	-- screenCenter('BG5','X')
 
 	setObjectCamera('rBG', 'other')
@@ -146,6 +152,11 @@ end
 	addLuaSprite('contres', true);	
 	addLuaSprite('exitres', true);
 	addLuaSprite('replay', true);
+	if isStoryMode then
+	cont = true
+	else
+	restart = true		
+	end
 end
 
 
@@ -180,7 +191,8 @@ end
 end
 
 function onUpdatePost(elapsed)
-if debugger == true then	
+if debugger == true then
+luaDebugMode = true		
 end	
 if curBeat <= 0 then
 if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
@@ -252,41 +264,38 @@ end
 	end
 	end
 
-if isStoryMode then
 if cont == true then
-		doTweenY('contTweenY', 'contres', -105, 0.02, 'circInOut')
+		doTweenY('contTweenY', 'contres', -65, 0.02, 'circInOut')
 	end
-end	
 if cont == false then
-		setProperty('contres.y', -90)
+		setProperty('contres.y', -50)
 	end
 	
 if restart == false then
-		setProperty('replay.y', -90)
+		setProperty('replay.y', -50)
 	end
 	if restart == true then
-		doTweenY('replayTweenY', 'replay', -105, 0.02, 'circInOut')
+		doTweenY('replayTweenY', 'replay', -65, 0.02, 'circInOut')
 	end
 	if leave == false then
-		setProperty('exitres.y', -90)
+		setProperty('exitres.y', -50)
 	end
 	if leave == true then
-		doTweenY('exitTweenY', 'exitres', -105, 0.02, 'circInOut')
-	end
-
-	if getKey('five') and debugger == false then -- toggle free cam, releasing to game
+		doTweenY('exitTweenY', 'exitres', -65, 0.02, 'circInOut')
+	end      
+	
+	--if getTextString('timeTxt') == '- '..songName..' ['..songdif..']'..' -' then
+	--end	
+	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
+	setTextString('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat)
+	if getKey('five') and debugger == false then
         debugger = true
 		addLuaText('variables');	
     elseif getKey('five') and debugger == true then
 		debugger = false
 		removeLuaText('variables',false);		 
-    end        
-	
-	if getTextString('timeTxt') == '- '..songName..' ['..songdif..']'..' -' then
-	end	
-	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
-	
-end
+    end 
+	end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
 if songName == 'personel' and curBeat < 10 then
@@ -308,6 +317,8 @@ end
 
 -- all this is for the results screen lmaooo
 function onEndSong()
+	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
+	setProperty('vocals.volume', 0)		
  if block == true then
  if week == 'Sunky' then
 setProperty('ratio.visible',false)
@@ -427,10 +438,10 @@ if isStoryMode then
 	doTweenX('contTween', 'contres', 956, 0.2, 'linear')
 	doTweenX('c1Tween', 'cBG', 956, 0.2, 'linear')	
 end
-	doTweenX('replayTween', 'replay', 848, 0.2, 'linear')
-	doTweenX('exitTween', 'exitres', 756, 0.2, 'linear')
-	doTweenX('r1Tween', 'rBG', 848, 0.2, 'linear')
-	doTweenX('e1ween', 'eBG', 756, 0.2, 'linear')	
+	doTweenX('replayTween', 'replay', 868, 0.2, 'linear')
+	doTweenX('exitTween', 'exitres', 776, 0.2, 'linear')
+	doTweenX('r1Tween', 'rBG', 868, 0.2, 'linear')
+	doTweenX('e1ween', 'eBG', 776, 0.2, 'linear')	
 end
 end
 
@@ -452,9 +463,11 @@ function checkbutton()
 			leave = false
 			restart = false
 			cont = true
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')	
 	else
 			leave = false
-			restart = true	
+			restart = true
+			cont = false	
 			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
 			end
 			end
@@ -462,6 +475,7 @@ function checkbutton()
 		if cont == true then
 			restart = false
 			leave = true
+			cont = false
 			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif leave == true then
 			leave = false
@@ -472,6 +486,7 @@ function checkbutton()
 			leave = false
 			restart = false
 			cont = true
+			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
 	else
 			leave = true
 			restart = false	

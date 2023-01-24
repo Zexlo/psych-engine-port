@@ -89,8 +89,8 @@ elseif curBeat >=499 then
 	doTweenAlpha('hiroom', 'room', 1, 1, 'sineOut')
 	doTweenAlpha('hiroom2', 'tower', 1, 1, 'sineOut')
 	doTweenAlpha('hiroom3', 'city', 1, 1, 'sineOut')
-	doTweenColor('unred1','boyfriend','FFFFFF', 1, 'linear')
-	doTweenColor('unred2','sonicdead','FFFFFF', 1, 'linear')
+	doTweenColor('red1','boyfriend','EEEEEE', 1, 'linear')
+	doTweenColor('red2','sonicdead','EEEEEE', 1, 'linear')
 end
 
 if curStep >= 2176 then

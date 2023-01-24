@@ -12,9 +12,11 @@ function onUpdate(elapsed)
         doTweenZoom('wee', 'camGame', 1.3, 0.5, 'linear');
         end
     
-        if curStep >= 10 then
-            setTextColor('txt', '4a57c2')
-                end 
+    if curStep < 1260 then
+        setTextColor('txt', '4a57c2')
+    else
+        setTextColor('txt', '4aa1ee')     
+    end    
 
     if curBeat >= 183 and curBeat <= 248 then
     addLuaSprite('wavBG', false);     

@@ -44,7 +44,7 @@
 	makeLuaText('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat, 1280, 5, 50);
     setTextSize('variables', 20);
     setTextAlignment('variables', 'left');
-    setObjectCamera('variables', 'hud');
+    setObjectCamera('variables', 'other');
 end
 
 function onCreatePost()	
@@ -137,12 +137,10 @@ end
 	setObjectCamera('exitres', 'other')	
 	setObjectCamera('zig', 'HUD')
 	setObjectCamera('trig', 'HUD')	
-	setObjectCamera('circ', 'HUD')		
-	setObjectCamera('BG1', 'HUD')
-	setObjectCamera('BG2', 'HUD')
-	setObjectCamera('BG3', 'HUD')
-	setObjectCamera('BG4', 'HUD')
-	setObjectCamera('BG5', 'HUD')	
+	setObjectCamera('circ', 'HUD')
+	for i = 1,5 do
+	setObjectCamera('BG'..i, 'HUD')
+	end	
 
 	addLuaSprite('trig', true);
 	addLuaSprite('timeBG', true);
@@ -287,7 +285,7 @@ if restart == false then
 	--if getTextString('timeTxt') == '- '..songName..' ['..songdif..']'..' -' then
 	--end	
 	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
-	setTextString('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat)
+	setTextString('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat..'\nCurStep:'..curStep)
 	if getKey('five') and debugger == false then
         debugger = true
 		addLuaText('variables');	
@@ -317,7 +315,7 @@ end
 
 -- all this is for the results screen lmaooo
 function onEndSong()
-	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
+	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0.8)
 	setProperty('vocals.volume', 0)		
  if block == true then
  if week == 'Sunky' then
@@ -328,11 +326,9 @@ setProperty('inCutscene', true);
  setGlobalFromScript('scripts/pauseScreen','canPause','false')
 	addLuaSprite('zig', true);
 	addLuaSprite('circ', true);	
-	addLuaSprite('BG1', true);
-	addLuaSprite('BG2', true);
-	addLuaSprite('BG3', true);
-	addLuaSprite('BG4', true);
-	addLuaSprite('BG5', true);
+	for i = 1,5 do
+	addLuaSprite('BG'..i, true);
+	end
 	setProperty('timeBG.visible',false)
 	setProperty('song.visible',false)
 	setProperty('iconP1.visible',false)
@@ -385,7 +381,6 @@ addLuaSprite('rating',true)
 	end
 	return Funtion_Continue; --allows song end
 end
-
 function onTimerCompleted(tag, loops, loopsLeft)	
 if tag == 'Xdone' then
 	doTweenY('txt3', 'bftxt', 10, 0.4, 'linear')

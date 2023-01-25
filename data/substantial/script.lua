@@ -1,3 +1,6 @@
+function onCreatePost()
+	setTimeBarColors('1800e6','000000') 
+end	
 function onUpdate(elapsed)
 	scaleObject('boyfriend', 0.9, 0.9);
 	scaleObject('dad', 1.99, 1.99);

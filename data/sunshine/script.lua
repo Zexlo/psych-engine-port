@@ -142,6 +142,7 @@ doTweenY('move13', 'cry', -1280, 1, 'linear');
        end
 end
 function onStartCountdown()
+	setTimeBarColors('E69138','000000')    
 	if not allowCountdown then
 		return Function_Stop;
 	end
@@ -153,8 +154,6 @@ function onUpdate()
 end
 
 function onUpdate(elasped)
-doTweenColor('ColorTween', 'timeBar', 'E69138', 1, 'linear')
-
 if curBeat >= 147 and curBeat <215 then
   removeLuaSprite('TailsBG', false);
     noteTweenX('play0', 4, 415, 0.05, 'SineInOut')

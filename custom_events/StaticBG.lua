@@ -15,7 +15,7 @@ function onCreate()
 
 	runTimer('BG', startTime);
     setProperty('StaticBG.alpha', 0.6);
-    objectPlayAnimation('StaticBG', 'move');
+    playAnim('StaticBG', 'move');
 	playSound('staticBUZZ');
     end
 end

@@ -1,5 +1,5 @@
-function onCreate()
-
+function onCreatePost()
+   setTimeBarColors('445D82','000000') 
         makeLuaSprite('credbox', 'box', 390, -1280);
          scaleObject('credbox', 1.2, 1.3);
 	addLuaSprite('credbox', true);
@@ -88,10 +88,6 @@ end
      doTweenY('move11', 'chart', -1280, 1, 'linear');
 
        end
-end
-
-function onUpdate(elasped)
-doTweenColor('ColorTween', 'timeBar', '445D82', 1, 'linear')
 end
 
 function onGameOverStart()

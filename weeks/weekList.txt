@@ -5,6 +5,7 @@ Sonic.exe
 Tooslowencore
 Majin
 LordX
+Faker
 TDoll
 Fleetway
 Starved
@@ -12,3 +13,4 @@ Xterion
 Sunky
 Sanic
 Coldsteel
+Curse

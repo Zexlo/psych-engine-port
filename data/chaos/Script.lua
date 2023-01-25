@@ -188,6 +188,7 @@ end
 end
 
 function onStartCountdown()
+    setTimeBarColors('F6b949','000000')     
 	if not allowCountdown then
 		return Function_Stop;
 	end
@@ -198,9 +199,6 @@ function onStartCountdown()
 end
 
 function onUpdate(elasped)
-doTweenColor('ColorTween', 'timeBar', 'F6b949', 1, 'linear')
-
-
 if curBeat >= 30 then
 setProperty('dad.y',defaultOpponentY + math.sin( getPropertyFromClass('Conductor', 'songPosition')/crochet )*100 );
 end

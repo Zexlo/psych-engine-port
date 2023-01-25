@@ -3,6 +3,7 @@ videoDelay = false;
 
 local allowCountdown = false;
 function onStartCountdown()
+	setTimeBarColors('4735C1','000000') 		
 	if not allowCountdown and isStoryMode then --Block the first countdown
 	startVideo('Phase2');
 	setProperty('inCutscene', false);		
@@ -70,7 +71,4 @@ function onStartCountdown()
 		return Function_Stop;
 	end
 	return Function_Continue;
-end
-function onUpdate(elasped)
-doTweenColor('ColorTween', 'timeBar', '4735C1', 1, 'linear')
 end

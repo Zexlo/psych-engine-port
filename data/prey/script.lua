@@ -250,7 +250,7 @@ elseif curStep >= 1624 and curStep <=1800 then
 end
 
 if curStep >=1790 then
-doTweenColor('ColorTween', 'healthBar', '6C6CD8', 1, 'linear')
+doTweenColor('ColorTween', 'healthBar', '6C6CD8', 0.4, 'linear')
 end
 
 if curBeat >= 781 then

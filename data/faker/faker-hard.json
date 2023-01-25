@@ -4,22 +4,32 @@
 		"player1": "bf",
 		"events": [
 			[
-				112714.285714286,
-				[
-					[
-						"Start-Random-Static",
-						"0.60",
-						"30"
-					]
-				]
-			],
-			[
-				113142.857142857,
+				112428.571428571,
 				[
 					[
 						"Static",
 						"",
-						""
+						"0.3"
+					]
+				]
+			],
+			[
+				113428.571428571,
+				[
+					[
+						"Static",
+						"",
+						"0.3"
+					]
+				]
+			],
+			[
+				114285.714285714,
+				[
+					[
+						"Static",
+						"",
+						"0.3"
 					],
 					[
 						"Change Character",
@@ -39,12 +49,22 @@
 				]
 			],
 			[
-				117000,
+				115857.142857143,
 				[
 					[
-						"Screen Shake",
-						"1, 0.08",
-						"0, 0"
+						"Static",
+						"",
+						"0.3"
+					]
+				]
+			],
+			[
+				117142.857142857,
+				[
+					[
+						"Static",
+						"",
+						"0.3"
 					]
 				]
 			],
@@ -53,28 +73,38 @@
 				[
 					[
 						"Play Animation",
-						"singRIGHT",
+						"singUP",
 						"dad"
 					]
 				]
 			],
 			[
-				118000,
+				118285.714285714,
 				[
 					[
 						"Static",
-						"singLEFT",
-						"dad"
+						"",
+						"0.3"
 					]
 				]
 			],
 			[
-				119857.142857143,
+				119285.714285714,
 				[
 					[
 						"Static",
-						"singDOWN",
-						"dad"
+						"",
+						"0.3"
+					]
+				]
+			],
+			[
+				120000,
+				[
+					[
+						"Static",
+						"",
+						"0.3"
 					]
 				]
 			],
@@ -93,8 +123,18 @@
 				[
 					[
 						"Static",
-						"singUP",
-						"dad"
+						"",
+						"5"
+					]
+				]
+			],
+			[
+				128571.428571429,
+				[
+					[
+						"Static",
+						"",
+						"0.3"
 					]
 				]
 			]
@@ -2490,19 +2530,99 @@
 				"bpm": 105
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 105,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 105
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 105
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 105
+			},
+			{
+				"gfSection": false,
 				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
 				"bpm": 105,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 105,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 105,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 105,
+				"sectionBeats": 4,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"gfSection": false,
+				"altAnim": false,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"bpm": 105,
+				"sectionBeats": 4,
 				"changeBPM": false,
 				"mustHitSection": true
 			}
 		],
 		"player2": "Faker",
 		"player3": "fakeGF",
-		"song": "faker",
+		"song": "Faker",
 		"validScore": true,
 		"stage": "Faker",
 		"sections": 0,

@@ -41,7 +41,7 @@
 	setProperty('resultsBG.alpha', 0)
 	addLuaSprite('resultsBG', true);
 
-	makeLuaText('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat, 1280, 5, 50);
+	makeLuaText('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat, 1280, 1050, 20);
     setTextSize('variables', 20);
     setTextAlignment('variables', 'left');
     setObjectCamera('variables', 'other');
@@ -299,6 +299,7 @@ function opponentNoteHit(id, direction, noteType, isSustainNote)
 if songName == 'personel' and curBeat < 10 then
 setProperty('health',2);
 end
+if songName ~= 'Black Sun' then
      if getProperty('health') > 0.4 then --prevent opponent from killing by just singing too long
           if not isSustainNote then
                setProperty('health', getProperty('health')-0.02); --amount to lose on normal notes
@@ -306,7 +307,7 @@ end
                setProperty('health', getProperty('health')-0.01); --amount to lose on sustain part of notes
           end
      end
-
+	end
 end
 
 function noteMiss(id, noteData, noteType, isSustainNote)

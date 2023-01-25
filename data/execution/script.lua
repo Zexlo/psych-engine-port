@@ -1,9 +1,6 @@
-function onCreate()
+function onCreatePost()
+    setTimeBarColors('445D82','000000')     
 setPropertyFromClass('GameOverSubstate', 'loopSoundName', ''); --put in mods/music/
-end
-
-function onUpdate(elasped)
-doTweenColor('ColorTween', 'timeBar', '445D82', 1, 'linear')
 end
 
 function onGameOverStart()

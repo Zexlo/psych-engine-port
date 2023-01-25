@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				61,
+				593
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "TransformationUP"
+		},
+		{
+			"offsets": [
+				82,
+				413
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "TransformationRIGHT"
+		},
+		{
+			"offsets": [
+				103,
+				262
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "TransformationDOWN"
+		},
+		{
+			"offsets": [
+				211,
+				419
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "TransformationLEFT"
+		},
+		{
+			"offsets": [
+				50,
+				463
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "TransformationRIGHT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Transform",
+	"position": [
+		-210,
+		290
+	],
+	"healthicon": "fakerexe",
+	"flip_x": false,
+	"healthbar_colors": [
+		49,
+		24,
+		167
+	],
+	"camera_position": [
+		-100,
+		-410
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

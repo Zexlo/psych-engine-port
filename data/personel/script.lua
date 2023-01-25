@@ -4,7 +4,7 @@ local allowCountdown = false
 local angle = 275
 local spin = 1
 
-function onCreate()
+function onCreatePost()
 	setProperty('gf.visible', false)
 	setProperty('boyfriend.visible', false)
 	setProperty('dad.visible', false)
@@ -15,6 +15,7 @@ function onCreate()
 	setProperty('iconP2.visible', false)
 	setProperty('iconP1.visible', false)
 	setProperty('void.visible', false)
+	setTimeBarColors('FF00FF','000000') 
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
@@ -24,8 +25,6 @@ end
 end
 
 function onUpdate(elapsed)
-doTweenColor('ColorTween', 'timeBar', 'FF00FF', 1, 'linear')
-
 	if curBeat == 1 then
 		setPropertyFromClass("openfl.Lib", "application.window.title", "psssh...nothin personnel...kid...")
 	end

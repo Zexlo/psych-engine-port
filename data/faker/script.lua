@@ -1,11 +1,6 @@
 allowCountdown = false;
-function onCreate()
+function onCreatePost()
    addCharacterToList('Transform', 'dad');
-
-   precacheImage('black');
-
-   precacheImage('StartScreens/CircleFaker');
-   precacheImage('StartScreens/TextFaker');
 
    makeLuaSprite('black', 'black', 0, 0);
    addLuaSprite('black', true);
@@ -23,12 +18,13 @@ function onCreate()
    runTimer('flyin', startTime);
    runTimer('fadeout', startTime+2.5);
    runTimer('beginsong', startTime+2);
+   setTimeBarColors('311c73','000000')    
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
    if tag == 'flyin' then
-         doTweenX('circlefly', 'circle', 0, 1, 'linear');
-         doTweenX('textfly', 'text', 0, 1, 'linear');
+         doTweenX('circlefly', 'circle', -50, 1, 'linear');
+         doTweenX('textfly', 'text', -50, 1, 'linear');
    end
    if tag == 'fadeout' then
          doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
@@ -46,4 +42,13 @@ function onStartCountdown()
 		return Function_Stop;
 	end
 	return Function_Continue;
+end
+
+function onUpdate(elapsed)
+  if curBeat >= 196 then
+   doTweenZoom('wee', 'camGame', 1.1, 0.5, 'linear');
+  end 
+  if curBeat >= 213 then
+  setProperty('black.alpha',1) 
+  end 
 end

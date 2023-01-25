@@ -77,7 +77,7 @@ startTime = 0.2;
 
 	runTimer('dorandom', startTime);
 setProperty('StaticRand.alpha', 1);	
-            objectPlayAnimation('StaticRand', 'rando', true); -- play the static, true is to interrupt the previous animation
+            playAnim('StaticRand', 'rando', true); -- play the static, true is to interrupt the previous animation
         end
     end
 end

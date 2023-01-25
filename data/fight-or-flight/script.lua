@@ -29,6 +29,7 @@ end
 
 function onCreatePost()
 	setObjectOrder('fear', getObjectOrder('meter')+1)
+	setTimeBarColors('FF0000','000000') 	
 	end
 	
 
@@ -73,8 +74,6 @@ function onUpdate()
 end
 
 function onUpdate(elapsed)
-	doTweenColor('ColorTween', 'timeBar', 'FF0000', 1, 'linear')
-
 	for i = 0,3 do
 	noteTweenX(i, i,-1000, 0.2, 'linear')
 end

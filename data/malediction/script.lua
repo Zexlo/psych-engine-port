@@ -1,4 +1,5 @@
-function onCreate()
+function onCreatePost()
+    setTimeBarColors('4a57c2','000000')   
     makeAnimatedLuaSprite('wavBG', 'curse/STATIC', -500, 0); 
     addAnimationByPrefix('wavBG', 'first', 'staticBackground', 24, true); --XML sheet anim name
     playAnim('wavBG', 'first',false);
@@ -7,7 +8,6 @@ function onCreate()
     end
     
 function onUpdate(elapsed)
-    doTweenColor('ColorTween', 'timeBar', '4a57c2', 1, 'linear')
     if curStep >= 181 and curStep <=184 then
         doTweenZoom('wee', 'camGame', 1.3, 0.5, 'linear');
         end

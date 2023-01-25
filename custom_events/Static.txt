@@ -1,5 +1,5 @@
-Smoothly sets the Opponent's
-transparency value.
+displays static
 
-Value 1: Duration (0 = Instant)
-Value 2: Target transparency value
+value 1 = visiblity of the static (default is 0.8)
+
+value 2 = time to display (default is 0.3 seconds)

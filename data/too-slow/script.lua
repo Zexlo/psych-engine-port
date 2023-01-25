@@ -112,6 +112,7 @@ end
 	end
 
 function onStartCountdown()
+	setTimeBarColors('166DBB','000000') 	
 if not allowCountdown then
 	return Function_Stop;
 	end
@@ -121,9 +122,7 @@ end
 function onUpdate(elasped)
 	for i = 0,3 do
 	noteTweenX(i, i,-1000, 0.2, 'linear')
-end	
-doTweenColor('ColorTween', 'timeBar', '166DBB', 1, 'linear')
-	
+end		
 	if curBeat >= 190 and curBeat <=198 or curStep >= 1306 and curStep <=1432 then
 doTweenZoom('wee', 'camGame', 1.3, 0.5, 'linear');
 else

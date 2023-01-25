@@ -48,12 +48,10 @@ function onTimerCompleted(tag, loops, loopsLeft)
 end
 
 function onStartCountdown()
+	setTimeBarColors('6C18C5','000000') 		
 	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
 		startVideo('triple');
 		return Function_Stop;
 	end
 	return Function_Continue;
-end
-function onUpdate(elasped)
-doTweenColor('ColorTween', 'timeBar', '6C18C5', 1, 'linear')
 end

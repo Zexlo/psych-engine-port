@@ -57,7 +57,7 @@ function onCreate()
 	makeLuaSprite('fadeBG', 'simplejump', 0, 0)
 	scaleObject('fadeBG', 0.7, 0.7); 
 	setProperty('fadeBG.alpha', 0)
-	makeLuaText('controltext', "CONTROLS\nTAB: Change skin (base bf ONLY)\nF12: Toggle fullscreen", 1280, 310, -800);
+	makeLuaText('controltext', "CONTROLS\nSPACE: dodge\nTAB: Change skin (base bf ONLY)\nF12: Toggle fullscreen", 1280, 310, -800);
     setTextSize('controltext', 30);
 	setObjectCamera('controltext', 'other');	
     setTextFont('controltext', 'sonic.otf')
@@ -82,40 +82,17 @@ function onCreatePost()
 	setObjectOrder('pauseIcon', getObjectOrder('pauseLeft')+1)
 	setProperty('pauseIcon.angle', 180)
 
-if week == 'Tooslow' or week == 'Tooslowencore' then
-makeLuaSprite('disk', 'covers/tooslow', -800, 260)
+	if week == 'Starved' or  week == 'Xterion' or week == 'Curse' or week == 'Faker' then
+	makeLuaSprite('disk', 'covers/blank', -800, 260)
 
-elseif week == 'YCR' then
-makeLuaSprite('disk', 'covers/cantrun', -800, 260)
+	elseif week == 'Sonic.exe' then
+	makeLuaSprite('disk', 'covers/'..songName, -800, 260)
+	else
 
-elseif week == 'Triple' then
-makeLuaSprite('disk', 'covers/Triple Trouble', -800, 260)
+	makeLuaSprite('disk', 'covers/'..week, -800, 260)	
+	end	
 
-elseif week == 'Majin' then
-makeLuaSprite('disk', 'covers/endless', -800, 260)
-
-elseif week == 'LordX' then
-makeLuaSprite('disk', 'covers/lordX', -800, 260)
-
-elseif week == 'Sunky' then
-makeLuaSprite('disk', 'covers/milk', -800, 260)
-
-elseif week == 'Sanic' then
-makeLuaSprite('disk', 'covers/toofest', -800, 260)
-
-elseif week == 'Fleetway' then
-makeLuaSprite('disk', 'covers/chaos', -800, 260)
-
-elseif week == 'TDoll' then
-makeLuaSprite('disk', 'covers/Tdoll', -800, 260)
-
-elseif week == 'Personel' then
-	makeLuaSprite('disk', 'covers/DONOTSTEEL', -800, 260)
-
-elseif week == 'Starved' or  week == 'Xterion' or week == 'Curse' or week == 'Faker' then
-makeLuaSprite('disk', 'covers/blankrecord', -800, 260)
-	end
-	scaleObject('disk', 0.28, 0.28); 	
+	scaleObject('disk', 0.55, 0.55); 	
 	setObjectCamera('disk', 'other')
 	addLuaSprite('disk')
 	setObjectOrder('disk', getObjectOrder('pauseLeft')+1)
@@ -202,21 +179,18 @@ end
 		setProperty('continue.y', 0)
 	end
 	if cSelected == true then
-        doTweenAngle('rotate', 'disk', 0, 0.02, 'smoothStepIn')	
 		doTweenY('cTweenY', 'continue', -15, 0.02, 'circInOut')
 	end
 	if rSelected == false then
 		setProperty('restart.y', 0)
 	end
 	if rSelected == true then
-	doTweenAngle('rotate1', 'disk', -360, 0.02, 'smoothStepIn')
 		doTweenY('rTweenY', 'restart', -15, 0.02, 'circInOut')
 	end
 	if eSelected == false then
 		setProperty('exit.y', 0)
 	end
 	if eSelected == true then
-doTweenAngle('rotate2', 'disk', 360, 0.02, 'smoothStepIn')	
 		doTweenY('eTweenY', 'exit', -15, 0.02, 'circInOut')
 	end
 
@@ -255,34 +229,32 @@ playSound('pause',1,'song')
 end
 end
 
-function damnIWannaDie()
+function damnIWannaDie()	
 	if keyJustPressed('down') and fakePaused == true then
+		doTweenAngle('rotate', 'disk', getProperty('disk.angle')+480, 0.2, 'smoothStepIn')		
+		playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
 		if cSelected == true then
 			cSelected = false
 			rSelected = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif rSelected == true then
 			rSelected = false
 			eSelected = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif eSelected == true then
 			eSelected = false
 			cSelected = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		end
 	elseif keyJustPressed('up') and fakePaused == true then
+		doTweenAngle('rotate', 'disk', getProperty('disk.angle')+480, 0.2, 'smoothStepIn')		
+		playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')	
 		if cSelected == true then
 			cSelected = false
 			eSelected = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif rSelected == true then
 			rSelected = false
 			cSelected = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif eSelected == true then
 			eSelected = false
 			rSelected = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		end
 	end
 end

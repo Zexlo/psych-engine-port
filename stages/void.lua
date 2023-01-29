@@ -1,6 +1,6 @@
 function onCreate()
-	makeLuaSprite('void', 'white', 0, 0);
-	scaleObject('void', 2, 2);
+	makeLuaSprite('void', 'white', -100, 0);
+	scaleObject('void', 3000, 1500);
 	addLuaSprite('void', false);
 	close(true);
 end

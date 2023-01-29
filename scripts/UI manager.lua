@@ -344,14 +344,9 @@ setProperty('inCutscene', true);
 	doTweenY('act', 'acttxt',360, 0.4, 'linear')
 	doTweenY('zag', 'zig',-200, 0.4, 'linear')	
 	runTimer('Xdone',1)
-	noteTweenY('p1', 7,hideY, 0.2 , 'linear')
-	noteTweenY('p2', 6,hideY, 0.4 , 'linear')
-	noteTweenY('p3', 5,hideY, 0.6 , 'linear')
-	noteTweenY('p4', 4,hideY, 0.8 , 'linear')
-	noteTweenY('o1', 0,hideY, 0.2 , 'linear')
-	noteTweenY('o2', 1,hideY, 0.4 , 'linear')
-	noteTweenY('o3', 2,hideY, 0.6 , 'linear')
-	noteTweenY('o4', 3,hideY, 0.8 , 'linear') 
+	for i = 0,7 do
+	noteTweenY('p'..i, i,hideY, 0.2 + i/10 , 'linear')
+	end	
     addLuaText('resultTxt');
     addLuaText('ratingtype');
     addLuaText('misstxt');
@@ -444,56 +439,50 @@ end
 
 function checkbutton()
 	if keyJustPressed('down') and endsong == true then
+		playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
 		if cont == true then
 			restart = true
 			leave = false
 			cont = false
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif restart == true then
 			leave = true
 			restart = false
 			cont = false
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 	elseif leave == true then
+	
 	if isStoryMode then
 			leave = false
 			restart = false
 			cont = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')	
 	else
 			leave = false
 			restart = true
-			cont = false	
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
+			cont = false		
 			end
 			end
 	elseif keyJustPressed('up') and endsong == true then
+		playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
 		if cont == true then
 			restart = false
 			leave = true
 			cont = false
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif leave == true then
 			leave = false
 			restart = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')
 		elseif restart == true then
 		if isStoryMode then
 			leave = false
 			restart = false
-			cont = true
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
+			cont = true	
 	else
 			leave = true
-			restart = false	
-			playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
+			restart = false		
 			end
 		end
 	end
 end
 
 function onDestroy()
-	setPropertyFromClass('lime.app.Application', 'current.window.title', 'FNF: Sonic EXE Psych port');
 	if nameon == true then
 	setPropertyFromClass('ClientPrefs', 'timeBarType', 'Song Name')
 	end

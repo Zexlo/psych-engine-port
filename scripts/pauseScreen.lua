@@ -1,7 +1,5 @@
-fakePaused = false
-cSelected = false
-rSelected = false
-eSelected = false
+local fakePaused, eSelected, rSelected, cSelected = false, false, false, false
+local down, moveY, fixY
 
 canPause = false
 
@@ -17,9 +15,9 @@ function onPause()
 end
 
 
-
 function onCreate()
 --close()
+
 	makeLuaSprite('3p', 'endless/three', 0, 0);
 	screenCenter('3p','XY')
 	makeLuaSprite('2p', 'endless/two', 0, 0);
@@ -73,7 +71,11 @@ function onCreate()
 
 	setObjectOrder('controltext', getObjectOrder('blackbox')+1)	
 end
-function onCreatePost()	
+function onCreatePost()
+
+	local Dscroll = downscroll
+	local Mscroll = middlescroll	
+	
 	makeAnimatedLuaSprite('pauseIcon', nil, -800, 140)
 	loadGraphic('pauseIcon', 'icons/icon-bf', 150)
 	addAnimation('pauseIcon', 'icon/icon-bf', {0, 1}, 0, true)
@@ -99,11 +101,11 @@ function onCreatePost()
 	setProperty('disk.angle', 180)
 
 
-if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
+if Mscroll and Dscroll then
 down = 550
 moveY = 1000
 fixY = 688
-elseif downscroll then
+elseif Dscroll then
 down = 570
 moveY = 1000
 fixY = 688
@@ -277,14 +279,9 @@ function plsHelp()
 	doTweenX('pauseIconTween', 'pauseIcon', -800, 0.6, 'circInOut')
 	doTweenAngle('pauseIconTweenAng', 'pauseIcon', 180, 0.6, 'circInOut')	
 	runTimer('4c',0.2)
-	noteTweenY('p1', 7,down, 0.2 , 'linear')
-	noteTweenY('p2', 6,down, 0.4 , 'linear')
-	noteTweenY('p3', 5,down, 0.6 , 'linear')
-	noteTweenY('p4', 4,down, 0.8 , 'linear')
-	noteTweenY('o1', 0,down, 0.2 , 'linear')
-	noteTweenY('o2', 1,down, 0.4 , 'linear')
-	noteTweenY('o3', 2,down, 0.6 , 'linear')
-	noteTweenY('o4', 3,down, 0.8 , 'linear')	
+	for i = 0,7 do
+		noteTweenY('p'..i, i,down, 0.2 +i/100 , 'linear')
+		end			
 	cSelected = false
 	rSelected = false
 	eSelected = false

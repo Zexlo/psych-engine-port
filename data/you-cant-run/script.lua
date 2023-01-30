@@ -2,8 +2,7 @@ allowCountdown = false;
 videoDelay = false;
 
 local allowCountdown = false;
-function onStartCountdown()
-	setTimeBarColors('4735C1','000000') 		
+function onStartCountdown()		
 	if not allowCountdown and isStoryMode then --Block the first countdown
 	startVideo('Phase2');
 	setProperty('inCutscene', false);		
@@ -17,6 +16,10 @@ function onCreate()
 	if isStoryMode then
 		videoDelay = true;
 	end
+
+function onCreatePost()
+	setTimeBarColors('4735C1','000000') 	
+end	
 
 	addCharacterToList('Beast', 'dad');
 	addCharacterToList('Eggman', 'dad');

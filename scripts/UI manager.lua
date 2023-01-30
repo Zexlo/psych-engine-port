@@ -1,21 +1,23 @@
-	local block = true
-	local endsong = false
-	local cont = false
-	local restart = false
-	local leave = false
-	nomid = false
-	debugger = false
+	local block, endsong,cont,restart,leave,nomid,debugger = true, false, false, false, false, false, false
+	local BG1, BG2, BG3, BG4, BG5, cBG, rBG, eBG, contres, exitres, replay, trig, zig, down, moveY, hideY, nameY, fixY, BGY, scoreY
+
+
 	function onCreate()	
-		if not middlescroll and songName == 'Fight or Flight' then
+
+local Dscroll = downscroll
+local Mscroll = middlescroll
+
+		if not Mscroll and songName == 'Fight or Flight' then
 			setPropertyFromClass('ClientPrefs', 'middleScroll', true)
 			nomid = true
 		end		
-	if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
+	if Mscroll and Dscroll then
+	BGY = 675		
 	down = 550
 	moveY = 1000
 	fixY = 688
 	hideY = 1000
-	elseif downscroll then
+	elseif Dscroll then
 	BGY = 675
 	nameY = 650
 	scoreY = 15
@@ -193,7 +195,7 @@ if debugger == true then
 luaDebugMode = true		
 end	
 if curBeat <= 0 then
-if getPropertyFromClass('ClientPrefs', 'middleScroll') == true and downscroll then
+if Mscroll and Dscroll then
 for i = 0,7 do
 	noteTweenY(i, i, 550, 0.001, 'SineInOut')
 	end

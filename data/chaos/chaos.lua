@@ -1,7 +1,7 @@
 -- Lua stuff
 function onCreate()
   precacheImage('chaos/Lewis Porker');
-	makeAnimatedLuaSprite('Porker', 'chaos/Lewis Porker', 2100, -1100); 
+	makeAnimatedLuaSprite('Porker', 'chaos/Lewis Porker', 1900, -1000); 
 	addAnimationByPrefix('Porker', 'first', 'PorkerFG', 24, false); --XML sheet anim name
 	scaleObject('porker',0.8,0.8)
 	addLuaSprite('Porker', true); 

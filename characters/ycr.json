@@ -1,0 +1,155 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				18,
+				-51
+			],
+			"anim": "laugh",
+			"fps": 24,
+			"name": "laugh_Instance",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"offsets": [
+				360,
+				7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "scream",
+			"indices": [],
+			"name": "scream"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				17,
+				-51
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "laugh",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-69,
+				129
+			],
+			"anim": "singUP",
+			"fps": 42,
+			"name": "normal_up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				184,
+				22
+			],
+			"anim": "singLEFT",
+			"fps": 38,
+			"name": "normal_left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				-6
+			],
+			"anim": "singDOWN",
+			"fps": 40,
+			"name": "normal_down",
+			"indices": []
+		},
+		{
+			"cameraOffset": [
+				0,
+				0
+			],
+			"loop": true,
+			"offsets": [
+				-18,
+				67
+			],
+			"anim": "idle",
+			"fps": 26,
+			"name": "normal_idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-69,
+				129
+			],
+			"loop": false,
+			"fps": 42,
+			"anim": "singUP-alt",
+			"indices": [],
+			"name": "normal_up"
+		},
+		{
+			"offsets": [
+				-26,
+				-31
+			],
+			"loop": false,
+			"fps": 35,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "normal_right"
+		},
+		{
+			"offsets": [
+				-26,
+				-30
+			],
+			"loop": false,
+			"fps": 35,
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "normal_right"
+		},
+		{
+			"offsets": [
+				183,
+				22
+			],
+			"loop": false,
+			"fps": 34,
+			"anim": "singLEFT-alt",
+			"indices": [],
+			"name": "normal_left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/YCR",
+	"position": [
+		0,
+		30
+	],
+	"healthicon": "run",
+	"flip_x": false,
+	"healthbar_colors": [
+		22,
+		13,
+		135
+	],
+	"camera_position": [
+		-80,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

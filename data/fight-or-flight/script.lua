@@ -35,8 +35,8 @@ function onCreatePost()
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 400, 0.8, 'SineInOut');
-		doTweenX('textfly', 'text', 400, 0.8, 'SineInOut');
+		doTweenX('circlefly', 'circle', 400, 0.8, 'cubeIn');
+		doTweenX('textfly', 'text', 400, 0.8, 'cubeIn');
 	end
 	if tag == 'fadeout' then
 		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');

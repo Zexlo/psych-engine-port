@@ -1,0 +1,5 @@
+Hides notes and receptors.
+
+Value1 = which notes? all, dad or bf
+
+value2 = duration of fade

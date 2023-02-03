@@ -25886,6 +25886,26 @@
 				"bpm": 146
 			},
 			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 146,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 146
+			},
+			{
 				"gfSection": false,
 				"altAnim": false,
 				"typeOfSection": 0,
@@ -25957,9 +25977,9 @@
 						"bf"
 					],
 					[
-						"Set Property",
-						"boyfriend.flipX",
-						"false"
+						"Opponent Notes Right Side",
+						"right",
+						""
 					]
 				]
 			],

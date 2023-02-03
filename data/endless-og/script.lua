@@ -67,8 +67,8 @@ end
 	
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 0, 1, 'linear');
-		doTweenX('textfly', 'text', 0, 1, 'linear');
+		doTweenX('circlefly', 'circle', 0, 1, 'cubeIn');
+		doTweenX('textfly', 'text', 0, 1, 'cubeIn');
 	end
 	if tag == 'fadeout' then
 		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');

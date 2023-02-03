@@ -192,8 +192,8 @@ end
        end
 
 	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 400, 1, 'linear');
-		doTweenX('textfly', 'text', 400, 1, 'linear');
+		doTweenX('circlefly', 'circle', 400, 1, 'cubeIn');
+		doTweenX('textfly', 'text', 400, 1, 'cubeIn');
 	end
 	if tag == 'fadeout' then
 		doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
@@ -259,11 +259,11 @@ doTweenX('run', 'furnace', 3800, 2, 'sineOut')
 end
 
 if curBeat >= 31.6 and curBeat <= 32 then
-doTweenZoom('wee', 'camGame', 1.5, 0.1, 'easein');
+doTweenZoom('wee', 'camGame', 1.5, 0.1, 'easeIn');
 end
 
 if curBeat >= 32 and curBeat <= 33 then
-doTweenZoom('woo', 'camGame', 0.8, 0.2, 'easein');
+doTweenZoom('woo', 'camGame', 0.8, 0.2, 'easeOut');
 end
 
 end

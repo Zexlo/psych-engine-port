@@ -131,17 +131,28 @@ end
 	scaleObject('eBG',0.9, 0.9);						
 	-- screenCenter('BG5','X')
 
+
+	setObjectCamera('resultTxt', 'other')
+	setObjectCamera('ratingtype', 'other')
+	setObjectCamera('misstxt', 'other')		
+	setObjectCamera('accuracyTxt', 'other')	
+	setObjectCamera('hitnotes', 'other')
+	setObjectCamera('bftxt', 'other')	
+	setObjectCamera('passed', 'other')
+	setObjectCamera('acttxt', 'other')	
+	setObjectCamera('scoretxt', 'other')
+
 	setObjectCamera('rBG', 'other')
 	setObjectCamera('eBG', 'other')
 	setObjectCamera('cBG', 'other')		
 	setObjectCamera('replay', 'other')	
 	setObjectCamera('contres', 'other')
 	setObjectCamera('exitres', 'other')	
-	setObjectCamera('zig', 'HUD')
-	setObjectCamera('trig', 'HUD')	
-	setObjectCamera('circ', 'HUD')
+	setObjectCamera('zig', 'other')
+	setObjectCamera('trig', 'other')	
+	setObjectCamera('circ', 'other')
 	for i = 1,5 do
-	setObjectCamera('BG'..i, 'HUD')
+	setObjectCamera('BG'..i, 'other')
 	end	
 
 	addLuaSprite('trig', true);
@@ -162,13 +173,13 @@ end
 
 function onBeatHit()
 if curBeat % 1 == 0 then
-	doTweenAngle('wee', 'iconP1', -15, 0.7, 'linear')
-	doTweenAngle('waa', 'iconP2', 15, 0.7, 'linear')
+	doTweenAngle('wee', 'iconP1', -20, 0.8, 'backInOut')
+	doTweenAngle('waa', 'iconP2', 20, 0.8, 'backInOut')
 	end
 	
 if curBeat % 2 == 0 then
-	doTweenAngle('wee', 'iconP1', 15, 0.7, 'linear')
-	doTweenAngle('waa', 'iconP2', -15, 0.7, 'linear')
+	doTweenAngle('wee', 'iconP1', 20, 0.8, 'backInOut')
+	doTweenAngle('waa', 'iconP2', -20, 0.8, 'backInOut')
 	end
 	
 end	
@@ -196,7 +207,7 @@ luaDebugMode = true
 end	
 if curBeat <= 0 then
 if Mscroll and Dscroll then
-for i = 0,7 do
+for i = 0,9 do
 	noteTweenY(i, i, 550, 0.001, 'SineInOut')
 	end
 	end	
@@ -340,14 +351,14 @@ setProperty('inCutscene', true);
 	setProperty('healthBarBG.visible',false)
 	setProperty('scoreTxt.visible',false)
 	doTweenAlpha('showBG', 'resultsBG', 0.7, 1, 'sineOut')		
-    doTweenX('RightTween', 'trig', 600, 0.2, 'linear')
-	doTweenX('txt1', 'bftxt', -170, 0.4, 'linear')
-	doTweenX('txt2', 'passed', 170, 0.4, 'linear')
-	doTweenY('act', 'acttxt',360, 0.4, 'linear')
-	doTweenY('zag', 'zig',-200, 0.4, 'linear')	
+    doTweenX('RightTween', 'trig', 600, 0.2, 'backInOut')
+	doTweenX('txt1', 'bftxt', -170, 0.4, 'backInOut')
+	doTweenX('txt2', 'passed', 170, 0.4, 'backInOut')
+	doTweenY('act', 'acttxt',360, 0.4, 'backInOut')
+	doTweenY('zag', 'zig',-200, 0.4, 'backInOut')	
 	runTimer('Xdone',1)
-	for i = 0,7 do
-	noteTweenY('p'..i, i,hideY, 0.2 + i/10 , 'linear')
+	for i = 0,9 do
+	noteTweenY('p'..i, i,hideY, 0.2 + i/10 , 'elasticOut')
 	end	
     addLuaText('resultTxt');
     addLuaText('ratingtype');
@@ -373,7 +384,7 @@ else
 end
 screenCenter('rating','X')
 scaleObject('rating',0.9,0.9)
-setObjectCamera('rating','HUD')
+setObjectCamera('rating','other')
 addLuaSprite('rating',true)
 		return Function_Stop; --prevents song end
 	end
@@ -386,16 +397,16 @@ if tag == 'Xdone' then
 	doTweenY('act2', 'acttxt',60, 0.4, 'linear')	
 	end
 if tag == 'resdone' then
-	doTweenX('BG1X', 'BG1', 420, 0.4, 'linear')
-	doTweenX('BG2X', 'BG2', 420, 0.6, 'linear')
-	doTweenX('BG3X', 'BG3',398, 0.8, 'linear')
-	doTweenX('BG4X', 'BG4',420, 1, 'linear')
-	doTweenY('BG5X', 'BG5',520, 1.2, 'linear')	
-	doTweenX('txt1', 'hitnotes', 0, 0.4, 'linear')
-	doTweenX('txt2', 'misstxt', 0, 0.6, 'linear')
-	doTweenX('act1', 'accuracyTxt',0, 0.8, 'linear')
-	doTweenX('act2', 'scoretxt',0, 1, 'linear')
-	doTweenY('act3', 'ratingtype',510, 1.2, 'linear')	
+	doTweenX('BG1X', 'BG1', 420, 0.4, 'backInOut')
+	doTweenX('BG2X', 'BG2', 420, 0.6, 'backInOut')
+	doTweenX('BG3X', 'BG3',398, 0.8, 'backInOut')
+	doTweenX('BG4X', 'BG4',420, 1, 'backInOut')
+	doTweenY('BG5X', 'BG5',520, 1.2, 'backInOut')	
+	doTweenX('txt1', 'hitnotes', 0, 0.4, 'backInOut')
+	doTweenX('txt2', 'misstxt', 0, 0.6, 'backInOut')
+	doTweenX('act1', 'accuracyTxt',0, 0.8, 'backInOut')
+	doTweenX('act2', 'scoretxt',0, 1, 'backInOut')
+	doTweenY('act3', 'ratingtype',510, 1.2, 'backInOut')	
 end
 end
 

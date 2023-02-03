@@ -23,8 +23,8 @@ end
 
 function onTimerCompleted(tag, loops, loopsLeft)
    if tag == 'flyin' then
-         doTweenX('circlefly', 'circle', -50, 1, 'linear');
-         doTweenX('textfly', 'text', -50, 1, 'linear');
+         doTweenX('circlefly', 'circle', -50, 1, 'cubeIn');
+         doTweenX('textfly', 'text', -50, 1, 'cubeIn');
    end
    if tag == 'fadeout' then
          doTweenAlpha('fadeblack', 'black', 0, 2, 'sineOut');
@@ -47,8 +47,15 @@ end
 function onUpdate(elapsed)
   if curBeat >= 196 then
    doTweenZoom('wee', 'camGame', 1.1, 0.5, 'linear');
-  end 
+  end
   if curBeat >= 213 then
   setProperty('black.alpha',1) 
-  end 
+  end
+  if curStep >= 768 then
+  setProperty('iconP1.visible',false)
+  setProperty('iconP2.visible',false)
+  setProperty('healthBar.visible',false)
+  setProperty('healthBarBG.visible',false)
+  setProperty('scoreTxt.visible',false) 
+end   
 end

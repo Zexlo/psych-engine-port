@@ -3,7 +3,7 @@
 		"player1": "bf",
 		"events": [
 			[
-				3107.14285714286,
+				3000,
 				[
 					[
 						"Static",
@@ -13,7 +13,17 @@
 				]
 			],
 			[
-				6535.71428571429,
+				6428.57142857143,
+				[
+					[
+						"Static",
+						"",
+						""
+					]
+				]
+			],
+			[
+				8357.14285714286,
 				[
 					[
 						"Static",
@@ -103,70 +113,10 @@
 				]
 			],
 			[
-				15424.1071428571,
+				15964.2857142857,
 				[
 					[
-						"Play Animation",
-						"idle",
-						""
-					]
-				]
-			],
-			[
-				15750,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				19285.7142857143,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				21107.1428571429,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				21857.1428571429,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				27107.1428571429,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				31607.1428571429,
-				[
-					[
-						"Static",
+						"YCRjumpscare",
 						"",
 						""
 					]
@@ -213,111 +163,36 @@
 				]
 			],
 			[
-				36000,
+				35892.8571428571,
 				[
 					[
 						"Play Animation",
-						"end",
-						""
+						"idle",
+						"dad"
 					]
 				]
 			],
 			[
-				38250,
+				55821.4285714286,
+				[
+					[
+						"Play Animation",
+						"scream",
+						"dad"
+					]
+				]
+			],
+			[
+				56357.1428571429,
 				[
 					[
 						"Static",
 						"",
 						""
-					]
-				]
-			],
-			[
-				40071.4285714286,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				42428.5714285714,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				45428.5714285714,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				49071.4285714286,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				50785.7142857143,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				52607.1428571429,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				54642.8571428572,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				56464.2857142857,
-				[
-					[
-						"Static",
-						"1",
-						""
-					]
-				]
-			],
-			[
-				56580.3571428572,
-				[
+					],
 					[
 						"Hillzone",
-						"1",
+						"",
 						""
 					],
 					[
@@ -328,8 +203,13 @@
 					[
 						"Change Character",
 						"bf",
-						"PBF"
-					],
+						"ycr-bf"
+					]
+				]
+			],
+			[
+				56571.4285714286,
+				[
 					[
 						"Change Character",
 						"gf",
@@ -338,7 +218,7 @@
 				]
 			],
 			[
-				57428.5714285715,
+				57214.2857142858,
 				[
 					[
 						"Note-Spin",
@@ -348,7 +228,7 @@
 				]
 			],
 			[
-				57857.1428571429,
+				57642.8571428572,
 				[
 					[
 						"Note-Spin",
@@ -358,7 +238,7 @@
 				]
 			],
 			[
-				60857.1428571429,
+				60642.8571428572,
 				[
 					[
 						"Note-Spin",
@@ -368,7 +248,7 @@
 				]
 			],
 			[
-				61285.7142857143,
+				61071.4285714286,
 				[
 					[
 						"Note-Spin",
@@ -378,7 +258,7 @@
 				]
 			],
 			[
-				64285.7142857143,
+				64071.4285714286,
 				[
 					[
 						"Note-Spin",
@@ -388,7 +268,7 @@
 				]
 			],
 			[
-				64714.2857142858,
+				64500.0000000001,
 				[
 					[
 						"Note-Spin",
@@ -398,7 +278,7 @@
 				]
 			],
 			[
-				67714.2857142858,
+				67500.0000000001,
 				[
 					[
 						"Note-Spin",
@@ -408,7 +288,7 @@
 				]
 			],
 			[
-				68142.8571428572,
+				67928.5714285715,
 				[
 					[
 						"Note-Spin",
@@ -458,7 +338,7 @@
 				]
 			],
 			[
-				78000,
+				77785.7142857143,
 				[
 					[
 						"Note-Spin",
@@ -468,7 +348,7 @@
 				]
 			],
 			[
-				78428.5714285715,
+				78214.2857142857,
 				[
 					[
 						"Note-Spin",
@@ -481,7 +361,7 @@
 				81428.5714285714,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -498,23 +378,28 @@
 				]
 			],
 			[
-				84000,
+				83571.4285714286,
 				[
 					[
-						"static",
+						"Static",
 						"",
 						""
+					],
+					[
+						"remove",
+						"",
+						""
+					],
+					[
+						"Change Character",
+						"dad",
+						"ycr-Mad"
 					]
 				]
 			],
 			[
-				84000,
+				83785.7142857143,
 				[
-					[
-						"Change Character",
-						"dad",
-						"P2Sonic"
-					],
 					[
 						"Change Character",
 						"bf",
@@ -528,62 +413,12 @@
 				]
 			],
 			[
-				99428.5714285714,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				111428.571428571,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				116571.428571429,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				118714.285714286,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				124285.714285714,
+				124500,
 				[
 					[
 						"Play Animation",
 						"scream",
-						""
-					]
-				]
-			],
-			[
-				124714.285714286,
-				[
-					[
-						"Static",
-						"",
-						""
+						"dad"
 					]
 				]
 			],
@@ -591,17 +426,19 @@
 				125142.857142857,
 				[
 					[
-						"Play Animation",
-						"end",
-						""
+						"Start-Random-Static",
+						"0.25",
+						"10"
 					]
-				]
+				],
+				null,
+				"Bit Note"
 			],
 			[
 				126000,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -611,27 +448,7 @@
 				126428.571428571,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				127392.857142857,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				129000,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -641,7 +458,7 @@
 				129428.571428571,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -651,17 +468,7 @@
 				129857.142857143,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				130821.428571428,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -671,7 +478,7 @@
 				132857.142857143,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -681,17 +488,7 @@
 				133285.714285714,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				134250,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -701,7 +498,7 @@
 				136285.714285714,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -711,17 +508,7 @@
 				136714.285714286,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				137142.857142857,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -733,7 +520,7 @@
 					[
 						"Play Animation",
 						"laugh",
-						""
+						"dad"
 					]
 				]
 			],
@@ -743,7 +530,7 @@
 					[
 						"Play Animation",
 						"laugh",
-						""
+						"dad"
 					]
 				]
 			],
@@ -753,7 +540,7 @@
 					[
 						"Play Animation",
 						"laugh",
-						""
+						"dad"
 					]
 				]
 			],
@@ -763,37 +550,7 @@
 					[
 						"Play Animation",
 						"laugh",
-						""
-					]
-				]
-			],
-			[
-				138750,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				138857.142857143,
-				[
-					[
-						"Play Animation",
-						"end",
-						""
-					]
-				]
-			],
-			[
-				139285.714285714,
-				[
-					[
-						"Static",
-						"",
-						""
+						"dad"
 					]
 				]
 			],
@@ -801,7 +558,7 @@
 				139714.285714286,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -811,37 +568,7 @@
 				140142.857142857,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				140250,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				141107.142857143,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				142714.285714286,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -851,7 +578,7 @@
 				143142.857142857,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -861,47 +588,7 @@
 				143571.428571428,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				143785.714285714,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				144535.714285714,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				145392.857142857,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				146250,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -911,7 +598,7 @@
 				146571.428571428,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -921,27 +608,7 @@
 				147000,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				147214.285714286,
-				[
-					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				148392.857142857,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -951,17 +618,7 @@
 				150000,
 				[
 					[
-						"Majin spin",
-						"",
-						""
-					]
-				]
-			],
-			[
-				150214.285714286,
-				[
-					[
-						"Static",
+						"Note-Spin",
 						"",
 						""
 					]
@@ -971,29 +628,19 @@
 				150428.571428571,
 				[
 					[
-						"Majin spin",
+						"Note-Spin",
 						"",
 						""
 					]
 				]
 			],
 			[
-				151392.857142857,
+				151714.285714286,
 				[
 					[
-						"Static",
-						"",
-						""
-					]
-				]
-			],
-			[
-				152142.857142857,
-				[
-					[
-						"Static",
-						"",
-						""
+						"Play Animation",
+						"die",
+						"dad"
 					]
 				]
 			]
@@ -1043,7 +690,50 @@
 				"mustHitSection": false
 			},
 			{
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						13714.2857142857,
+						1,
+						0,
+						"No Animation"
+					],
+					[
+						13928.5714285714,
+						1,
+						0,
+						"No Animation"
+					],
+					[
+						14142.8571428571,
+						1,
+						0,
+						"No Animation"
+					],
+					[
+						14357.1428571429,
+						1,
+						0,
+						"No Animation"
+					],
+					[
+						14571.4285714286,
+						1,
+						0,
+						"No Animation"
+					],
+					[
+						14785.7142857143,
+						1,
+						0,
+						"No Animation"
+					],
+					[
+						15000,
+						1,
+						0,
+						"No Animation"
+					]
+				],
 				"lengthInSteps": 16,
 				"altAnim": true,
 				"mustHitSection": false
@@ -3760,13 +3450,13 @@
 			{
 				"sectionNotes": [
 					[
-						84000,
-						0,
+						84857.1428571429,
+						3,
 						750
 					],
 					[
-						84857.1428571429,
-						3,
+						84000,
+						0,
 						750
 					]
 				],
@@ -6699,7 +6389,8 @@
 					[
 						151714.285714286,
 						5,
-						750
+						750,
+						"No Animation"
 					],
 					[
 						150857.142857143,
@@ -6743,7 +6434,8 @@
 					[
 						152571.428571428,
 						3,
-						1285.71428571429
+						1285.71428571429,
+						"No Animation"
 					]
 				],
 				"typeOfSection": 0,
@@ -8028,9 +7720,9 @@
 				"bpm": 140
 			},
 			{
+				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
-				"sectionBeats": 4,
 				"altAnim": false,
 				"gfSection": false,
 				"bpm": 140,
@@ -8038,54 +7730,144 @@
 				"mustHitSection": true
 			},
 			{
-				"sectionBeats": 4,
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
-				"sectionBeats": 4,
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
-				"sectionBeats": 4,
-				"sectionNotes": [],
-				"typeOfSection": 0,
-				"gfSection": false,
-				"altAnim": false,
-				"mustHitSection": true,
-				"changeBPM": false,
-				"bpm": 140
-			},
-			{
-				"gfSection": false,
-				"altAnim": false,
+				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 140,
-				"sectionBeats": 4,
 				"changeBPM": false,
 				"mustHitSection": true
 			},
 			{
-				"gfSection": false,
-				"altAnim": false,
+				"lengthInSteps": 16,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 140,
-				"sectionBeats": 4,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
 			},
 			{
 				"gfSection": false,
@@ -8118,15 +7900,15 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "P2Sonic",
+		"player2": "ycr",
 		"player3": "gf",
 		"song": "You Can't Run",
-		"validScore": true,
-		"arrowSkin": "",
-		"stage": "Run",
 		"needsVoices": true,
-		"noteStyle": "normal",
+		"stage": "Run",
+		"arrowSkin": "",
+		"validScore": true,
+		"speed": 3.3,
 		"bpm": 140,
-		"speed": 3.2
+		"noteStyle": "normal"
 	}
 }

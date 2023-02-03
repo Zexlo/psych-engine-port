@@ -137,18 +137,18 @@ function onUpdatePost(elapsed)
 	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause == true then
 		playSound('pauseSounds/pause', 0.8, 'pause')
 		playSound('pause',1,'song')		
-		doTweenX('pauseRightTween', 'pauseRight', 600, 0.2, 'linear')
-		doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'linear')
-		doTweenY('fixtimebar2', 'timeBar', fixY, 0.2, 'linear')
-		doTweenX('pauseLeftTween', 'pauseLeft', 0, 0.2, 'linear')
-		doTweenY('controlTween', 'controltext', 30, 0.4, 'linear')	
-		doTweenX('TimerTween', 'Timer', 207, 0.2, 'linear')
+		doTweenX('pauseRightTween', 'pauseRight', 600, 0.2, 'cubeOut')
+		doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'smoothStepIn')
+		doTweenY('fixtimebar2', 'timeBar', fixY, 0.2, 'smoothStepIn')
+		doTweenX('pauseLeftTween', 'pauseLeft', 0, 0.2, 'cubeOut')
+		doTweenY('controlTween', 'controltext', 30, 0.4, 'expoOut')	
+		doTweenX('TimerTween', 'Timer', 207, 0.2, 'cubeOut')
 		doTweenX('diskTween', 'disk', 65, 0.4, 'smoothStepIn')
 		doTweenAngle('diskTweenAng', 'disk', 0, 1, 'circInOut')
-		doTweenX('cTween', 'continue', 900, 0.2, 'linear')
-		doTweenX('rTween', 'restart', 818, 0.2, 'linear')
-		doTweenX('eTween', 'exit', 736, 0.2, 'linear')
-		doTweenX('pauseIconTween', 'pauseIcon', 65, 0.4, 'circInOut')
+		doTweenX('cTween', 'continue', 900, 0.2, 'elasticOut')
+		doTweenX('rTween', 'restart', 818, 0.4, 'elasticOut')
+		doTweenX('eTween', 'exit', 736, 0.6, 'elasticOut')
+		doTweenX('pauseIconTween', 'pauseIcon', 65, 0.4, 'cubeOut')
 		doTweenAngle('pauseIconTweenAng', 'pauseIcon', 0, 0.4, 'circInOut')	
 		setSpriteShader('blackbox','grayscale')
 	    addHaxeLibrary("ShaderFilter", "openfl.filters")
@@ -159,8 +159,8 @@ function onUpdatePost(elapsed)
 		rSelected = false
 		eSelected = false
 		fakePaused = true
-	for i = 0,7 do	
-	noteTweenY(i, i,moveY, 0.2, 'linear')
+	for i = 0,9 do	
+	noteTweenY(i, i,moveY, 0.2, 'elasticIn')
 end		
 	elseif keyJustPressed('accept') and fakePaused == true and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause then
 		plsHelp()
@@ -233,7 +233,7 @@ end
 
 function damnIWannaDie()	
 	if keyJustPressed('down') and fakePaused == true then
-		doTweenAngle('rotate', 'disk', getProperty('disk.angle')+480, 0.2, 'smoothStepIn')		
+		doTweenAngle('rotate', 'disk', getProperty('disk.angle')+480, 0.2, 'circOut')		
 		playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
 		if cSelected == true then
 			cSelected = false
@@ -267,20 +267,20 @@ function plsHelp()
 	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
 	doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'linear')
 	doTweenY('fixtimebar2', 'timeBar', fixY, 0.2, 'linear')
-	doTweenX('pauseRightTween2', 'pauseRight', 1500, 0.2, 'linear')
+	doTweenX('pauseRightTween2', 'pauseRight', 1500, 0.2, 'cubeOut')
 	doTweenX('pauseLeftTween2', 'pauseLeft', -800, 0.2, 'linear')
-	doTweenY('controlTween', 'controltext', -800, 0.4, 'linear')	
+	doTweenY('controlTween', 'controltext', -800, 0.4, 'expoOut')	
 	doTweenX('TimerTween2', 'Timer', -800, 0.2, 'linear')
-	doTweenX('cTween2', 'continue', 1500, 0.2, 'linear')
-	doTweenX('rTween', 'restart', 1500, 0.2, 'linear')
-	doTweenX('eTween', 'exit', 1500, 0.2, 'linear')
+	doTweenX('cTween2', 'continue', 1500, 0.4, 'elasticOut')
+	doTweenX('rTween', 'restart', 1500, 0.4, 'elasticOut')
+	doTweenX('eTween', 'exit', 1500, 0.4, 'elasticOut')
 	doTweenX('diskTween', 'disk', -800, 0.6, 'circInOut')
 	doTweenAngle('diskTweenAng', 'disk', 180, 1, 'circInOut')
 	doTweenX('pauseIconTween', 'pauseIcon', -800, 0.6, 'circInOut')
 	doTweenAngle('pauseIconTweenAng', 'pauseIcon', 180, 0.6, 'circInOut')	
 	runTimer('4c',0.2)
-	for i = 0,7 do
-		noteTweenY('p'..i, i,down, 0.2 +i/100 , 'linear')
+	for i = 0,9 do
+		noteTweenY('p'..i, i,down, 0.4 +i/10 , 'elasticOut')
 		end			
 	cSelected = false
 	rSelected = false

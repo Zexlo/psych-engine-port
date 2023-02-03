@@ -8,6 +8,7 @@
 
 --copied from flxkey lol
 --cant access flxkey with hscript for some reason
+
 local ANY = -2;
 local NONE = -1;
 local A = 65;

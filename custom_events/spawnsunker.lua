@@ -11,7 +11,7 @@ function onEvent(name, value1, value2)
 
     if name == 'spawnsunker' then
 setProperty('sumky.alpha', 0.8);
-objectPlayAnimation('sumky', 'brrr');	
+playAnim('sumky', 'brrr');	
 doTweenAngle('brr','sumky',360, 0.8,'circInout')
     end
 end

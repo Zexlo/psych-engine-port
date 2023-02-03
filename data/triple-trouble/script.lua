@@ -55,3 +55,13 @@ function onStartCountdown()
 	end
 	return Function_Continue;
 end
+
+function onUpdate()
+if curBeat >= 324 and curBeat <= 708 then
+	setProperty('boyfriend.flipX', true)
+	doTweenX('moveBf','boyfriend',-400,0.2,'linear')		
+elseif curBeat >= 708 then
+	doTweenX('moveBf','boyfriend',400,0.2,'linear')
+	setProperty('boyfriend.flipX', false)		
+end
+end

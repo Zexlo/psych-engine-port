@@ -1,14 +1,10 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				294,
 				10
 			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "Eggman_Idle",
 			"indices": [
 				0,
 				1,
@@ -24,17 +20,17 @@
 				11,
 				12,
 				13
-			]
+			],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "EggIdle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				425,
 				264
 			],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Eggman_Up",
 			"indices": [
 				0,
 				1,
@@ -52,17 +48,17 @@
 				13,
 				14,
 				15
-			]
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "EggUp"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				433,
 				199
 			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Eggman_Right",
 			"indices": [
 				0,
 				1,
@@ -80,17 +76,17 @@
 				13,
 				14,
 				15
-			]
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "EggRight"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				355,
 				-98
 			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Eggman_Down",
 			"indices": [
 				0,
 				1,
@@ -108,17 +104,17 @@
 				13,
 				14,
 				15
-			]
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "EggDown"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				540,
 				109
 			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Eggman_Left",
 			"indices": [
 				0,
 				1,
@@ -149,17 +145,17 @@
 				26,
 				27,
 				28
-			]
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "EggLeft"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				293,
 				224
 			],
-			"anim": "laugh",
-			"fps": 35,
-			"name": "Eggman_Laugh",
 			"indices": [
 				0,
 				1,
@@ -190,7 +186,11 @@
 				26,
 				27,
 				28
-			]
+			],
+			"fps": 35,
+			"anim": "laugh",
+			"loop": false,
+			"name": "EggLaugh"
 		}
 	],
 	"no_antialiasing": false,
@@ -202,9 +202,9 @@
 	"healthicon": "egg",
 	"flip_x": false,
 	"healthbar_colors": [
-		255,
-		155,
-		75
+		153,
+		102,
+		0
 	],
 	"camera_position": [
 		-290,

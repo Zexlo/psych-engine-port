@@ -60,7 +60,7 @@ end
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'flyin' then
-		doTweenX('circlefly', 'circle', 100, 0.02, 'SineInOut');
+		doTweenX('circlefly', 'circle', 100, 0.2, 'elasticOut');
         playSound('flatBONK', 1, 'thefunny');
 		
 	end

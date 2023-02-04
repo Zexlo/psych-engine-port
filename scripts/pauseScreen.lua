@@ -159,6 +159,8 @@ function onUpdatePost(elapsed)
 		rSelected = false
 		eSelected = false
 		fakePaused = true
+		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
+		setProperty('vocals.volume', 0)	
 	for i = 0,9 do	
 	noteTweenY(i, i,moveY, 0.2, 'elasticIn')
 end		

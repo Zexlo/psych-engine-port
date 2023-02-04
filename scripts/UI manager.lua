@@ -172,13 +172,13 @@ end
 
 function onBeatHit()
 if curBeat % 1 == 0 then
-	doTweenAngle('wee', 'iconP1', -20, 0.8, 'backInOut')
-	doTweenAngle('waa', 'iconP2', 20, 0.8, 'backInOut')
+	doTweenAngle('wee', 'iconP1', -15, 0.8, 'backInOut')
+	doTweenAngle('waa', 'iconP2', 15, 0.8, 'backInOut')
 	end
 	
 if curBeat % 2 == 0 then
-	doTweenAngle('wee', 'iconP1', 20, 0.8, 'backInOut')
-	doTweenAngle('waa', 'iconP2', -20, 0.8, 'backInOut')
+	doTweenAngle('wee', 'iconP1', 15, 0.8, 'backInOut')
+	doTweenAngle('waa', 'iconP2', -15, 0.8, 'backInOut')
 	end
 	
 end	

@@ -56,6 +56,7 @@ function onUpdate(elapsed)
   setProperty('iconP2.visible',false)
   setProperty('healthBar.visible',false)
   setProperty('healthBarBG.visible',false)
-  setProperty('scoreTxt.visible',false) 
+  setProperty('scoreTxt.visible',false)
+  doTweenAlpha('hidestuff', 'timeBar', 0, 0.7, 'linear');  
 end   
 end

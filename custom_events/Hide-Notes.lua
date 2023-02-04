@@ -6,15 +6,16 @@ function onEvent(name, value1, value2)
      for i = 0,7 do
      noteTweenAlpha(i,i,0,dur,'linear')
 		end
-	end
 
 elseif value1 == 'bf' then
 		for i = 4,7 do
 		noteTweenAlpha(i,i,0,dur,'linear')
 		   end
+
 		elseif value1 == 'dad' then
 			for i = 0,3 do
 			noteTweenAlpha(i,i,0,dur,'linear')
 			   end
-		   end	
+		   end
+		end	   	
 end

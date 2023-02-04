@@ -5,8 +5,8 @@ function onCreate()
 	setScrollFactor('red', 0.9, 1);
 	scaleObject('red', 2, 3);
 	scaleObject('yo', 2, 3);
-	addLuaSprite("yo", true)
-	addLuaSprite("red", true)
+	addLuaSprite('yo', true)
+	addLuaSprite('red', true)
 	setProperty('red.alpha', 0)
 	setProperty('yo.alpha', 0)
 	setObjectCamera('red', 'HUD');

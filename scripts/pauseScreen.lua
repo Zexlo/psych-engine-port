@@ -126,17 +126,17 @@ end
 end
 
 function onEndSong()
-canPause = false
-if songName ~= 'Chaos' then
 canPause = false		
 close()
-end
 end
 
 function onUpdatePost(elapsed)
 	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause == true then
 		playSound('pauseSounds/pause', 0.8, 'pause')
-		playSound('pause',1,'song')		
+		playSound('pause',1,'song')
+		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
+		setProperty('vocals.volume', 0)
+		setProperty('timeBar.visible',false)				
 		doTweenX('pauseRightTween', 'pauseRight', 600, 0.2, 'cubeOut')
 		doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'smoothStepIn')
 		doTweenY('fixtimebar2', 'timeBar', fixY, 0.2, 'smoothStepIn')
@@ -205,12 +205,9 @@ end
 		-- counted in milliseconds, 1000 = 1 second
 		setPropertyFromClass('flixel.FlxG', 'sound.music.time', getPropertyFromClass('Conductor', 'songPosition'))
 		setProperty('vocals.time', getPropertyFromClass('Conductor', 'songPosition'))
-		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
-		setProperty('vocals.volume', 0)
 end
 	if fakePaused == false and canPause then
 		setProperty('blackbox.visible', false)
-		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
 		setSpriteShader('blackbox','noshader')
 		runHaxeCode([[
 		game.camGame.setFilters([new ShaderFilter(game.getLuaObject("blackbox").shader)]);
@@ -262,9 +259,8 @@ function damnIWannaDie()
 end
 function plsHelp()
 	if cSelected == true then
+		setProperty('timeBar.visible',true)	
 	playSound('pauseSounds/unpause', 1, 'unpause')
-	setProperty('vocals.volume', 1)
-	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
 	doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'linear')
 	doTweenY('fixtimebar2', 'timeBar', fixY, 0.2, 'linear')
 	doTweenX('pauseRightTween2', 'pauseRight', 1500, 0.2, 'cubeOut')
@@ -313,6 +309,8 @@ end
 if tag == 'countdown'and loopsLeft == 1 then
 removeLuaSprite('1p',false)	
 	fakePaused = false
+	setProperty('vocals.volume', 1)
+	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)	
 	end
 end
 	

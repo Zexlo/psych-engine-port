@@ -1,9 +1,8 @@
-	local block, endsong,cont,restart,leave,nomid,debugger = true, false, false, false, false, false, false
-	local BG1, BG2, BG3, BG4, BG5, cBG, rBG, eBG, contres, exitres, replay, trig, zig, down, moveY, hideY, nameY, fixY, BGY, scoreY
+	local block, endsong,cont,restart,leave,nomid = true, false, false, false, false, false
+	local BG1, BG2, BG3, BG4, BG5, cBG, rBG, eBG, contres, exitres, replay, trig, zig
 
 
 	function onCreate()	
-
 local Dscroll = downscroll
 local Mscroll = middlescroll
 
@@ -212,20 +211,30 @@ for i = 0,9 do
 	end
 	end	
 	end
-	
-if week == 'Majin' then
-setProperty('songLength', 60000000)
-end
-	
---UI SETTING
-    setProperty('iconP1.x', screenWidth - 430)
-    setProperty('iconP2.x', 285)
-if endsong == false then	
-	setProperty('song.visible',getProperty('timeTxt.visible'))	
-	setProperty('song.alpha',getProperty('timeTxt.alpha'))	
-	setProperty('timeBG.visible',getProperty('timeBar.visible'))	
-	setProperty('timeBG.alpha',getProperty('timeBar.alpha'))
-end
+	if curBeat >= 1 then		
+		doTweenAlpha('fadelol','timeBar',1,1,linear)
+		doTweenAlpha('fadelel','timeTxt',1,1,linear)
+		doTweenAlpha('fadelol','timeBarBG',1,1,linear)		
+	end	
+	if week == 'Majin' then
+	setProperty('songLength', 60000000)
+	end
+		
+	--UI SETTING
+		setProperty('iconP1.x', screenWidth - 430)
+		setProperty('iconP2.x', 285)
+	if endsong == false then	
+		setProperty('song.visible',getProperty('timeBar.visible'))	
+		setProperty('song.alpha',getProperty('timeBar.alpha'))
+		setProperty('timeBarBG.visible',getProperty('timeBar.visible'))	
+		setProperty('timeBarBG.alpha',getProperty('timeBar.alpha'))	
+		setProperty('timeBG.visible',getProperty('timeBar.visible'))	
+		setProperty('timeBG.alpha',getProperty('timeBar.alpha'))
+	if songName ~= 'Prey' then	
+		setProperty('timeTxt.visible',getProperty('timeBar.visible'))	
+		setProperty('timeTxt.alpha',getProperty('timeBar.alpha'))	
+	end
+	end
 --BOTPLAY SHIT	
 if botPlay == true then
     setProperty('nah.alpha', 1)
@@ -299,11 +308,11 @@ if restart == false then
 	--end	
 	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
 	setTextString('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat..'\nCurStep:'..curStep)
-	if getKey('five') and debugger == false then
-        debugger = true
+	if getKey('five') and luaDebugMode == false then
+        luaDebugMode = true
 		addLuaText('variables');	
-    elseif getKey('five') and debugger == true then
-		debugger = false
+    elseif getKey('five') and luaDebugMode == true then
+		luaDebugMode = false
 		removeLuaText('variables',false);		 
     end 
 	end
@@ -335,7 +344,6 @@ function onEndSong()
  if week == 'Sunky' then
 setProperty('ratio.visible',false)
 end
-
 setProperty('inCutscene', true);
  setGlobalFromScript('scripts/pauseScreen','canPause','false')
 	addLuaSprite('zig', true);

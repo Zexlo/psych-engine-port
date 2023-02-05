@@ -1,6 +1,6 @@
 function onCreate()
 	addCharacterToList('Tails_Doll_Alt', 'dad');
-
+	initLuaShader('old tv')	
 
 --setPropertyFromClass('lime.app.Application', 'current.window.width', 854)
 --setPropertyFromClass('lime.app.Application', 'current.window.height', 480)
@@ -65,14 +65,14 @@ function onCreate()
           addLuaText('niff')
       makeLuaText('cry', 'CryBit', 770, 250, -1280)
           setTextSize('cry', 30)
-          addLuaText('cry')
+          addLuaText('cry')      
 
 	setObjectCamera('credbox', 'hud');
 	setObjectCamera('ready', 'hud');
 	setObjectCamera('set', 'hud');
-	setObjectCamera('go', 'hud');	
-	setObjectCamera('VHScover', 'hud')	 
-               
+	setObjectCamera('go', 'hud');		 
+
+   
     	startTime = 0.5;
       
           	runTimer('slidedown', startTime+2);
@@ -149,9 +149,6 @@ function onStartCountdown()
 	return Function_Continue;
 end
 
-function onUpdate()
---setShaderFloat('dad', 'iTime', os.clock())
-end
 
 function onUpdate(elasped)
 if curBeat >= 147 and curBeat <215 then

@@ -1,6 +1,3 @@
-local bfx = 200;
-local bfy = 0;
-local zoomshit = 0;
 allowCountdown = false;
 function onCreate()
     makeLuaSprite('credbox', 'box', 380, -1280);
@@ -136,5 +133,10 @@ function onUpdate(elasped)
 	noteTweenX('play5', 5, 770, 0.01, 'SineInOut')
 	noteTweenX('play6', 6, 880, 0.01, 'SineInOut')
 	noteTweenX('play7', 7, 990, 0.01, 'SineInOut')
-   end
+   else
+      noteTweenX('play0', 0, 190, 0.01, 'SineInOut')
+      noteTweenX('play1', 1, 300, 0.01, 'SineInOut')
+      noteTweenX('play2', 2, 880, 0.01, 'SineInOut')
+      noteTweenX('play3', 3, 990, 0.01, 'SineInOut') 
+   end      
 end

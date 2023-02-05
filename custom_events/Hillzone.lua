@@ -6,13 +6,13 @@ function onCreate()
    end
 
 function onEvent(name, value1, value2)
+    if name == 'Hillzone' then
 
-    if name == 'Hillzone' then	
+    if value1 == 'show' then	
     setProperty('Hillzone.alpha', 1);
-        end
 
-    if name == 'Runstage' then
-		
-        setProperty('Hillzone.alpha', 0);
+    elseif value1 == 'hide' then
+    setProperty('Hillzone.alpha', 0);
         end	
+    end
 end

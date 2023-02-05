@@ -4,11 +4,11 @@ function onCreatePost()
     addLuaSprite('tents',true)
     setProperty('tents.alpha',0)
 
-    makeLuaText('drain','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat, 1280, 0, 80);
+--[[     makeLuaText('drain','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat, 1280, 0, 80);
     setTextSize('drain', 20);
     setTextAlignment('drain', 'center');
     setObjectCamera('drain', 'other');
-    addLuaText('drain')
+    addLuaText('drain') ]]
     setTimeBarColors('311c73','000000')     
 end
 

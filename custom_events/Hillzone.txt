@@ -1,5 +1,3 @@
-Smoothly sets the Opponent's
-transparency value.
+Shows or hides GHZ
 
-Value 1: Duration (0 = Instant)
-Value 2: Target transparency value
+Value 1: show or hide, pretty simple

@@ -22,13 +22,19 @@
 	
 	doTweenY('move3', 'bar1', -500, 0.2, 'linear')
 	doTweenY('move4', 'bar2', 1000, 0.2, 'linear')
-for i = 0,9 do
-if middlescroll then
-	noteTweenAlpha(i, i, 0.5, 0.001, 'SineInOut')	
-else
+
+	if middlescroll then
+	for i = 0,3 do	
+	noteTweenAlpha(i, i, 0.5, 0.001, 'SineInOut')
+	end	
+	else
+		noteTweenAlpha(i, i, 1, 0.001, 'SineInOut')
+	end
+	
+	for i = 4,7 do
 	noteTweenAlpha(i, i, 1, 0.001, 'SineInOut')
-end
-end		
+	end
+
 	setProperty('healthBarBG.visible', true)
 	setProperty('healthBar.visible', true)
 	setProperty('scoreTxt.visible', true)

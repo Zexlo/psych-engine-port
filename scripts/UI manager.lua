@@ -53,14 +53,7 @@ function onCreatePost()
 			noteTweenY(i, i, 545, 0.001, 'SineInOut')
 			end
 			end	
-				
-	if botPlay == true then
-		setProperty('nah.alpha', 1)
-		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
-		setProperty('vocals.volume', 0)
-	elseif botPlay == false then
-	removeLuaSprite('nah',false)
-	end		
+
 if timeBarType == 'Song Name' then
 else
 	makeLuaText('song', ' ' .. (songName), 1250, 0, nameY);
@@ -181,6 +174,13 @@ end
 	end
 end
 
+
+function onStartCountdown()
+	if botPlay == true then
+		setProperty('nah.alpha', 1)	
+	return Function_Stop; --prevents song end
+end
+end
 
 function onBeatHit()
 if curBeat % 1 == 0 then

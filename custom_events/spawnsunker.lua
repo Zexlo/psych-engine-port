@@ -24,7 +24,7 @@ function onEvent(name, value1, value2)
         if value1 == 'sunker' then
     setProperty('sumky.alpha', 0.8);
     playAnim('sumky', 'brrr');	
-    doTweenAngle('brr','sumky',360, 0.8,'circInout')
+    doTweenAngle('brr','sumky',360, 1,'circInout')
 
         elseif value1 == 'cereal' then
     setProperty('loops.alpha', 1);	
@@ -45,7 +45,7 @@ removeLuaSprite('sumky',true)
 if tag == 'go' then
     removeLuaSprite('loops',true)
     end
-    
+
 	if tag == 'omom' then
         setProperty('dio.alpha', 0);
         removeLuaSprite('dio',true)

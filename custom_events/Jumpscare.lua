@@ -7,7 +7,7 @@ function onCreate()
     makeAnimatedLuaSprite('JUMPSCARE', 'sonicJUMPSCARE', 0, 0); -- "234" = sprite X pos, "567" = sprite Y pos
     addAnimationByPrefix('JUMPSCARE', 'idle', 'sonicSPOOK', 24, false); -- "24" = framerate of animation, "false" = does the animation loop
     setProperty('JUMPSCARE.alpha', 0);
-    --objectPlayAnimation('JUMPSCARE', 'idle');
+    --playAnim('JUMPSCARE', 'idle');
     addLuaSprite('JUMPSCARE', true); -- false = add behind characters, true = add over characters
     setObjectCamera('JUMPSCARE', 'hud'); -- shows up in the camera center as he should
 end
@@ -20,7 +20,7 @@ startTime = 1.2;
 
 	runTimer('jump', startTime);
         setProperty('JUMPSCARE.alpha', 1);
-        objectPlayAnimation('JUMPSCARE', 'idle'); -- play the graphic's animation
+        playAnim('JUMPSCARE', 'idle',false); -- play the graphic's animation
         playSound('Jumpscare');
     end
 end

@@ -1,3 +1,0 @@
-Shows the opponent's notes and receptors.
-
-Value 1 = time to tween alpha to 1

@@ -22,8 +22,12 @@
 	
 	doTweenY('move3', 'bar1', -500, 0.2, 'linear')
 	doTweenY('move4', 'bar2', 1000, 0.2, 'linear')
-for i = 0,7 do
+for i = 0,9 do
+if middlescroll then
+	noteTweenAlpha(i, i, 0.5, 0.001, 'SineInOut')	
+else
 	noteTweenAlpha(i, i, 1, 0.001, 'SineInOut')
+end
 end		
 	setProperty('healthBarBG.visible', true)
 	setProperty('healthBar.visible', true)
@@ -36,7 +40,7 @@ end
 	setProperty('song.visible', true)
 	docutscene = false
 else
-for i = 0,7 do
+for i = 0,9 do
 	noteTweenAlpha(i, i, 0, 0.001, 'SineInOut')
 end	
 	doTweenY('move1', 'bar1', 0, 0.2, 'linear')

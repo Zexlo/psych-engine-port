@@ -1,1 +1,4 @@
-turns dad into spunchbop for milk song
+summons a sunky and plays the animation assigned to it.
+
+Value1 = which sunky? sunker, cereal or munch (order of appearence)
+value 2 = nothing

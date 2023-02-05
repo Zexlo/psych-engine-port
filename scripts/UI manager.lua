@@ -1,10 +1,9 @@
 	local block, endsong,cont,restart,leave,nomid = true, false, false, false, false, false
 	local BG1, BG2, BG3, BG4, BG5, cBG, rBG, eBG, contres, exitres, replay, trig, zig
 
-
 	function onCreate()	
-local Dscroll = downscroll
-local Mscroll = middlescroll
+		local Dscroll = downscroll
+		local Mscroll = middlescroll
 
 		if not Mscroll and songName == 'Fight or Flight' then
 			setPropertyFromClass('ClientPrefs', 'middleScroll', true)
@@ -13,11 +12,11 @@ local Mscroll = middlescroll
 	if Mscroll and Dscroll then
 	BGY = 675		
 	down = 550
-	moveY = 1000
-	fixY = 688
 	hideY = 1000
+	nameY = 650	
 	elseif Dscroll then
 	BGY = 675
+	down = 550	
 	nameY = 650
 	scoreY = 15
 	hideY = -200
@@ -48,7 +47,20 @@ local Mscroll = middlescroll
     setObjectCamera('variables', 'other');
 end
 
-function onCreatePost()	
+function onCreatePost()
+	if middlescroll and downscroll then
+		for i = 0,9 do
+			noteTweenY(i, i, 545, 0.001, 'SineInOut')
+			end
+			end	
+				
+	if botPlay == true then
+		setProperty('nah.alpha', 1)
+		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
+		setProperty('vocals.volume', 0)
+	elseif botPlay == false then
+	removeLuaSprite('nah',false)
+	end		
 if timeBarType == 'Song Name' then
 else
 	makeLuaText('song', ' ' .. (songName), 1250, 0, nameY);
@@ -204,13 +216,7 @@ function onUpdatePost(elapsed)
 if debugger == true then
 luaDebugMode = true		
 end	
-if curBeat <= 0 then
-if Mscroll and Dscroll then
-for i = 0,9 do
-	noteTweenY(i, i, 550, 0.001, 'SineInOut')
-	end
-	end	
-	end
+
 	if curBeat >= 1 then		
 		doTweenAlpha('fadelol','timeBar',1,1,linear)
 		doTweenAlpha('fadelel','timeTxt',1,1,linear)
@@ -236,16 +242,6 @@ for i = 0,9 do
 	end
 	end
 --BOTPLAY SHIT	
-if botPlay == true then
-    setProperty('nah.alpha', 1)
-	setPropertyFromClass('Conductor', 'songPosition', getPropertyFromClass('Conductor', 'songPosition') - elapsed * 1000  )
-	setPropertyFromClass('flixel.FlxG', 'sound.music.time', getPropertyFromClass('Conductor', 'songPosition'))
-	setProperty('vocals.time', getPropertyFromClass('Conductor', 'songPosition'))
-	setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
-	setProperty('vocals.volume', 0)
-elseif botPlay == false then
-removeLuaSprite('nah',false)
-end
 
 if botPlay == true and keyJustPressed('back') or botPlay == true and keyJustPressed('accept') then
 exitSong(false)

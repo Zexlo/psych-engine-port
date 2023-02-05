@@ -25,7 +25,7 @@ function noteMiss(id, noteData, noteType, isSustainNote)
 if noteType == 'Static Note' then
 	setProperty('Static.alpha', 1); 	  
 	runTimer('stopit',1)
-    objectPlayAnimation('Static', 'idle', false);
+    playAnim('Static', 'idle', false);
     playSound('staticsound');
         
     end

@@ -9,5 +9,5 @@ This port serves as a light weight alternative to the cancelled and buggy V2.5/3
 ## How to install
 Psych Engine is not included with this port. If you already have Psych Engine, skip step 1.  
 1. Download the latest release of [Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine/releases).
-2. Download the latest release of the port from [github](https://github.com/Zexlo/FNF-Sonic-EXE-psych-engine-port/releases), [GameBanana](https://gamebanana.com/wips/72479), or clone the repo.
+2. Download the latest release of the port from [github](https://github.com/Zexlo/FNF-Sonic-EXE-psych-engine-port/releases), [GameBanana](https://gamebanana.com/mods/424087), or clone the repo.
 3. Extract Psych Engine and our port, then drag and drop the port folder into the "mods" folder in Psych Engine.

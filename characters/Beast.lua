@@ -38,7 +38,7 @@ end
 
 function onEvent(name, value1, value2)
 	if name == 'Change Character' then
-        if dadName == 'Beast' then
+        if dadName == 'Beast' and songName == 'Triple Trouble' then
             runHaxeCode([[
             game.camHUD.setFilters([new ShaderFilter(game.getLuaObject("glitch").shader)]);
             ]])

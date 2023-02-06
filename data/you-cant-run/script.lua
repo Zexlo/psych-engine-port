@@ -27,10 +27,6 @@ end
 	addCharacterToList('Knucks', 'gf');
 	precacheImage('screenstatic');
 
-	--precacheImage('black');
-	--precacheImage('StartScreens/CircleYouCantRun');
-	--precacheImage('StartScreens/TextYouCantRun');
-
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);
 	makeLuaSprite('circle', 'StartScreens/CircleYouCantRun', 1280, 200);
@@ -68,8 +64,8 @@ function onTimerCompleted(tag, loops, loopsLeft)
 	end
 end
 
-function onStartCountdown()
-	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
+function onEndSong()
+	if isStoryMode and not seenCutscene then --Block the first countdown
 		startVideo('triple');
 		return Function_Stop;
 	end

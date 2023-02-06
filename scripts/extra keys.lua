@@ -113,11 +113,9 @@ local PSYCHRIGHT = -13;
 
 
 
-local arrowDirs = {'LEFT', 'DOWN', 'UP', 'RIGHT', 'SPACE', 'SHARPLEFT', 'SHARPDOWN', 'SHARPUP', 'SHARPRIGHT'}
-local arrowColors = {'purple', 'blue', 'green', 'red', 'white', 'orange', 'yellow', 'violet', 'darkred', 'dark',
-                     'pink', 'turq', 'emerald', 'lightred', 'lime', 'darkpurple', 'darkorange', 'cobalt'}
-local splashColors = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-                    0, 1, 2, 3, 6, 7, 8, 9}
+local arrowDirs = {'LEFT', 'DOWN', 'UP', 'RIGHT', 'SPACE'}
+local arrowColors = {'purple', 'blue', 'green', 'red', 'white'}
+local splashColors = {0, 1, 2, 3, 4, 5}
 
 local scaleMult = 1
 local pixelScaleShit = 8.57;
@@ -129,19 +127,6 @@ local maniaData = {
     {0.7, 112, 0, {1,5,4}, {1,5,4}, {PSYCHLEFT, SPACE, PSYCHRIGHT}}, --3k
     {0.7, 112, 0, {1,2,3,4}, {1,2,3,4}, {PSYCHLEFT, PSYCHDOWN, PSYCHUP, PSYCHRIGHT}}, --4k
     {0.65, 98, -15, {1,2,5,3,4}, {1,2,5,3,4}, {PSYCHLEFT, PSYCHDOWN, SPACE, PSYCHUP, PSYCHRIGHT}},--5k
-    {0.6, 84, -35, {1,3,4,1,2,4}, {1,3,4,7,2,10}, {S, D, F, J, K, L}},--6k
-    {0.55, 77, -50, {1,3,4,5,1,2,4}, {1,3,4,5,7,2,10}, {S, D, F, SPACE, J, K, L}},--7k
-    {0.5, 70, -75, {1,2,3,4,1,2,3,4}, {1,2,3,4,7,8,9,10}, {A,S,D,F,H,J,K,L}},--8k
-    {0.46, 63, -70, {1,2,3,4,5,1,2,3,4}, {1,2,3,4,5,7,8,9,10}, {A,S,D,F,SPACE,H,J,K,L}},--9k
-    {0.4, 56, -80, {1,2,3,4,5,5,1,2,3,4}, {1,2,3,4,5,6,7,8,9,10}, {Q,W,E,R,V,N,U,I,O,P}},--10k
-    {0.37, 50, -77, {1,2,3,4,5,8,5,1,2,3,4}, {1,2,3,4,5,13,6,7,8,9,10}, {Q,W,E,R,V,B,N,U,I,O,P}},--11k
-    {0.36, 50, -100, {1,2,3,4,6,7,8,9,1,2,3,4}, {1,2,3,4,15,16,17,18,7,8,9,10}, {Q,W,E,R,C,V,B,N,U,I,O,P}},--12k
-    {0.35, 46, -100, {1,2,3,4,6,7,5,8,9,1,2,3,4}, {1,2,3,4,11,12,5,13,14,7,8,9,10}, {Q,W,E,R,C,V,SPACE,B,N,U,I,O,P}},--13k
-    {0.32, 42, -100, {1,2,3,4,6,8,9,6,7,9,1,2,3,4}, {1,2,3,4,11,13,14,15,12,18,7,8,9,10}, {Q,W,E,R,X,C,V,B,N,M,U,I,O,P}},--14k
-    {0.3, 39, -100, {1,2,3,4,6,8,9,5,6,7,9,1,2,3,4}, {1,2,3,4,11,13,14,5,15,12,18,7,8,9,10}, {Q,W,E,R,X,C,V,SPACE,B,N,M,U,I,O,P}},--15k
-    {0.28, 37, -100, {6,7,8,9,1,2,3,4,1,2,3,4,6,7,8,9}, {11,12,13,14,1,2,3,4,7,8,9,10,15,16,17,18}, {Q,W,E,R,A,S,D,F,H,J,K,L,Y,U,I,O}},--16k
-    {0.26, 35, -100, {6,7,8,9,1,2,3,4,5,1,2,3,4,6,7,8,9}, {11,12,13,14,1,2,3,4,5,7,8,9,10,15,16,17,18}, {Q,W,E,R,A,S,D,F,SPACE,H,J,K,L,Y,U,I,O}},--17k
-    {0.24, 33, -100, {6,7,8,9,1,2,3,4,5,5,1,2,3,4,6,7,8,9}, {11,12,13,14,1,2,3,4,5,6,7,8,9,10,15,16,17,18}, {Q,W,E,R,A,S,D,F,V,N,H,J,K,L,Y,U,I,O}} --18k
 }
 
 --for indexing maniaData
@@ -248,17 +233,11 @@ function generateSingAnimations()
     local singDirs = {}
     for i = 0, keyCount-1 do 
         local arrowDir = arrowDirs[maniaData[keyCount][ARROW_DIRECTION][i+1]]
-        if not string.find(arrowDir, 'SHARP') and not string.find(arrowDir, 'SPACE') then 
+        if not string.find(arrowDir, 'SPACE') then 
             table.insert(singDirs, 'sing'..arrowDirs[maniaData[keyCount][ARROW_DIRECTION][i+1]])
         else 
-            if arrowDir == 'SPACE' or arrowDir == 'SHARPUP' then 
+            if arrowDir == 'SPACE' then 
                 table.insert(singDirs, 'singUP')
-            elseif arrowDir == 'SHARPLEFT' then
-                table.insert(singDirs, 'singLEFT')
-            elseif arrowDir == 'SHARPRIGHT' then
-                table.insert(singDirs, 'singRIGHT')
-            elseif arrowDir == 'SHARPDOWN' then
-                table.insert(singDirs, 'singDOWN')
             end
         end
     end
@@ -297,7 +276,6 @@ function onCreatePost()
     reparseChart()
     updateNotes()
 
-    
 end
 
 function reparseChart()
@@ -425,10 +403,11 @@ function updateNotes()
     --need to change note scales and animations
     local noteCount = getProperty('unspawnNotes.length')
     local eventsLength = getProperty('eventNotes.length')
-        
-    for i = 0,noteCount-1 do 
+
+    
+    for i = 0,noteCount-1 do  --If notedata is higher than strumgroup length then the game crashes
         local noteData = getPropertyFromGroup('unspawnNotes', i, 'eventLength') --stealing this variable for actual note data!!! (for mania changes lol)
-                                                                                --because if notedata is higher than strumgroup length then the game crashes
+       
         local currentKeyCount = keyCount
         for j = 0,eventsLength-1 do 
             if getPropertyFromGroup('eventNotes', j, 'event') == 'Change Mania' then 
@@ -515,9 +494,17 @@ function onDestroy()
     setPropertyFromClass('ClientPrefs', 'noteSplashes', noteSplashesEnabled)
 end
 
+function noteMiss(membersIndex, noteData, noteType, isSustainNote)
+    if getPropertyFromGroup('notes', membersIndex, 'noteData') == 2 then
+addMisses(-1)
+playAnim('boyfriend','idle',true)
+    end     
+end
 
 function goodNoteHit(id, noteData, noteType, isSustainNote)
-
+    if getPropertyFromGroup('notes', id, 'noteData') == 2 then
+        playSound('Ring',1) 
+end
     if getPropertyFromGroup('notes', id, 'rating') == 'sick' and not getPropertyFromGroup('notes', id, 'noteSplashDisabled') then 
         --debugPrint('sploosh')
         local colorData = splashColors[maniaData[keyCount][ARROW_COLOR][noteData+1]]
@@ -555,22 +542,12 @@ function goodNoteHit(id, noteData, noteType, isSustainNote)
                 splash.animation.addByPrefix("note0-1", "note splash purple 1", 24, false);
                 splash.animation.addByPrefix("note3-1", "note splash red 1", 24, false);
                 splash.animation.addByPrefix("note4-1", "note splash white 1", 24, false);
-                splash.animation.addByPrefix("note5-1", "note splash orange 1", 24, false);
-                splash.animation.addByPrefix("note6-1", "note splash yellow 1", 24, false);
-                splash.animation.addByPrefix("note7-1", "note splash violet 1", 24, false);
-                splash.animation.addByPrefix("note8-1", "note splash darkred 1", 24, false);
-                splash.animation.addByPrefix("note9-1", "note splash dark 1", 24, false);
 
                 splash.animation.addByPrefix("note1-2", "note splash blue 2", 24, false);
                 splash.animation.addByPrefix("note2-2", "note splash green 2", 24, false);
                 splash.animation.addByPrefix("note0-2", "note splash purple 2", 24, false);
                 splash.animation.addByPrefix("note3-2", "note splash red 2", 24, false);
                 splash.animation.addByPrefix("note4-2", "note splash white 2", 24, false);
-                splash.animation.addByPrefix("note5-1", "note splash orange 2", 24, false);
-                splash.animation.addByPrefix("note6-2", "note splash yellow 2", 24, false);
-                splash.animation.addByPrefix("note7-2", "note splash violet 2", 24, false);
-                splash.animation.addByPrefix("note8-2", "note splash darkred 2", 24, false);
-                splash.animation.addByPrefix("note9-2", "note splash dark 2", 24, false);
 
                 var animNum = FlxG.random.int(1, 2);
                 splash.animation.play('note' + ]]..colorData..[[ + '-' + animNum, true);
@@ -621,7 +598,7 @@ function opponentNoteHit(id, noteData, noteType, isSustainNote)
     ]])
 end
 
-local keysPressed = {false,false,false,false,false,false,false,false,false,false}
+local keysPressed = {false,false,false,false,false}
 --fuck
 
 --need to check if holding sustains because psych dumb and still uses shitty controls.hx
@@ -654,7 +631,7 @@ function onCountdownStarted()
 if keyCount == nil then
 	keyCount = 5
 	runHaxeCode([[
-		game.setOnLuas('keyCount',4);
+		game.setOnLuas('keyCount',5);
 	]])
 	end
 	
@@ -720,9 +697,6 @@ function generateBinds()
     for i = 0,keyCount-1 do 
         local control = getControlFromInt(controlArray[i+1][1])
         --debugPrint(control)
-        makeLuaText('bind'..i, control, 32, 0,0)
-        setProperty('bind'..i..'.alpha', 0)
-        setTextSize('bind'..i, 32)
         runHaxeCode([[
             var idx = ]]..i..[[;
             var text = game.modchartTexts.get("bind]]..i..[[");
@@ -734,31 +708,7 @@ function generateBinds()
                 text.y = game.playerStrums.members[idx].y;
             } 
         ]])
-        runTimer('bindPopupEnd', 4)
-        addLuaText('bind'..i)
 
-    end
-end
-function onTimerCompleted(tag, loops, loopsleft)
-    if tag == 'bindPopupEnd' then 
-        runTimer('bindPopupDestroy', 2)
-        for i = 0,keyCount-1 do 
-            runHaxeCode([[
-                var idx = ]]..i..[[;
-                var text = game.modchartTexts.get("bind]]..i..[[");
-                if (text != null)
-                {
-                    if (ClientPrefs.downScroll)
-                        FlxTween.tween(text, {y: FlxG.width+200}, 1, {ease: FlxEase.circIn, startDelay: 0.5 + (0.2 * (]]..i..[[/]]..keyCount..[[)*4 )});
-                    else 
-                        FlxTween.tween(text, {y: -200}, 1, {ease: FlxEase.circIn, startDelay: 0.5 + (0.2 * (]]..i..[[/]]..keyCount..[[)*4 )});
-                } 
-            ]])
-        end
-    elseif tag == 'bindPopupDestroy' then 
-        for i = 0,keyCount-1 do 
-            removeLuaText('bind'..i)
-        end
     end
 end
 --stupid control bullshit cuz flxkey doesnt wanna work with hscript

@@ -47,7 +47,14 @@ function onTimerCompleted(tag, loops, loopsLeft)
 	end
 end
 
-function onStartCountdown()
+function onCountdownTick()
+	
+	noteTweenX('hideit',2,-1000,0.2,'linear')
+	noteTweenX('fix1',0,92,0.2,'linear')
+	noteTweenX('fix2',1,204,0.2,'linear')
+	noteTweenX('fix3',3,316,0.2,'linear')
+	noteTweenX('fix4',4,428,0.2,'linear')	
+	doTweenZoom('wee', 'camGame', 1.4, 0.2, 'linear');	
 	setTimeBarColors('6C18C5','000000') 		
 	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
 		startVideo('triple');
@@ -57,9 +64,13 @@ function onStartCountdown()
 end
 
 function onUpdate()
-if curBeat >= 324 and curBeat <= 708 then
+if curBeat >= 324 and curBeat <= 708 and inGameOver == false then
 	setProperty('boyfriend.flipX', true)
-	doTweenX('moveBf','boyfriend',-400,0.2,'linear')		
+	doTweenX('moveBf','boyfriend',-400,0.2,'linear')
+	if dadName == 'Beast' then
+		setProperty('dad.flipX', true)
+		doTweenX('movedad','dad',400,0.2,'linear')			
+	end		
 elseif curBeat >= 708 then
 	doTweenX('moveBf','boyfriend',400,0.2,'linear')
 	setProperty('boyfriend.flipX', false)		

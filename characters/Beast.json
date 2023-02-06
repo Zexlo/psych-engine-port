@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				44,
-				393
-			],
 			"loop": true,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Beast IDLE"
-		},
-		{
 			"offsets": [
-				-177,
+				113,
 				333
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Beast RIGHT"
+			"fps": 24,
+			"name": "Beast RIGHT",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
-				149,
+				219,
 				297
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Beast LEFT"
+			"fps": 24,
+			"name": "Beast LEFT",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				55,
 				480
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Beast UP"
+			"fps": 24,
+			"name": "Beast UP",
+			"indices": []
 		},
 		{
+			"loop": true,
 			"offsets": [
 				67,
 				292
 			],
-			"loop": true,
-			"fps": 24,
 			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Beast DOWN",
+			"indices": []
+		},
+		{
+			"offsets": [
+				14,
+				393
+			],
 			"indices": [],
-			"name": "Beast DOWN"
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Beast IDLE"
 		}
 	],
 	"no_antialiasing": false,

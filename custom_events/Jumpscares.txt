@@ -1,0 +1,3 @@
+Plays 1 of 3 Soul jumpscares.
+
+Value1 = Tails, Knuckles or Eggman.

@@ -1,14 +1,13 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				84,
 				-50
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Knux Idle",
+			"anim": "idle",
 			"indices": [
 				0,
 				1,
@@ -24,17 +23,17 @@
 				11,
 				12,
 				13
-			]
+			],
+			"name": "Knux Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				67,
 				-1
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Knux Up",
+			"anim": "singUP",
 			"indices": [
 				0,
 				1,
@@ -52,17 +51,46 @@
 				13,
 				14,
 				15
-			]
+			],
+			"name": "Knux Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				130,
 				-151
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Knux Down",
+			"anim": "singDOWN",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			],
+			"name": "Knux Down"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				267,
+				-120
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Knux Right",
 			"indices": [
 				0,
 				1,
@@ -83,41 +111,14 @@
 			]
 		},
 		{
-			"offsets": [
-				267,
-				-120
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [
-				0,
-				1,
-				2,
-				3,
-				4,
-				5,
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15
-			],
-			"name": "Knux Right"
-		},
-		{
 			"offsets": [
 				54,
 				-119
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Knux Left",
 			"indices": [
 				0,
 				1,
@@ -135,20 +136,19 @@
 				13,
 				14,
 				15
-			],
-			"name": "Knux Left"
+			]
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/KnucklesEXE",
 	"position": [
-		730,
+		840,
 		110
 	],
 	"healthicon": "knuckles",
 	"flip_x": true,
 	"healthbar_colors": [
-		103,
+		102,
 		0,
 		0
 	],

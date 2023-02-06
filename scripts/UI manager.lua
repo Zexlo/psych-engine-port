@@ -175,7 +175,7 @@ end
 end
 
 
-function onStartCountdown()
+function onStartCountdown()	
 	if botPlay == true then
 		setProperty('nah.alpha', 1)	
 	return Function_Stop; --prevents song end
@@ -213,23 +213,18 @@ end
 end
 
 function onUpdatePost(elapsed)
-if debugger == true then
-luaDebugMode = true		
-end	
-
-	if curBeat >= 1 then		
-		doTweenAlpha('fadelol','timeBar',1,1,linear)
-		doTweenAlpha('fadelel','timeTxt',1,1,linear)
-		doTweenAlpha('fadelol','timeBarBG',1,1,linear)		
+	if debugger == true then
+	luaDebugMode = true		
 	end	
-	if week == 'Majin' then
-	setProperty('songLength', 60000000)
-	end
-		
-	--UI SETTING
-		setProperty('iconP1.x', screenWidth - 430)
-		setProperty('iconP2.x', 285)
-	if endsong == false then	
+		if week == 'Majin' then
+			setProperty('songLength', 60000000)
+			end
+
+			setProperty('iconP1.x', screenWidth - 430)
+			setProperty('iconP2.x', 285)		
+	
+			--UI SETTING
+	
 		setProperty('song.visible',getProperty('timeBar.visible'))	
 		setProperty('song.alpha',getProperty('timeBar.alpha'))
 		setProperty('timeBarBG.visible',getProperty('timeBar.visible'))	
@@ -240,63 +235,55 @@ end
 		setProperty('timeTxt.visible',getProperty('timeBar.visible'))	
 		setProperty('timeTxt.alpha',getProperty('timeBar.alpha'))	
 	end
-	end
---BOTPLAY SHIT	
+	--BOTPLAY SHIT	
 
-if botPlay == true and keyJustPressed('back') or botPlay == true and keyJustPressed('accept') then
-exitSong(false)
-end
+	if botPlay == true and keyJustPressed('back') or botPlay == true and keyJustPressed('accept') then
+	exitSong(false)
+	end
 
 	if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
-setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
+	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
 		fullscreen = true		
 	elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == true then
-setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
+	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
 		fullscreen = false
-end
+	end
 
--- results screen crap
+	if endsong == true then
+		checkbutton()
+		end
+	-- results screen crap
 
-if endsong == true then
-checkbutton()
-end
+ 	if getKey('enter') and endsong == true then
+		if cont == true then
+			block = false	
+			endSong();
+			elseif restart == true then
+			restartSong()
+			elseif leave == true and isStoryMode then
+			exitSong()
+			elseif leave == true and not isStoryMode then
+			block = false
+			endSong()	
+		end
+	end
 
- if getKey('enter') and endsong == true and isStoryMode then
 	if cont == true then
-	block = false	
-	endSong();
-	elseif restart == true then
-	restartSong()
-	elseif leave == true then
-	exitSong()	
-	end
-
- elseif getKey('enter') and endsong == true and not isStoryMode then
-	if restart == true then
-	restartSong(false);
-	elseif leave == true then
-	block = false
-	endSong()
-	end
-	end
-
-if cont == true then
 		doTweenY('contTweenY', 'contres', -65, 0.02, 'circInOut')
-	end
-if cont == false then
+	
+	elseif cont == false then
 		setProperty('contres.y', -50)
 	end
-	
-if restart == false then
+	if restart == false then
 		setProperty('replay.y', -50)
-	end
-	if restart == true then
+
+	elseif restart == true then
 		doTweenY('replayTweenY', 'replay', -65, 0.02, 'circInOut')
 	end
 	if leave == false then
 		setProperty('exitres.y', -50)
-	end
-	if leave == true then
+
+	elseif leave == true then
 		doTweenY('exitTweenY', 'exitres', -65, 0.02, 'circInOut')
 	end      
 	
@@ -304,6 +291,7 @@ if restart == false then
 	--end	
 	setTextString('scoreTxt','Performance: '..getProperty('ratingName') ..'\nSacrifices: '..getProperty('songMisses') ..' | Accuracy: '..(string.sub(getProperty('ratingPercent')* 100,0,5)).. '% ['..getProperty('ratingFC')..']')
 	setTextString('variables','song:'..songName..'\ndifficulty: '..difficultyName..'\nCurbeat:'..curBeat..'\nCurStep:'..curStep)
+
 	if getKey('five') and luaDebugMode == false then
         luaDebugMode = true
 		addLuaText('variables');	
@@ -317,6 +305,7 @@ function opponentNoteHit(id, direction, noteType, isSustainNote)
 if songName == 'personel' and curBeat < 10 then
 setProperty('health',2);
 end
+
 if songName ~= 'Black Sun' then
      if getProperty('health') > 0.4 then --prevent opponent from killing by just singing too long
           if not isSustainNote then
@@ -338,10 +327,10 @@ function onEndSong()
 	setProperty('vocals.volume', 0)		
  if block == true then
  if week == 'Sunky' then
-setProperty('ratio.visible',false)
-end
-setProperty('inCutscene', true);
- setGlobalFromScript('scripts/pauseScreen','canPause','false')
+	setProperty('ratio.visible',false)
+	end
+	setProperty('inCutscene', true);
+ 	setGlobalFromScript('scripts/pauseScreen','canPause','false')
 	addLuaSprite('zig', true);
 	addLuaSprite('circ', true);	
 	for i = 1,5 do
@@ -377,30 +366,30 @@ setProperty('inCutscene', true);
 	setTextString('hitnotes', ' NOTES HIT: '..hits)
 	setTextString('misstxt', ' MISSES: '..getProperty('songMisses'))	
 	setTextString('accuracyTxt','ACCURACY: ' ..(string.sub(getProperty('ratingPercent')* 100,0,5))..'%')
-if	rating >= 0 and rating < 0.5 then
+	if	rating >= 0 and rating < 0.5 then
 	makeLuaSprite('rating','shit',430,1000)
-elseif	rating >= 0.5 and rating < 0.7 then	
+	elseif	rating >= 0.5 and rating < 0.7 then	
 	makeLuaSprite('rating','bad',450,1000)
-elseif	rating >= 0.7 and rating < 1 then	
+	elseif	rating >= 0.7 and rating < 1 then	
 	makeLuaSprite('rating','good',450,1000)
-else	
+	else	
 	makeLuaSprite('rating','sick',450,1000)	
-end
-screenCenter('rating','X')
-scaleObject('rating',0.9,0.9)
-setObjectCamera('rating','other')
-addLuaSprite('rating',true)
+	end
+	screenCenter('rating','X')
+	scaleObject('rating',0.9,0.9)
+	setObjectCamera('rating','other')
+	addLuaSprite('rating',true)
 		return Function_Stop; --prevents song end
 	end
 	return Funtion_Continue; --allows song end
-end
-function onTimerCompleted(tag, loops, loopsLeft)	
-if tag == 'Xdone' then
+	end
+	function onTimerCompleted(tag, loops, loopsLeft)	
+	if tag == 'Xdone' then
 	doTweenY('txt3', 'bftxt', 10, 0.4, 'linear')
 	doTweenY('txt4', 'passed', 10, 0.4, 'linear')
 	doTweenY('act2', 'acttxt',60, 0.4, 'linear')	
 	end
-if tag == 'resdone' then
+	if tag == 'resdone' then
 	doTweenX('BG1X', 'BG1', 420, 0.4, 'backInOut')
 	doTweenX('BG2X', 'BG2', 420, 0.6, 'backInOut')
 	doTweenX('BG3X', 'BG3',398, 0.8, 'backInOut')
@@ -411,50 +400,52 @@ if tag == 'resdone' then
 	doTweenX('act1', 'accuracyTxt',0, 0.8, 'backInOut')
 	doTweenX('act2', 'scoretxt',0, 1, 'backInOut')
 	doTweenY('act3', 'ratingtype',510, 1.2, 'backInOut')	
-end
-end
+		end
+	end
 
-function onTweenCompleted(tag)		
-if tag == 'txt4' then
-runTimer('resdone',1)
-doTweenY('res', 'resultTxt', 140, 0.5, 'linear')
-end
-if tag == 'zag' then
-setProperty('zig.y', -205)
-doTweenY('moveY1', 'zig', 0, 1, 'linear')	
-end
-if tag == 'moveY1' then
-setProperty('zig.y', -205)
-doTweenY('zag', 'zig', 0, 1, 'linear')
-end
-if tag == 'BG5X' then
-doTweenY('rateimg', 'rating',560, 0.6, 'linear')
-end
-if tag == 'rateimg' then
-if	rating >= 0 and rating < 0.5 then
+	function onTweenCompleted(tag)		
+	if tag == 'txt4' then
+	runTimer('resdone',1)
+	doTweenY('res', 'resultTxt', 140, 0.5, 'linear')
+
+	elseif tag == 'zag' then
+	setProperty('zig.y', -205)
+	doTweenY('moveY1', 'zig', 0, 1, 'linear')	
+
+
+	elseif tag == 'moveY1' then
+	setProperty('zig.y', -205)
+	doTweenY('zag', 'zig', 0, 1, 'linear')
+
+	elseif tag == 'BG5X' then
+	doTweenY('rateimg', 'rating',560, 0.6, 'linear')
+
+
+	elseif tag == 'rateimg' then
+	if	rating >= 0 and rating < 0.5 then
 
 	playSound('shit',1,'rateping')
-elseif	rating >= 0.5 and rating < 0.7 then	
+	elseif	rating >= 0.5 and rating < 0.7 then	
 	playSound('shit',1,'rateping')
-elseif	rating >= 0.7 and rating < 1 then	
+	elseif	rating >= 0.7 and rating < 1 then	
 	playSound('good',1,'rateping')
-else	
+	else	
 	playSound('sick',1,'rateping')
-end
-endsong = true
-if isStoryMode then
+	end
+	endsong = true
+	if isStoryMode then
 	doTweenX('contTween', 'contres', 956, 0.2, 'linear')
 	doTweenX('c1Tween', 'cBG', 956, 0.2, 'linear')	
-end
+	end
 	doTweenX('replayTween', 'replay', 868, 0.2, 'linear')
 	doTweenX('exitTween', 'exitres', 776, 0.2, 'linear')
 	doTweenX('r1Tween', 'rBG', 868, 0.2, 'linear')
 	doTweenX('e1ween', 'eBG', 776, 0.2, 'linear')	
-end
-end
+	end
+	end
 
 
-function checkbutton()
+	function checkbutton()
 	if keyJustPressed('down') and endsong == true then
 		playSound('pauseSounds/ScrollMenu', 0.3, 'pausescroll')		
 		if cont == true then
@@ -497,22 +488,22 @@ function checkbutton()
 			end
 		end
 	end
-end
+	end
 
-function onDestroy()
+	function onDestroy()
 	if nameon == true then
 	setPropertyFromClass('ClientPrefs', 'timeBarType', 'Song Name')
-	end
-	if nomid == true then
+	
+	elseif nomid == true then
 	setPropertyFromClass('ClientPrefs', 'middleScroll', false)	
+	end
 	end	
-end
 
-function onGameOverStart()
-if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
+	function onGameOverStart()
+	if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
 	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
 	fullscreen = true		
-elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == true then
+	elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == true then
 	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
 	fullscreen = false
 	end

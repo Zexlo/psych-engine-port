@@ -34,7 +34,7 @@ float noise(vec2 uv, float blockiness)
 float fbm(vec2 uv, int count, float blockiness, float complexity)
 {
     float val = 0.0;
-    float amp = 0.5;
+    float amp = 0.4;
     
     while(count != 0)
     {
@@ -47,10 +47,10 @@ float fbm(vec2 uv, int count, float blockiness, float complexity)
     return val;
 }
 
-const float glitchAmplitude = 0.2; // increase this
+const float glitchAmplitude = 0.1; // increase this
 const float glitchNarrowness = 4.0;
 const float glitchBlockiness = 2.0;
-const float glitchMinimizer = 5.0; // decrease this
+const float glitchMinimizer = 3.0; // decrease this
 
 void mainImage()
 {

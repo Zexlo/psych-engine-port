@@ -29,3 +29,6 @@ if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.TAB') and boyfriendName
 	end		
 end
 end
+function onUpdatePost(elapsed)
+
+end

@@ -1,10 +1,14 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				294,
 				10
 			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "EggIdle",
 			"indices": [
 				0,
 				1,
@@ -20,17 +24,17 @@
 				11,
 				12,
 				13
-			],
-			"fps": 24,
-			"anim": "idle",
-			"loop": false,
-			"name": "EggIdle"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				425,
 				264
 			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "EggUp",
 			"indices": [
 				0,
 				1,
@@ -48,17 +52,17 @@
 				13,
 				14,
 				15
-			],
-			"fps": 24,
-			"anim": "singUP",
-			"loop": false,
-			"name": "EggUp"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				433,
 				199
 			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "EggRight",
 			"indices": [
 				0,
 				1,
@@ -76,17 +80,17 @@
 				13,
 				14,
 				15
-			],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"loop": false,
-			"name": "EggRight"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				355,
 				-98
 			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "EggDown",
 			"indices": [
 				0,
 				1,
@@ -104,17 +108,17 @@
 				13,
 				14,
 				15
-			],
-			"fps": 24,
-			"anim": "singDOWN",
-			"loop": false,
-			"name": "EggDown"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				540,
 				109
 			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "EggLeft",
 			"indices": [
 				0,
 				1,
@@ -145,15 +149,11 @@
 				26,
 				27,
 				28
-			],
-			"fps": 24,
-			"anim": "singLEFT",
-			"loop": false,
-			"name": "EggLeft"
+			]
 		},
 		{
 			"offsets": [
-				293,
+				298,
 				224
 			],
 			"indices": [
@@ -188,7 +188,7 @@
 				28
 			],
 			"fps": 35,
-			"anim": "laugh",
+			"anim": "Laugh",
 			"loop": false,
 			"name": "EggLaugh"
 		}

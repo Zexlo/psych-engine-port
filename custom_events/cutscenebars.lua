@@ -28,9 +28,10 @@
 	noteTweenAlpha(i, i, 0.5, 0.001, 'SineInOut')
 	end	
 	else
+		for i = 0,3 do	
 		noteTweenAlpha(i, i, 1, 0.001, 'SineInOut')
 	end
-	
+	end	
 	for i = 4,7 do
 	noteTweenAlpha(i, i, 1, 0.001, 'SineInOut')
 	end

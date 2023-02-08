@@ -20,17 +20,17 @@ function onEvent(eventName, value1, value2)
 
 if value1 == 'Tails' then
 doTweenAlpha('scare','tails',0.7,0.3,ElasticOut)
-playSound('jumpscare/Tscream',0.2)
+playSound('jumpscare/Tscream',0.3)
 doTweenZoom('zoomie','camOther',1.2,0.1,ExpoOut) 
 
 elseif value1 == 'Knuckles' then
     doTweenAlpha('scare','knux',0.7,0.3,ElasticOut)
-    playSound('jumpscare/Kscream',0.2)
+    playSound('jumpscare/Kscream',0.4)
     doTweenZoom('zoomie','camOther',1.2,0.1,ExpoOut)   
 
 elseif value1 == 'Eggman' then
         doTweenAlpha('scare','eggy',0.7,0.3,ExpoOut)
-        playSound('jumpscare/Escream',0.2) 
+        playSound('jumpscare/Escream',0.4) 
         doTweenZoom('zoomie','camOther',1.2,0.1,ExpoOut)           
 
 end

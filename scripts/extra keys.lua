@@ -8,7 +8,7 @@
 
 --copied from flxkey lol
 --cant access flxkey with hscript for some reason
-
+Rings = 0
 local ANY = -2;
 local NONE = -1;
 local A = 65;
@@ -261,6 +261,18 @@ function turnArrayIntoString(arr)
 end
 
 function onCreatePost()
+    makeLuaSprite('counter','Counter',1100,620)
+    makeLuaText('Ringcount','0',200,1110,620)
+    setTextSize('Ringcount',40)
+    setTextFont('Ringcount','FNF.ttf')
+    setTextColor('Ringcount','FFD631')
+    setTextBorder('Ringcount',3,'C55D00')
+    setObjectCamera('counter','hud')
+    setObjectCamera('Ringcount','hud')
+    setObjectOrder('Ringcount', getObjectOrder('counter'))   
+    addLuaText('Ringcount')
+    addLuaSprite('counter')
+
     luaDebugMode = true
     --import the shit
     addHaxeLibrary('FlxKey', 'flixel.input.keyboard')
@@ -494,8 +506,17 @@ function onDestroy()
     setPropertyFromClass('ClientPrefs', 'noteSplashes', noteSplashesEnabled)
 end
 
+function onUpdatePost(elapsed)
+
+end
+
 function noteMiss(membersIndex, noteData, noteType, isSustainNote)
-    if getPropertyFromGroup('notes', membersIndex, 'noteData') == 2 then
+    if Rings >= 1 and getPropertyFromGroup('notes', membersIndex, 'noteData') ~= 2 then
+        addHealth(0.25)
+     Rings = Rings -1
+     setTextString('Ringcount',Rings)            
+
+    elseif getPropertyFromGroup('notes', membersIndex, 'noteData') == 2 then
 addMisses(-1)
 playAnim('boyfriend','idle',true)
     end     
@@ -503,7 +524,9 @@ end
 
 function goodNoteHit(id, noteData, noteType, isSustainNote)
     if getPropertyFromGroup('notes', id, 'noteData') == 2 then
-        playSound('Ring',1) 
+        playSound('Ring',1)
+        Rings = Rings + 1
+        setTextString('Ringcount',Rings)   
 end
     if getPropertyFromGroup('notes', id, 'rating') == 'sick' and not getPropertyFromGroup('notes', id, 'noteSplashDisabled') then 
         --debugPrint('sploosh')
@@ -617,7 +640,6 @@ function onUpdatePost(elapsed)
             end
         end 
     end
-
 end
 
 function onKeyPress(key)

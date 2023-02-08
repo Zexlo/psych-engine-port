@@ -1,6 +1,4 @@
-local fakePaused, eSelected, rSelected, cSelected = false, false, false, false
-local down, moveY, fixY
-
+fakePaused = false
 canPause = false
 
 function onGameOver()
@@ -134,8 +132,6 @@ function onUpdatePost(elapsed)
 	if keyJustPressed('accept') and fakePaused == false and not getPropertyFromClass('flixel.FlxG', 'keys.justPressed.SPACE') and canPause == true then
 		playSound('pauseSounds/pause', 0.8, 'pause')
 		playSound('pause',1,'song')
-		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
-		setProperty('vocals.volume', 0)
 		setProperty('timeBar.visible',false)				
 		doTweenX('pauseRightTween', 'pauseRight', 600, 0.2, 'cubeOut')
 		doTweenX('fixtimebar', 'timeBar', 438, 0.2, 'smoothStepIn')
@@ -159,8 +155,6 @@ function onUpdatePost(elapsed)
 		rSelected = false
 		eSelected = false
 		fakePaused = true
-		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
-		setProperty('vocals.volume', 0)	
 	for i = 0,9 do	
 	noteTweenY(i, i,moveY, 0.2, 'elasticIn')
 end		
@@ -201,7 +195,8 @@ end
 	--hi im coffeedev
 	
 	if fakePaused == true then
-	
+		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
+		setProperty('vocals.volume', 0)	
 		setProperty('blackbox.visible', true)
 		setPropertyFromClass('Conductor', 'songPosition', getPropertyFromClass('Conductor', 'songPosition') - elapsed * 1000  ) 
 		-- counted in milliseconds, 1000 = 1 second

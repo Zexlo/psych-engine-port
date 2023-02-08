@@ -2,13 +2,28 @@ allowCountdown = false;
 videoDelay = false;
 
 function onCreate()
-	if isStoryMode and not seenCutscene then
-		videoDelay = true;
-	end
+allowCountdown = false
+
+makeLuaSprite('skyBG', 'YCR/sky', -1100, -300); -- X,Y pos   
+makeLuaSprite('Btrees', 'YCR/trees', -1100, -300); -- X,Y pos
+makeLuaSprite('Ftrees', 'YCR/TreesFront', -1100, -100); -- X,Y pos
+makeLuaSprite('Fgrass', 'YCR/Grass', -1100, -200); -- X,Y pos
+makeLuaSprite('Bgrass', 'YCR/GrassBack', -1100, -100); -- X,Y pos
+makeAnimatedLuaSprite('Bstatic','BeastBG',-1150,-300);
+scaleObject('Bstatic',6,6)
+addAnimationByPrefix('Bstatic','spoop','staticgo',24,true)
+setProperty('Bstatic.alpha',0)
+addLuaSprite('skyBG', false);
+addLuaSprite('Bgrass', false);	
+addLuaSprite('Btrees', false);
+addLuaSprite('Bstatic',false);
+addLuaSprite('Fgrass', false);	
+addLuaSprite('Ftrees', false);
+playAnim('Bstatic',spoop,true);
 
 	addCharacterToList('Beast', 'dad');
-	addCharacterToList('Eggman', 'dad');
-	addCharacterToList('Knucks', 'gf');
+	addCharacterToList('eggman', 'dad');
+	addCharacterToList('knux', 'gf');
 
 	makeLuaSprite('black', 'black', 0, 0);
 	addLuaSprite('black', true);
@@ -17,18 +32,13 @@ function onCreate()
 	makeLuaSprite('text', 'StartScreens/TextTripleTrouble', -1280, 0);
 	addLuaSprite('text', true);
 
-	setObjectCamera('black', 'hud');
-	setObjectCamera('circle', 'hud');
-	setObjectCamera('text', 'hud');
+	setObjectCamera('black', 'other');
+	setObjectCamera('circle', 'other');
+	setObjectCamera('text', 'other');
 
-	startTime = 0.3;
-	if videoDelay then 
-		startTime = 3; -- cutscene delay
-	end
-
-	runTimer('flyin', startTime);
-	runTimer('fadeout', startTime + 2);
-	runTimer('beginsong', startTime + 3);
+	runTimer('flyin', 0.5);
+	runTimer('fadeout', 2.5);
+	runTimer('beginsong', 2.5);
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
@@ -47,7 +57,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
 	end
 end
 
-function onCountdownTick()
+function onStartCountdown()
 	
 	noteTweenX('hideit',2,-1000,0.2,'linear')
 	noteTweenX('fix1',0,92,0.2,'linear')
@@ -56,23 +66,49 @@ function onCountdownTick()
 	noteTweenX('fix4',4,428,0.2,'linear')	
 	doTweenZoom('wee', 'camGame', 1.4, 0.2, 'linear');	
 	setTimeBarColors('6C18C5','000000') 		
-	if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
-		startVideo('triple');
+	if not allowCountdown then --Block the first countdown
 		return Function_Stop;
 	end
 	return Function_Continue;
 end
 
-function onUpdate()
-if curBeat >= 324 and curBeat <= 708 and inGameOver == false then
-	setProperty('boyfriend.flipX', true)
-	doTweenX('moveBf','boyfriend',-400,0.2,'linear')
+function onUpdatePost(elapsed)
+
 	if dadName == 'Beast' then
+		setProperty('Bstatic.alpha',1) 
+	else
+		setProperty('Bstatic.alpha',0)
+	runHaxeCode([[
+		fhandle = openFile("FUNFUNFUN.txt")
+		if( fhandle == 0 )
+		   print("Error: Could not open file!")
+		else
+		   closeFile fhandle
+		endif
+
+	]])	
+	end
+
+if curBeat >= 324 and curBeat < 708 and inGameOver == false then
+	noteTweenX('hideit',2,-1000,0.2,'linear')
+	noteTweenX('fix1',0,732,0.2,'linear')
+	noteTweenX('fix2',1,844,0.2,'linear')
+	noteTweenX('fix3',3,956,0.2,'linear')
+	noteTweenX('fix4',4,1068,0.2,'linear')
+	setProperty('boyfriend.flipX', true)
+	doTweenX('movebf','boyfriend',-400,0.2,'linear')		
+	if dadName == 'Beast' then	
 		setProperty('dad.flipX', true)
 		doTweenX('movedad','dad',400,0.2,'linear')			
-	end		
+	end
+
 elseif curBeat >= 708 then
-	doTweenX('moveBf','boyfriend',400,0.2,'linear')
-	setProperty('boyfriend.flipX', false)		
+	noteTweenX('hideit',2,-1000,0.2,'linear')
+	noteTweenX('fix1',0,92,0.2,'linear')
+	noteTweenX('fix2',1,204,0.2,'linear')
+	noteTweenX('fix3',3,316,0.2,'linear')
+	noteTweenX('fix4',4,428,0.2,'linear')
+	setProperty('boyfriend.flipX', false)	
+	close(true)	
 end
 end

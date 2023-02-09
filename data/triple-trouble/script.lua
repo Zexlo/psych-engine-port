@@ -2,7 +2,6 @@ allowCountdown = false;
 videoDelay = false;
 
 function onCreate()
-allowCountdown = false
 
 makeLuaSprite('skyBG', 'YCR/sky', -1100, -300); -- X,Y pos   
 makeLuaSprite('Btrees', 'YCR/trees', -1100, -300); -- X,Y pos
@@ -65,7 +64,8 @@ function onStartCountdown()
 	noteTweenX('fix3',3,316,0.2,'linear')
 	noteTweenX('fix4',4,428,0.2,'linear')	
 	doTweenZoom('wee', 'camGame', 1.4, 0.2, 'linear');	
-	setTimeBarColors('6C18C5','000000') 		
+	setTimeBarColors('6C18C5','000000') 
+			
 	if not allowCountdown then --Block the first countdown
 		return Function_Stop;
 	end
@@ -89,7 +89,7 @@ function onUpdatePost(elapsed)
 	]])	
 	end
 
-if curBeat >= 324 and curBeat < 708 and inGameOver == false then
+	if inGameOver == false and (curBeat >= 324 and curBeat < 708) then
 	noteTweenX('hideit',2,-1000,0.2,'linear')
 	noteTweenX('fix1',0,732,0.2,'linear')
 	noteTweenX('fix2',1,844,0.2,'linear')

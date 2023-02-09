@@ -52,23 +52,30 @@ end
     setTextAlignment('song', 'center')
 	setObjectOrder('song', getObjectOrder('timeBar'))
 	setProperty('scoreTxt.y', scoreY)
-end
 
-
-function onCountdownTick()
-
-	if week == 'Majin' then
-		setProperty('songLength', 60000000)
-		end
-
-	if botPlay == true then
+	if botPlay then
 		makeLuaSprite('nah', 'nocheating', 0, 0);
 		addLuaSprite('nah', true);
 		setObjectCamera('nah', 'other')
 		setProperty('nah.alpha', 0)		
 		setProperty('nah.alpha', 1)	
-	return Function_Stop; --prevents song end
+		allowCountdown = false
+	else
+		allowCountdown = true;
+		startCountdown();	
+	end
 end
+
+function onStartCountdown()
+	if week == 'Majin' then
+		setProperty('songLength', 60000000)
+		end	
+
+	if not allowCountdown then
+		return Function_Stop;
+	end
+
+	return Function_Continue;
 end
 
 function onBeatHit()
@@ -90,6 +97,7 @@ function onUpdatePost(elapsed)
 	setProperty('iconP2.x', 285)				
 			--UI SETTING
 	
+			
 		setProperty('song.visible',getProperty('timeBar.visible'))	
 		setProperty('song.alpha',getProperty('timeBar.alpha'))
 		setProperty('timeBarBG.visible',getProperty('timeBar.visible'))	
@@ -102,16 +110,16 @@ function onUpdatePost(elapsed)
 	end
 	--BOTPLAY SHIT	
 
-	if botPlay == true and keyJustPressed('back') or botPlay == true and keyJustPressed('accept') then
+	if botPlay and (keyJustPressed('back') or keyJustPressed('accept')) then 
 	exitSong(false)
 	end
 
-	if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
+	if not fullscreen and (getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12'))then
 	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
-		fullscreen = true		
-	elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == true then
+	fullscreen = true			
+	elseif fullscreen and (getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12'))then
 	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
-		fullscreen = false
+	fullscreen = false
 	end
 
 	
@@ -132,11 +140,8 @@ function onUpdatePost(elapsed)
 	end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
-if songName == 'personel' and curBeat < 10 then
-setProperty('health',2);
-end
 
-if songName ~= 'Black Sun' or songName ~= 'Triple Trouble' then
+if songName ~= 'Black Sun' and songName ~= 'Triple Trouble' then
      if getProperty('health') > 0.4 then --prevent opponent from killing by just singing too long
           if not isSustainNote then
                setProperty('health', getProperty('health')-0.016); --amount to lose on normal notes
@@ -161,12 +166,11 @@ function onDestroy()
 end	
 
 	function onGameOverStart()
-	if getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == false then
-	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
-	fullscreen = true		
-	elseif getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12') and fullscreen == true then
-	setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
-	fullscreen = false
-	close()
-	end
+		if not fullscreen and (getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12'))then
+			setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', true);	
+			fullscreen = true			
+			elseif fullscreen and (getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12'))then
+			setPropertyFromClass('openfl.Lib', 'application.window.fullscreen', false);
+			fullscreen = false
+			end
 end

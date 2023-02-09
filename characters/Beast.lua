@@ -38,42 +38,42 @@ end
 
 function onEvent(name, value1, value2)
 	if name == 'Change Character' then
-        if dadName == 'Beast' and songName == 'Triple Trouble' then 
+        if dadName == 'Beast' and songName == 'Triple Trouble' then
             runHaxeCode([[
             game.camHUD.setFilters([new ShaderFilter(game.getLuaObject("glitch").shader)]);
             ]])
-        else 
+        else
             runHaxeCode([[
                 game.camHUD.setFilters([new ShaderFilter(game.getLuaObject("noglitch").shader)]);
                 ]])                 
      end    
     end
-end       
---function shaderCoordFix()
-    --runHaxeCode([[
-        --resetCamCache = function(?spr) {
-            --if (spr == null || spr.filters == null) return;
-            --spr.__cacheBitmap = null;
-            --spr.__cacheBitmapData = null;
-        --}
+end        
+function shaderCoordFix()
+    runHaxeCode([[
+        resetCamCache = function(?spr) {
+            if (spr == null || spr.filters == null) return;
+            spr.__cacheBitmap = null;
+            spr.__cacheBitmapData = null;
+        }
         
-        --fixShaderCoordFix = function(?_) {
-            --resetCamCache(game.camGame.flashSprite);
-            --resetCamCache(game.camHUD.flashSprite);
-            --resetCamCache(game.camOther.flashSprite);
-        --}
+        fixShaderCoordFix = function(?_) {
+            resetCamCache(game.camGame.flashSprite);
+            resetCamCache(game.camHUD.flashSprite);
+            resetCamCache(game.camOther.flashSprite);
+        }
     
-        --FlxG.signals.gameResized.add(fixShaderCoordFix);
-        --fixShaderCoordFix();
-        --return;
-    --]])
+        FlxG.signals.gameResized.add(fixShaderCoordFix);
+        fixShaderCoordFix();
+        return;
+    ]])
     
-    --local temp = onDestroy
-    --function onDestroy()
-        --runHaxeCode([[
-            --FlxG.signals.gameResized.remove(fixShaderCoordFix);
-            --return;
-        --]])
-        --if (temp) then temp() end
-    --end
---end
+    local temp = onDestroy
+    function onDestroy()
+        runHaxeCode([[
+            FlxG.signals.gameResized.remove(fixShaderCoordFix);
+            return;
+        ]])
+        if (temp) then temp() end
+    end
+end

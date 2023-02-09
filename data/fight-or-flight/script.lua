@@ -29,7 +29,8 @@ end
 
 function onCreatePost()
 	setObjectOrder('fear', getObjectOrder('meter')+1)
-	setTimeBarColors('FF0000','000000') 	
+	setTimeBarColors('FF0000','000000')
+	 	
 	end
 	
 
@@ -76,8 +77,13 @@ end
 function onUpdate(elapsed)
 	for i = 0,3 do
 	noteTweenX(i, i,-1000, 0.2, 'linear')
+
+	noteTweenX('play0', 4, 415, 0.05, 'SineInOut')
+	noteTweenX('play1', 5, 525, 0.05, 'SineInOut')
+	noteTweenX('play2', 6, 635, 0.05, 'SineInOut')
+	noteTweenX('play3', 7, 745, 0.05, 'SineInOut')
 end
-	
+
 if curBeat >= 294 and curBeat <=499 then
 	doTweenAlpha('bye1', 'room', 0, 1, 'sineOut')
 	doTweenAlpha('bye2', 'tower', 0, 1, 'sineOut')

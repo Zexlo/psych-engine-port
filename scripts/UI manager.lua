@@ -1,10 +1,7 @@
-	
 	function onCreate()
-		if not middlescroll and songName == 'Fight or Flight' then
-			setPropertyFromClass('ClientPrefs', 'middlescroll', true)
-			nomid = true
-		end		
-	if middlescroll and downscroll then
+	local Mscroll = middlescroll
+
+	if Mscroll and downscroll then
 	BGY = 675		
 	nameY = 650	
 	elseif downscroll then
@@ -30,17 +27,13 @@
 end
 
 function onCreatePost()
-	if middlescroll and downscroll then
-		for i = 0,9 do
-			noteTweenY(i, i, 545, 0.001, 'SineInOut')
-			end
-			end	
+	luaDebugMode = true
+
 
 if timeBarType == 'Song Name' then
 else
 	makeLuaText('song', ' ' .. (songName), 1250, 0, nameY);
 end	
-		
     setTextSize('song', 25)
     addLuaText('song');
 
@@ -70,6 +63,11 @@ function onStartCountdown()
 	if week == 'Majin' then
 		setProperty('songLength', 60000000)
 		end	
+		if middlescroll and downscroll then
+			for i = 0,9 do
+				noteTweenY(i, i, 545, 0.001, 'SineInOut')
+				end
+			end	
 
 	if not allowCountdown then
 		return Function_Stop;
@@ -97,7 +95,6 @@ function onUpdatePost(elapsed)
 	setProperty('iconP2.x', 285)				
 			--UI SETTING
 	
-			
 		setProperty('song.visible',getProperty('timeBar.visible'))	
 		setProperty('song.alpha',getProperty('timeBar.alpha'))
 		setProperty('timeBarBG.visible',getProperty('timeBar.visible'))	
@@ -155,15 +152,6 @@ end
 function noteMiss(id, noteData, noteType, isSustainNote)
 playAnim('gf', 'sad', false, false, 0)
 end
-
-function onDestroy()
---[[ 	if nameon == true then
-	setPropertyFromClass('ClientPrefs', 'timeBarType', 'Song Name') ]]
-	
-	if nomid == true then
-	setPropertyFromClass('ClientPrefs', 'middlescroll', false)	
-	end
-end	
 
 	function onGameOverStart()
 		if not fullscreen and (getPropertyFromClass('flixel.FlxG', 'keys.justPressed.F12'))then

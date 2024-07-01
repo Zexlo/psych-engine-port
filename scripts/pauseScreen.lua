@@ -198,10 +198,10 @@ end
 		setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 0)
 		setProperty('vocals.volume', 0)	
 		setProperty('blackbox.visible', true)
-		setPropertyFromClass('Conductor', 'songPosition', getPropertyFromClass('Conductor', 'songPosition') - elapsed * 1000  ) 
+		setPropertyFromClass('backend.Conductor', 'songPosition', getPropertyFromClass('backend.Conductor', 'songPosition') - elapsed * 1000  ) 
 		-- counted in milliseconds, 1000 = 1 second
-		setPropertyFromClass('flixel.FlxG', 'sound.music.time', getPropertyFromClass('Conductor', 'songPosition'))
-		setProperty('vocals.time', getPropertyFromClass('Conductor', 'songPosition'))
+		setPropertyFromClass('flixel.FlxG', 'sound.music.time', getPropertyFromClass('backend.Conductor', 'songPosition'))
+		setProperty('vocals.time', getPropertyFromClass('backend.Conductor', 'songPosition'))
 end
 	if fakePaused == false and canPause then
 		setProperty('blackbox.visible', false)

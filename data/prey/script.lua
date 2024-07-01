@@ -79,7 +79,7 @@ function onCreate()
 	setProperty('dad.alpha', 0)
 	setProperty('gf.alpha', 0)
 	doTweenX("fixit", "gf", 4200, 2, "linear")
-	setProperty('boyfriend.alpha', 0)
+	-- setProperty('boyfriend.alpha', 0)
 	setProperty('furnace.visible', false)	
 	setProperty('camHUD.alpha',0)
 
